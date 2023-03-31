@@ -14,6 +14,11 @@
 		040CF66929C4A86A008BC27F /* Etlas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 040CF66729C4A86A008BC27F /* Etlas.xcdatamodeld */; };
 		040CF66B29C4A86C008BC27F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040CF66A29C4A86C008BC27F /* Assets.xcassets */; };
 		040CF66E29C4A86C008BC27F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040CF66C29C4A86C008BC27F /* LaunchScreen.storyboard */; };
+		0427055329D5AC2100D4CAD7 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DDC1A129D5053C00858A3E /* Poppins-Regular.ttf */; };
+		0427055A29D5BB0E00D4CAD7 /* LanguageSelectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0427055929D5BB0E00D4CAD7 /* LanguageSelectionViewController.storyboard */; };
+		0427055C29D5BB5200D4CAD7 /* LanguageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427055B29D5BB5200D4CAD7 /* LanguageSelectionViewController.swift */; };
+		04DDC19F29D4FA8500858A3E /* CapitalisTypOasis.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DDC19D29D4FA8400858A3E /* CapitalisTypOasis.ttf */; };
+		04DDC1A029D4FA8500858A3E /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 04DDC19E29D4FA8500858A3E /* Montserrat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		040CF66A29C4A86C008BC27F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040CF66D29C4A86C008BC27F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040CF66F29C4A86C008BC27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0427055929D5BB0E00D4CAD7 /* LanguageSelectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LanguageSelectionViewController.storyboard; sourceTree = "<group>"; };
+		0427055B29D5BB5200D4CAD7 /* LanguageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionViewController.swift; sourceTree = "<group>"; };
+		04DDC19D29D4FA8400858A3E /* CapitalisTypOasis.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CapitalisTypOasis.ttf; sourceTree = "<group>"; };
+		04DDC19E29D4FA8500858A3E /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
+		04DDC1A129D5053C00858A3E /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040B7D1729D7076D00B1F87C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				040B7D1929D7095100B1F87C /* Fonts */,
+				040CF66A29C4A86C008BC27F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		040B7D1829D7093400B1F87C /* LanguageSelection */ = {
+			isa = PBXGroup;
+			children = (
+				040B7D1C29D70A0E00B1F87C /* Model */,
+				040B7D1B29D70A0800B1F87C /* View */,
+				040B7D1A29D709F600B1F87C /* Controller */,
+			);
+			path = LanguageSelection;
+			sourceTree = "<group>";
+		};
+		040B7D1929D7095100B1F87C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04DDC19E29D4FA8500858A3E /* Montserrat */,
+				04DDC19D29D4FA8400858A3E /* CapitalisTypOasis.ttf */,
+				04DDC1A129D5053C00858A3E /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		040B7D1A29D709F600B1F87C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0427055B29D5BB5200D4CAD7 /* LanguageSelectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		040B7D1B29D70A0800B1F87C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0427055929D5BB0E00D4CAD7 /* LanguageSelectionViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		040B7D1C29D70A0E00B1F87C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		040B7D1D29D70A7600B1F87C /* LaunchingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				040CF66C29C4A86C008BC27F /* LaunchScreen.storyboard */,
+			);
+			path = LaunchingScreen;
+			sourceTree = "<group>";
+		};
+		040B7D1E29D70B0600B1F87C /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				040B7D2229D70B5100B1F87C /* Model */,
+				040B7D2129D70B4900B1F87C /* View */,
+				040B7D2029D70B4000B1F87C /* Controller */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		040B7D2029D70B4000B1F87C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		040B7D2129D70B4900B1F87C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		040B7D2229D70B5100B1F87C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		040CF65229C4A86A008BC27F = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +159,50 @@
 		040CF65D29C4A86A008BC27F /* Etlas */ = {
 			isa = PBXGroup;
 			children = (
+				040B7D1D29D70A7600B1F87C /* LaunchingScreen */,
+				040B7D1829D7093400B1F87C /* LanguageSelection */,
+				0427055429D5B77400D4CAD7 /* Onboarding */,
+				040B7D1E29D70B0600B1F87C /* SignUp */,
 				040CF65E29C4A86A008BC27F /* AppDelegate.swift */,
 				040CF66029C4A86A008BC27F /* SceneDelegate.swift */,
-				040CF66229C4A86A008BC27F /* ViewController.swift */,
-				040CF66429C4A86A008BC27F /* Main.storyboard */,
-				040CF66A29C4A86C008BC27F /* Assets.xcassets */,
-				040CF66C29C4A86C008BC27F /* LaunchScreen.storyboard */,
+				040B7D1729D7076D00B1F87C /* Resources */,
 				040CF66F29C4A86C008BC27F /* Info.plist */,
 				040CF66729C4A86A008BC27F /* Etlas.xcdatamodeld */,
 			);
 			path = Etlas;
+			sourceTree = "<group>";
+		};
+		0427055429D5B77400D4CAD7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0427055729D5B7A700D4CAD7 /* Model */,
+				0427055629D5B79A00D4CAD7 /* View */,
+				0427055529D5B78A00D4CAD7 /* Controller */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		0427055529D5B78A00D4CAD7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				040CF66229C4A86A008BC27F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0427055629D5B79A00D4CAD7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				040CF66429C4A86A008BC27F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0427055729D5B7A700D4CAD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +263,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DDC1A029D4FA8500858A3E /* Montserrat in Resources */,
 				040CF66E29C4A86C008BC27F /* LaunchScreen.storyboard in Resources */,
+				0427055A29D5BB0E00D4CAD7 /* LanguageSelectionViewController.storyboard in Resources */,
 				040CF66B29C4A86C008BC27F /* Assets.xcassets in Resources */,
+				0427055329D5AC2100D4CAD7 /* Poppins-Regular.ttf in Resources */,
 				040CF66629C4A86A008BC27F /* Main.storyboard in Resources */,
+				04DDC19F29D4FA8500858A3E /* CapitalisTypOasis.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +284,7 @@
 				040CF65F29C4A86A008BC27F /* AppDelegate.swift in Sources */,
 				040CF66129C4A86A008BC27F /* SceneDelegate.swift in Sources */,
 				040CF66929C4A86A008BC27F /* Etlas.xcdatamodeld in Sources */,
+				0427055C29D5BB5200D4CAD7 /* LanguageSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
