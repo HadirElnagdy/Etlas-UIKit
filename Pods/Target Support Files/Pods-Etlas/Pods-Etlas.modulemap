@@ -1,0 +1,6 @@
+module Pods_Etlas {
+  umbrella header "Pods-Etlas-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "OnboradingScreen.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
