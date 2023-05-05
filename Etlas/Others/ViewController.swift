@@ -11,24 +11,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let storyborad = UIStoryboard(name: "LanguageSelectionViewController", bundle: nil)
-        let onboardingVC =  storyborad.instantiateViewController(withIdentifier: "LanguageSelectionViewController")
-        self.navigationController?.pushViewController(onboardingVC, animated: false)
-    }
-
-    @IBOutlet weak var continueButton: UIButton!{
-        didSet{
-            let customColor = UIColor(red: 0.75, green: 0.51, blue: 0.28, alpha: 1.0)
-            continueButton.backgroundColor = customColor
-            continueButton.layer.cornerRadius = 20
-            continueButton.layer.borderWidth = 2
-            continueButton.layer.borderColor = customColor.cgColor
+        // Check if language selection is needed
+        let selectedLanguage = UserDefaults.standard.string(forKey: "selectedLanguage")
+        if selectedLanguage == nil {
+           // Show language selection page
+            let storyborad = UIStoryboard(name: "LanguageSelectionViewController", bundle: nil)
+            let languageSelectionVC =  storyborad.instantiateViewController(withIdentifier: "LanguageSelectionViewController")
+            self.navigationController?.pushViewController(languageSelectionVC, animated: false)
+        } else {
+            let storyborad = UIStoryboard(name: "OnboardingViewController", bundle: nil)
+            let onboardingVC =  storyborad.instantiateViewController(withIdentifier: "OnboardingViewController")
+            self.navigationController?.pushViewController(onboardingVC, animated: false)
         }
-    }
-    
-    @IBAction func continuePressed(_ sender: UIButton) {
+
         
     }
+
+ 
     
 }
 

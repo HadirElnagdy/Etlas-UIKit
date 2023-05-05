@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OnboradingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="RnF-Lc-40A">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_OnboradingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="RnF-Lc-40A">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_Onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="6Sj-JQ-ytG">
                                 <rect key="frame" x="0.0" y="370.33333333333326" width="274.33333333333331" height="494"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Och-PZ-Zpe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Och-PZ-Zpe" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
                                 <rect key="frame" x="197" y="561" width="180" height="64"/>
                                 <color key="backgroundColor" red="0.74901960779999999" green="0.50588235290000005" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -36,7 +36,7 @@
                                         <fragment content="Sign in">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="20" name="MontserratRoman-Bold"/>
+                                                <font key="NSFont" metaFont="system" size="20"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
@@ -67,7 +67,7 @@
 is here ;)</string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="20" name="MontserratRoman-Bold"/>
+                                            <font key="NSFont" size="20" name="Montserrat-SemiBold"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
@@ -79,7 +79,7 @@ is here ;)</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncw-aW-gg8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncw-aW-gg8" customClass="ClearButton" customModule="Etlas" customModuleProvider="target">
                                 <rect key="frame" x="197" y="644" width="180" height="65"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -91,7 +91,7 @@ is here ;)</string>
                                         <fragment content="Sign up">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="20" name="MontserratRoman-Bold"/>
+                                                <font key="NSFont" metaFont="system" size="20"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
@@ -109,7 +109,7 @@ is here ;)</string>
                                         <string key="content">Is an augmented reality application that helps people to recognize monuments during their tour in anywhere in  the world by only a scan using your mobile camera.</string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="20" name="MontserratRoman-Medium"/>
+                                            <font key="NSFont" size="20" name="Montserrat-Regular"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
@@ -156,6 +156,6 @@ is here ;)</string>
     </scenes>
     <resources>
         <image name="Img_Onboarding" width="318" height="494"/>
-        <image name="OnboradingScreen" width="430" height="932"/>
+        <image name="bg_OnboradingScreen" width="430" height="932"/>
     </resources>
 </document>

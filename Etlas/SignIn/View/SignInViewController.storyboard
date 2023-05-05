@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XK6-qs-SrG">
-                                <rect key="frame" x="52" y="124" width="67" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XK6-qs-SrG">
+                                <rect key="frame" x="24" y="80" width="67" height="23.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="LOG IN">
                                         <attributes>
@@ -30,197 +29,195 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-VJ-xzZ">
-                                <rect key="frame" x="52" y="153" width="81" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-VJ-xzZ">
+                                <rect key="frame" x="24" y="115.5" width="80" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="dJv-rx-XaE"/>
+                                    <constraint firstAttribute="height" constant="1" id="rih-w8-Dph"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6P8-fr-sMo">
-                                <rect key="frame" x="52" y="171" width="187" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6P8-fr-sMo">
+                                <rect key="frame" x="24" y="132.5" width="187" height="17.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Please, Enter Your Account.">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="15" name="MontserratRoman-Regular"/>
+                                            <font key="NSFont" size="15" name="Montserrat-Regular"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd1-jU-WG7">
-                                <rect key="frame" x="51" y="213" width="49" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd1-jU-WG7">
+                                <rect key="frame" x="24" y="174" width="48.5" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="E-mail">
                                         <attributes>
                                             <color key="NSColor" red="0.74901960779999999" green="0.50588235290000005" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="MontserratRoman-SemiBold"/>
+                                            <font key="NSFont" size="17" name="Montserrat-SemiBold"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZq-wy-pkc">
-                                <rect key="frame" x="51" y="242" width="316" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZq-wy-pkc" customClass="CustomTextField" customModule="Etlas" customModuleProvider="target">
+                                <rect key="frame" x="24" y="210" width="366" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uma-da-cmA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" smartInsertDeleteType="yes" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ta-JB-K5W">
-                                <rect key="frame" x="50" y="319" width="309" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ta-JB-K5W" customClass="CustomTextField" customModule="Etlas" customModuleProvider="target">
+                                <rect key="frame" x="24" y="320" width="366" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bv0-ZP-PDG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-Ub-wMU">
-                                <rect key="frame" x="302" y="313" width="57" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.6705882353" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="ic_eye"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyV-vp-YMt">
-                                <rect key="frame" x="220" y="361" width="146" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyV-vp-YMt">
+                                <rect key="frame" x="244" y="378" width="146" height="31.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Forgot password?">
                                             <attributes>
                                                 <color key="NSColor" red="0.6705882352941176" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="15" name="MontserratRoman-SemiBold"/>
+                                                <font key="NSFont" size="15" name="Montserrat-SemiBold"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgotPasswordPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vk2-DR-RBC"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7E-CB-wdh">
-                                <rect key="frame" x="121" y="438" width="27" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="OR">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="18" name="MontserratRoman-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLq-RH-GHQ">
-                                <rect key="frame" x="161" y="438" width="66" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="SIGN IN">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="18" name="MontserratRoman-Bold"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNu-4x-oQ5">
-                                <rect key="frame" x="251" y="438" width="56" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="USING">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="18" name="MontserratRoman-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIC-Hm-m96">
-                                <rect key="frame" x="109" y="475" width="72" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="ic_google" title=""/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqX-h9-WpH">
-                                <rect key="frame" x="261" y="475" width="72" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="ic_facebook"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx0-ZX-IRW">
-                                <rect key="frame" x="181" y="475" width="72" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="ic_twitter" title=""/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oj1-C8-W3E">
-                                <rect key="frame" x="64" y="661" width="85" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="uGM-ls-kgI">
+                                <rect key="frame" x="135.5" y="430" width="143" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR SIGN IN USING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKa-hq-b4N">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="2NW-Im-odE">
+                                <rect key="frame" x="104" y="474.5" width="206" height="61"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIC-Hm-m96">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="61"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_google" title=""/>
+                                        <connections>
+                                            <action selector="googleSignInPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hf4-1r-MPv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx0-ZX-IRW">
+                                        <rect key="frame" x="67" y="0.0" width="72" height="61"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_twitter" title=""/>
+                                        <connections>
+                                            <action selector="twitterSignInPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VVn-EC-OJi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqX-h9-WpH">
+                                        <rect key="frame" x="134" y="0.0" width="72" height="61"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_facebook"/>
+                                        <connections>
+                                            <action selector="facebookSignInPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DfJ-g3-33y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oj1-C8-W3E" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
+                                <rect key="frame" x="24" y="595.5" width="181" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="xCu-bZ-J1z"/>
+                                    <constraint firstAttribute="width" constant="181" id="xRg-GG-Y3B"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Sign In ">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="18" name="MontserratRoman-Bold"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signInPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aQC-P2-G62"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rx-3t-WoI">
-                                <rect key="frame" x="50" y="741" width="184" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rx-3t-WoI">
+                                <rect key="frame" x="24" y="669.5" width="184" height="17.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Don’t have an account yet?">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="15" name="MontserratRoman-SemiBold"/>
+                                            <font key="NSFont" size="15" name="Montserrat-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNk-Ep-Keo">
-                                <rect key="frame" x="52" y="284" width="76" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNk-Ep-Keo">
+                                <rect key="frame" x="24" y="284" width="75.5" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Password">
                                         <attributes>
                                             <color key="NSColor" red="0.74901960779999999" green="0.50588235290000005" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="MontserratRoman-SemiBold"/>
+                                            <font key="NSFont" size="17" name="Montserrat-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp1-Ji-fyd">
-                                <rect key="frame" x="242" y="734" width="78" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-Ub-wMU">
+                                <rect key="frame" x="342" y="320" width="57" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AI2-nq-Is8"/>
+                                </constraints>
+                                <color key="tintColor" red="0.6705882353" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                                <connections>
+                                    <action selector="showPasswordPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Qdv-iW-e2z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp1-Ji-fyd">
+                                <rect key="frame" x="203" y="662.5" width="78" height="31.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Sign">
                                             <attributes>
                                                 <color key="NSColor" red="0.74901960784313726" green="0.50588235294117645" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="15" name="MontserratRoman-SemiBold"/>
+                                                <font key="NSFont" size="15" name="Montserrat-SemiBold"/>
                                                 <font key="NSOriginalFont" size="15" name="ITFDevanagariMarathi-Book"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content=" ">
                                             <attributes>
                                                 <color key="NSColor" red="0.74901960784313726" green="0.50588235294117645" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="15" name="MontserratRoman-SemiBold"/>
+                                                <font key="NSFont" size="15" name="Montserrat-SemiBold"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content="Up">
                                             <attributes>
                                                 <color key="NSColor" red="0.74901960784313726" green="0.50588235294117645" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="15" name="MontserratRoman-SemiBold"/>
+                                                <font key="NSFont" size="15" name="Montserrat-SemiBold"/>
                                                 <font key="NSOriginalFont" size="15" name="ITFDevanagariMarathi-Book"/>
                                             </attributes>
                                         </fragment>
@@ -233,18 +230,61 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.0" green="0.20784313730000001" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2NW-Im-odE" firstAttribute="top" secondItem="uGM-ls-kgI" secondAttribute="bottom" constant="24" id="2Fr-qG-Hcf"/>
+                            <constraint firstItem="fyV-vp-YMt" firstAttribute="top" secondItem="4Ta-JB-K5W" secondAttribute="bottom" constant="8" id="9fa-pk-dPn"/>
+                            <constraint firstItem="2NW-Im-odE" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="DgB-5j-uUw"/>
+                            <constraint firstItem="4Ta-JB-K5W" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="DlO-Cv-stO"/>
+                            <constraint firstItem="UmX-VJ-xzZ" firstAttribute="top" secondItem="XK6-qs-SrG" secondAttribute="bottom" constant="12" id="Fa1-VR-3hy"/>
+                            <constraint firstItem="uGM-ls-kgI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="GLf-Ya-j07"/>
+                            <constraint firstItem="6P8-fr-sMo" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="HEC-vo-4uC"/>
+                            <constraint firstItem="wd1-jU-WG7" firstAttribute="top" secondItem="6P8-fr-sMo" secondAttribute="bottom" constant="24" id="HHT-2q-wCM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Ta-JB-K5W" secondAttribute="trailing" constant="24" id="I6g-0J-hXp"/>
+                            <constraint firstItem="e0E-Ub-wMU" firstAttribute="leading" secondItem="4Ta-JB-K5W" secondAttribute="trailing" constant="-48" id="Kz0-NO-9t7"/>
+                            <constraint firstItem="SNk-Ep-Keo" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="LAz-l6-Bsk"/>
+                            <constraint firstItem="uGM-ls-kgI" firstAttribute="top" secondItem="4Ta-JB-K5W" secondAttribute="bottom" constant="60" id="MtG-eH-cf4"/>
+                            <constraint firstItem="7rx-3t-WoI" firstAttribute="top" secondItem="oj1-C8-W3E" secondAttribute="bottom" constant="16" id="OY1-if-bZK"/>
+                            <constraint firstItem="e0E-Ub-wMU" firstAttribute="top" secondItem="4Ta-JB-K5W" secondAttribute="top" id="R9T-fm-EYU"/>
+                            <constraint firstItem="6P8-fr-sMo" firstAttribute="top" secondItem="UmX-VJ-xzZ" secondAttribute="bottom" constant="16" id="S7e-yL-GyD"/>
+                            <constraint firstItem="UmX-VJ-xzZ" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="bAg-rw-P1h"/>
+                            <constraint firstItem="Cp1-Ji-fyd" firstAttribute="leading" secondItem="7rx-3t-WoI" secondAttribute="trailing" constant="-5" id="dYS-m5-bkN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fyV-vp-YMt" secondAttribute="trailing" constant="24" id="dys-5e-zQL"/>
+                            <constraint firstItem="hZq-wy-pkc" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="f4r-Nu-smW"/>
+                            <constraint firstItem="wd1-jU-WG7" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="i83-ey-bYL"/>
+                            <constraint firstItem="XK6-qs-SrG" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="80" id="iJr-8f-ADS"/>
+                            <constraint firstItem="XK6-qs-SrG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="lt6-LU-jkG"/>
+                            <constraint firstItem="hZq-wy-pkc" firstAttribute="top" secondItem="wd1-jU-WG7" secondAttribute="bottom" constant="16" id="mS2-rz-1TJ"/>
+                            <constraint firstItem="7rx-3t-WoI" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="nja-hR-osO"/>
+                            <constraint firstItem="Cp1-Ji-fyd" firstAttribute="centerY" secondItem="7rx-3t-WoI" secondAttribute="centerY" id="ouU-eW-Fln"/>
+                            <constraint firstItem="oj1-C8-W3E" firstAttribute="top" secondItem="2NW-Im-odE" secondAttribute="bottom" constant="60" id="pE7-Zd-om0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hZq-wy-pkc" secondAttribute="trailing" constant="24" id="pZR-1N-l9S"/>
+                            <constraint firstItem="4Ta-JB-K5W" firstAttribute="top" secondItem="SNk-Ep-Keo" secondAttribute="bottom" constant="16" id="r4Q-0T-pDE"/>
+                            <constraint firstItem="oj1-C8-W3E" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="vtl-bB-JnN"/>
+                            <constraint firstItem="SNk-Ep-Keo" firstAttribute="top" secondItem="hZq-wy-pkc" secondAttribute="bottom" constant="24" id="zF9-HU-udq"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="SignInButton" destination="oj1-C8-W3E" id="ecs-vh-aLd"/>
+                        <outlet property="EnterAccountLabel" destination="6P8-fr-sMo" id="xJE-ax-GVv"/>
+                        <outlet property="dontHaveAccountLabel" destination="7rx-3t-WoI" id="PE6-Re-fmw"/>
+                        <outlet property="emaiTextField" destination="hZq-wy-pkc" id="Xwl-UX-wFQ"/>
+                        <outlet property="emailLabel" destination="wd1-jU-WG7" id="f23-U2-IWm"/>
+                        <outlet property="forgotPasswordButton" destination="fyV-vp-YMt" id="wNE-On-JWv"/>
+                        <outlet property="logInLabel" destination="XK6-qs-SrG" id="qK6-u1-PBN"/>
+                        <outlet property="passwordLabel" destination="SNk-Ep-Keo" id="EBa-zL-f7C"/>
+                        <outlet property="passwordTextField" destination="4Ta-JB-K5W" id="TAL-uW-7Me"/>
+                        <outlet property="showPasswordButton" destination="e0E-Ub-wMU" id="Q7G-42-jjH"/>
+                        <outlet property="signInButton" destination="oj1-C8-W3E" id="ecs-vh-aLd"/>
+                        <outlet property="signInLabel" destination="MKa-hq-b4N" id="PvR-R7-Xt5"/>
+                        <outlet property="signUpButton" destination="Cp1-Ji-fyd" id="a80-Mo-XkP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-522" y="33"/>
+            <point key="canvasLocation" x="-523.1884057971015" y="32.8125"/>
         </scene>
     </scenes>
     <resources>
-        <image name="ic_eye" width="33" height="32"/>
+        <image name="eye" catalog="system" width="128" height="79"/>
         <image name="ic_facebook" width="48" height="47"/>
         <image name="ic_google" width="48" height="47"/>
         <image name="ic_twitter" width="48" height="47"/>

@@ -13,6 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//            window = UIWindow(frame: UIScreen.main.bounds)
+//            window?.makeKeyAndVisible()
+//
+//           if userIsLoggedIn {
+//               let homeViewController = HomeViewController()
+//               window?.rootViewController = homeViewController
+//           } else {
+//               let onboardingViewController = OnboardingViewController()
+//               window?.rootViewController = onboardingViewController
+//           }
         LocalizationManager.shared.delegate = self
         LocalizationManager.shared.setAppInitLanguage()
         return true

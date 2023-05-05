@@ -15,45 +15,10 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LanguageSelection" translatesAutoresizingMaskIntoConstraints="NO" id="Taf-7p-iiM">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHu-gy-Cxh">
-                                <rect key="frame" x="144" y="52" width="105" height="748"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Continue">
-                                            <attributes>
-                                                <font key="NSFont" size="20" name="MontserratRoman-Bold"/>
-                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="continuePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UGc-OH-Aut"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.0" green="0.20784313730000001" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="MHu-gy-Cxh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Kn-V2-Y9o"/>
-                            <constraint firstAttribute="bottom" secondItem="Taf-7p-iiM" secondAttribute="bottom" id="J5S-Cr-rrP"/>
-                            <constraint firstItem="MHu-gy-Cxh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eh7-5e-WB5"/>
-                            <constraint firstItem="MHu-gy-Cxh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gFg-pU-zy2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MHu-gy-Cxh" secondAttribute="bottom" constant="18" id="i6t-vd-ICd"/>
-                            <constraint firstItem="Taf-7p-iiM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lVt-Rm-yQj"/>
-                            <constraint firstItem="Taf-7p-iiM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lY2-4Y-3s4"/>
-                            <constraint firstItem="Taf-7p-iiM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yfj-rB-EIq"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SrO-Zs-IuV"/>
-                    <connections>
-                        <outlet property="continueButton" destination="MHu-gy-Cxh" id="jrL-wF-OuK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,7 +43,4 @@
             <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="LanguageSelection" width="430" height="932"/>
-    </resources>
 </document>
