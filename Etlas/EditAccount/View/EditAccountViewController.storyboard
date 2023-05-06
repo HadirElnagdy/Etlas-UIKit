@@ -28,67 +28,9 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGn-VV-O95">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0L-Bn-z99">
-                                                        <rect key="frame" x="132.66666666666666" y="60" width="127.99999999999997" height="21"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Edit">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="18" name="Montserrat-SemiBold"/>
-                                                                    <real key="NSKern" value="0.0"/>
-                                                                    <font key="NSOriginalFont" size="18" name="MshtakanBold"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                        <tabStops/>
-                                                                    </paragraphStyle>
-                                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                            <fragment content=" ">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="18" name="Montserrat-SemiBold"/>
-                                                                    <real key="NSKern" value="0.0"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                        <tabStops/>
-                                                                    </paragraphStyle>
-                                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                            <fragment content="Information">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="18" name="Montserrat-SemiBold"/>
-                                                                    <real key="NSKern" value="0.0"/>
-                                                                    <font key="NSOriginalFont" size="18" name="MshtakanBold"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                        <tabStops/>
-                                                                    </paragraphStyle>
-                                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <real key="NSStrokeWidth" value="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Br-KN-mlq">
-                                                        <rect key="frame" x="321" y="53.333333333333329" width="48" height="34.333333333333329"/>
-                                                        <color key="tintColor" red="0.0" green="0.20784313730000001" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="black"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="7Br-KN-mlq" secondAttribute="trailing" constant="24" id="7iY-i7-Vgp"/>
                                                     <constraint firstAttribute="height" constant="128" id="Dom-fR-fdp"/>
-                                                    <constraint firstItem="D0L-Bn-z99" firstAttribute="top" secondItem="NGn-VV-O95" secondAttribute="top" constant="60" id="I0D-lL-U3d"/>
-                                                    <constraint firstItem="7Br-KN-mlq" firstAttribute="centerY" secondItem="D0L-Bn-z99" secondAttribute="centerY" id="Ssp-0k-mUY"/>
-                                                    <constraint firstItem="D0L-Bn-z99" firstAttribute="centerX" secondItem="NGn-VV-O95" secondAttribute="centerX" id="rRt-lj-5oh"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YnS-C6-VgL">
@@ -347,7 +289,6 @@
     <resources>
         <image name="bg_EditAccount" width="430" height="932"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

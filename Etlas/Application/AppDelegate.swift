@@ -13,12 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//            window = UIWindow(frame: UIScreen.main.bounds)
-//            window?.makeKeyAndVisible()
-//
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.makeKeyAndVisible()
+
 //           if userIsLoggedIn {
-//               let homeViewController = HomeViewController()
-//               window?.rootViewController = homeViewController
+            let storyborad = UIStoryboard(name: "OnboardingViewController", bundle: nil)
+            let onboardingVC =  storyborad.instantiateViewController(withIdentifier: "OnboardingViewController")
+               window?.rootViewController = onboardingVC
 //           } else {
 //               let onboardingViewController = OnboardingViewController()
 //               window?.rootViewController = onboardingViewController

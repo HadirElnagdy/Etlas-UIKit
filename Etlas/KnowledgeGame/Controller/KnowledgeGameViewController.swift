@@ -2,15 +2,16 @@
 //  KnowledgeGameViewController.swift
 //  Etlas
 //
-//  Created by Hadir on 03/05/2023.
+//  Created by Hadir on 06/05/2023.
 //
 
 import UIKit
 
 class KnowledgeGameViewController: UIViewController {
 
+  
     // MARK: - IBOutlets
-   
+    
 
    
    // MARK: - Lifecycle methods
@@ -26,7 +27,8 @@ class KnowledgeGameViewController: UIViewController {
    
    // MARK: - Private methods
    private func setupUI() {
-       
+      
+
    }
 
 

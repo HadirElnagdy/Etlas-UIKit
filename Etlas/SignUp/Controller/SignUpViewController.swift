@@ -43,10 +43,10 @@ class SignUpViewController: BaseViewController {
             passwordTextField.isSecureTextEntry = true
             fullNameTextField.isSecureTextEntry = false
             emailTextField.isSecureTextEntry = false
-            let attributedString = NSMutableAttributedString(string: "OR SIGN UP USING")
-            let boldFontAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 18.0)!]
-            attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))
-            signUpLabel.attributedText = attributedString
+//            let attributedString = NSMutableAttributedString(string: "OR SIGN UP USING")
+//            let boldFontAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 18.0)!]
+//            attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))
+//            signUpLabel.attributedText = attributedString
 //            passwordTextField.placeholder = "Password".localized
 //            emailTextField.placeholder = "Email".localized
 //            fullNameTextField.placeholder = "Fullname".localized

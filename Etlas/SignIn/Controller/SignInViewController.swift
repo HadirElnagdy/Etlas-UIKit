@@ -51,10 +51,10 @@ class SignInViewController: BaseViewController {
     
     // MARK: - Private methods
        private func setupUI() {
-           let attributedString = NSMutableAttributedString(string: "OR SIGN IN USING")
-           let boldFontAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 18.0)!]
-           attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))
-           signInLabel.attributedText = attributedString
+//           let attributedString = NSMutableAttributedString(string: "OR SIGN IN USING")
+//           let boldFontAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 18.0)!]
+//           attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))
+//           signInLabel.attributedText = attributedString
            passwordTextField.isSecureTextEntry = true
            emaiTextField.isSecureTextEntry = false
 //           logInLabel.text = "Log_In".localized

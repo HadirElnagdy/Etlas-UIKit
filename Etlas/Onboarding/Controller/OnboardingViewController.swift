@@ -35,7 +35,6 @@ class OnboardingViewController: UIViewController {
     // MARK: - Private methods
     private func setupUI() {
         self.navigationController?.navigationBar.isHidden = true
-        signInButton.setTitle("Sign In", for: .normal)
 //        signInButton.setTitle("Sign_In".localized, for: .normal)
 //        signUpButton.setTitle("Sign_Up".localized, for: .normal)
         }
