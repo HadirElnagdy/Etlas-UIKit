@@ -7,16 +7,18 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.text = ""
     }
 }

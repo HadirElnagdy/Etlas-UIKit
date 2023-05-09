@@ -32,6 +32,12 @@ class HomeViewController: BaseViewController {
        
    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //the search when someone press go or return
+    
+         return true
+    }
+
     
 
 

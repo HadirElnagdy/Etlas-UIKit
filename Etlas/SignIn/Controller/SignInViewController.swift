@@ -44,9 +44,9 @@ class SignInViewController: BaseViewController {
     
     
     @IBAction func signInPressed(_ sender: UIButton) {
-                let storyboard: UIStoryboard = UIStoryboard(name: "HomeViewController", bundle: nil)
-                let signUpVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
-                self.present(signUpVC, animated: true)
+        let storyboard: UIStoryboard = UIStoryboard(name: "HomeViewController", bundle: nil)
+        let signUpVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+        self.present(signUpVC, animated: true)
     }
     @IBAction func SignUpPressed(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "SignUpViewController", bundle: nil)
@@ -56,10 +56,10 @@ class SignInViewController: BaseViewController {
     
     // MARK: - Private methods
     private func setupUI() {
-        //           let attributedString = NSMutableAttributedString(string: "OR SIGN IN USING")
-        //           let boldFontAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 18.0)!]
-        //           attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))
-        //           signInLabel.attributedText = attributedString
+        let attributedString = NSMutableAttributedString(string: "OR SIGN IN USING")
+        let boldFontAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 18.0)!]
+        attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))
+        signInLabel.attributedText = attributedString
         passwordTextField.isSecureTextEntry = true
         //           logInLabel.text = "Log_In".localized
         //           EnterAccountLabel.text = "Enter_Account".localized
