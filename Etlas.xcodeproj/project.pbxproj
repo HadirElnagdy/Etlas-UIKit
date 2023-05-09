@@ -23,9 +23,10 @@
 		0457BDB129F6CF3700E2D8F0 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457BDB029F6CF3700E2D8F0 /* LocalizationManager.swift */; };
 		0470619129E741D300114E55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0470619329E741D300114E55 /* Localizable.strings */; };
 		04A2BE5D2A0591A800044C9B /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2BE5C2A0591A800044C9B /* AboutUsViewController.swift */; };
+		04C8C71A2A08031C006D2CC7 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8C7192A08031C006D2CC7 /* CustomTabBarController.swift */; };
+		04C8C7202A084B9A006D2CC7 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8C71F2A084B9A006D2CC7 /* CustomTabBar.swift */; };
 		04CE22572A05A90E004FCCE9 /* BlueTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE22502A05A90D004FCCE9 /* BlueTextField.swift */; };
 		04CE22582A05A90E004FCCE9 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE22512A05A90D004FCCE9 /* BlueButton.swift */; };
-		04CE22592A05A90E004FCCE9 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE22522A05A90D004FCCE9 /* CustomTabBarController.swift */; };
 		04CE225A2A05A90E004FCCE9 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE22532A05A90D004FCCE9 /* ClearButton.swift */; };
 		04CE225B2A05A90E004FCCE9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE22542A05A90D004FCCE9 /* CustomTextField.swift */; };
 		04CE225C2A05A90E004FCCE9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE22552A05A90E004FCCE9 /* BaseViewController.swift */; };
@@ -36,7 +37,8 @@
 		04CE226B2A05A9E4004FCCE9 /* EditAccountViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CE226A2A05A9E4004FCCE9 /* EditAccountViewController.storyboard */; };
 		04CE226F2A05AA30004FCCE9 /* HighestScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE226E2A05AA30004FCCE9 /* HighestScoreViewController.swift */; };
 		04CE22722A05AA45004FCCE9 /* HighestScoreViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CE22712A05AA45004FCCE9 /* HighestScoreViewController.storyboard */; };
-		04EA1C402A065CA5005BB160 /* RatingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1C3F2A065CA5005BB160 /* RatingBar.swift */; };
+		04D319842A09768600CF0C7F /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D319832A09768600CF0C7F /* CustomView.swift */; };
+		04D319A92A098D0300CF0C7F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D319A82A098D0300CF0C7F /* RatingView.swift */; };
 		04EA1C482A066D0B005BB160 /* KnowledgeGameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EA1C472A066D0B005BB160 /* KnowledgeGameViewController.storyboard */; };
 		04EA1C4A2A066D21005BB160 /* KnowledgeGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1C492A066D21005BB160 /* KnowledgeGameViewController.swift */; };
 		04EA1C4E2A066D74005BB160 /* ARModelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1C4D2A066D74005BB160 /* ARModelsViewController.swift */; };
@@ -76,9 +78,10 @@
 		04A2BE432A05903400044C9B /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		04A2BE5B2A05917300044C9B /* AboutUsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutUsViewController.storyboard; sourceTree = "<group>"; };
 		04A2BE5C2A0591A800044C9B /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		04C8C7192A08031C006D2CC7 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		04C8C71F2A084B9A006D2CC7 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		04CE22502A05A90D004FCCE9 /* BlueTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueTextField.swift; sourceTree = "<group>"; };
 		04CE22512A05A90D004FCCE9 /* BlueButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
-		04CE22522A05A90D004FCCE9 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		04CE22532A05A90D004FCCE9 /* ClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		04CE22542A05A90D004FCCE9 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		04CE22552A05A90E004FCCE9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +92,9 @@
 		04CE226A2A05A9E4004FCCE9 /* EditAccountViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditAccountViewController.storyboard; sourceTree = "<group>"; };
 		04CE226E2A05AA30004FCCE9 /* HighestScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighestScoreViewController.swift; sourceTree = "<group>"; };
 		04CE22712A05AA45004FCCE9 /* HighestScoreViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HighestScoreViewController.storyboard; sourceTree = "<group>"; };
-		04EA1C3F2A065CA5005BB160 /* RatingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingBar.swift; sourceTree = "<group>"; };
+		04D319582A08FEAE00CF0C7F /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		04D319832A09768600CF0C7F /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		04D319A82A098D0300CF0C7F /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		04EA1C472A066D0B005BB160 /* KnowledgeGameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KnowledgeGameViewController.storyboard; sourceTree = "<group>"; };
 		04EA1C492A066D21005BB160 /* KnowledgeGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeGameViewController.swift; sourceTree = "<group>"; };
 		04EA1C4D2A066D74005BB160 /* ARModelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARModelsViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +293,7 @@
 				04A2BE402A05903300044C9B /* Montserrat-Regular.ttf */,
 				04A2BE412A05903300044C9B /* Montserrat-SemiBold.ttf */,
 				04A2BE422A05903400044C9B /* Poppins-Regular.ttf */,
+				04D319582A08FEAE00CF0C7F /* Montserrat-Light.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -325,11 +331,13 @@
 				04CE22502A05A90D004FCCE9 /* BlueTextField.swift */,
 				04CE22562A05A90E004FCCE9 /* BrownButton.swift */,
 				04CE22532A05A90D004FCCE9 /* ClearButton.swift */,
-				04CE22522A05A90D004FCCE9 /* CustomTabBarController.swift */,
 				04CE22542A05A90D004FCCE9 /* CustomTextField.swift */,
-				04EA1C3F2A065CA5005BB160 /* RatingBar.swift */,
 				04EA1C572A0682FC005BB160 /* CircleImageView.swift */,
 				04EA1C592A068E26005BB160 /* CustomGrayView.swift */,
+				04C8C7192A08031C006D2CC7 /* CustomTabBarController.swift */,
+				04C8C71F2A084B9A006D2CC7 /* CustomTabBar.swift */,
+				04D319832A09768600CF0C7F /* CustomView.swift */,
+				04D319A82A098D0300CF0C7F /* RatingView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -409,6 +417,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		04D3195A2A090C9100CF0C7F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04D3195B2A090C9C00CF0C7F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04EA1C412A065F19005BB160 /* KnowledgeGame */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +461,8 @@
 		04EA1C442A065F50005BB160 /* CameraScreen */ = {
 			isa = PBXGroup;
 			children = (
+				04D3195B2A090C9C00CF0C7F /* View */,
+				04D3195A2A090C9100CF0C7F /* Controller */,
 			);
 			path = CameraScreen;
 			sourceTree = "<group>";
@@ -622,25 +646,27 @@
 				0457BDB129F6CF3700E2D8F0 /* LocalizationManager.swift in Sources */,
 				04CE22642A05A974004FCCE9 /* HomeViewController.swift in Sources */,
 				040CF66329C4A86A008BC27F /* ViewController.swift in Sources */,
-				04CE22592A05A90E004FCCE9 /* CustomTabBarController.swift in Sources */,
 				040161AD29E43C0B0021F73C /* SignUpViewController.swift in Sources */,
 				04CE225C2A05A90E004FCCE9 /* BaseViewController.swift in Sources */,
 				041F3BB329E4260D00351680 /* OnboardingViewController.swift in Sources */,
 				04CE226F2A05AA30004FCCE9 /* HighestScoreViewController.swift in Sources */,
 				04550A7929F7E7EC00442218 /* SignUpSecondViewController.swift in Sources */,
 				04EA1C4A2A066D21005BB160 /* KnowledgeGameViewController.swift in Sources */,
+				04C8C71A2A08031C006D2CC7 /* CustomTabBarController.swift in Sources */,
 				040CF65F29C4A86A008BC27F /* AppDelegate.swift in Sources */,
 				04EA1C5A2A068E26005BB160 /* CustomGrayView.swift in Sources */,
 				040161B529E43D310021F73C /* SignInViewController.swift in Sources */,
+				04C8C7202A084B9A006D2CC7 /* CustomTabBar.swift in Sources */,
 				04EA1C542A066DE5005BB160 /* SettingsViewController.swift in Sources */,
 				04EA1C582A0682FC005BB160 /* CircleImageView.swift in Sources */,
 				04A2BE5D2A0591A800044C9B /* AboutUsViewController.swift in Sources */,
 				04CE225A2A05A90E004FCCE9 /* ClearButton.swift in Sources */,
-				04EA1C402A065CA5005BB160 /* RatingBar.swift in Sources */,
+				04D319842A09768600CF0C7F /* CustomView.swift in Sources */,
 				04CE22582A05A90E004FCCE9 /* BlueButton.swift in Sources */,
 				040CF66929C4A86A008BC27F /* Etlas.xcdatamodeld in Sources */,
 				04CE22572A05A90E004FCCE9 /* BlueTextField.swift in Sources */,
 				04EA1C4E2A066D74005BB160 /* ARModelsViewController.swift in Sources */,
+				04D319A92A098D0300CF0C7F /* RatingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

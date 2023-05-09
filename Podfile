@@ -5,8 +5,10 @@ target 'Etlas' do
 
 
   # Pods for Etlas
-  pod 'Alamofire'
-  pod 'Kingfisher'
+  pod 'EasyCustomTabBar'
+  pod 'Cosmos'
+  pod "TinyConstraints"
+
 
 
 end

@@ -22,16 +22,16 @@ class SignInViewController: BaseViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     // MARK: - Lifecycle methods
-       override func viewDidLoad() {
-           super.viewDidLoad()
-           setupUI()
-       }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
     
     // MARK: - IBActions
     @IBAction func showPasswordPressed(_ sender: UIButton) {
         passwordTextField.isSecureTextEntry.toggle()
         let imageName = passwordTextField.isSecureTextEntry ? "eye" : "eye.slash"
-            showPasswordButton.setImage(UIImage(systemName: imageName), for: .normal)
+        showPasswordButton.setImage(UIImage(systemName: imageName), for: .normal)
     }
     @IBAction func forgotPasswordPressed(_ sender: UIButton) {
     }
@@ -41,7 +41,12 @@ class SignInViewController: BaseViewController {
     }
     @IBAction func facebookSignInPressed(_ sender: UIButton) {
     }
+    
+    
     @IBAction func signInPressed(_ sender: UIButton) {
+                let storyboard: UIStoryboard = UIStoryboard(name: "HomeViewController", bundle: nil)
+                let signUpVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+                self.present(signUpVC, animated: true)
     }
     @IBAction func SignUpPressed(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "SignUpViewController", bundle: nil)
@@ -50,28 +55,27 @@ class SignInViewController: BaseViewController {
     }
     
     // MARK: - Private methods
-       private func setupUI() {
-//           let attributedString = NSMutableAttributedString(string: "OR SIGN IN USING")
-//           let boldFontAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 18.0)!]
-//           attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))
-//           signInLabel.attributedText = attributedString
-           passwordTextField.isSecureTextEntry = true
-           emaiTextField.isSecureTextEntry = false
-//           logInLabel.text = "Log_In".localized
-//           EnterAccountLabel.text = "Enter_Account".localized
-//           emailLabel.text = "Email".localized
-//           emaiTextField.placeholder = "Email".localized
-//           passwordLabel.text = "Password".localized
-//           passwordTextField.placeholder = "Password".localized
-//           forgotPasswordButton.setTitle("Forgot_Password".localized, for: .normal)
-//           signInLabel.text = "OR_SIGNIN_USING".localized
-//           signInButton.setTitle("Sign_In".localized, for: .normal)
-//           dontHaveAccountLabel.text = "Dont_Have_Account"
-//           signUpButton.setTitle("Sign_Up".localized, for: .normal)
-       }
+    private func setupUI() {
+        //           let attributedString = NSMutableAttributedString(string: "OR SIGN IN USING")
+        //           let boldFontAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 18.0)!]
+        //           attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))
+        //           signInLabel.attributedText = attributedString
+        passwordTextField.isSecureTextEntry = true
+        //           logInLabel.text = "Log_In".localized
+        //           EnterAccountLabel.text = "Enter_Account".localized
+        //           emailLabel.text = "Email".localized
+        //           emaiTextField.placeholder = "Email".localized
+        //           passwordLabel.text = "Password".localized
+        //           passwordTextField.placeholder = "Password".localized
+        //           forgotPasswordButton.setTitle("Forgot_Password".localized, for: .normal)
+        //           signInLabel.text = "OR_SIGNIN_USING".localized
+        //           signInButton.setTitle("Sign_In".localized, for: .normal)
+        //           dontHaveAccountLabel.text = "Dont_Have_Account"
+        //           signUpButton.setTitle("Sign_Up".localized, for: .normal)
+    }
     
-  
-
     
-
+    
+    
+    
 }

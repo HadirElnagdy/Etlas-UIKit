@@ -2,65 +2,47 @@
 //  CustomTabBarController.swift
 //  Etlas
 //
-//  Created by Hadir on 05/05/2023.
+//  Created by Hadir on 07/05/2023.
 //
 
 import UIKit
-class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
-    let customTabBarView = UIView()
-    let button1 = UIButton()
-    let button2 = UIButton()
-    let button3 = UIButton()
 
+class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
+    
+    var tabBarHeight: CGFloat = 80
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.delegate = self
+        self.tabBar.itemPositioning = .centered
+        self.selectedIndex = 0
+        setupMiddleButton()
+    }
+
+    func setupMiddleButton() {
+        let middleButtonWidth: CGFloat = 60
+        let middleButtonHeight: CGFloat = 60
         
-        delegate = self
-
-        // Create custom tab bar view
-        customTabBarView.frame = tabBar.frame
-        customTabBarView.backgroundColor = .white
-        view.addSubview(customTabBarView)
-
-        // Hide default tab bar
-        tabBar.isHidden = true
-
-        // Add buttons to custom tab bar view
-        button1.setTitle("Tab 1", for: .normal)
-        button1.addTarget(self, action: #selector(selectTab1), for: .touchUpInside)
-        customTabBarView.addSubview(button1)
-
-        button2.setTitle("Tab 2", for: .normal)
-        button2.addTarget(self, action: #selector(selectTab2), for: .touchUpInside)
-        customTabBarView.addSubview(button2)
-
-        button3.setTitle("Tab 3", for: .normal)
-        button3.addTarget(self, action: #selector(selectTab3), for: .touchUpInside)
-        customTabBarView.addSubview(button3)
-
-        // Set initial selected index
-        selectedIndex = 0
+        let middleButton = UIButton(frame: CGRect(x: (self.view.bounds.width / 2) - (middleButtonWidth / 2), y: -(middleButtonHeight / 3), width: middleButtonWidth, height: middleButtonHeight))
+        
+        middleButton.setBackgroundImage(UIImage(named: "ic_ScanButton"), for: .normal)
+        middleButton.layer.cornerRadius = 20
+        middleButton.layer.shadowColor = UIColor.black.cgColor
+        middleButton.layer.shadowOpacity = 0.1
+        middleButton.layer.shadowOffset = CGSize(width: 4, height: 4)
+        
+        self.tabBar.addSubview(middleButton)
+        middleButton.addTarget(self, action: #selector(selectMiddleVC), for: .touchUpInside)
+        
+       
+        self.view.layoutIfNeeded()
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
-        // Position buttons in custom tab bar view
-        let buttonWidth = customTabBarView.frame.width / CGFloat(customTabBarView.subviews.count)
-        for (index, button) in customTabBarView.subviews.enumerated() {
-            button.frame = CGRect(x: buttonWidth * CGFloat(index), y: 0, width: buttonWidth, height: customTabBarView.frame.height)
-        }
+    @objc func selectMiddleVC(sender: UIButton) {
+        self.selectedIndex = 2
     }
-
-    @objc func selectTab1() {
-        selectedIndex = 0
-    }
-
-    @objc func selectTab2() {
-        selectedIndex = 1
-    }
-
-    @objc func selectTab3() {
-        selectedIndex = 2
-    }
+    
 }

@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Cosmos
+import TinyConstraints
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
     // MARK: - IBOutlets
-   
-
+    @IBOutlet weak var ratingView: UIView!
+    
    
    // MARK: - Lifecycle methods
    override func viewDidLoad() {
@@ -27,7 +29,10 @@ class HomeViewController: UIViewController {
    // MARK: - Private methods
    private func setupUI() {
        
+       
    }
+    
+    
 
 
 }

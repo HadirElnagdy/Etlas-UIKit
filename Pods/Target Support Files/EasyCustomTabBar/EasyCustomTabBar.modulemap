@@ -1,0 +1,6 @@
+module EasyCustomTabBar {
+  umbrella header "EasyCustomTabBar-umbrella.h"
+
+  export *
+  module * { export * }
+}
