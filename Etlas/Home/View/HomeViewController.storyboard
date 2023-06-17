@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s9N-qM-wMP">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,7 +12,7 @@
         <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i62-uc-Vxa">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="922"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="866"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ky2-0k-vJq">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
@@ -80,9 +80,8 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQy-sg-sPi">
-                                                        <rect key="frame" x="289" y="358.66666666666669" width="80" height="24"/>
+                                                        <rect key="frame" x="291.33333333333331" y="358.66666666666669" width="77.666666666666686" height="24"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="Q6i-Wz-9B1"/>
                                                             <constraint firstAttribute="height" constant="24" id="czs-oB-o21"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
@@ -98,17 +97,51 @@
                                                             </attributedString>
                                                         </buttonConfiguration>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfo-MQ-c4U">
+                                                        <rect key="frame" x="24" y="51.666666666666657" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="Nyt-CS-RRf"/>
+                                                            <constraint firstAttribute="height" constant="30" id="vJy-gq-lN2"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="exclamationmark.circle" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="learnMorePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vqI-6T-K2G"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mth-g9-48J">
+                                                        <rect key="frame" x="172.33333333333334" y="56" width="48.666666666666657" height="21"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Home">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="18" name="Montserrat-SemiBold"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_newHome" translatesAutoresizingMaskIntoConstraints="NO" id="pT7-dC-zdU">
+                                                        <rect key="frame" x="196.33333333333334" y="362" width="40" height="17"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="1uA-Wm-WV9" firstAttribute="top" secondItem="blx-qE-2SX" secondAttribute="bottom" constant="32" id="5Nr-tU-rTz"/>
+                                                    <constraint firstItem="pT7-dC-zdU" firstAttribute="centerY" secondItem="yHg-ie-XkP" secondAttribute="centerY" id="5vK-aK-rwX"/>
+                                                    <constraint firstItem="Sfo-MQ-c4U" firstAttribute="centerY" secondItem="mth-g9-48J" secondAttribute="centerY" id="6oR-f4-KUd"/>
                                                     <constraint firstItem="yHg-ie-XkP" firstAttribute="top" secondItem="1uA-Wm-WV9" secondAttribute="bottom" constant="24" id="Bdv-i7-6Cw"/>
                                                     <constraint firstItem="6MU-aP-nlo" firstAttribute="top" secondItem="Ky2-0k-vJq" secondAttribute="top" constant="120" id="PDT-UE-BXi"/>
+                                                    <constraint firstItem="mth-g9-48J" firstAttribute="centerX" secondItem="Ky2-0k-vJq" secondAttribute="centerX" id="Tgm-dv-GuZ"/>
                                                     <constraint firstItem="yHg-ie-XkP" firstAttribute="leading" secondItem="Ky2-0k-vJq" secondAttribute="leading" constant="24" id="ZIp-XP-M2l"/>
+                                                    <constraint firstItem="pT7-dC-zdU" firstAttribute="leading" secondItem="yHg-ie-XkP" secondAttribute="trailing" constant="8" id="ZcG-Yz-NQq"/>
                                                     <constraint firstItem="1uA-Wm-WV9" firstAttribute="centerX" secondItem="Ky2-0k-vJq" secondAttribute="centerX" id="Zev-nq-WGh"/>
                                                     <constraint firstItem="6MU-aP-nlo" firstAttribute="centerX" secondItem="Ky2-0k-vJq" secondAttribute="centerX" id="g2l-ZF-IeE"/>
                                                     <constraint firstAttribute="trailing" secondItem="EQy-sg-sPi" secondAttribute="trailing" constant="24" id="ghy-9s-iJL"/>
+                                                    <constraint firstItem="Sfo-MQ-c4U" firstAttribute="leading" secondItem="Ky2-0k-vJq" secondAttribute="leading" constant="24" id="knc-ZI-Y9l"/>
                                                     <constraint firstItem="blx-qE-2SX" firstAttribute="centerX" secondItem="Ky2-0k-vJq" secondAttribute="centerX" id="l0m-WA-2gC"/>
+                                                    <constraint firstItem="mth-g9-48J" firstAttribute="top" secondItem="Ky2-0k-vJq" secondAttribute="top" constant="56" id="lWV-rP-09M"/>
                                                     <constraint firstItem="blx-qE-2SX" firstAttribute="top" secondItem="6MU-aP-nlo" secondAttribute="bottom" constant="24" id="lwi-Fx-0Sw"/>
                                                     <constraint firstAttribute="height" constant="400" id="ntI-xv-0XJ"/>
                                                     <constraint firstItem="EQy-sg-sPi" firstAttribute="centerY" secondItem="yHg-ie-XkP" secondAttribute="centerY" id="t11-Db-ly0"/>
@@ -134,12 +167,12 @@
                                                                         <rect key="frame" x="20" y="0.0" width="350" height="130"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ3-z1-8MT">
-                                                                                <rect key="frame" x="148" y="16" width="73" height="21"/>
+                                                                                <rect key="frame" x="148" y="16" width="72.666666666666686" height="21.666666666666671"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment content="Giza tour">
                                                                                         <attributes>
                                                                                             <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                            <font key="NSFont" size="18" name="Montserrat-Medium"/>
+                                                                                            <font key="NSFont" metaFont="system" size="18"/>
                                                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                         </attributes>
                                                                                     </fragment>
@@ -168,7 +201,7 @@ and ride the camels. </string>
                                                                                     <constraint firstAttribute="height" constant="24" id="wJH-B7-yXM"/>
                                                                                 </constraints>
                                                                             </view>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_GizaTour" translatesAutoresizingMaskIntoConstraints="NO" id="fsU-lK-xa5">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_GizaTour" translatesAutoresizingMaskIntoConstraints="NO" id="fsU-lK-xa5">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="130"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="130" id="YVd-Ai-tmg"/>
@@ -194,12 +227,12 @@ and ride the camels. </string>
                                                                         <rect key="frame" x="390" y="0.0" width="350" height="130"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l01-Qr-8uA">
-                                                                                <rect key="frame" x="153" y="16" width="73" height="21"/>
+                                                                                <rect key="frame" x="153" y="16" width="72.666666666666686" height="21.666666666666671"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment content="Giza tour">
                                                                                         <attributes>
                                                                                             <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                            <font key="NSFont" size="18" name="Montserrat-Medium"/>
+                                                                                            <font key="NSFont" metaFont="system" size="18"/>
                                                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                         </attributes>
                                                                                     </fragment>
@@ -254,12 +287,12 @@ and ride the camels. </string>
                                                                         <rect key="frame" x="760" y="0.0" width="350" height="130"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsq-Mn-yPb">
-                                                                                <rect key="frame" x="153" y="16" width="73" height="21"/>
+                                                                                <rect key="frame" x="153" y="16" width="72.666666666666686" height="21.666666666666671"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment content="Giza tour">
                                                                                         <attributes>
                                                                                             <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                            <font key="NSFont" size="18" name="Montserrat-Medium"/>
+                                                                                            <font key="NSFont" metaFont="system" size="18"/>
                                                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                         </attributes>
                                                                                     </fragment>
@@ -314,12 +347,12 @@ and ride the camels. </string>
                                                                         <rect key="frame" x="1130" y="0.0" width="350" height="130"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgR-sA-5ZV">
-                                                                                <rect key="frame" x="148" y="16" width="73" height="21"/>
+                                                                                <rect key="frame" x="148" y="16" width="72.666666666666686" height="21.666666666666671"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment content="Giza tour">
                                                                                         <attributes>
                                                                                             <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                            <font key="NSFont" size="18" name="Montserrat-Medium"/>
+                                                                                            <font key="NSFont" metaFont="system" size="18"/>
                                                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                         </attributes>
                                                                                     </fragment>
@@ -348,7 +381,7 @@ and ride the camels. </string>
                                                                                     <constraint firstAttribute="height" constant="24" id="aEb-Pw-HHm"/>
                                                                                 </constraints>
                                                                             </view>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_GizaTour" translatesAutoresizingMaskIntoConstraints="NO" id="lWi-k6-l6D">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_GizaTour" translatesAutoresizingMaskIntoConstraints="NO" id="lWi-k6-l6D">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="130"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="140" id="460-9i-Cc0"/>
@@ -411,10 +444,9 @@ and ride the camels. </string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogV-RD-X8T">
-                                                        <rect key="frame" x="289" y="30.666666666666629" width="80" height="24"/>
+                                                        <rect key="frame" x="291.33333333333331" y="30.666666666666629" width="77.666666666666686" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="GoI-44-z7l"/>
-                                                            <constraint firstAttribute="width" constant="80" id="WMx-9w-fEu"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain">
@@ -429,10 +461,15 @@ and ride the camels. </string>
                                                             </attributedString>
                                                         </buttonConfiguration>
                                                     </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_newHome" translatesAutoresizingMaskIntoConstraints="NO" id="0pI-yZ-aRf">
+                                                        <rect key="frame" x="210.33333333333334" y="34" width="40" height="17"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="ogV-RD-X8T" firstAttribute="centerY" secondItem="bar-29-MbO" secondAttribute="centerY" id="OXO-VB-KCC"/>
+                                                    <constraint firstItem="0pI-yZ-aRf" firstAttribute="centerY" secondItem="bar-29-MbO" secondAttribute="centerY" id="S55-5A-g5l"/>
+                                                    <constraint firstItem="0pI-yZ-aRf" firstAttribute="leading" secondItem="bar-29-MbO" secondAttribute="trailing" constant="8" id="We0-mv-TKE"/>
                                                     <constraint firstAttribute="height" constant="72" id="nsn-bU-sUz"/>
                                                     <constraint firstItem="bar-29-MbO" firstAttribute="leading" secondItem="GBO-HH-KCf" secondAttribute="leading" constant="24" id="odw-dr-Hsl"/>
                                                     <constraint firstItem="bar-29-MbO" firstAttribute="top" secondItem="GBO-HH-KCf" secondAttribute="top" constant="32" id="ogO-cY-7Kz"/>
@@ -459,19 +496,19 @@ and ride the camels. </string>
                                                                         <rect key="frame" x="20" y="0.0" width="145" height="224"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIA-Qf-rfW">
-                                                                                <rect key="frame" x="8.0000000000000036" y="102" width="49.333333333333343" height="18.666666666666671"/>
+                                                                                <rect key="frame" x="8" y="102" width="50" height="19.333333333333329"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment content="Anubis">
                                                                                         <attributes>
                                                                                             <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                            <font key="NSFont" size="16" name="Montserrat-Medium"/>
+                                                                                            <font key="NSFont" metaFont="system" size="16"/>
                                                                                         </attributes>
                                                                                     </fragment>
                                                                                 </attributedString>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1z-lj-tXA">
-                                                                                <rect key="frame" x="8.0000000000000071" y="128.66666666666663" width="125.66666666666669" height="28"/>
+                                                                                <rect key="frame" x="8.0000000000000071" y="129.33333333333337" width="125.66666666666669" height="28"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment>
                                                                                         <string key="content">Know more about
@@ -526,7 +563,7 @@ Anubis and his powers.</string>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGE-hU-TGz">
-                                                                                <rect key="frame" x="8" y="164.66666666666663" width="66.333333333333329" height="14"/>
+                                                                                <rect key="frame" x="8" y="165.33333333333337" width="66.333333333333329" height="14"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment content="15 Jan 2023">
                                                                                         <attributes>
@@ -568,19 +605,19 @@ Anubis and his powers.</string>
                                                                         <rect key="frame" x="185" y="0.0" width="145" height="224"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2B7-5K-YDZ">
-                                                                                <rect key="frame" x="8.0000000000000036" y="102" width="49.333333333333343" height="18.666666666666671"/>
+                                                                                <rect key="frame" x="8" y="102" width="50" height="19.333333333333329"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment content="Anubis">
                                                                                         <attributes>
                                                                                             <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                            <font key="NSFont" size="16" name="Montserrat-Medium"/>
+                                                                                            <font key="NSFont" metaFont="system" size="16"/>
                                                                                         </attributes>
                                                                                     </fragment>
                                                                                 </attributedString>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6O-nV-Fm3">
-                                                                                <rect key="frame" x="8.0000000000000071" y="128.66666666666663" width="125.66666666666669" height="28"/>
+                                                                                <rect key="frame" x="8.0000000000000071" y="129.33333333333337" width="125.66666666666669" height="28"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment>
                                                                                         <string key="content">Know more about
@@ -635,7 +672,7 @@ Anubis and his powers.</string>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPe-r1-MYq">
-                                                                                <rect key="frame" x="8" y="164.66666666666663" width="66.333333333333329" height="14"/>
+                                                                                <rect key="frame" x="8" y="165.33333333333337" width="66.333333333333329" height="14"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment content="15 Jan 2023">
                                                                                         <attributes>
@@ -677,19 +714,19 @@ Anubis and his powers.</string>
                                                                         <rect key="frame" x="350" y="0.0" width="145" height="224"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLX-aK-Jr3">
-                                                                                <rect key="frame" x="8.0000000000000036" y="102" width="49.333333333333343" height="18.666666666666671"/>
+                                                                                <rect key="frame" x="8" y="102" width="50" height="19.333333333333329"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment content="Anubis">
                                                                                         <attributes>
                                                                                             <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                            <font key="NSFont" size="16" name="Montserrat-Medium"/>
+                                                                                            <font key="NSFont" metaFont="system" size="16"/>
                                                                                         </attributes>
                                                                                     </fragment>
                                                                                 </attributedString>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxc-Qu-it9">
-                                                                                <rect key="frame" x="8.0000000000000071" y="128.66666666666663" width="125.66666666666669" height="28"/>
+                                                                                <rect key="frame" x="8.0000000000000071" y="129.33333333333337" width="125.66666666666669" height="28"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment>
                                                                                         <string key="content">Know more about
@@ -744,7 +781,7 @@ Anubis and his powers.</string>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcQ-Cn-YZs">
-                                                                                <rect key="frame" x="8" y="164.66666666666663" width="66.333333333333329" height="14"/>
+                                                                                <rect key="frame" x="8" y="165.33333333333337" width="66.333333333333329" height="14"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment content="15 Jan 2023">
                                                                                         <attributes>
@@ -786,19 +823,19 @@ Anubis and his powers.</string>
                                                                         <rect key="frame" x="515" y="0.0" width="145" height="224"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03f-A1-xSG">
-                                                                                <rect key="frame" x="8.0000000000000036" y="102" width="49.333333333333343" height="18.666666666666671"/>
+                                                                                <rect key="frame" x="8" y="102" width="50" height="19.333333333333329"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment content="Anubis">
                                                                                         <attributes>
                                                                                             <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                            <font key="NSFont" size="16" name="Montserrat-Medium"/>
+                                                                                            <font key="NSFont" metaFont="system" size="16"/>
                                                                                         </attributes>
                                                                                     </fragment>
                                                                                 </attributedString>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lj-Y2-HsX">
-                                                                                <rect key="frame" x="8.0000000000000071" y="128.66666666666663" width="125.66666666666669" height="28"/>
+                                                                                <rect key="frame" x="8.0000000000000071" y="129.33333333333337" width="125.66666666666669" height="28"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment>
                                                                                         <string key="content">Know more about
@@ -853,7 +890,7 @@ Anubis and his powers.</string>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpr-xQ-y2Y">
-                                                                                <rect key="frame" x="8" y="164.66666666666663" width="66.333333333333329" height="14"/>
+                                                                                <rect key="frame" x="8" y="165.33333333333337" width="66.333333333333329" height="14"/>
                                                                                 <attributedString key="attributedText">
                                                                                     <fragment content="15 Jan 2023">
                                                                                         <attributes>
@@ -915,10 +952,10 @@ Anubis and his powers.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xki-5V-qp8">
-                                                <rect key="frame" x="0.0" y="826" width="393" height="96"/>
+                                                <rect key="frame" x="0.0" y="826" width="393" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="96" id="psW-LO-EAm"/>
+                                                    <constraint firstAttribute="height" constant="40" id="psW-LO-EAm"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -948,22 +985,162 @@ Anubis and his powers.</string>
                             <constraint firstAttribute="bottom" secondItem="DlJ-jc-YZD" secondAttribute="bottom" id="wZu-ET-Nfd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="ic_HomeButton" selectedImage="ic_HomeButton" id="g1u-es-W7q"/>
+                    <tabBarItem key="tabBarItem" title="" image="ic_HomeButton" selectedImage="ic_SelectedHome" id="g1u-es-W7q"/>
                     <connections>
                         <outlet property="ratingView" destination="CVb-Ks-pbQ" id="yoS-tN-eBQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1918.3206106870227" y="-34.507042253521128"/>
+        </scene>
+        <!--Middle ButtonVC View Controller-->
+        <scene sceneID="PI3-bt-kCV">
+            <objects>
+                <tabBarController storyboardIdentifier="TBMiddleButtonVCViewController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="s9N-qM-wMP" customClass="TBMiddleButtonVCViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ppm-qJ-tCI" customClass="CustomTabBar" customModule="Etlas" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="4HD-hq-H63"/>
+                        <segue destination="WyY-pQ-kCC" kind="relationship" relationship="viewControllers" id="8Lj-bu-Dac"/>
+                        <segue destination="9aG-QA-mDI" kind="relationship" relationship="viewControllers" id="K4f-Y0-XYE"/>
+                        <segue destination="Y4C-ZY-V1q" kind="relationship" relationship="viewControllers" id="82l-k9-Adk"/>
+                        <segue destination="dsq-3W-iqB" kind="relationship" relationship="viewControllers" id="TlS-Cf-Ldk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVM-lj-4LP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="991.60305343511448" y="-34.507042253521128"/>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="NVn-zh-SWF">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENM-n5-Hhf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="HomeViewController" referencedIdentifier="HomeViewController" id="AWS-qX-WT6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cap-Qf-EAh"/>
+                </viewControllerPlaceholder>
+            </objects>
+            <point key="canvasLocation" x="156" y="1161"/>
+        </scene>
+        <!--KnowledgeGameViewController-->
+        <scene sceneID="73F-6a-cH2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="KnowledgeGameViewController" referencedIdentifier="KnowledgeGameViewController" id="joj-Ve-5iQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Iad-XE-el8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ed-MP-Ahx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808" y="1172"/>
+        </scene>
+        <!--SettingsViewController-->
+        <scene sceneID="jH6-GS-RCs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SettingsViewController" referencedIdentifier="SettingsViewController" id="aCD-p5-Zfa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="m9a-U4-ZH7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVC-5U-zTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2531" y="1172"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I05-VB-R76">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WyY-pQ-kCC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" enabled="NO" title="" image="ic_AR" selectedImage="ic_AR" id="Pl6-xX-f7G"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RZS-1m-C2Q">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AWS-qX-WT6" kind="relationship" relationship="rootViewController" id="3Kd-qE-MuZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kG-eT-Wyi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="757"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Obb-4u-ngo">
+            <objects>
+                <viewController storyboardIdentifier="EmptyVC" id="9aG-QA-mDI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lZf-mW-5Ds">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="R5O-iF-D06"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="" id="ats-OD-bMN"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NIJ-bL-Uyr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="756"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GoN-pX-d5g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y4C-ZY-V1q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="ic_knowledgeCheckButton" selectedImage="ic_SelectedKnowledgeCheck" id="6Gd-GT-Wu3"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4gY-gG-jip">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="joj-Ve-5iQ" kind="relationship" relationship="rootViewController" id="tFN-hb-WSw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onk-Yt-fkF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808" y="756"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uqf-z1-ww9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dsq-3W-iqB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="ic_settingsButton" selectedImage="ic_SelectedSettings" id="85Y-gV-Js7"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UIS-OF-XYK">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aCD-p5-Zfa" kind="relationship" relationship="rootViewController" id="MIZ-Lb-bcg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pf7-Wu-hFW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2531" y="756"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg_Home" width="430" height="932"/>
         <image name="chevron.forward" catalog="system" width="97" height="128"/>
+        <image name="exclamationmark.circle" catalog="system" width="128" height="123"/>
+        <image name="ic_AR" width="34" height="42"/>
         <image name="ic_HomeButton" width="33" height="32"/>
+        <image name="ic_SelectedHome" width="33" height="42"/>
+        <image name="ic_SelectedKnowledgeCheck" width="32" height="42"/>
+        <image name="ic_SelectedSettings" width="33" height="42"/>
+        <image name="ic_knowledgeCheckButton" width="32" height="32"/>
+        <image name="ic_settingsButton" width="33" height="32"/>
         <image name="img_Anubis" width="155" height="96"/>
         <image name="img_GizaTour" width="116" height="105"/>
+        <image name="img_newHome" width="40" height="17"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

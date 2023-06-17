@@ -25,16 +25,23 @@ class SignUpSecondViewController: BaseViewController {
         self.dismiss(animated: true)
     }
     @IBAction func registerPressed(_ sender: UIButton) {
-        
+        let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
+        let homeVC =  storyborad.instantiateViewController(withIdentifier: "TBMiddleButtonVCViewController")
+        //navigationController?.pushViewController(homeVC, animated: true)
+        self.present(homeVC, animated: true)
+
     }
     @IBAction func signInPressed(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "SignInViewController", bundle: nil)
         let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
-        self.show(signInVC, sender: self)
+        //navigationController?.pushViewController(signInVC, animated: true)
+        self.present(signInVC, animated: true)
+
     }
     
     // MARK: - Private methods
     private func setupUI() {
+        self.navigationController?.navigationBar.isHidden = true
         let attributedString = NSMutableAttributedString(string: "OR SIGN UP USING")
         let boldFontAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 18.0)!]
         attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))

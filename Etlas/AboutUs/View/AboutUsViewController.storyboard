@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gIT-LX-gnC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -11,7 +11,7 @@
         <!--About Us View Controller-->
         <scene sceneID="nDO-BH-5r1">
             <objects>
-                <viewController storyboardIdentifier="AboutUsViewController" id="gIT-LX-gnC" customClass="AboutUsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutUsViewController" id="gIT-LX-gnC" customClass="AboutUsViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0JX-9U-K1b">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,12 +35,24 @@
                                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="bold"/>
                                                             <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="closePressed:" destination="gIT-LX-gnC" eventType="touchUpInside" id="r10-S0-rOR"/>
+                                                        </connections>
                                                     </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_AboutUs(e)" translatesAutoresizingMaskIntoConstraints="NO" id="o8E-Kv-ZpP">
+                                                        <rect key="frame" x="65" y="97" width="263" height="275"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="263" id="KpO-49-q8a"/>
+                                                            <constraint firstAttribute="height" constant="275" id="sCD-it-2kg"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="g1a-CY-H6o" firstAttribute="top" secondItem="2U8-Td-G2z" secondAttribute="top" constant="64" id="4FV-n3-o2D"/>
+                                                    <constraint firstItem="o8E-Kv-ZpP" firstAttribute="centerX" secondItem="2U8-Td-G2z" secondAttribute="centerX" id="84d-G7-AJO"/>
                                                     <constraint firstAttribute="height" constant="380" id="KbK-ce-8R0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="o8E-Kv-ZpP" secondAttribute="bottom" constant="8" id="da7-00-BT3"/>
                                                     <constraint firstAttribute="trailing" secondItem="g1a-CY-H6o" secondAttribute="trailing" constant="24" id="kxT-nI-Z0R"/>
                                                 </constraints>
                                             </view>
@@ -193,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hat-1Y-7MO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="-36"/>
+            <point key="canvasLocation" x="1136.6412213740457" y="-36.619718309859159"/>
         </scene>
     </scenes>
     <resources>
@@ -202,6 +214,7 @@
         <image name="ic_facebook" width="48" height="47"/>
         <image name="ic_google" width="48" height="47"/>
         <image name="ic_twitter" width="48" height="47"/>
+        <image name="img_AboutUs(e)" width="274" height="272"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

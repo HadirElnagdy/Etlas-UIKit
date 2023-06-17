@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Article View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ArticleViewController" id="Y6W-OH-hqX" customClass="ArticleViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_Anubis 1" translatesAutoresizingMaskIntoConstraints="NO" id="AF9-Jj-bxC">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="k3D-8d-pVp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtF-or-HEj">
+                                <rect key="frame" x="337" y="56" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Lgo-Li-Ahg"/>
+                                    <constraint firstAttribute="width" constant="32" id="a5C-U0-8rh"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Psz-ET-RjW"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7EL-1b-VOA">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="s5e-FM-aeh">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1250"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6GN-qK-CqX">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="gdK-Uw-uVM"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hn-jp-mZt">
+                                                <rect key="frame" x="0.0" y="400" width="393" height="850"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LB-ua-KZC">
+                                                        <rect key="frame" x="281" y="16" width="88" height="81"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="ic_FavButton"/>
+                                                        <connections>
+                                                            <action selector="lovePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uk5-bl-xip"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7c5-JW-cch">
+                                                        <rect key="frame" x="24" y="24" width="67.666666666666671" height="25.666666666666671"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Anubis">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.74901960784313726" green="0.50588235294117645" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="22" name="Montserrat-SemiBold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WM-f7-uEc">
+                                                        <rect key="frame" x="24" y="57.666666666666686" width="66.333333333333329" height="14"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="15 Jan 2023">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                                    <font key="NSFont" size="12" name="Montserrat-Regular"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3Y-IR-R2y">
+                                                        <rect key="frame" x="24" y="79" width="329" height="433"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment>
+                                                                <string key="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+has been the industry's standard dummy text ever since the 1500s, when an unknown
+printer took a galley of type and scrambled it to make a type specimen book. It has survived
+not only five centuries, but also the leap into electronic typesetting, remaining essentially
+</string>
+                                                                <attributes>
+                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="18" name="Montserrat-Regular"/>
+                                                                    <real key="NSKern" value="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                        <tabStops/>
+                                                                    </paragraphStyle>
+                                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment>
+                                                                <string key="content">unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+                                                                <attributes>
+                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="18" name="Montserrat-Regular"/>
+                                                                    <real key="NSKern" value="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                        <tabStops/>
+                                                                    </paragraphStyle>
+                                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="7c5-JW-cch" firstAttribute="top" secondItem="1hn-jp-mZt" secondAttribute="top" constant="24" id="8bS-7b-0Qs"/>
+                                                    <constraint firstItem="7c5-JW-cch" firstAttribute="leading" secondItem="1hn-jp-mZt" secondAttribute="leading" constant="24" id="FjI-i3-GJd"/>
+                                                    <constraint firstItem="8WM-f7-uEc" firstAttribute="top" secondItem="7c5-JW-cch" secondAttribute="bottom" constant="8" id="QBL-VT-Cxl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6LB-ua-KZC" secondAttribute="trailing" constant="24" id="bpl-zQ-9zx"/>
+                                                    <constraint firstItem="L3Y-IR-R2y" firstAttribute="leading" secondItem="7c5-JW-cch" secondAttribute="leading" id="fYm-pt-x88"/>
+                                                    <constraint firstItem="8WM-f7-uEc" firstAttribute="leading" secondItem="7c5-JW-cch" secondAttribute="leading" id="gRZ-rh-02b"/>
+                                                    <constraint firstItem="L3Y-IR-R2y" firstAttribute="top" secondItem="8WM-f7-uEc" secondAttribute="bottom" constant="32" id="hkl-uR-0ql"/>
+                                                    <constraint firstItem="6LB-ua-KZC" firstAttribute="top" secondItem="1hn-jp-mZt" secondAttribute="top" constant="16" id="k4s-iO-guX"/>
+                                                    <constraint firstAttribute="height" constant="850" id="t7U-4q-0Wn"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="s5e-FM-aeh" firstAttribute="width" secondItem="cIG-WD-qp1" secondAttribute="width" id="0PD-1M-nPs"/>
+                                    <constraint firstItem="s5e-FM-aeh" firstAttribute="trailing" secondItem="NeZ-ps-VZZ" secondAttribute="trailing" id="JXl-w7-sNO"/>
+                                    <constraint firstItem="s5e-FM-aeh" firstAttribute="top" secondItem="NeZ-ps-VZZ" secondAttribute="top" id="Kfo-2j-IWD"/>
+                                    <constraint firstItem="s5e-FM-aeh" firstAttribute="leading" secondItem="NeZ-ps-VZZ" secondAttribute="leading" id="hRd-8D-km1"/>
+                                    <constraint firstItem="s5e-FM-aeh" firstAttribute="bottom" secondItem="NeZ-ps-VZZ" secondAttribute="bottom" id="rdj-Vt-wV9"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="NeZ-ps-VZZ"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="cIG-WD-qp1"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AF9-Jj-bxC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9hg-71-cbv"/>
+                            <constraint firstItem="7EL-1b-VOA" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="RaL-9y-Tun"/>
+                            <constraint firstItem="7EL-1b-VOA" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Vtf-Qb-Eq7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OtF-or-HEj" secondAttribute="trailing" constant="24" id="Yn5-q2-m9v"/>
+                            <constraint firstItem="AF9-Jj-bxC" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="c0g-iV-iOD"/>
+                            <constraint firstAttribute="trailing" secondItem="7EL-1b-VOA" secondAttribute="trailing" id="fY8-TL-9Lw"/>
+                            <constraint firstAttribute="bottom" secondItem="7EL-1b-VOA" secondAttribute="bottom" id="qd6-nl-KEJ"/>
+                            <constraint firstItem="AF9-Jj-bxC" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="vYh-4M-j95"/>
+                            <constraint firstItem="OtF-or-HEj" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="56" id="vgU-eh-q5j"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="1000"/>
+                    <connections>
+                        <outlet property="blueView" destination="1hn-jp-mZt" id="uDk-jm-D1s"/>
+                        <outlet property="loveButton" destination="6LB-ua-KZC" id="i4r-Mq-7ad"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.37404580152672" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <image name="ic_FavButton" width="64" height="67"/>
+        <image name="img_Anubis 1" width="430" height="429"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

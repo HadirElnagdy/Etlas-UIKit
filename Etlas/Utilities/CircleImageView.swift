@@ -11,7 +11,7 @@ class CircleImageView: UIImageView {
     
     // MARK: - Properties
     
-    private let grayTintColor = UIColor.gray.withAlphaComponent(0.5)
+    private let grayTintColor = UIColor.darkGray.withAlphaComponent(1.0)
     
     // MARK: - Initializers
     
@@ -35,8 +35,7 @@ class CircleImageView: UIImageView {
         clipsToBounds = true
         
         // Set the gray tint color and add a tap gesture recognizer
-        image = UIImage(named: "photo")?.withRenderingMode(.alwaysTemplate)
-        tintColor = grayTintColor
+        //image = UIImage(named: "img_GizaTour")?.withRenderingMode(.alwaysTemplate)
         isUserInteractionEnabled = true
 //        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapImageView)))
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,7 +12,7 @@
         <!--Edit Account View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="EditAccountViewController" id="Y6W-OH-hqX" customClass="EditAccountViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditAccountViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="EditAccountViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,15 +28,48 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGn-VV-O95">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHO-xs-DHu">
+                                                        <rect key="frame" x="132.66666666666666" y="56" width="127.99999999999997" height="21"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Edit Information">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.050980392159999999" green="0.1960784314" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="18" name="Montserrat-SemiBold"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npa-BC-rnK">
+                                                        <rect key="frame" x="341" y="52.666666666666657" width="28" height="28"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="28" id="3CV-4o-eHN"/>
+                                                            <constraint firstAttribute="height" constant="28" id="Uvb-zW-gWO"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="closePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5Iq-rx-oBp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="QHO-xs-DHu" firstAttribute="centerX" secondItem="NGn-VV-O95" secondAttribute="centerX" id="0tW-tm-nok"/>
                                                     <constraint firstAttribute="height" constant="128" id="Dom-fR-fdp"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Npa-BC-rnK" secondAttribute="trailing" constant="24" id="aC3-lL-rJu"/>
+                                                    <constraint firstItem="Npa-BC-rnK" firstAttribute="centerY" secondItem="QHO-xs-DHu" secondAttribute="centerY" id="cEm-2a-YCC"/>
+                                                    <constraint firstItem="QHO-xs-DHu" firstAttribute="top" secondItem="NGn-VV-O95" secondAttribute="top" constant="56" id="jka-2R-jEa"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YnS-C6-VgL">
                                                 <rect key="frame" x="0.0" y="128" width="393" height="575"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pD-5l-e4p" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pD-5l-e4p" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
                                                         <rect key="frame" x="24" y="53" width="345" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="bge-XO-6G9"/>
@@ -45,7 +78,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8B-GO-Be7" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8B-GO-Be7" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
                                                         <rect key="frame" x="24" y="273" width="345" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Tvk-Uy-Ssl"/>
@@ -54,7 +87,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="password"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oh6-Pe-ab2" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oh6-Pe-ab2" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
                                                         <rect key="frame" x="24" y="163" width="345" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="AWc-he-XQC"/>
@@ -136,6 +169,9 @@
                                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                                                        <connections>
+                                                            <action selector="editFullNamePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mgU-Ly-loI"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCc-A9-dED">
                                                         <rect key="frame" x="327" y="281" width="42" height="34"/>
@@ -146,6 +182,9 @@
                                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                                                        <connections>
+                                                            <action selector="editPasswordPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1M0-ge-uGw"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ5-78-Pw7">
                                                         <rect key="frame" x="327" y="171" width="42" height="34"/>
@@ -156,8 +195,11 @@
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                                                        <connections>
+                                                            <action selector="editEmailPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6Lk-5Q-Fnd"/>
+                                                        </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEt-yS-6o1" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEt-yS-6o1" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
                                                         <rect key="frame" x="24" y="383" width="345" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="dgJ-Ja-YyT"/>
@@ -166,7 +208,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="tel"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AfK-qW-07G" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AfK-qW-07G" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
                                                         <rect key="frame" x="24" y="493" width="345" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="345" id="Rmf-2o-bUS"/>
@@ -184,6 +226,9 @@
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                                                        <connections>
+                                                            <action selector="editPhonePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LSS-50-eR6"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihs-gC-KGa">
                                                         <rect key="frame" x="327" y="501" width="42" height="34"/>
@@ -194,6 +239,9 @@
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                                                        <connections>
+                                                            <action selector="editAddressPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HJf-mt-Fcn"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -244,6 +292,9 @@
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                                        <connections>
+                                                            <action selector="savePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jUI-Jk-QVS"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -280,6 +331,18 @@
                             <constraint firstItem="s9W-Ql-hbx" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="izI-pw-fok"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="AfK-qW-07G" id="grH-JR-1op"/>
+                        <outlet property="editAddressButton" destination="ihs-gC-KGa" id="ZzE-AY-zbk"/>
+                        <outlet property="editEmailButton" destination="dZ5-78-Pw7" id="ogR-k8-Lkf"/>
+                        <outlet property="editFullNameButton" destination="l6R-4X-YOw" id="yij-Pc-Caa"/>
+                        <outlet property="editPasswordButton" destination="GCc-A9-dED" id="sWc-pl-nQy"/>
+                        <outlet property="editPhoneButton" destination="KeW-o4-ntv" id="lIY-CY-b2d"/>
+                        <outlet property="emailTextField" destination="oh6-Pe-ab2" id="HR6-tt-3Lr"/>
+                        <outlet property="fullNameTextField" destination="1pD-5l-e4p" id="ccl-qK-f1T"/>
+                        <outlet property="passwordTextField" destination="n8B-GO-Be7" id="sab-GV-bMY"/>
+                        <outlet property="phoneTextField" destination="VEt-yS-6o1" id="eQe-Jq-gHu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -289,6 +352,7 @@
     <resources>
         <image name="bg_EditAccount" width="430" height="932"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

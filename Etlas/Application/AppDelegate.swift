@@ -17,15 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             window?.makeKeyAndVisible()
 
 //           if userIsLoggedIn {
-            let storyborad = UIStoryboard(name: "OnboardingViewController", bundle: nil)
-            let onboardingVC =  storyborad.instantiateViewController(withIdentifier: "OnboardingViewController")
-               window?.rootViewController = onboardingVC
+//            let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
+//            let onboardingVC =  storyborad.instantiateViewController(withIdentifier: "TBMiddleButtonVCViewController")
+//               window?.rootViewController = onboardingVC
 //           } else {
-//               let onboardingViewController = OnboardingViewController()
-//               window?.rootViewController = onboardingViewController
+                let storyborad = UIStoryboard(name: "OnboardingViewController", bundle: nil)
+               let onboardingViewController = storyborad.instantiateViewController(withIdentifier: "OnboardingViewController")
+               window?.rootViewController = onboardingViewController
 //           }
-        LocalizationManager.shared.delegate = self
-        LocalizationManager.shared.setAppInitLanguage()
+//        LocalizationManager.shared.delegate = self
+//        LocalizationManager.shared.setAppInitLanguage()
         return true
     }
 
@@ -77,13 +78,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     }
 
 }
-
-extension AppDelegate: LocalizationDelegate{
-    func resetApp() {
-//        guard let window = window else {return}
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "ViewController")
-//        window.rootViewController = vc
-//        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve ,animations: nil, completion: nil)
-    }
-}
+//
+//extension AppDelegate: LocalizationDelegate{
+//    func resetApp() {
+////        guard let window = window else {return}
+////        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+////        let vc = storyboard.instantiateViewController(withIdentifier: "ViewController")
+////        window.rootViewController = vc
+////        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve ,animations: nil, completion: nil)
+//    }
+//}

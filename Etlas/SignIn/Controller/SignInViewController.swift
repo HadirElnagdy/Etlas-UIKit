@@ -34,6 +34,11 @@ class SignInViewController: BaseViewController {
         showPasswordButton.setImage(UIImage(systemName: imageName), for: .normal)
     }
     @IBAction func forgotPasswordPressed(_ sender: UIButton) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "ForgotPasswordViewController", bundle: nil)
+        let forgotPWVC = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController")
+      //  navigationController?.pushViewController(forgotPWVC, animated: true)
+        self.present(forgotPWVC, animated: true)
+        
     }
     @IBAction func googleSignInPressed(_ sender: UIButton) {
     }
@@ -44,18 +49,23 @@ class SignInViewController: BaseViewController {
     
     
     @IBAction func signInPressed(_ sender: UIButton) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "HomeViewController", bundle: nil)
-        let signUpVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
-        self.present(signUpVC, animated: true)
+        let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
+        let homeVC =  storyborad.instantiateViewController(withIdentifier: "TBMiddleButtonVCViewController")
+        //navigationController?.pushViewController(homeVC, animated: true)
+        self.present(homeVC, animated: true)
+
     }
-    @IBAction func SignUpPressed(_ sender: UIButton) {
+    @IBAction func signUpPressed(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "SignUpViewController", bundle: nil)
         let signUpVC = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
-        self.show(signUpVC, sender: self)
+       // navigationController?.pushViewController(signUpVC, animated: true)
+        self.present(signUpVC, animated: true)
+
     }
     
     // MARK: - Private methods
     private func setupUI() {
+        self.navigationController?.navigationBar.isHidden = true
         let attributedString = NSMutableAttributedString(string: "OR SIGN IN USING")
         let boldFontAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 18.0)!]
         attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))

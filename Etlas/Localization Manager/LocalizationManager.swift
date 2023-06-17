@@ -85,14 +85,15 @@ class LocalizationManager: NSObject{
     }
     
     //reset app for the new language
-    func resetApp(){
+    func resetApp() {
         let dir = getLanguageDirection()
         var semantic: UISemanticContentAttribute
         switch dir{
             case .leftToRight:
                 semantic = .forceLeftToRight
             case .rightToLeft:
-                semantic = .forceRightToLeft
+            /// hnb2a nghyayrha to semantic = .forceRightToLeft
+                semantic = .forceLeftToRight
         }
         UITabBar.appearance().semanticContentAttribute = semantic
         UIView.appearance().semanticContentAttribute = semantic
@@ -109,7 +110,7 @@ class LocalizationManager: NSObject{
             let languageCode = Locale.preferredLanguages.first
             if let code = languageCode, let language = isLanguageAvailable(code) {
                 setLanguage(language: language)
-            }else{
+            } else {
                 //default fallback
                 setLanguage(language: .English)
             }

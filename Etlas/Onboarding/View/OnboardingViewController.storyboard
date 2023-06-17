@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ufR-le-IKL">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -11,17 +11,13 @@
         <!--Onboarding View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="OnboardingViewController" id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_OnboradingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="RnF-Lc-40A">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_OnboradingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="RnF-Lc-40A">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_Onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="6Sj-JQ-ytG">
-                                <rect key="frame" x="0.0" y="370.33333333333326" width="274.33333333333331" height="494"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Och-PZ-Zpe" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
                                 <rect key="frame" x="197" y="561" width="180" height="64"/>
@@ -67,7 +63,7 @@
 is here ;)</string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="20" name="Montserrat-SemiBold"/>
+                                            <font key="NSFont" size="20" name="Montserrat-Bold"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
@@ -108,7 +104,7 @@ is here ;)</string>
                                     <fragment>
                                         <string key="content">Is an augmented reality application that helps people to recognize monuments during their tour in anywhere in  the world by only a scan using your mobile camera.</string>
                                         <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="20" name="Montserrat-Regular"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -121,10 +117,18 @@ is here ;)</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_Onboarding 1" translatesAutoresizingMaskIntoConstraints="NO" id="Bpl-BT-xil">
+                                <rect key="frame" x="0.0" y="354.33333333333326" width="283" height="497"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="497" id="SB8-iT-FdO"/>
+                                    <constraint firstAttribute="width" constant="283" id="xfa-sJ-yv7"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.0" green="0.20784313730000001" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Bpl-BT-xil" firstAttribute="top" secondItem="R5P-QJ-nEo" secondAttribute="bottom" constant="16" id="1YQ-X1-fQs"/>
                             <constraint firstItem="BhU-Jt-i08" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="1bA-ls-mbq"/>
                             <constraint firstItem="zKV-lx-Cj0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="22J-tD-Q8o"/>
                             <constraint firstItem="R5P-QJ-nEo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="2EE-1C-hC3"/>
@@ -132,17 +136,22 @@ is here ;)</string>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ncw-aW-gg8" secondAttribute="bottom" constant="109" id="FYK-dp-a6j"/>
                             <constraint firstItem="zKV-lx-Cj0" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="88" id="IgZ-DE-77p"/>
                             <constraint firstItem="BhU-Jt-i08" firstAttribute="top" secondItem="zKV-lx-Cj0" secondAttribute="bottom" constant="8" symbolic="YES" id="KWB-qJ-VhW"/>
-                            <constraint firstItem="6Sj-JQ-ytG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LIc-2T-o1w"/>
+                            <constraint firstItem="RnF-Lc-40A" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Pce-ZY-Q3x"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BhU-Jt-i08" secondAttribute="trailing" constant="24" id="PyP-qF-hLX"/>
+                            <constraint firstAttribute="bottom" secondItem="RnF-Lc-40A" secondAttribute="bottom" id="TBh-b0-fnN"/>
+                            <constraint firstItem="RnF-Lc-40A" firstAttribute="centerX" secondItem="BhU-Jt-i08" secondAttribute="centerX" id="V3Q-eP-1Uq"/>
+                            <constraint firstItem="Bpl-BT-xil" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="YNQ-dD-Ipy"/>
                             <constraint firstItem="Ncw-aW-gg8" firstAttribute="top" secondItem="Och-PZ-Zpe" secondAttribute="bottom" constant="19" id="bCc-tv-WX9"/>
+                            <constraint firstItem="RnF-Lc-40A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fXo-i8-lDQ"/>
                             <constraint firstItem="Ncw-aW-gg8" firstAttribute="trailing" secondItem="Och-PZ-Zpe" secondAttribute="trailing" id="ijb-M8-7Rk"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6Sj-JQ-ytG" secondAttribute="trailing" constant="118.67" id="sYz-6j-O9i"/>
+                            <constraint firstItem="RnF-Lc-40A" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="qNb-eZ-S4D"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="R5P-QJ-nEo" secondAttribute="trailing" constant="69" id="tCI-Le-BCK"/>
-                            <constraint firstItem="6Sj-JQ-ytG" firstAttribute="top" secondItem="R5P-QJ-nEo" secondAttribute="bottom" constant="32" id="xVQ-ub-HMP"/>
+                            <constraint firstItem="RnF-Lc-40A" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="wdg-tP-NZx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Och-PZ-Zpe" secondAttribute="trailing" constant="16" id="zZW-y9-mjc"/>
                             <constraint firstItem="R5P-QJ-nEo" firstAttribute="top" secondItem="BhU-Jt-i08" secondAttribute="bottom" constant="23" id="zmp-TI-eHO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Nj8-x9-UOV"/>
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
                         <outlet property="signInButton" destination="Och-PZ-Zpe" id="Djd-cX-kMC"/>
@@ -151,11 +160,29 @@ is here ;)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122.90076335877862" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1976.3358778625955" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Y1h-yU-vLn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ufR-le-IKL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t4U-Nb-awa">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="vfN-wG-2a3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dug-Ax-gb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049.6183206106871" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Img_Onboarding" width="318" height="494"/>
+        <image name="Img_Onboarding 1" width="318" height="494"/>
         <image name="bg_OnboradingScreen" width="430" height="932"/>
     </resources>
 </document>

@@ -12,7 +12,7 @@
         <!--Highest Score View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HighestScoreViewController" id="Y6W-OH-hqX" customClass="HighestScoreViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HighestScoreViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="HighestScoreViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,9 +28,32 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ifg-7Y-J2G">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-hn-reX">
+                                                        <rect key="frame" x="321.66666666666669" y="49" width="47.333333333333314" height="34.333333333333343"/>
+                                                        <color key="tintColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="closePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3pJ-om-Rep"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvU-Fk-jwH">
+                                                        <rect key="frame" x="156" y="56.000000000000007" width="81" height="20.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="8Mg-VK-x2m"/>
+                                                    <constraint firstItem="A1p-hn-reX" firstAttribute="centerY" secondItem="bvU-Fk-jwH" secondAttribute="centerY" id="EgE-Rz-mRU"/>
+                                                    <constraint firstItem="bvU-Fk-jwH" firstAttribute="centerX" secondItem="Ifg-7Y-J2G" secondAttribute="centerX" id="IUQ-Fx-ESV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="A1p-hn-reX" secondAttribute="trailing" constant="24" id="VMv-Sk-KAt"/>
+                                                    <constraint firstItem="bvU-Fk-jwH" firstAttribute="top" secondItem="Ifg-7Y-J2G" secondAttribute="top" constant="56" id="rwW-wS-Aob"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kns-pe-oo7">
@@ -40,24 +63,24 @@
                                                         <rect key="frame" x="21.666666666666657" y="10" width="350" height="380"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt5-5Q-EsB">
-                                                                <rect key="frame" x="147" y="48.000000000000007" width="55.666666666666657" height="116.66666666666669"/>
+                                                                <rect key="frame" x="144.66666666666669" y="48.000000000000007" width="60.666666666666657" height="119.66666666666669"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="0">
                                                                         <attributes>
                                                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <font key="NSFont" size="100" name="Montserrat-Bold"/>
+                                                                            <font key="NSFont" metaFont="system" size="100"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iw5-IX-TBR">
-                                                                <rect key="frame" x="55.666666666666671" y="188.66666666666669" width="238.66666666666663" height="35"/>
+                                                                <rect key="frame" x="55.666666666666671" y="191.66666666666669" width="238.66666666666663" height="35"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="is your total score">
                                                                         <attributes>
                                                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <font key="NSFont" size="30" name="Montserrat-Regular"/>
+                                                                            <font key="NSFont" size="30" name="Montserrat-Medium"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
@@ -72,16 +95,15 @@
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn1-a4-iMG">
-                                                                <rect key="frame" x="95" y="296" width="160" height="40"/>
+                                                                <rect key="frame" x="101" y="296" width="148" height="40"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="IUX-Au-Qnu"/>
-                                                                    <constraint firstAttribute="width" constant="160" id="n1Q-rB-VnB"/>
                                                                 </constraints>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Best Score">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.74901960784313726" green="0.50588235294117645" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <font key="NSFont" size="30" name="Montserrat-Medium"/>
+                                                                            <font key="NSFont" size="30" name="Montserrat-SemiBold"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -123,7 +145,7 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="Want to record a new score?">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" size="20" name="Montserrat-Bold"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -140,6 +162,9 @@
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Play Now!"/>
+                                                        <connections>
+                                                            <action selector="playNowPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HVP-d4-aik"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -189,6 +214,7 @@
     </scenes>
     <resources>
         <image name="bg_HighestScore" width="430" height="932"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

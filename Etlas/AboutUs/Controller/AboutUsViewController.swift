@@ -20,7 +20,10 @@ class AboutUsViewController: UIViewController {
    }
    
    // MARK: - IBActions
-   
+    @IBAction func closePressed(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
 
 
    

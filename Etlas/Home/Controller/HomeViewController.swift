@@ -22,12 +22,17 @@ class HomeViewController: BaseViewController {
    }
    
    // MARK: - IBActions
-   
-
-
+    @IBAction func learnMorePressed(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "MainMenuViewController", bundle: nil)
+        let VC = storyboard.instantiateViewController(identifier: "MainMenuViewController")
+        self.present(VC, animated: true)
+        
+    }
+    
    
    // MARK: - Private methods
    private func setupUI() {
+       self.navigationController?.navigationBar.isHidden = true
        
        
    }

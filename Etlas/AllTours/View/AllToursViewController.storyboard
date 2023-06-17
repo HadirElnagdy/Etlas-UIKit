@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--All Tours View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AllToursViewController" id="Y6W-OH-hqX" customClass="AllToursViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwh-RG-Tad">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="210"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="znc-1n-AvZ" customClass="CustomTextField" customModule="Etlas" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="117" width="265" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="ls5-ef-ovF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cL-xl-52E">
+                                        <rect key="frame" x="305" y="117" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="Kqu-fp-CsN"/>
+                                            <constraint firstAttribute="height" constant="64" id="sdi-fV-aEn"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_Filter"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeF-Fo-1Tx">
+                                        <rect key="frame" x="337" y="50.666666666666657" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="2eL-LD-RKh"/>
+                                            <constraint firstAttribute="height" constant="32" id="XDb-uX-7rk"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lm1-5b-3XC">
+                                        <rect key="frame" x="24" y="50.666666666666657" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="Wbw-I8-Iam"/>
+                                            <constraint firstAttribute="height" constant="32" id="Zgi-HO-bOu"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="exclamationmark.circle" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWb-rt-WIz">
+                                        <rect key="frame" x="174.66666666666666" y="56" width="44" height="21"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Tours">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="18" name="Montserrat-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3cL-xl-52E" firstAttribute="centerY" secondItem="znc-1n-AvZ" secondAttribute="centerY" id="1qM-vH-aQB"/>
+                                    <constraint firstItem="Lm1-5b-3XC" firstAttribute="leading" secondItem="Fwh-RG-Tad" secondAttribute="leading" constant="24" id="44v-CD-jFE"/>
+                                    <constraint firstAttribute="trailing" secondItem="3cL-xl-52E" secondAttribute="trailing" constant="24" id="6Uz-4x-HXo"/>
+                                    <constraint firstItem="3cL-xl-52E" firstAttribute="leading" secondItem="znc-1n-AvZ" secondAttribute="trailing" constant="16" id="EGe-bC-MLC"/>
+                                    <constraint firstAttribute="height" constant="210" id="EnC-Iz-ceJ"/>
+                                    <constraint firstItem="Lm1-5b-3XC" firstAttribute="centerY" secondItem="VWb-rt-WIz" secondAttribute="centerY" id="F06-WO-OOD"/>
+                                    <constraint firstItem="DeF-Fo-1Tx" firstAttribute="centerY" secondItem="VWb-rt-WIz" secondAttribute="centerY" id="Lwp-Ug-XND"/>
+                                    <constraint firstItem="VWb-rt-WIz" firstAttribute="centerX" secondItem="Fwh-RG-Tad" secondAttribute="centerX" id="TcA-gO-hV7"/>
+                                    <constraint firstAttribute="trailing" secondItem="DeF-Fo-1Tx" secondAttribute="trailing" constant="24" id="bni-If-xLX"/>
+                                    <constraint firstItem="znc-1n-AvZ" firstAttribute="top" secondItem="VWb-rt-WIz" secondAttribute="bottom" constant="40" id="nNu-Vz-hnJ"/>
+                                    <constraint firstItem="VWb-rt-WIz" firstAttribute="top" secondItem="Fwh-RG-Tad" secondAttribute="top" constant="56" id="u8G-82-iuT"/>
+                                    <constraint firstItem="znc-1n-AvZ" firstAttribute="leading" secondItem="Fwh-RG-Tad" secondAttribute="leading" constant="24" id="xni-sR-1QG"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a7V-gz-GYh">
+                                <rect key="frame" x="0.0" y="210" width="393" height="528"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fwh-RG-Tad" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="0W6-pM-nfS"/>
+                            <constraint firstItem="a7V-gz-GYh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6el-aX-gTm"/>
+                            <constraint firstItem="a7V-gz-GYh" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="bbj-ld-SlF"/>
+                            <constraint firstItem="Fwh-RG-Tad" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="fbq-DW-Q4u"/>
+                            <constraint firstItem="a7V-gz-GYh" firstAttribute="top" secondItem="Fwh-RG-Tad" secondAttribute="bottom" id="gj8-Wp-4VM"/>
+                            <constraint firstItem="Fwh-RG-Tad" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="okS-iN-rM7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="a7V-gz-GYh" secondAttribute="bottom" constant="80" id="pWE-ih-bHW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="toursTableView" destination="a7V-gz-GYh" id="raF-pM-lDg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.37404580152672" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <image name="exclamationmark.circle" catalog="system" width="128" height="123"/>
+        <image name="ic_Filter" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -12,13 +12,13 @@
         <!--Sign In View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SignInViewController" id="Y6W-OH-hqX" customClass="SignInViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="SignInViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XK6-qs-SrG">
-                                <rect key="frame" x="24" y="80" width="67" height="23.5"/>
+                                <rect key="frame" x="24" y="80" width="67" height="23.333333333333329"/>
                                 <attributedString key="attributedText">
                                     <fragment content="LOG IN">
                                         <attributes>
@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-VJ-xzZ">
-                                <rect key="frame" x="24" y="115.5" width="80" height="1"/>
+                                <rect key="frame" x="24" y="116.33333333333333" width="80" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="dJv-rx-XaE"/>
@@ -38,7 +38,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6P8-fr-sMo">
-                                <rect key="frame" x="24" y="132.5" width="187" height="17.5"/>
+                                <rect key="frame" x="24" y="133.33333333333334" width="187" height="17.666666666666657"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Please, Enter Your Account.">
                                         <attributes>
@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd1-jU-WG7">
-                                <rect key="frame" x="24" y="174" width="48.5" height="20"/>
+                                <rect key="frame" x="24.000000000000004" y="175" width="48.333333333333343" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="E-mail">
                                         <attributes>
@@ -62,15 +62,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZq-wy-pkc" customClass="CustomTextField" customModule="Etlas" customModuleProvider="target">
-                                <rect key="frame" x="24" y="210" width="366" height="50"/>
+                                <rect key="frame" x="24" y="211" width="345" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="uma-da-cmA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" smartInsertDeleteType="yes" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ta-JB-K5W" customClass="CustomTextField" customModule="Etlas" customModuleProvider="target">
-                                <rect key="frame" x="24" y="320" width="366" height="50"/>
+                                <rect key="frame" x="24" y="321" width="345" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bv0-ZP-PDG"/>
                                 </constraints>
@@ -78,7 +78,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyV-vp-YMt">
-                                <rect key="frame" x="244" y="378" width="146" height="31.5"/>
+                                <rect key="frame" x="223" y="379" width="146" height="31.666666666666686"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -92,41 +92,41 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="forgotPasswordPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vk2-DR-RBC"/>
+                                    <action selector="forgotPasswordPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Na4-gy-xTv"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="uGM-ls-kgI">
-                                <rect key="frame" x="135.5" y="430" width="143" height="20.5"/>
+                                <rect key="frame" x="125" y="431" width="143" height="20.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR SIGN IN USING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKa-hq-b4N">
-                                        <rect key="frame" x="0.0" y="0.0" width="143" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="2NW-Im-odE">
-                                <rect key="frame" x="104" y="474.5" width="206" height="61"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2NW-Im-odE">
+                                <rect key="frame" x="137.66666666666666" y="475.33333333333331" width="118" height="53.999999999999943"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIC-Hm-m96">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="61"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="8It-sq-vJx"/>
+                                            <constraint firstAttribute="height" constant="54" id="iXG-qt-m3N"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="ic_google" title=""/>
                                         <connections>
                                             <action selector="googleSignInPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hf4-1r-MPv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx0-ZX-IRW">
-                                        <rect key="frame" x="67" y="0.0" width="72" height="61"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="ic_twitter" title=""/>
-                                        <connections>
-                                            <action selector="twitterSignInPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VVn-EC-OJi"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqX-h9-WpH">
-                                        <rect key="frame" x="134" y="0.0" width="72" height="61"/>
+                                        <rect key="frame" x="64" y="0.0" width="54" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="ITP-aX-tRb"/>
+                                            <constraint firstAttribute="width" constant="54" id="Vit-wp-1ef"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="ic_facebook"/>
                                         <connections>
@@ -136,7 +136,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oj1-C8-W3E" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
-                                <rect key="frame" x="24" y="595.5" width="181" height="58"/>
+                                <rect key="frame" x="24" y="589.33333333333337" width="181" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="xCu-bZ-J1z"/>
                                     <constraint firstAttribute="width" constant="181" id="xRg-GG-Y3B"/>
@@ -158,7 +158,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rx-3t-WoI">
-                                <rect key="frame" x="24" y="669.5" width="184" height="17.5"/>
+                                <rect key="frame" x="24" y="663.33333333333337" width="184" height="17.666666666666629"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Don’t have an account yet?">
                                         <attributes>
@@ -171,7 +171,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNk-Ep-Keo">
-                                <rect key="frame" x="24" y="284" width="75.5" height="20"/>
+                                <rect key="frame" x="24" y="285" width="75.333333333333329" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Password">
                                         <attributes>
@@ -184,7 +184,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-Ub-wMU">
-                                <rect key="frame" x="342" y="320" width="57" height="50"/>
+                                <rect key="frame" x="321" y="321" width="57.666666666666686" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="AI2-nq-Is8"/>
                                 </constraints>
@@ -196,7 +196,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp1-Ji-fyd">
-                                <rect key="frame" x="203" y="662.5" width="78" height="31.5"/>
+                                <rect key="frame" x="203" y="656.33333333333337" width="78" height="31.666666666666629"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -224,7 +224,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="SignUpPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="t7K-GY-Lkm"/>
+                                    <action selector="signUpPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="t7K-GY-Lkm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -235,7 +235,7 @@
                             <constraint firstItem="fyV-vp-YMt" firstAttribute="top" secondItem="4Ta-JB-K5W" secondAttribute="bottom" constant="8" id="9fa-pk-dPn"/>
                             <constraint firstItem="2NW-Im-odE" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="DgB-5j-uUw"/>
                             <constraint firstItem="4Ta-JB-K5W" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="DlO-Cv-stO"/>
-                            <constraint firstItem="UmX-VJ-xzZ" firstAttribute="top" secondItem="XK6-qs-SrG" secondAttribute="bottom" constant="12" id="Fa1-VR-3hy"/>
+                            <constraint firstItem="UmX-VJ-xzZ" firstAttribute="top" secondItem="XK6-qs-SrG" secondAttribute="bottom" constant="13" id="Fa1-VR-3hy"/>
                             <constraint firstItem="uGM-ls-kgI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="GLf-Ya-j07"/>
                             <constraint firstItem="6P8-fr-sMo" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="HEC-vo-4uC"/>
                             <constraint firstItem="wd1-jU-WG7" firstAttribute="top" secondItem="6P8-fr-sMo" secondAttribute="bottom" constant="24" id="HHT-2q-wCM"/>
@@ -263,6 +263,7 @@
                             <constraint firstItem="SNk-Ep-Keo" firstAttribute="top" secondItem="hZq-wy-pkc" secondAttribute="bottom" constant="24" id="zF9-HU-udq"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="R4l-JZ-hVy"/>
                     <connections>
                         <outlet property="EnterAccountLabel" destination="6P8-fr-sMo" id="xJE-ax-GVv"/>
                         <outlet property="dontHaveAccountLabel" destination="7rx-3t-WoI" id="PE6-Re-fmw"/>
@@ -280,14 +281,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-523.1884057971015" y="32.8125"/>
+            <point key="canvasLocation" x="402.29007633587787" y="32.394366197183103"/>
         </scene>
     </scenes>
     <resources>
         <image name="eye" catalog="system" width="128" height="79"/>
         <image name="ic_facebook" width="48" height="47"/>
         <image name="ic_google" width="48" height="47"/>
-        <image name="ic_twitter" width="48" height="47"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

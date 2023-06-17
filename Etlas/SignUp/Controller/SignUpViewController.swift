@@ -27,7 +27,9 @@ class SignUpViewController: BaseViewController {
     @IBAction func SignInPressed(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "SignInViewController", bundle: nil)
         let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
-        self.show(signInVC, sender: self)
+       // navigationController?.pushViewController(signInVC, animated: true)
+        self.present(signInVC, animated: true)
+
     }
     @IBAction func nextPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: "goToSecondPage", sender: self)
@@ -40,6 +42,7 @@ class SignUpViewController: BaseViewController {
     
     // MARK: - Private methods
         private func setupUI() {
+            self.navigationController?.navigationBar.isHidden = true
             passwordTextField.isSecureTextEntry = true
             let attributedString = NSMutableAttributedString(string: "OR SIGN UP USING")
             let boldFontAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 18.0)!]

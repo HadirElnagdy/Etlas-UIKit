@@ -26,7 +26,7 @@ class BlueTextField: UITextField {
     }
     override func layoutSubviews() {
             super.layoutSubviews()
-            self.frame.size.height = 50
+            //self.frame.size.height = 50
             self.frame.size.width = 345
         }
     override func awakeFromNib() {

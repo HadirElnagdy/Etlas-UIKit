@@ -20,6 +20,9 @@ class ForgotPasswordViewController: BaseViewController {
     }
     
     // MARK: - IBActions
+    @IBAction func backPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
     

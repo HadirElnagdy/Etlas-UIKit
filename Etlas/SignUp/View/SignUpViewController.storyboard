@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,7 +12,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="Y6W-OH-hqX" customClass="SignUpViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="SignUpViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,7 +130,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="DHT-hT-4ua"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="password"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eh-eP-pmI">
                                                         <rect key="frame" x="24.000000000000004" y="119" width="48.333333333333343" height="20"/>
@@ -199,33 +199,29 @@ contain letters and symbols.</string>
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E73-W9-umj">
-                                                        <rect key="frame" x="98" y="110.33333333333337" width="55" height="54"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="27H-fX-OgB"/>
-                                                            <constraint firstAttribute="height" constant="54" id="j8N-fM-Sxc"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="ic_google" title=""/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPB-0f-T0K">
-                                                        <rect key="frame" x="169" y="110.33333333333337" width="55" height="54"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="JOg-UB-702"/>
-                                                            <constraint firstAttribute="height" constant="54" id="Tc3-hN-Xx8"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="ic_twitter" title=""/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ss-mW-0nT">
-                                                        <rect key="frame" x="240" y="110.33333333333337" width="55" height="54"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="Ait-NN-S0m"/>
-                                                            <constraint firstAttribute="height" constant="54" id="BLM-Y6-M65"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="ic_facebook"/>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cYG-3r-OQ6">
+                                                        <rect key="frame" x="136.66666666666666" y="110.33333333333337" width="119.99999999999997" height="54"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E73-W9-umj">
+                                                                <rect key="frame" x="0.0" y="0.0" width="55" height="54"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="55" id="27H-fX-OgB"/>
+                                                                    <constraint firstAttribute="height" constant="54" id="j8N-fM-Sxc"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="ic_google" title=""/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ss-mW-0nT">
+                                                                <rect key="frame" x="65" y="0.0" width="55" height="54"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="55" id="Ait-NN-S0m"/>
+                                                                    <constraint firstAttribute="height" constant="54" id="BLM-Y6-M65"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="ic_facebook"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNX-Eg-xMn" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
                                                         <rect key="frame" x="24" y="196.33333333333337" width="180" height="58"/>
                                                         <constraints>
@@ -282,17 +278,13 @@ contain letters and symbols.</string>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="5ss-mW-0nT" firstAttribute="leading" secondItem="nPB-0f-T0K" secondAttribute="trailing" constant="16" id="3fE-qB-37b"/>
-                                                    <constraint firstItem="nPB-0f-T0K" firstAttribute="leading" secondItem="E73-W9-umj" secondAttribute="trailing" constant="16" id="42b-73-es9"/>
+                                                    <constraint firstItem="RNX-Eg-xMn" firstAttribute="top" secondItem="cYG-3r-OQ6" secondAttribute="bottom" constant="32" id="4gx-zl-llV"/>
+                                                    <constraint firstItem="cYG-3r-OQ6" firstAttribute="centerX" secondItem="eXn-KB-FLF" secondAttribute="centerX" id="7V6-OJ-M55"/>
                                                     <constraint firstItem="LWK-Vd-NWp" firstAttribute="leading" secondItem="E7W-nW-Uo9" secondAttribute="trailing" constant="-8" id="AN4-Sb-Zkx"/>
-                                                    <constraint firstItem="E73-W9-umj" firstAttribute="centerY" secondItem="nPB-0f-T0K" secondAttribute="centerY" id="Cc3-yz-aiK"/>
                                                     <constraint firstItem="LWK-Vd-NWp" firstAttribute="centerY" secondItem="E7W-nW-Uo9" secondAttribute="centerY" id="I0r-A2-os3"/>
+                                                    <constraint firstItem="cYG-3r-OQ6" firstAttribute="top" secondItem="nwy-cc-Gvt" secondAttribute="bottom" constant="24" id="JVB-8j-3oz"/>
                                                     <constraint firstItem="nwy-cc-Gvt" firstAttribute="centerX" secondItem="eXn-KB-FLF" secondAttribute="centerX" id="KGn-h7-0XS"/>
                                                     <constraint firstAttribute="height" constant="350" id="Q4v-2d-wOY"/>
-                                                    <constraint firstItem="5ss-mW-0nT" firstAttribute="centerY" secondItem="nPB-0f-T0K" secondAttribute="centerY" id="YVp-1a-q33"/>
-                                                    <constraint firstItem="nPB-0f-T0K" firstAttribute="centerX" secondItem="eXn-KB-FLF" secondAttribute="centerX" id="cKH-rh-OEr"/>
-                                                    <constraint firstItem="nPB-0f-T0K" firstAttribute="top" secondItem="nwy-cc-Gvt" secondAttribute="bottom" constant="24" id="hWj-KY-Wzu"/>
-                                                    <constraint firstItem="RNX-Eg-xMn" firstAttribute="top" secondItem="E73-W9-umj" secondAttribute="bottom" constant="32" id="lz6-Go-kAL"/>
                                                     <constraint firstItem="7nW-3L-ZAJ" firstAttribute="top" secondItem="eXn-KB-FLF" secondAttribute="top" id="s1B-o9-qnk"/>
                                                     <constraint firstItem="E7W-nW-Uo9" firstAttribute="top" secondItem="RNX-Eg-xMn" secondAttribute="bottom" constant="16" id="sRH-Sm-FC8"/>
                                                     <constraint firstItem="nwy-cc-Gvt" firstAttribute="top" secondItem="7nW-3L-ZAJ" secondAttribute="bottom" constant="32" id="zVu-ll-9qu"/>
@@ -349,13 +341,13 @@ contain letters and symbols.</string>
         <!--Sign Up Second View Controller-->
         <scene sceneID="N8F-Qx-GfI">
             <objects>
-                <viewController storyboardIdentifier="SignUpSecondViewController" id="kTn-bO-S16" customClass="SignUpSecondViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpSecondViewController" modalPresentationStyle="fullScreen" id="kTn-bO-S16" customClass="SignUpSecondViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zw3-zE-Sua">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9b2-fb-Ho7">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xHz-pm-Fzt">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="855"/>
@@ -491,33 +483,29 @@ contain letters and symbols.</string>
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkh-qF-Zes">
-                                                        <rect key="frame" x="98" y="69.666666666666686" width="55" height="54"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="gff-3B-MrG"/>
-                                                            <constraint firstAttribute="height" constant="54" id="k3A-kV-UXI"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="ic_google" title=""/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLv-3Q-XPm">
-                                                        <rect key="frame" x="169" y="69.666666666666686" width="55" height="54"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="opJ-jG-wPM"/>
-                                                            <constraint firstAttribute="height" constant="54" id="yLO-ER-m8q"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="ic_twitter" title=""/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKE-sL-nxH">
-                                                        <rect key="frame" x="240" y="69.666666666666686" width="55" height="54"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="Mbk-bW-GsF"/>
-                                                            <constraint firstAttribute="height" constant="54" id="yMB-AH-kZB"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="ic_facebook"/>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CVk-FX-KJs">
+                                                        <rect key="frame" x="136.66666666666666" y="69.666666666666686" width="119.99999999999997" height="54"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkh-qF-Zes">
+                                                                <rect key="frame" x="0.0" y="0.0" width="55" height="54"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="55" id="gff-3B-MrG"/>
+                                                                    <constraint firstAttribute="height" constant="54" id="k3A-kV-UXI"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="ic_google" title=""/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKE-sL-nxH">
+                                                                <rect key="frame" x="65" y="0.0" width="55" height="54"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="55" id="Mbk-bW-GsF"/>
+                                                                    <constraint firstAttribute="height" constant="54" id="yMB-AH-kZB"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="ic_facebook"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ltz-tX-cCV" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
                                                         <rect key="frame" x="24" y="263.66666666666663" width="180" height="58"/>
                                                         <constraints>
@@ -574,17 +562,13 @@ contain letters and symbols.</string>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="Ltz-tX-cCV" firstAttribute="top" secondItem="Wkh-qF-Zes" secondAttribute="bottom" constant="140" id="4ei-Qh-P54"/>
                                                     <constraint firstItem="TtP-qv-zCe" firstAttribute="top" secondItem="Ih1-FR-tQl" secondAttribute="top" constant="24" id="DY3-s8-OPr"/>
-                                                    <constraint firstItem="ZLv-3Q-XPm" firstAttribute="leading" secondItem="Wkh-qF-Zes" secondAttribute="trailing" constant="16" id="M4v-aR-9fb"/>
+                                                    <constraint firstItem="CVk-FX-KJs" firstAttribute="top" secondItem="TtP-qv-zCe" secondAttribute="bottom" constant="24" id="Kbt-7T-qpe"/>
                                                     <constraint firstItem="hTG-wz-zSc" firstAttribute="top" secondItem="Ltz-tX-cCV" secondAttribute="bottom" constant="16" id="Xns-76-dlC"/>
-                                                    <constraint firstItem="KKE-sL-nxH" firstAttribute="centerY" secondItem="ZLv-3Q-XPm" secondAttribute="centerY" id="ax9-Xs-ayu"/>
-                                                    <constraint firstItem="KKE-sL-nxH" firstAttribute="leading" secondItem="ZLv-3Q-XPm" secondAttribute="trailing" constant="16" id="bIf-Qd-vx0"/>
+                                                    <constraint firstItem="Ltz-tX-cCV" firstAttribute="top" secondItem="CVk-FX-KJs" secondAttribute="bottom" constant="140" id="cet-fa-UB7"/>
+                                                    <constraint firstItem="CVk-FX-KJs" firstAttribute="centerX" secondItem="Ih1-FR-tQl" secondAttribute="centerX" id="fwT-Cq-Xy9"/>
                                                     <constraint firstAttribute="height" constant="430" id="gEz-Li-PW7"/>
-                                                    <constraint firstItem="ZLv-3Q-XPm" firstAttribute="centerX" secondItem="Ih1-FR-tQl" secondAttribute="centerX" id="gfD-eg-LNb"/>
-                                                    <constraint firstItem="Wkh-qF-Zes" firstAttribute="centerY" secondItem="ZLv-3Q-XPm" secondAttribute="centerY" id="kto-qH-Joh"/>
                                                     <constraint firstItem="pbA-bh-Bvo" firstAttribute="leading" secondItem="hTG-wz-zSc" secondAttribute="trailing" constant="-8" id="mAf-4g-ha9"/>
-                                                    <constraint firstItem="ZLv-3Q-XPm" firstAttribute="top" secondItem="TtP-qv-zCe" secondAttribute="bottom" constant="24" id="n8q-ko-vSd"/>
                                                     <constraint firstItem="TtP-qv-zCe" firstAttribute="centerX" secondItem="Ih1-FR-tQl" secondAttribute="centerX" id="py4-RY-owE"/>
                                                     <constraint firstItem="pbA-bh-Bvo" firstAttribute="centerY" secondItem="hTG-wz-zSc" secondAttribute="centerY" id="y4Y-v8-X0q"/>
                                                 </constraints>
@@ -635,7 +619,6 @@ contain letters and symbols.</string>
         <image name="eye" catalog="system" width="128" height="79"/>
         <image name="ic_facebook" width="48" height="47"/>
         <image name="ic_google" width="48" height="47"/>
-        <image name="ic_twitter" width="48" height="47"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

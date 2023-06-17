@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToursTableViewCell" rowHeight="274" id="KGk-i7-Jjw" customClass="ToursTableViewCell" customModule="Etlas" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="811" height="274"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="811" height="274"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ks-2w-q4s">
+                        <rect key="frame" x="0.0" y="0.0" width="811" height="274"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSP-r0-XLu" customClass="CustomView" customModule="Etlas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="811" height="274"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsS-Tu-F9p">
+                                        <rect key="frame" x="148" y="16" width="72.666666666666686" height="21.666666666666671"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Giza tour">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJS-VO-jWe">
+                                        <rect key="frame" x="158" y="38" width="184" height="52"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">where you can visit the pyramids
+and ride the camels. </string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="Montserrat-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTt-f3-zLy" customClass="RatingView" customModule="Etlas" customModuleProvider="target">
+                                        <rect key="frame" x="148" y="98" width="150" height="24"/>
+                                        <color key="backgroundColor" red="0.70980392160000005" green="0.70980392160000005" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="YxX-1P-h3g"/>
+                                            <constraint firstAttribute="width" constant="150" id="rki-D6-PJd"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_GizaTour" translatesAutoresizingMaskIntoConstraints="NO" id="f6C-mX-AOh">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="JsD-rf-SbW"/>
+                                            <constraint firstAttribute="width" constant="140" id="QFh-G5-oss"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="FTt-f3-zLy" firstAttribute="leading" secondItem="f6C-mX-AOh" secondAttribute="trailing" constant="8" id="8RN-bt-85J"/>
+                                    <constraint firstAttribute="bottom" secondItem="FTt-f3-zLy" secondAttribute="bottom" constant="8" id="Efu-c7-GHH"/>
+                                    <constraint firstAttribute="bottom" secondItem="f6C-mX-AOh" secondAttribute="bottom" id="Fyi-Y1-9t5"/>
+                                    <constraint firstItem="f6C-mX-AOh" firstAttribute="leading" secondItem="vSP-r0-XLu" secondAttribute="leading" id="aCk-Ne-oHA"/>
+                                    <constraint firstItem="fJS-VO-jWe" firstAttribute="leading" secondItem="fsS-Tu-F9p" secondAttribute="leading" id="hI4-0u-9Vl"/>
+                                    <constraint firstItem="fsS-Tu-F9p" firstAttribute="top" secondItem="vSP-r0-XLu" secondAttribute="top" constant="16" id="p8d-a4-vdc"/>
+                                    <constraint firstItem="fJS-VO-jWe" firstAttribute="top" secondItem="fsS-Tu-F9p" secondAttribute="bottom" constant="1" id="syX-gq-nXg"/>
+                                    <constraint firstItem="fsS-Tu-F9p" firstAttribute="leading" secondItem="f6C-mX-AOh" secondAttribute="trailing" constant="8" id="w3T-nQ-p9q"/>
+                                    <constraint firstItem="f6C-mX-AOh" firstAttribute="top" secondItem="vSP-r0-XLu" secondAttribute="top" id="xWf-Mf-yKN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vSP-r0-XLu" firstAttribute="top" secondItem="6Ks-2w-q4s" secondAttribute="top" id="0O2-cS-alY"/>
+                            <constraint firstItem="vSP-r0-XLu" firstAttribute="leading" secondItem="6Ks-2w-q4s" secondAttribute="leading" id="K1v-zI-70c"/>
+                            <constraint firstAttribute="trailing" secondItem="vSP-r0-XLu" secondAttribute="trailing" id="dz0-zo-pr2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6Ks-2w-q4s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="I3y-Mb-rqr"/>
+                    <constraint firstAttribute="trailing" secondItem="6Ks-2w-q4s" secondAttribute="trailing" id="I7L-j6-Q6E"/>
+                    <constraint firstAttribute="bottom" secondItem="6Ks-2w-q4s" secondAttribute="bottom" id="Iny-Ek-7XX"/>
+                    <constraint firstItem="6Ks-2w-q4s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jPu-Ho-RLZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="tourDetails" destination="fJS-VO-jWe" id="pau-l1-kmt"/>
+                <outlet property="tourImg" destination="f6C-mX-AOh" id="bd1-gP-mUC"/>
+                <outlet property="tourName" destination="fsS-Tu-F9p" id="Oqu-3x-Bil"/>
+                <outlet property="tourRating" destination="FTt-f3-zLy" id="WxF-cj-Lfb"/>
+            </connections>
+            <point key="canvasLocation" x="310.68702290076334" y="41.549295774647888"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_GizaTour" width="116" height="105"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
