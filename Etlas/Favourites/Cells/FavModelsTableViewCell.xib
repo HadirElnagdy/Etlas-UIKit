@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavModelsTableViewCell" rowHeight="149" id="KGk-i7-Jjw" customClass="FavModelsTableViewCell" customModule="Etlas" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="429" height="149"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="429" height="149"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqt-2B-iWk" customClass="CustomView" customModule="Etlas" customModuleProvider="target">
+                        <rect key="frame" x="24" y="0.0" width="381" height="117"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_3dAnubis" translatesAutoresizingMaskIntoConstraints="NO" id="dXn-yj-gbp">
+                                <rect key="frame" x="8" y="0.0" width="72" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="M5J-gZ-yRr"/>
+                                    <constraint firstAttribute="width" constant="72" id="e5u-TP-eST"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1q-q4-S1G">
+                                <rect key="frame" x="333" y="16" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="1Y8-4N-jmd"/>
+                                    <constraint firstAttribute="width" constant="32" id="xQh-EU-nXg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ic_FavArticlesDel"/>
+                                <connections>
+                                    <action selector="deletePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FPa-4a-xr1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55F-jj-R5d">
+                                <rect key="frame" x="96" y="45" width="122" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="200 BC | Egypt">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Montserrat-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AD2-VQ-tID">
+                                <rect key="frame" x="96" y="78" width="184" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Scanned 12 OCT 2021">
+                                        <attributes>
+                                            <color key="NSColor" red="0.6705882352941176" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Montserrat-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW2-7F-mk1">
+                                <rect key="frame" x="96" y="16" width="117" height="24"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Statue Name">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74901960784313726" green="0.50588235294117645" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="20" name="Montserrat-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dXn-yj-gbp" secondAttribute="bottom" id="2ZM-uz-4fx"/>
+                            <constraint firstItem="dXn-yj-gbp" firstAttribute="leading" secondItem="Bqt-2B-iWk" secondAttribute="leading" constant="8" id="3GY-Sg-BlS"/>
+                            <constraint firstItem="AD2-VQ-tID" firstAttribute="leading" secondItem="JW2-7F-mk1" secondAttribute="leading" id="PXk-m8-shm"/>
+                            <constraint firstItem="JW2-7F-mk1" firstAttribute="top" secondItem="Bqt-2B-iWk" secondAttribute="top" constant="16" id="Pwo-70-PXU"/>
+                            <constraint firstItem="dXn-yj-gbp" firstAttribute="top" secondItem="Bqt-2B-iWk" secondAttribute="top" id="fyG-zB-w1d"/>
+                            <constraint firstItem="55F-jj-R5d" firstAttribute="top" secondItem="JW2-7F-mk1" secondAttribute="bottom" constant="5" id="ht6-RO-j7I"/>
+                            <constraint firstItem="AD2-VQ-tID" firstAttribute="top" secondItem="55F-jj-R5d" secondAttribute="bottom" constant="12" id="pe3-fv-Lmw"/>
+                            <constraint firstItem="55F-jj-R5d" firstAttribute="leading" secondItem="JW2-7F-mk1" secondAttribute="leading" id="pl6-zj-K4J"/>
+                            <constraint firstItem="JW2-7F-mk1" firstAttribute="leading" secondItem="dXn-yj-gbp" secondAttribute="trailing" constant="16" id="prv-kB-wkk"/>
+                            <constraint firstAttribute="trailing" secondItem="K1q-q4-S1G" secondAttribute="trailing" constant="16" id="qIb-D4-EWm"/>
+                            <constraint firstItem="K1q-q4-S1G" firstAttribute="top" secondItem="Bqt-2B-iWk" secondAttribute="top" constant="16" id="xfQ-88-fpc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Bqt-2B-iWk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="aX3-rM-pxN"/>
+                    <constraint firstItem="Bqt-2B-iWk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hMl-QW-u1s"/>
+                    <constraint firstAttribute="bottom" secondItem="Bqt-2B-iWk" secondAttribute="bottom" constant="32" id="jag-G3-Zks"/>
+                    <constraint firstAttribute="trailing" secondItem="Bqt-2B-iWk" secondAttribute="trailing" constant="24" id="x1c-PX-iqA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="modelImg" destination="dXn-yj-gbp" id="LIV-yb-Biw"/>
+                <outlet property="modelName" destination="JW2-7F-mk1" id="RAG-2D-pKA"/>
+                <outlet property="period" destination="55F-jj-R5d" id="HhG-bZ-w7U"/>
+                <outlet property="scanningDate" destination="AD2-VQ-tID" id="SbW-P3-qbd"/>
+            </connections>
+            <point key="canvasLocation" x="110.68702290076335" y="56.690140845070424"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_FavArticlesDel" width="25" height="29"/>
+        <image name="img_3dAnubis" width="93" height="225"/>
+    </resources>
+</document>

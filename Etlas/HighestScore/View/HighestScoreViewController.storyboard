@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +30,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-hn-reX">
-                                                        <rect key="frame" x="321.66666666666669" y="49" width="47.333333333333314" height="34.333333333333343"/>
+                                                        <rect key="frame" x="337" y="50.666666666666657" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="bHb-zQ-tF9"/>
+                                                            <constraint firstAttribute="height" constant="32" id="kfM-Vd-WSm"/>
+                                                        </constraints>
                                                         <color key="tintColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
@@ -40,10 +44,16 @@
                                                             <action selector="closePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3pJ-om-Rep"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvU-Fk-jwH">
-                                                        <rect key="frame" x="156" y="56.000000000000007" width="81" height="20.333333333333336"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvU-Fk-jwH">
+                                                        <rect key="frame" x="153.33333333333334" y="56" width="86.333333333333343" height="21"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Best score">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="18" name="Montserrat-SemiBold"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -204,6 +214,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bestScoreLabel" destination="kt5-5Q-EsB" id="gor-62-izV"/>
                         <outlet property="bestScoreView" destination="xjf-5p-RfF" id="PX0-RX-p4v"/>
                     </connections>
                 </viewController>

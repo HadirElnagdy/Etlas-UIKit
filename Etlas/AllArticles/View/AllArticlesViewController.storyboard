@@ -3,15 +3,15 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--All Articles View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllArticlesViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="AllArticlesViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +35,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="ic_Filter"/>
+                                        <connections>
+                                            <action selector="filterPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hlz-be-yv0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wev-Nr-Ga1">
                                         <rect key="frame" x="337" y="50.666666666666657" width="32" height="32"/>
@@ -45,6 +48,9 @@
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZAs-5G-Go3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tz-hg-Uoc">
                                         <rect key="frame" x="24" y="50.666666666666657" width="32" height="32"/>
@@ -55,6 +61,9 @@
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="exclamationmark.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="learnMorePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="REe-wh-0K4"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6e-qs-NCV">
                                         <rect key="frame" x="166.66666666666666" y="56" width="59.666666666666657" height="21"/>
@@ -86,19 +95,38 @@
                                     <constraint firstAttribute="height" constant="210" id="ypI-By-GNt"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CHT-lU-iSn">
+                                <rect key="frame" x="0.0" y="210" width="393" height="608"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="bdg-7k-tfQ">
+                                    <size key="itemSize" width="175" height="270"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="sp4-NO-F3d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2rK-Rw-LQz"/>
                             <constraint firstItem="sp4-NO-F3d" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Dwm-5g-yd4"/>
+                            <constraint firstItem="CHT-lU-iSn" firstAttribute="top" secondItem="sp4-NO-F3d" secondAttribute="bottom" id="Dyg-wR-Iyn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="CHT-lU-iSn" secondAttribute="bottom" id="Gm9-1v-2pV"/>
                             <constraint firstAttribute="trailing" secondItem="sp4-NO-F3d" secondAttribute="trailing" id="iMX-Aq-caS"/>
+                            <constraint firstItem="CHT-lU-iSn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ko6-6W-Ld6"/>
+                            <constraint firstItem="CHT-lU-iSn" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="uZF-Zh-pMx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="articlesCollectionView" destination="CHT-lU-iSn" id="KnT-zr-d4h"/>
+                        <outlet property="searchTextField" destination="Yrj-59-fa6" id="Hqw-SJ-hRf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="56" y="-34"/>
+            <point key="canvasLocation" x="55.725190839694655" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>

@@ -10,7 +10,10 @@ import UIKit
 class NewPasswordViewController: BaseViewController {
 
     // MARK: - IBOutlets
-    
+    @IBOutlet weak var showNewPasswordBtn: PasswordButton!
+    @IBOutlet weak var showPasswordBtn: PasswordButton!
+    @IBOutlet weak var newPasswordTextField: CustomTextField!
+    @IBOutlet weak var confirmPasswordTextField: CustomTextField!
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
@@ -34,7 +37,10 @@ class NewPasswordViewController: BaseViewController {
     
     // MARK: - Private methods
     private func setupUI() {
-        
+        newPasswordTextField.isSecureTextEntry = true
+        confirmPasswordTextField.isSecureTextEntry = true
+        showNewPasswordBtn.textField = newPasswordTextField
+        showPasswordBtn.textField = confirmPasswordTextField
         
     }
     

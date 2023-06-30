@@ -11,7 +11,8 @@ class HighestScoreViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var bestScoreView: UIView!
-
+    @IBOutlet weak var bestScoreLabel: UILabel!
+    
    
    // MARK: - Lifecycle methods
    override func viewDidLoad() {
@@ -21,12 +22,12 @@ class HighestScoreViewController: UIViewController {
    
    // MARK: - IBActions
     @IBAction func closePressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     @IBAction func playNowPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "KnowledgeGameViewController", bundle: nil)
         let VC = storyboard.instantiateViewController(identifier: "KnowledgeGameViewController")
-        self.present(VC, animated: true)
+        navigationController?.pushViewController(VC, animated: true)
     }
     
 

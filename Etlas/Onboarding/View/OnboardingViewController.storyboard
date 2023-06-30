@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ufR-le-IKL">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YTZ-Td-BW7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController storyboardIdentifier="OnboardingViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_OnboradingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="RnF-Lc-40A">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onborading Screen" translatesAutoresizingMaskIntoConstraints="NO" id="RnF-Lc-40A">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Och-PZ-Zpe" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
-                                <rect key="frame" x="197" y="561" width="180" height="64"/>
+                                <rect key="frame" x="218" y="605" width="180" height="64"/>
                                 <color key="backgroundColor" red="0.74901960779999999" green="0.50588235290000005" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="N4P-yT-cfj"/>
@@ -55,8 +55,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5P-QJ-nEo">
-                                <rect key="frame" x="24" y="291.66666666666669" width="300" height="46.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5P-QJ-nEo">
+                                <rect key="frame" x="24" y="324" width="321" height="47"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">No worries, your tour guide
@@ -76,7 +76,7 @@ is here ;)</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncw-aW-gg8" customClass="ClearButton" customModule="Etlas" customModuleProvider="target">
-                                <rect key="frame" x="197" y="644" width="180" height="65"/>
+                                <rect key="frame" x="218" y="688" width="180" height="65"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="mSu-gg-QMi"/>
@@ -98,14 +98,14 @@ is here ;)</string>
                                     <action selector="signUpPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Tz6-6r-GJy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhU-Jt-i08">
-                                <rect key="frame" x="24" y="152" width="345" height="116.66666666666669"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhU-Jt-i08">
+                                <rect key="frame" x="24" y="152" width="321" height="164"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Is an augmented reality application that helps people to recognize monuments during their tour in anywhere in  the world by only a scan using your mobile camera.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="20" name="Montserrat-Regular"/>
+                                            <font key="NSFont" size="20" name="Montserrat-Medium"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
@@ -117,18 +117,10 @@ is here ;)</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_Onboarding 1" translatesAutoresizingMaskIntoConstraints="NO" id="Bpl-BT-xil">
-                                <rect key="frame" x="0.0" y="354.33333333333326" width="283" height="497"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="497" id="SB8-iT-FdO"/>
-                                    <constraint firstAttribute="width" constant="283" id="xfa-sJ-yv7"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.0" green="0.20784313730000001" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Bpl-BT-xil" firstAttribute="top" secondItem="R5P-QJ-nEo" secondAttribute="bottom" constant="16" id="1YQ-X1-fQs"/>
                             <constraint firstItem="BhU-Jt-i08" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="1bA-ls-mbq"/>
                             <constraint firstItem="zKV-lx-Cj0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="22J-tD-Q8o"/>
                             <constraint firstItem="R5P-QJ-nEo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="2EE-1C-hC3"/>
@@ -140,7 +132,6 @@ is here ;)</string>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BhU-Jt-i08" secondAttribute="trailing" constant="24" id="PyP-qF-hLX"/>
                             <constraint firstAttribute="bottom" secondItem="RnF-Lc-40A" secondAttribute="bottom" id="TBh-b0-fnN"/>
                             <constraint firstItem="RnF-Lc-40A" firstAttribute="centerX" secondItem="BhU-Jt-i08" secondAttribute="centerX" id="V3Q-eP-1Uq"/>
-                            <constraint firstItem="Bpl-BT-xil" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="YNQ-dD-Ipy"/>
                             <constraint firstItem="Ncw-aW-gg8" firstAttribute="top" secondItem="Och-PZ-Zpe" secondAttribute="bottom" constant="19" id="bCc-tv-WX9"/>
                             <constraint firstItem="RnF-Lc-40A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fXo-i8-lDQ"/>
                             <constraint firstItem="Ncw-aW-gg8" firstAttribute="trailing" secondItem="Och-PZ-Zpe" secondAttribute="trailing" id="ijb-M8-7Rk"/>
@@ -152,7 +143,6 @@ is here ;)</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nj8-x9-UOV"/>
-                    <size key="freeformSize" width="393" height="852"/>
                     <connections>
                         <outlet property="signInButton" destination="Och-PZ-Zpe" id="Djd-cX-kMC"/>
                         <outlet property="signUpButton" destination="Ncw-aW-gg8" id="P4W-SF-6oM"/>
@@ -160,29 +150,27 @@ is here ;)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976.3358778625955" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1946.376811594203" y="-46.875"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Y1h-yU-vLn">
+        <scene sceneID="GA0-9Z-fcC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ufR-le-IKL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="YTZ-Td-BW7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t4U-Nb-awa">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U1c-4L-bqk">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="vfN-wG-2a3"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Gng-Mc-6yj"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dug-Ax-gb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhW-2h-SVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049.6183206106871" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1020.6106870229007" y="-46.478873239436624"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Img_Onboarding 1" width="318" height="494"/>
-        <image name="bg_OnboradingScreen" width="430" height="932"/>
+        <image name="Onborading Screen" width="430" height="932"/>
     </resources>
 </document>

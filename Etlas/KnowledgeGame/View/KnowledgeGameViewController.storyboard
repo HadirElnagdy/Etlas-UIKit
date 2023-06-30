@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +26,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMf-Ue-ZaS">
-                                                        <rect key="frame" x="24" y="53.666666666666657" width="24" height="24"/>
+                                                        <rect key="frame" x="24" y="54.666666666666657" width="24" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="24" id="gZz-KN-CPN"/>
                                                             <constraint firstAttribute="height" constant="24" id="y35-WV-SiF"/>
@@ -34,9 +34,12 @@
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="exclamationmark.circle" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="learnMorePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="et6-zt-urD"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDR-HS-RzI">
-                                                        <rect key="frame" x="123.00000000000001" y="55" width="147.33333333333337" height="21"/>
+                                                        <rect key="frame" x="123.00000000000001" y="56" width="147.33333333333337" height="21"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Knowledge Check">
                                                                 <attributes>
@@ -54,7 +57,7 @@
                                                     <constraint firstItem="rDR-HS-RzI" firstAttribute="centerX" secondItem="pJL-rl-WSF" secondAttribute="centerX" id="Iw9-RC-P3J"/>
                                                     <constraint firstAttribute="height" constant="100" id="O0F-6z-wK7"/>
                                                     <constraint firstItem="lMf-Ue-ZaS" firstAttribute="leading" secondItem="pJL-rl-WSF" secondAttribute="leading" constant="24" id="aqf-nO-1e6"/>
-                                                    <constraint firstAttribute="bottom" secondItem="rDR-HS-RzI" secondAttribute="bottom" constant="24" id="fMm-a9-0o5"/>
+                                                    <constraint firstAttribute="top" secondItem="rDR-HS-RzI" secondAttribute="top" constant="-56" id="fMm-a9-0o5"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebk-RH-UOU">
@@ -350,8 +353,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="landmarksScoreLabel" destination="kP3-ih-bg1" id="JrH-kV-VN7"/>
                         <outlet property="landmarksView" destination="Snw-iQ-WSu" id="Eua-kw-S7c"/>
+                        <outlet property="monumentsScoreLabel" destination="DUn-jt-zBj" id="fpI-S5-gdG"/>
                         <outlet property="monumentsView" destination="rnM-KG-chb" id="Q5V-nN-qOd"/>
+                        <outlet property="statuesScoreLabel" destination="ZYa-OD-sqP" id="tKU-vi-9P6"/>
                         <outlet property="statuesView" destination="Dha-Ry-hQB" id="EmA-ua-Vfo"/>
                     </connections>
                 </viewController>

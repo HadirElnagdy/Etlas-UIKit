@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -48,7 +48,7 @@
                                                                     <constraint firstAttribute="height" constant="50" id="0GZ-Gw-hSB"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" textContentType="name"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,7 +83,7 @@
                                                                     <constraint firstAttribute="height" constant="50" id="71y-Ub-ceK"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" textContentType="email"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,23 +147,24 @@
                                                                 </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqk-hw-l8X" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
-                                                                <rect key="frame" x="24" y="61" width="345" height="240"/>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ia7-xE-kWi" customClass="MessageTextView" customModule="Etlas" customModuleProvider="target">
+                                                                <rect key="frame" x="24" y="61" width="345" height="239"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="240" id="8UH-SH-8xC"/>
+                                                                    <constraint firstAttribute="height" constant="239" id="gb2-bt-PHg"/>
                                                                 </constraints>
+                                                                <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="321" id="63y-2S-rWK"/>
                                                             <constraint firstItem="RAg-rH-AKV" firstAttribute="top" secondItem="mFS-jQ-QT6" secondAttribute="top" constant="24" id="Mgu-bV-ru6"/>
-                                                            <constraint firstItem="yqk-hw-l8X" firstAttribute="leading" secondItem="RAg-rH-AKV" secondAttribute="leading" id="Zoo-ah-nnt"/>
-                                                            <constraint firstItem="yqk-hw-l8X" firstAttribute="top" secondItem="RAg-rH-AKV" secondAttribute="bottom" constant="16" id="c5f-g9-CaC"/>
+                                                            <constraint firstItem="ia7-xE-kWi" firstAttribute="top" secondItem="RAg-rH-AKV" secondAttribute="bottom" constant="16" id="bym-a4-Lnd"/>
                                                             <constraint firstItem="RAg-rH-AKV" firstAttribute="leading" secondItem="mFS-jQ-QT6" secondAttribute="leading" constant="24" id="e3x-fv-GTI"/>
-                                                            <constraint firstAttribute="trailing" secondItem="yqk-hw-l8X" secondAttribute="trailing" constant="24" id="yya-HT-p5T"/>
+                                                            <constraint firstItem="ia7-xE-kWi" firstAttribute="leading" secondItem="RAg-rH-AKV" secondAttribute="leading" id="hNJ-eC-1qa"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dY-oZ-BTl" userLabel="ButtonView">
@@ -187,6 +188,9 @@
                                                                         </fragment>
                                                                     </attributedString>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="submitPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zua-yc-dRg"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -197,6 +201,9 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ia7-xE-kWi" firstAttribute="trailing" secondItem="yTq-LI-QxK" secondAttribute="trailing" id="Xym-dK-0cP"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
@@ -233,7 +240,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="heavy"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="closePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aVv-2R-QI9"/>
@@ -287,16 +294,20 @@
                     <size key="freeformSize" width="389" height="1051"/>
                     <connections>
                         <outlet property="blueView" destination="gDi-45-WNi" id="X9x-xL-2G3"/>
+                        <outlet property="messageTextView" destination="ia7-xE-kWi" id="4Ov-nf-KgA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45.038167938931295" y="-4.2253521126760569"/>
+            <point key="canvasLocation" x="45.038167938931295" y="-4.5774647887323949"/>
         </scene>
     </scenes>
     <resources>
         <image name="img_ContactUs" width="430" height="288"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

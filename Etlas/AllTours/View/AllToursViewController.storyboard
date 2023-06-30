@@ -3,16 +3,15 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--All Tours View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="AllToursViewController" id="Y6W-OH-hqX" customClass="AllToursViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllToursViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="AllToursViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +35,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="ic_Filter"/>
+                                        <connections>
+                                            <action selector="filterPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dFm-D3-iyy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeF-Fo-1Tx">
                                         <rect key="frame" x="337" y="50.666666666666657" width="32" height="32"/>
@@ -46,6 +48,9 @@
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HSa-OB-RTv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lm1-5b-3XC">
                                         <rect key="frame" x="24" y="50.666666666666657" width="32" height="32"/>
@@ -56,6 +61,9 @@
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="exclamationmark.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="learnMorePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hzh-gD-mBQ"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWb-rt-WIz">
                                         <rect key="frame" x="174.66666666666666" y="56" width="44" height="21"/>
@@ -87,17 +95,17 @@
                                     <constraint firstItem="znc-1n-AvZ" firstAttribute="leading" secondItem="Fwh-RG-Tad" secondAttribute="leading" constant="24" id="xni-sR-1QG"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a7V-gz-GYh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="131" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a7V-gz-GYh">
                                 <rect key="frame" x="0.0" y="210" width="393" height="528"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Fwh-RG-Tad" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="0W6-pM-nfS"/>
-                            <constraint firstItem="a7V-gz-GYh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6el-aX-gTm"/>
-                            <constraint firstItem="a7V-gz-GYh" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="bbj-ld-SlF"/>
+                            <constraint firstItem="a7V-gz-GYh" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="6el-aX-gTm"/>
+                            <constraint firstItem="a7V-gz-GYh" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="bbj-ld-SlF"/>
                             <constraint firstItem="Fwh-RG-Tad" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="fbq-DW-Q4u"/>
                             <constraint firstItem="a7V-gz-GYh" firstAttribute="top" secondItem="Fwh-RG-Tad" secondAttribute="bottom" id="gj8-Wp-4VM"/>
                             <constraint firstItem="Fwh-RG-Tad" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="okS-iN-rM7"/>
@@ -117,8 +125,5 @@
         <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="exclamationmark.circle" catalog="system" width="128" height="123"/>
         <image name="ic_Filter" width="64" height="64"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

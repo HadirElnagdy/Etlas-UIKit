@@ -12,6 +12,7 @@ class ContactUsViewController: BaseViewController {
     
      // MARK: - IBOutlets
     @IBOutlet weak var blueView: UIView!
+    @IBOutlet weak var messageTextView: MessageTextView!
     
 
     
@@ -23,8 +24,11 @@ class ContactUsViewController: BaseViewController {
     
     // MARK: - IBActions
     @IBAction func closePressed(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        dismissLastTwoPresentedViewControllers()
     }
+    @IBAction func submitPressed(_ sender: BrownButton) {
+    }
+    
     
      
 
@@ -34,9 +38,15 @@ class ContactUsViewController: BaseViewController {
     private func setupUI() {
         blueView.layer.cornerRadius = 30
         blueView.layer.masksToBounds = true
+        messageTextView.placeholder = "Write a message."
     }
-
-
+    private func dismissLastTwoPresentedViewControllers() {
+        guard let presentingViewController = self.presentingViewController?.presentingViewController else {
+            return
+        }
+        
+        presentingViewController.dismiss(animated: true, completion: nil)
+    }
 
 
 }

@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -144,7 +144,7 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chH-KV-MxO">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chH-KV-MxO" customClass="PasswordButton" customModule="Etlas" customModuleProvider="target">
                                                         <rect key="frame" x="321" y="265" width="57.666666666666686" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="SSB-xP-Mlt"/>
@@ -152,9 +152,6 @@
                                                         <color key="tintColor" red="0.6705882353" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
-                                                        <connections>
-                                                            <action selector="showPasswordPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="035-8P-Ayh"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,6 +207,9 @@ contain letters and symbols.</string>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="ic_google" title=""/>
+                                                                <connections>
+                                                                    <action selector="googleSignUpPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="b5m-AY-sVI"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ss-mW-0nT">
                                                                 <rect key="frame" x="65" y="0.0" width="55" height="54"/>
@@ -219,6 +219,9 @@ contain letters and symbols.</string>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="ic_facebook"/>
+                                                                <connections>
+                                                                    <action selector="facebookSignUpPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Cdm-gy-sS4"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -324,19 +327,20 @@ contain letters and symbols.</string>
                             <constraint firstItem="QnV-6w-QgN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="n1q-cd-zO9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="y0D-OK-6Ok"/>
                     <connections>
                         <outlet property="emailTextField" destination="26w-BR-FWS" id="9dB-DP-oKr"/>
                         <outlet property="fullNameTextField" destination="hCL-0U-9aH" id="Svq-8Y-Jyo"/>
                         <outlet property="nextButton" destination="RNX-Eg-xMn" id="1BC-Uj-92q"/>
                         <outlet property="passwordTextField" destination="dB6-ds-sj0" id="3gN-uF-3W3"/>
-                        <outlet property="showPasswordButton" destination="chH-KV-MxO" id="GKB-hR-hUh"/>
+                        <outlet property="showPasswordButton" destination="chH-KV-MxO" id="qUe-NH-QpP"/>
                         <outlet property="signUpLabel" destination="nwy-cc-Gvt" id="EK1-mg-SN1"/>
                         <segue destination="kTn-bO-S16" kind="presentation" identifier="goToSecondPage" id="AuY-cL-5xW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="974.80916030534343" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1901.5267175572519" y="3.5211267605633805"/>
         </scene>
         <!--Sign Up Second View Controller-->
         <scene sceneID="N8F-Qx-GfI">
@@ -494,6 +498,9 @@ contain letters and symbols.</string>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="ic_google" title=""/>
+                                                                <connections>
+                                                                    <action selector="googleSignUpPressed:" destination="kTn-bO-S16" eventType="touchUpInside" id="Gve-Kz-2Eb"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKE-sL-nxH">
                                                                 <rect key="frame" x="65" y="0.0" width="55" height="54"/>
@@ -503,6 +510,9 @@ contain letters and symbols.</string>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="ic_facebook"/>
+                                                                <connections>
+                                                                    <action selector="facebookSignUpPressed:" destination="kTn-bO-S16" eventType="touchUpInside" id="QsY-Do-dim"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -611,7 +621,7 @@ contain letters and symbols.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6x-J5-I7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849.6183206106869" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="2776.3358778625952" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

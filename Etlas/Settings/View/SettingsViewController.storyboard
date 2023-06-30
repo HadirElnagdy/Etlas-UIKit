@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -80,9 +80,9 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VpK-ET-dzr" userLabel="ImageView">
                                                 <rect key="frame" x="0.0" y="128" width="393" height="200"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_GizaTour" translatesAutoresizingMaskIntoConstraints="NO" id="iyW-f9-nKu" customClass="CircleImageView" customModule="Etlas" customModuleProvider="target">
-                                                        <rect key="frame" x="132.66666666666666" y="8" width="127.99999999999997" height="128"/>
-                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iyW-f9-nKu" customClass="CircleImageView" customModule="Etlas" customModuleProvider="target">
+                                                        <rect key="frame" x="132.66666666666666" y="8.9999999999999929" width="127.99999999999997" height="126.66666666666666"/>
+                                                        <color key="tintColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="128" id="3at-Ab-jOn"/>
                                                             <constraint firstAttribute="height" constant="128" id="mzd-KH-lfk"/>
@@ -97,7 +97,7 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="Name">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" size="20" name="Montserrat-Medium"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -370,10 +370,13 @@
                             <constraint firstItem="5of-Vl-MFz" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="rAs-6F-dq2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="personalImageView" destination="iyW-f9-nKu" id="IP3-q6-9qv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-266.41221374045801" y="-19.014084507042256"/>
+            <point key="canvasLocation" x="-477" y="-32"/>
         </scene>
     </scenes>
     <resources>
@@ -382,7 +385,7 @@
         <image name="globe" catalog="system" width="128" height="123"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="ic_bestScore" width="24" height="24"/>
-        <image name="img_GizaTour" width="116" height="105"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="109"/>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -14,7 +14,7 @@ class SignInViewController: BaseViewController {
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var emaiTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
-    @IBOutlet weak var showPasswordButton: UIButton!
+    @IBOutlet weak var showPasswordButton: PasswordButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var signInLabel: UILabel!
     @IBOutlet weak var signInButton: BrownButton!
@@ -28,21 +28,14 @@ class SignInViewController: BaseViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func showPasswordPressed(_ sender: UIButton) {
-        passwordTextField.isSecureTextEntry.toggle()
-        let imageName = passwordTextField.isSecureTextEntry ? "eye" : "eye.slash"
-        showPasswordButton.setImage(UIImage(systemName: imageName), for: .normal)
-    }
     @IBAction func forgotPasswordPressed(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "ForgotPasswordViewController", bundle: nil)
         let forgotPWVC = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController")
-      //  navigationController?.pushViewController(forgotPWVC, animated: true)
+    
         self.present(forgotPWVC, animated: true)
         
     }
     @IBAction func googleSignInPressed(_ sender: UIButton) {
-    }
-    @IBAction func twitterSignInPressed(_ sender: UIButton) {
     }
     @IBAction func facebookSignInPressed(_ sender: UIButton) {
     }
@@ -50,15 +43,13 @@ class SignInViewController: BaseViewController {
     
     @IBAction func signInPressed(_ sender: UIButton) {
         let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
-        let homeVC =  storyborad.instantiateViewController(withIdentifier: "TBMiddleButtonVCViewController")
-        //navigationController?.pushViewController(homeVC, animated: true)
+        let homeVC =  storyborad.instantiateViewController(withIdentifier: "MainTabBarViewController")
         self.present(homeVC, animated: true)
 
     }
     @IBAction func signUpPressed(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "SignUpViewController", bundle: nil)
         let signUpVC = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
-       // navigationController?.pushViewController(signUpVC, animated: true)
         self.present(signUpVC, animated: true)
 
     }
@@ -71,17 +62,8 @@ class SignInViewController: BaseViewController {
         attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))
         signInLabel.attributedText = attributedString
         passwordTextField.isSecureTextEntry = true
-        //           logInLabel.text = "Log_In".localized
-        //           EnterAccountLabel.text = "Enter_Account".localized
-        //           emailLabel.text = "Email".localized
-        //           emaiTextField.placeholder = "Email".localized
-        //           passwordLabel.text = "Password".localized
-        //           passwordTextField.placeholder = "Password".localized
-        //           forgotPasswordButton.setTitle("Forgot_Password".localized, for: .normal)
-        //           signInLabel.text = "OR_SIGNIN_USING".localized
-        //           signInButton.setTitle("Sign_In".localized, for: .normal)
-        //           dontHaveAccountLabel.text = "Dont_Have_Account"
-        //           signUpButton.setTitle("Sign_Up".localized, for: .normal)
+        showPasswordButton.textField = passwordTextField
+       
     }
     
     

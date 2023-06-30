@@ -8,7 +8,10 @@ target 'Etlas' do
   pod 'EasyCustomTabBar'
   pod 'Cosmos'
   pod "TinyConstraints"
+  pod 'Alamofire'
+  pod 'SwiftMessages'
+  pod 'NVActivityIndicatorView'
 
-
+	
 
 end

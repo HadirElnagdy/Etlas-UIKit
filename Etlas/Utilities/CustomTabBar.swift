@@ -10,8 +10,7 @@ import UIKit
 class CustomTabBar: UITabBar {
     
     private var shapeLayer: CALayer?
-    // Set the tint color for the selected and unselected bar items
-        
+    
     override func draw(_ rect: CGRect) {
         self.addShape()
         self.barTintColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
@@ -20,6 +19,12 @@ class CustomTabBar: UITabBar {
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         var sizeThatFits = super.sizeThatFits(size)
         sizeThatFits.height = 70
+        
+        if hasNotch() {
+            // Add an inset to the bottom of the tab bar
+            sizeThatFits.height += 8
+        }
+        
         return sizeThatFits
     }
     
@@ -39,9 +44,24 @@ class CustomTabBar: UITabBar {
     }
     
     private func createPath() -> CGPath {
-        let height: CGFloat = 70
-        let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: frame.width, height: height), byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 20.0, height: 20.0))
+        let height: CGFloat = 80
+        
+        var rect = CGRect(x: 0, y: 0, width: frame.width, height: height)
+        
+        if hasNotch() {
+            // Adjust the height to account for the inset on devices with a notch
+            rect.size.height += 8
+        }
+        
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 20.0, height: 20.0))
         return path.cgPath
     }
     
+    func hasNotch() -> Bool {
+        if #available(iOS 11.0, *) {
+            let window = UIApplication.shared.windows[0]
+            return window.safeAreaInsets.bottom > 0
+        }
+        return false
+    }
 }

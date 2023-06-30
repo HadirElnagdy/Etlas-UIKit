@@ -21,9 +21,15 @@ class RecognitionFailedViewController: UIViewController {
    
    // MARK: - IBActions
     @IBAction func learnMorePressed(_ sender: UIButton) {
-       
+        let storyboard = UIStoryboard(name: "MainMenuViewController", bundle: nil)
+        let VC = storyboard.instantiateViewController(identifier: "MainMenuViewController")
+        self.present(VC, animated: true)
         
     }
+    @IBAction func tryAgainPressed(_ sender: BrownButton) {
+        
+    }
+    
     
    
    // MARK: - Private methods

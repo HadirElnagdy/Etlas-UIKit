@@ -20,8 +20,8 @@ class LanguageSelectionViewController: UIViewController {
    }
    
    // MARK: - IBActions
-    @IBAction func closePressed(_ sender: UIButton) {
-        self.dismiss(animated: true)
+    @IBAction func backPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
   
     

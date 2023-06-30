@@ -24,17 +24,19 @@ class SignUpSecondViewController: BaseViewController {
     @IBAction func goBackPressed(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
+    @IBAction func googleSignUpPressed(_ sender: UIButton) {
+    }
+    @IBAction func facebookSignUpPressed(_ sender: UIButton) {
+    }
     @IBAction func registerPressed(_ sender: UIButton) {
-        let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
-        let homeVC =  storyborad.instantiateViewController(withIdentifier: "TBMiddleButtonVCViewController")
-        //navigationController?.pushViewController(homeVC, animated: true)
-        self.present(homeVC, animated: true)
+        let storyborad = UIStoryboard(name: "EmailVerificationViewController", bundle: nil)
+        let VC =  storyborad.instantiateViewController(withIdentifier: "EmailVerificationViewController")
+        self.present(VC, animated: true)
 
     }
     @IBAction func signInPressed(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "SignInViewController", bundle: nil)
         let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
-        //navigationController?.pushViewController(signInVC, animated: true)
         self.present(signInVC, animated: true)
 
     }

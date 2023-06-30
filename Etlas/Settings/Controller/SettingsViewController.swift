@@ -9,51 +9,112 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    
-      // MARK: - IBOutlets
-      
+    // MARK: - IBOutlets
+    @IBOutlet weak var personalImageView: CircleImageView!
 
-     
-     // MARK: - Lifecycle methods
-     override func viewDidLoad() {
-         super.viewDidLoad()
-         setupUI()
-     }
-     
-     // MARK: - IBActions
+    // MARK: - Properties
+    private var selectedImage: UIImage?
+
+    // MARK: - Lifecycle methods
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+
+    // MARK: - IBActions
+
     @IBAction func learnMorePressed(_ sender: UIButton) {
+        presentViewController(withIdentifier: "MainMenuViewController")
     }
+
     @IBAction func logOutPressed(_ sender: UIButton) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "OnboardingViewController", bundle: nil)
-        let onboardingVC = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
-        self.present(onboardingVC, animated: true)
+        // Perform logout action
     }
+
     @IBAction func editProfilePressed(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "EditAccountViewController", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "EditAccountViewController")
-        self.present(viewController, animated: true)
+        pushViewController(withIdentifier: "EditAccountViewController")
     }
+
     @IBAction func favouritesPressed(_ sender: UIButton) {
-        
+        pushViewController(withIdentifier: "FavouritesViewController")
     }
+
     @IBAction func bestScorePressed(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "HighestScoreViewController", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "HighestScoreViewController")
-        self.present(viewController, animated: true)
+        pushViewController(withIdentifier: "HighestScoreViewController")
     }
+
     @IBAction func languagePressed(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "LanguageSelectionViewController", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "LanguageSelectionViewController")
-        self.present(viewController, animated: true)
+        pushViewController(withIdentifier: "LanguageSelectionViewController")
     }
-    
 
-     
-     // MARK: - Private methods
-     private func setupUI() {
-         self.navigationController?.navigationBar.isHidden = true
+    // MARK: - Private methods
 
-     }
+    private func setupUI() {
+        navigationController?.navigationBar.isHidden = true
 
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
+        personalImageView.addGestureRecognizer(tapGesture)
+        personalImageView.isUserInteractionEnabled = true
+    }
 
+    @objc private func imageViewTapped() {
+        let imagePickerManager = ImagePickerManager()
+        imagePickerManager.presentImagePicker(from: self, delegate: self)
+    }
+
+    private func presentViewController(withIdentifier identifier: String) {
+        let storyboard = UIStoryboard(name: identifier, bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
+        present(viewController, animated: true)
+    }
+
+    private func pushViewController(withIdentifier identifier: String) {
+        let storyboard = UIStoryboard(name: identifier, bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: - ImagePickerDelegate
+extension SettingsViewController: ImagePickerDelegate {
+    func didSelectImage(_ image: UIImage?) {
+        selectedImage = image
+        personalImageView.image = image
+    }
+}
+
+// MARK: - ImagePickerManager
+protocol ImagePickerDelegate: AnyObject {
+    func didSelectImage(_ image: UIImage?)
+}
+
+class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    private weak var delegate: ImagePickerDelegate?
+
+    func presentImagePicker(from viewController: UIViewController, delegate: ImagePickerDelegate) {
+        self.delegate = delegate
+
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+
+        viewController.present(imagePicker, animated: true, completion: nil)
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        picker.dismiss(animated: true, completion: nil)
+
+        if let image = info[.originalImage] as? UIImage {
+            delegate?.didSelectImage(image)
+        } else {
+            delegate?.didSelectImage(nil)
+        }
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+        delegate?.didSelectImage(nil)
+    }
 }

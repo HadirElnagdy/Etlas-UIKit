@@ -6,44 +6,89 @@
 //
 
 import UIKit
-import Cosmos
-import TinyConstraints
 
 class HomeViewController: BaseViewController {
-
-    // MARK: - IBOutlets
-    @IBOutlet weak var ratingView: UIView!
     
+    // MARK: - IBOutlets
+    @IBOutlet weak var toursCollectionView: UICollectionView!
+    @IBOutlet weak var articlesCollectionView: UICollectionView!
+    @IBOutlet weak var searchTextField: CustomTextField!
+    
+    // MARK: - Data
+    var tourModels: [AllToursUIModel] = [AllToursUIModel(), AllToursUIModel(), AllToursUIModel(), AllToursUIModel()]
+    var articleModels: [AllArticlesModel] = [AllArticlesModel(), AllArticlesModel(), AllArticlesModel(), AllArticlesModel()]
    
-   // MARK: - Lifecycle methods
-   override func viewDidLoad() {
-       super.viewDidLoad()
-       setupUI()
-   }
+    // MARK: - Lifecycle methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        setupCollectionViews()
+        setupSearchTextField()
+    }
    
-   // MARK: - IBActions
+    // MARK: - IBActions
     @IBAction func learnMorePressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "MainMenuViewController", bundle: nil)
         let VC = storyboard.instantiateViewController(identifier: "MainMenuViewController")
         self.present(VC, animated: true)
-        
     }
     
+    @IBAction func seeAllToursPressed(_ sender: UIButton) {
+        pushStoryboardViewController(identifier: "AllToursViewController")
+    }
+    
+    @IBAction func seeAllArticlesPressed(_ sender: UIButton) {
+        pushStoryboardViewController(identifier: "AllArticlesViewController")
+    }
+    
+    // MARK: - Private methods
+    private func setupUI() {
+        navigationController?.navigationBar.isHidden = true
+    }
    
-   // MARK: - Private methods
-   private func setupUI() {
-       self.navigationController?.navigationBar.isHidden = true
-       
-       
-   }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //the search when someone press go or return
-    
-         return true
+    private func setupCollectionViews() {
+        toursCollectionView.delegate = self
+        toursCollectionView.dataSource = self
+        toursCollectionView.register(UINib(nibName: "AllToursCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AllToursCollectionViewCell")
+        
+        articlesCollectionView.delegate = self
+        articlesCollectionView.dataSource = self
+        articlesCollectionView.register(UINib(nibName: "AllArticlesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AllArticlesCollectionViewCell")
     }
-
     
-
-
+    private func pushStoryboardViewController(identifier: String) {
+        let storyboard = UIStoryboard(name: identifier, bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: identifier)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    private func setupSearchTextField() {
+        searchTextField.delegate = self
+        searchTextField.returnKeyType = .search
+    }
+    
 }
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return collectionView == toursCollectionView ? tourModels.count : articleModels.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == toursCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllToursCollectionViewCell", for: indexPath) as? AllToursCollectionViewCell
+            cell?.configure(model: tourModels[indexPath.item])
+            return cell ?? UICollectionViewCell()
+        } else if collectionView == articlesCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllArticlesCollectionViewCell", for: indexPath) as? AllArticlesCollectionViewCell
+            cell?.configure(model: articleModels[indexPath.item])
+            return cell ?? UICollectionViewCell()
+        } else {
+            return UICollectionViewCell()
+        }
+    }
+}
+
+
+   

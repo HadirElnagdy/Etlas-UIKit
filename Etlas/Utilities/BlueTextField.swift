@@ -11,7 +11,7 @@ class BlueTextField: UITextField {
 
     // MARK: - Properties
     
-    let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+    let padding = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
     
     // MARK: - Init
     

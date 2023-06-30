@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fav Articles View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="FavArticlesViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="FavArticlesViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB7-pD-80y">
+                                <rect key="frame" x="166.66666666666666" y="56" width="59.666666666666657" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Articles">
+                                        <attributes>
+                                            <color key="NSColor" red="0.050980392159999999" green="0.1960784314" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Montserrat-SemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFp-AR-4JC">
+                                <rect key="frame" x="341" y="52.666666666666657" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="JZ0-vH-NNb"/>
+                                    <constraint firstAttribute="height" constant="28" id="Yq8-au-WHZ"/>
+                                </constraints>
+                                <color key="tintColor" red="0.14117647059999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="e1U-fb-nhq"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="h1F-Do-unk">
+                                <rect key="frame" x="0.0" y="125" width="393" height="693"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aB7-pD-80y" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="56" id="Eze-4b-YbG"/>
+                            <constraint firstItem="h1F-Do-unk" firstAttribute="top" secondItem="aB7-pD-80y" secondAttribute="bottom" constant="48" id="M4P-rl-Ics"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="h1F-Do-unk" secondAttribute="bottom" id="PBq-EC-ziV"/>
+                            <constraint firstItem="h1F-Do-unk" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="WYR-Uc-EMN"/>
+                            <constraint firstItem="h1F-Do-unk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ZqE-WK-zgR"/>
+                            <constraint firstItem="EFp-AR-4JC" firstAttribute="centerY" secondItem="aB7-pD-80y" secondAttribute="centerY" id="ely-1Z-4gY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EFp-AR-4JC" secondAttribute="trailing" constant="24" id="oWA-n7-yEC"/>
+                            <constraint firstItem="aB7-pD-80y" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xhp-bS-RsG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="favArticlesTableView" destination="h1F-Do-unk" id="FhT-PZ-CRb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129.00763358778624" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

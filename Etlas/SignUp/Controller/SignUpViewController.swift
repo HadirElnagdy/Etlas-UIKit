@@ -12,8 +12,9 @@ class SignUpViewController: BaseViewController {
     //MARK: IBOutlets
     @IBOutlet weak var fullNameTextField: CustomTextField!
     @IBOutlet weak var emailTextField: CustomTextField!
+    @IBOutlet weak var showPasswordButton: PasswordButton!
     @IBOutlet weak var passwordTextField: CustomTextField!
-    @IBOutlet weak var showPasswordButton: UIButton!
+    
     @IBOutlet weak var signUpLabel: UILabel!
     @IBOutlet weak var nextButton: BrownButton!
 
@@ -24,21 +25,21 @@ class SignUpViewController: BaseViewController {
         }
     
     // MARK: - IBActions
+    @IBAction func googleSignUpPressed(_ sender: UIButton) {
+    }
+    @IBAction func facebookSignUpPressed(_ sender: UIButton) {
+    }
+    
     @IBAction func SignInPressed(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "SignInViewController", bundle: nil)
         let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
-       // navigationController?.pushViewController(signInVC, animated: true)
         self.present(signInVC, animated: true)
 
     }
     @IBAction func nextPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: "goToSecondPage", sender: self)
     }
-    @IBAction func showPasswordPressed(_ sender: UIButton) {
-        passwordTextField.isSecureTextEntry.toggle()
-        let imageName = passwordTextField.isSecureTextEntry ? "eye" : "eye.slash"
-        showPasswordButton.setImage(UIImage(systemName: imageName), for: .normal)
-    }
+   
     
     // MARK: - Private methods
         private func setupUI() {
@@ -48,6 +49,7 @@ class SignUpViewController: BaseViewController {
             let boldFontAttribute = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Bold", size: 18.0)!]
             attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))
             signUpLabel.attributedText = attributedString
+            showPasswordButton.textField = passwordTextField
             
         }
         

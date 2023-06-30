@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Statue View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="StatueViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="StatueViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXh-lS-VAt">
+                                <rect key="frame" x="337" y="56" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="PuJ-Uz-fBd"/>
+                                    <constraint firstAttribute="height" constant="32" id="c0I-Pl-nTI"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="waJ-K1-ksn"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_3dAnubis" translatesAutoresizingMaskIntoConstraints="NO" id="2Qf-cq-Uat">
+                                <rect key="frame" x="146.66666666666666" y="96" width="100" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="DKR-zc-4sJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="sa4-1i-AHj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31p-Xe-szM">
+                                <rect key="frame" x="75.666666666666686" y="336" width="242" height="37.333333333333314"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ANUBIS STATUE">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74901960784313726" green="0.50588235294117645" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="32" name="CapitalisTypOasisMedium"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egb-EK-D0K">
+                                <rect key="frame" x="136" y="389.33333333333331" width="121.33333333333331" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="200 BC | Egypt">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="18" name="Montserrat-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ieo-cG-lBk">
+                                <rect key="frame" x="0.0" y="434.33333333333331" width="176" height="2"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.50588235290000005" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="RMf-vU-DQb"/>
+                                    <constraint firstAttribute="height" constant="2" id="Y2f-ZJ-92p"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzW-7z-83b">
+                                <rect key="frame" x="0.0" y="418.33333333333326" width="393" height="433.66666666666674"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQ7-dL-UPJ">
+                                        <rect key="frame" x="0.0" y="32" width="393" height="401.66666666666669"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5v-ua-lsh">
+                                                <rect key="frame" x="0.0" y="48" width="393" height="353.66666666666669"/>
+                                                <subviews>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftJ-O5-hkO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="353.66666666666669"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uDt-z8-5lv">
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="960"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNh-HA-iE3">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="960"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqo-1M-FIO">
+                                                                                <rect key="frame" x="24" y="0.0" width="345" height="818"/>
+                                                                                <attributedString key="attributedText">
+                                                                                    <fragment>
+                                                                                        <string key="content">Anubis Statue is an ancient statue that where built in the old egypt and worshiped by the people.
+</string>
+                                                                                        <attributes>
+                                                                                            <font key="NSFont" size="18" name="Montserrat-Regular"/>
+                                                                                            <real key="NSKern" value="0.0"/>
+                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                                                        </attributes>
+                                                                                    </fragment>
+                                                                                    <fragment>
+                                                                                        <string key="content">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially 
+
+unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Anubis Statue is an ancient statue that where built in the old egypt and worshiped by the people.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially 
+
+unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+                                                                                        <attributes>
+                                                                                            <font key="NSFont" size="18" name="Montserrat-Regular"/>
+                                                                                            <real key="NSKern" value="0.0"/>
+                                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                                                <tabStops/>
+                                                                                            </paragraphStyle>
+                                                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                            <real key="NSStrokeWidth" value="0.0"/>
+                                                                                        </attributes>
+                                                                                    </fragment>
+                                                                                </attributedString>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="trailing" secondItem="aqo-1M-FIO" secondAttribute="trailing" constant="24" id="I5N-cI-z6G"/>
+                                                                            <constraint firstItem="aqo-1M-FIO" firstAttribute="top" secondItem="SNh-HA-iE3" secondAttribute="top" id="Rae-bA-Qre"/>
+                                                                            <constraint firstAttribute="height" constant="960" id="meT-Ws-lp9"/>
+                                                                            <constraint firstItem="aqo-1M-FIO" firstAttribute="leading" secondItem="SNh-HA-iE3" secondAttribute="leading" constant="24" id="mgi-kt-Ecf"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="uDt-z8-5lv" firstAttribute="bottom" secondItem="MuO-qq-ajd" secondAttribute="bottom" id="JSl-Ke-Zu2"/>
+                                                            <constraint firstItem="uDt-z8-5lv" firstAttribute="leading" secondItem="MuO-qq-ajd" secondAttribute="leading" id="Krn-tQ-dpt"/>
+                                                            <constraint firstItem="uDt-z8-5lv" firstAttribute="width" secondItem="aqR-vp-aXt" secondAttribute="width" id="Tok-La-VrE"/>
+                                                            <constraint firstItem="uDt-z8-5lv" firstAttribute="trailing" secondItem="MuO-qq-ajd" secondAttribute="trailing" id="bcV-Cb-xFX"/>
+                                                            <constraint firstItem="uDt-z8-5lv" firstAttribute="top" secondItem="MuO-qq-ajd" secondAttribute="top" id="lkk-N8-YDy"/>
+                                                        </constraints>
+                                                        <viewLayoutGuide key="contentLayoutGuide" id="MuO-qq-ajd"/>
+                                                        <viewLayoutGuide key="frameLayoutGuide" id="aqR-vp-aXt"/>
+                                                    </scrollView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="ftJ-O5-hkO" secondAttribute="bottom" id="eqw-6k-Z0U"/>
+                                                    <constraint firstItem="ftJ-O5-hkO" firstAttribute="top" secondItem="o5v-ua-lsh" secondAttribute="top" id="fm4-Lm-d9g"/>
+                                                    <constraint firstItem="ftJ-O5-hkO" firstAttribute="leading" secondItem="o5v-ua-lsh" secondAttribute="leading" id="ktw-jm-G0k"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ftJ-O5-hkO" secondAttribute="trailing" id="oE2-Te-Apa"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="o5v-ua-lsh" secondAttribute="bottom" id="V4c-5K-uES"/>
+                                            <constraint firstItem="o5v-ua-lsh" firstAttribute="leading" secondItem="FQ7-dL-UPJ" secondAttribute="leading" id="blW-0S-uoL"/>
+                                            <constraint firstAttribute="trailing" secondItem="o5v-ua-lsh" secondAttribute="trailing" id="ka9-P5-gVQ"/>
+                                            <constraint firstItem="o5v-ua-lsh" firstAttribute="top" secondItem="FQ7-dL-UPJ" secondAttribute="top" constant="48.000000000000057" id="vuW-Rs-tob"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6su-RF-fyz">
+                                        <rect key="frame" x="297" y="0.0" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="ttN-Jb-R8S"/>
+                                            <constraint firstAttribute="height" constant="64" id="zZD-lC-51j"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_PlayButton"/>
+                                        <connections>
+                                            <action selector="readButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="R6U-19-0WY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GR-90-nX1">
+                                        <rect key="frame" x="225" y="0.0" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="L6y-U9-L2m"/>
+                                            <constraint firstAttribute="height" constant="64" id="eaH-CS-Lii"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="ic_FavButton"/>
+                                        <connections>
+                                            <action selector="lovePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RfS-Ws-oN9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="FQ7-dL-UPJ" firstAttribute="top" secondItem="jzW-7z-83b" secondAttribute="top" constant="32" id="0GA-qM-Gs3"/>
+                                    <constraint firstAttribute="trailing" secondItem="6su-RF-fyz" secondAttribute="trailing" constant="32" id="DTl-9W-LtN"/>
+                                    <constraint firstAttribute="trailing" secondItem="FQ7-dL-UPJ" secondAttribute="trailing" id="GLg-9L-yTi"/>
+                                    <constraint firstAttribute="bottom" secondItem="FQ7-dL-UPJ" secondAttribute="bottom" id="JKm-gc-by7"/>
+                                    <constraint firstItem="2GR-90-nX1" firstAttribute="centerY" secondItem="6su-RF-fyz" secondAttribute="centerY" id="kYt-aG-dDm"/>
+                                    <constraint firstItem="FQ7-dL-UPJ" firstAttribute="leading" secondItem="jzW-7z-83b" secondAttribute="leading" id="lDS-gt-fFn"/>
+                                    <constraint firstItem="6su-RF-fyz" firstAttribute="top" secondItem="jzW-7z-83b" secondAttribute="top" id="lEj-nD-V4j"/>
+                                    <constraint firstItem="6su-RF-fyz" firstAttribute="leading" secondItem="2GR-90-nX1" secondAttribute="trailing" constant="8" id="uXH-jx-1qH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dXh-lS-VAt" secondAttribute="trailing" constant="24" id="DeG-Bv-Ch0"/>
+                            <constraint firstItem="dXh-lS-VAt" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="56" id="GyJ-BL-OLF"/>
+                            <constraint firstItem="jzW-7z-83b" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="H1Y-Qq-Ksb"/>
+                            <constraint firstItem="2Qf-cq-Uat" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LmY-Fc-GRg"/>
+                            <constraint firstItem="jzW-7z-83b" firstAttribute="top" secondItem="egb-EK-D0K" secondAttribute="bottom" constant="8" id="NOJ-kW-4uQ"/>
+                            <constraint firstItem="Ieo-cG-lBk" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Och-Fw-zLI"/>
+                            <constraint firstItem="jzW-7z-83b" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TL2-2q-JTU"/>
+                            <constraint firstItem="egb-EK-D0K" firstAttribute="centerX" secondItem="31p-Xe-szM" secondAttribute="centerX" id="Xmi-ec-cY7"/>
+                            <constraint firstItem="2Qf-cq-Uat" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="96" id="Zbd-EY-jxl"/>
+                            <constraint firstItem="31p-Xe-szM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="d3c-Gb-o0l"/>
+                            <constraint firstItem="egb-EK-D0K" firstAttribute="top" secondItem="31p-Xe-szM" secondAttribute="bottom" constant="16" id="gfK-Xx-5cp"/>
+                            <constraint firstItem="31p-Xe-szM" firstAttribute="top" secondItem="2Qf-cq-Uat" secondAttribute="bottom" constant="40" id="nCw-ZZ-5aG"/>
+                            <constraint firstItem="Ieo-cG-lBk" firstAttribute="top" secondItem="egb-EK-D0K" secondAttribute="bottom" constant="24" id="w3u-md-xBb"/>
+                            <constraint firstAttribute="bottom" secondItem="jzW-7z-83b" secondAttribute="bottom" id="wHe-WO-5Tf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="aqo-1M-FIO" id="O4d-OP-joP"/>
+                        <outlet property="loveButton" destination="2GR-90-nX1" id="zMf-xY-jZ9"/>
+                        <outlet property="monumentImg" destination="2Qf-cq-Uat" id="LhG-ps-DQ5"/>
+                        <outlet property="monumentNameLabel" destination="31p-Xe-szM" id="iXg-Mc-MdS"/>
+                        <outlet property="readButton" destination="6su-RF-fyz" id="Iel-An-0dd"/>
+                        <outlet property="whiteView" destination="FQ7-dL-UPJ" id="OoK-IM-BrH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129.00763358778624" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_FavButton" width="64" height="67"/>
+        <image name="ic_PlayButton" width="64" height="64"/>
+        <image name="img_3dAnubis" width="93" height="225"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

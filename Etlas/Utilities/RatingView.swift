@@ -34,6 +34,7 @@ class RatingView: UIView {
         view.settings.emptyImage = UIImage(named: "ic_RatingStarEmpty")?.withRenderingMode(.alwaysOriginal)
         view.settings.filledImage = UIImage(named: "ic_RatingStarFilled")?.withRenderingMode(.alwaysOriginal)
         view.settings.fillMode = .precise
+        view.isUserInteractionEnabled = false
         view.settings.starMargin = 3.6
         return view
     }()

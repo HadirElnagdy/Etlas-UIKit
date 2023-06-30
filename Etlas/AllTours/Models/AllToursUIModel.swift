@@ -15,10 +15,10 @@ struct AllToursUIModel {
     var tourName: String?
     
     init(
-        tourDetails: String? = "Details",
-        tourImg: UIImageView? = nil,
-        tourRating: Double? = 2.5,
-        tourName: String? = "Name"
+        tourDetails: String? = "where you can visit the pyramids and ride the camels.",
+        tourImg: UIImageView? = UIImageView(image: UIImage(named: "img_GizaTour")),
+        tourRating: Double? = 3.0,
+        tourName: String? = "Giza tour"
     ) {
         self.tourDetails = tourDetails
         self.tourImg = tourImg
@@ -27,3 +27,4 @@ struct AllToursUIModel {
     }
     
 }
+

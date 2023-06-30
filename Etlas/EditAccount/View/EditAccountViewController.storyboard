@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dqw-Qp-LEy">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="823"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGn-VV-O95">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
@@ -67,10 +67,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YnS-C6-VgL">
-                                                <rect key="frame" x="0.0" y="128" width="393" height="575"/>
+                                                <rect key="frame" x="0.0" y="128" width="393" height="475"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pD-5l-e4p" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
-                                                        <rect key="frame" x="24" y="53" width="345" height="50"/>
+                                                        <rect key="frame" x="24" y="37" width="345" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="bge-XO-6G9"/>
                                                             <constraint firstAttribute="width" constant="345" id="s6w-3o-Mjm"/>
@@ -78,8 +78,8 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8B-GO-Be7" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
-                                                        <rect key="frame" x="24" y="273" width="345" height="50"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8B-GO-Be7" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
+                                                        <rect key="frame" x="24" y="257" width="345" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Tvk-Uy-Ssl"/>
                                                             <constraint firstAttribute="width" constant="345" id="fTN-Ja-zVH"/>
@@ -88,7 +88,7 @@
                                                         <textInputTraits key="textInputTraits" textContentType="password"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oh6-Pe-ab2" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
-                                                        <rect key="frame" x="24" y="163" width="345" height="50"/>
+                                                        <rect key="frame" x="24" y="147" width="345" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="AWc-he-XQC"/>
                                                             <constraint firstAttribute="width" constant="345" id="xAC-YB-cPi"/>
@@ -97,7 +97,7 @@
                                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjS-Bd-YEz">
-                                                        <rect key="frame" x="23.999999999999993" y="0.0" width="81.333333333333314" height="37"/>
+                                                        <rect key="frame" x="23.999999999999993" y="0.0" width="81.333333333333314" height="21"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Full Name">
                                                                 <attributes>
@@ -109,7 +109,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eo-UZ-dnu">
-                                                        <rect key="frame" x="24.000000000000004" y="127" width="48.333333333333343" height="20"/>
+                                                        <rect key="frame" x="24.000000000000004" y="111" width="48.333333333333343" height="20"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="E-mail">
                                                                 <attributes>
@@ -122,46 +122,33 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hb-1L-hog">
-                                                        <rect key="frame" x="24" y="237" width="75.333333333333329" height="20"/>
+                                                        <rect key="frame" x="24.000000000000007" y="221" width="114.66666666666669" height="20"/>
                                                         <attributedString key="attributedText">
-                                                            <fragment content="Password">
+                                                            <fragment content="Phone Number">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.74901960784313726" green="0.50588235294117645" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="NSColor" red="0.74902000000000002" green="0.50588" blue="0.28234999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" size="17" name="Montserrat-SemiBold"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOw-im-BYR">
-                                                        <rect key="frame" x="24.000000000000007" y="347" width="114.66666666666669" height="20"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Phone Number">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.74901960784313726" green="0.50588235294117645" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="17" name="Montserrat-SemiBold"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bv-bk-bhP">
-                                                        <rect key="frame" x="23.999999999999996" y="457" width="62.666666666666657" height="20"/>
+                                                        <rect key="frame" x="23.999999999999996" y="331" width="62.666666666666657" height="20"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Address">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.74901960784313726" green="0.50588235294117645" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" size="17" name="Montserrat-SemiBold"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6R-4X-YOw">
-                                                        <rect key="frame" x="327" y="61" width="42" height="34"/>
+                                                        <rect key="frame" x="327" y="45" width="42" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="CZF-de-3j2"/>
                                                             <constraint firstAttribute="width" constant="42" id="oGy-5i-y5p"/>
@@ -174,7 +161,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCc-A9-dED">
-                                                        <rect key="frame" x="327" y="281" width="42" height="34"/>
+                                                        <rect key="frame" x="327" y="265" width="42" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="42" id="Hgx-VM-FlN"/>
                                                             <constraint firstAttribute="height" constant="34" id="fux-TT-pVV"/>
@@ -183,11 +170,11 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
                                                         <connections>
-                                                            <action selector="editPasswordPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1M0-ge-uGw"/>
+                                                            <action selector="editPhonePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="59J-V0-H59"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ5-78-Pw7">
-                                                        <rect key="frame" x="327" y="171" width="42" height="34"/>
+                                                        <rect key="frame" x="327" y="155" width="42" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="42" id="7S7-rc-ZLU"/>
                                                             <constraint firstAttribute="height" constant="34" id="Kf7-aU-PP2"/>
@@ -199,8 +186,8 @@
                                                             <action selector="editEmailPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6Lk-5Q-Fnd"/>
                                                         </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEt-yS-6o1" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
-                                                        <rect key="frame" x="24" y="383" width="345" height="50"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEt-yS-6o1" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
+                                                        <rect key="frame" x="24" y="367" width="345" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="dgJ-Ja-YyT"/>
                                                             <constraint firstAttribute="width" constant="345" id="utZ-1y-DNm"/>
@@ -208,17 +195,8 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="tel"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AfK-qW-07G" customClass="BlueTextField" customModule="Etlas" customModuleProvider="target">
-                                                        <rect key="frame" x="24" y="493" width="345" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="345" id="Rmf-2o-bUS"/>
-                                                            <constraint firstAttribute="height" constant="50" id="jcY-qQ-4oD"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="street-address"/>
-                                                    </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeW-o4-ntv">
-                                                        <rect key="frame" x="327" y="391" width="42" height="34"/>
+                                                        <rect key="frame" x="327" y="375" width="42" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="42" id="csK-gG-Iq1"/>
                                                             <constraint firstAttribute="height" constant="34" id="kw9-dB-mgu"/>
@@ -227,20 +205,25 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
                                                         <connections>
-                                                            <action selector="editPhonePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LSS-50-eR6"/>
+                                                            <action selector="editAddressPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7Ks-up-xdd"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihs-gC-KGa">
-                                                        <rect key="frame" x="327" y="501" width="42" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="42" id="Gpy-4T-3fb"/>
-                                                            <constraint firstAttribute="height" constant="34" id="UQV-LR-wLD"/>
-                                                        </constraints>
-                                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDL-nj-dZR">
+                                                        <rect key="frame" x="24" y="441" width="195.66666666666666" height="30.333333333333314"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title=""/>
+                                                        <buttonConfiguration key="configuration" style="plain">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Want to change password?">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="14" name="Montserrat-Medium"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="editAddressPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HJf-mt-Fcn"/>
+                                                            <action selector="changePasswordPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dq3-Nl-u72"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -251,25 +234,19 @@
                                                     <constraint firstItem="VEt-yS-6o1" firstAttribute="top" secondItem="IOw-im-BYR" secondAttribute="bottom" constant="16" id="2Yn-TU-tNX"/>
                                                     <constraint firstItem="l6R-4X-YOw" firstAttribute="centerY" secondItem="1pD-5l-e4p" secondAttribute="centerY" id="42l-4w-VAk"/>
                                                     <constraint firstItem="GCc-A9-dED" firstAttribute="leading" secondItem="n8B-GO-Be7" secondAttribute="trailing" constant="-42" id="8kX-TY-KQc"/>
-                                                    <constraint firstItem="AfK-qW-07G" firstAttribute="leading" secondItem="MjS-Bd-YEz" secondAttribute="leading" id="A8X-Bg-TyD"/>
+                                                    <constraint firstItem="LDL-nj-dZR" firstAttribute="leading" secondItem="VEt-yS-6o1" secondAttribute="leading" id="B4f-dR-g6o"/>
                                                     <constraint firstItem="GCc-A9-dED" firstAttribute="centerY" secondItem="n8B-GO-Be7" secondAttribute="centerY" id="Bcj-UJ-su5"/>
                                                     <constraint firstItem="5eo-UZ-dnu" firstAttribute="top" secondItem="1pD-5l-e4p" secondAttribute="bottom" constant="24" id="DdU-v0-6bd"/>
                                                     <constraint firstItem="4Hb-1L-hog" firstAttribute="leading" secondItem="MjS-Bd-YEz" secondAttribute="leading" id="HBU-hb-sku"/>
                                                     <constraint firstItem="KeW-o4-ntv" firstAttribute="leading" secondItem="VEt-yS-6o1" secondAttribute="trailing" constant="-42" id="HCx-lh-38G"/>
                                                     <constraint firstItem="l6R-4X-YOw" firstAttribute="leading" secondItem="1pD-5l-e4p" secondAttribute="trailing" constant="-42" id="J2n-0q-y8F"/>
-                                                    <constraint firstItem="ihs-gC-KGa" firstAttribute="leading" secondItem="AfK-qW-07G" secondAttribute="trailing" constant="-42" id="MDx-jR-MPB"/>
-                                                    <constraint firstItem="AfK-qW-07G" firstAttribute="top" secondItem="YnS-C6-VgL" secondAttribute="top" constant="493" id="McC-wI-OCA"/>
-                                                    <constraint firstItem="ihs-gC-KGa" firstAttribute="centerY" secondItem="AfK-qW-07G" secondAttribute="centerY" id="OiX-ac-RKM"/>
                                                     <constraint firstItem="oh6-Pe-ab2" firstAttribute="top" secondItem="5eo-UZ-dnu" secondAttribute="bottom" constant="16" id="Ot1-zh-ZYe"/>
                                                     <constraint firstItem="4Hb-1L-hog" firstAttribute="top" secondItem="oh6-Pe-ab2" secondAttribute="bottom" constant="24" id="QOD-7t-RHL"/>
-                                                    <constraint firstItem="8Bv-bk-bhP" firstAttribute="leading" secondItem="MjS-Bd-YEz" secondAttribute="leading" id="Try-kJ-90f"/>
                                                     <constraint firstItem="dZ5-78-Pw7" firstAttribute="centerY" secondItem="oh6-Pe-ab2" secondAttribute="centerY" id="W0h-rV-r9I"/>
                                                     <constraint firstItem="n8B-GO-Be7" firstAttribute="leading" secondItem="MjS-Bd-YEz" secondAttribute="leading" id="YCN-IP-ThR"/>
-                                                    <constraint firstAttribute="height" constant="575" id="bYO-az-fhd"/>
-                                                    <constraint firstItem="AfK-qW-07G" firstAttribute="top" secondItem="8Bv-bk-bhP" secondAttribute="bottom" constant="16" id="cf1-rh-cbA"/>
+                                                    <constraint firstAttribute="height" constant="475" id="bYO-az-fhd"/>
                                                     <constraint firstItem="KeW-o4-ntv" firstAttribute="centerY" secondItem="VEt-yS-6o1" secondAttribute="centerY" id="eV7-dM-GFA"/>
                                                     <constraint firstItem="n8B-GO-Be7" firstAttribute="top" secondItem="4Hb-1L-hog" secondAttribute="bottom" constant="16" id="eYf-T8-daN"/>
-                                                    <constraint firstItem="8Bv-bk-bhP" firstAttribute="top" secondItem="VEt-yS-6o1" secondAttribute="bottom" constant="24" id="fZS-LT-T9y"/>
                                                     <constraint firstItem="MjS-Bd-YEz" firstAttribute="top" secondItem="YnS-C6-VgL" secondAttribute="top" id="lgC-u7-w6y"/>
                                                     <constraint firstItem="5eo-UZ-dnu" firstAttribute="leading" secondItem="MjS-Bd-YEz" secondAttribute="leading" id="mZ0-xK-INk"/>
                                                     <constraint firstItem="dZ5-78-Pw7" firstAttribute="leading" secondItem="oh6-Pe-ab2" secondAttribute="trailing" constant="-42" id="mpU-JQ-P0B"/>
@@ -278,10 +255,11 @@
                                                     <constraint firstItem="1pD-5l-e4p" firstAttribute="top" secondItem="MjS-Bd-YEz" secondAttribute="bottom" constant="16" id="tFM-TE-10o"/>
                                                     <constraint firstItem="IOw-im-BYR" firstAttribute="top" secondItem="n8B-GO-Be7" secondAttribute="bottom" constant="24" id="w5j-SF-7XQ"/>
                                                     <constraint firstItem="VEt-yS-6o1" firstAttribute="leading" secondItem="MjS-Bd-YEz" secondAttribute="leading" id="x68-hJ-ulW"/>
+                                                    <constraint firstItem="LDL-nj-dZR" firstAttribute="top" secondItem="VEt-yS-6o1" secondAttribute="bottom" constant="24" id="yRs-Zi-E9Q"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gmv-kA-Ot3">
-                                                <rect key="frame" x="0.0" y="703" width="393" height="120"/>
+                                                <rect key="frame" x="0.0" y="603" width="393" height="120"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBf-uZ-LdR" customClass="BlueButton" customModule="Etlas" customModuleProvider="target">
                                                         <rect key="frame" x="86.666666666666686" y="31.666666666666629" width="220" height="57"/>
@@ -302,6 +280,13 @@
                                                     <constraint firstAttribute="height" constant="120" id="P8u-YW-24K"/>
                                                     <constraint firstItem="UBf-uZ-LdR" firstAttribute="centerY" secondItem="Gmv-kA-Ot3" secondAttribute="centerY" id="rsN-zz-LYt"/>
                                                     <constraint firstItem="UBf-uZ-LdR" firstAttribute="centerX" secondItem="Gmv-kA-Ot3" secondAttribute="centerX" id="tvT-ns-UHe"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvn-V2-u5W">
+                                                <rect key="frame" x="0.0" y="723" width="393" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="AGF-OO-Zjc"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -332,16 +317,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addressTextField" destination="AfK-qW-07G" id="grH-JR-1op"/>
-                        <outlet property="editAddressButton" destination="ihs-gC-KGa" id="ZzE-AY-zbk"/>
+                        <outlet property="addressTextField" destination="VEt-yS-6o1" id="BDu-D3-rLx"/>
+                        <outlet property="editAddressButton" destination="KeW-o4-ntv" id="geo-4r-T5Y"/>
                         <outlet property="editEmailButton" destination="dZ5-78-Pw7" id="ogR-k8-Lkf"/>
                         <outlet property="editFullNameButton" destination="l6R-4X-YOw" id="yij-Pc-Caa"/>
-                        <outlet property="editPasswordButton" destination="GCc-A9-dED" id="sWc-pl-nQy"/>
-                        <outlet property="editPhoneButton" destination="KeW-o4-ntv" id="lIY-CY-b2d"/>
+                        <outlet property="editPhoneButton" destination="GCc-A9-dED" id="0g3-F5-Zls"/>
                         <outlet property="emailTextField" destination="oh6-Pe-ab2" id="HR6-tt-3Lr"/>
                         <outlet property="fullNameTextField" destination="1pD-5l-e4p" id="ccl-qK-f1T"/>
-                        <outlet property="passwordTextField" destination="n8B-GO-Be7" id="sab-GV-bMY"/>
-                        <outlet property="phoneTextField" destination="VEt-yS-6o1" id="eQe-Jq-gHu"/>
+                        <outlet property="phoneTextField" destination="n8B-GO-Be7" id="vZw-qb-rJM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

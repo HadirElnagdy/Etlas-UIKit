@@ -29,5 +29,6 @@ class BlueButton: UIButton{
         let buttonFont = UIFont(name: "Montserrat-Bold", size: 20)
         titleLabel?.font = buttonFont
         setTitleColor(.white, for: .normal)
+        
     }
 }

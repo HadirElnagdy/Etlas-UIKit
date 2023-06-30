@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "img_3dAnubis.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

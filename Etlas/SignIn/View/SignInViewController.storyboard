@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -183,17 +183,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-Ub-wMU">
-                                <rect key="frame" x="321" y="321" width="57.666666666666686" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-Ub-wMU" customClass="PasswordButton" customModule="Etlas" customModuleProvider="target">
+                                <rect key="frame" x="311.33333333333331" y="321" width="57.666666666666686" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="AI2-nq-Is8"/>
                                 </constraints>
                                 <color key="tintColor" red="0.6705882353" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
-                                <connections>
-                                    <action selector="showPasswordPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Qdv-iW-e2z"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp1-Ji-fyd">
                                 <rect key="frame" x="203" y="656.33333333333337" width="78" height="31.666666666666629"/>
@@ -240,16 +237,16 @@
                             <constraint firstItem="6P8-fr-sMo" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="HEC-vo-4uC"/>
                             <constraint firstItem="wd1-jU-WG7" firstAttribute="top" secondItem="6P8-fr-sMo" secondAttribute="bottom" constant="24" id="HHT-2q-wCM"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Ta-JB-K5W" secondAttribute="trailing" constant="24" id="I6g-0J-hXp"/>
-                            <constraint firstItem="e0E-Ub-wMU" firstAttribute="leading" secondItem="4Ta-JB-K5W" secondAttribute="trailing" constant="-48" id="Kz0-NO-9t7"/>
+                            <constraint firstItem="e0E-Ub-wMU" firstAttribute="trailing" secondItem="4Ta-JB-K5W" secondAttribute="trailing" id="Kz0-NO-9t7"/>
                             <constraint firstItem="SNk-Ep-Keo" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="LAz-l6-Bsk"/>
                             <constraint firstItem="uGM-ls-kgI" firstAttribute="top" secondItem="4Ta-JB-K5W" secondAttribute="bottom" constant="60" id="MtG-eH-cf4"/>
                             <constraint firstItem="7rx-3t-WoI" firstAttribute="top" secondItem="oj1-C8-W3E" secondAttribute="bottom" constant="16" id="OY1-if-bZK"/>
-                            <constraint firstItem="e0E-Ub-wMU" firstAttribute="top" secondItem="4Ta-JB-K5W" secondAttribute="top" id="R9T-fm-EYU"/>
                             <constraint firstItem="6P8-fr-sMo" firstAttribute="top" secondItem="UmX-VJ-xzZ" secondAttribute="bottom" constant="16" id="S7e-yL-GyD"/>
                             <constraint firstItem="UmX-VJ-xzZ" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="bAg-rw-P1h"/>
                             <constraint firstItem="Cp1-Ji-fyd" firstAttribute="leading" secondItem="7rx-3t-WoI" secondAttribute="trailing" constant="-5" id="dYS-m5-bkN"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fyV-vp-YMt" secondAttribute="trailing" constant="24" id="dys-5e-zQL"/>
                             <constraint firstItem="hZq-wy-pkc" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="f4r-Nu-smW"/>
+                            <constraint firstItem="e0E-Ub-wMU" firstAttribute="centerY" secondItem="4Ta-JB-K5W" secondAttribute="centerY" id="fQu-aC-coM"/>
                             <constraint firstItem="wd1-jU-WG7" firstAttribute="leading" secondItem="XK6-qs-SrG" secondAttribute="leading" id="i83-ey-bYL"/>
                             <constraint firstItem="XK6-qs-SrG" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="80" id="iJr-8f-ADS"/>
                             <constraint firstItem="XK6-qs-SrG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="lt6-LU-jkG"/>
@@ -281,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="402.29007633587787" y="32.394366197183103"/>
+            <point key="canvasLocation" x="-346" y="-1"/>
         </scene>
     </scenes>
     <resources>
