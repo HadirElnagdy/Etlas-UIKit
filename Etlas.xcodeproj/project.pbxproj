@@ -98,6 +98,10 @@
 		04D319842A09768600CF0C7F /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D319832A09768600CF0C7F /* CustomView.swift */; };
 		04D319A92A098D0300CF0C7F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D319A82A098D0300CF0C7F /* RatingView.swift */; };
 		04D574A02A4ED8CC00F9C227 /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5749F2A4ED8CC00F9C227 /* BackendService.swift */; };
+		04D574A22A4EE2A900F9C227 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D574A12A4EE2A900F9C227 /* APIEndpoints.swift */; };
+		04D574A42A4EE2B900F9C227 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D574A32A4EE2B900F9C227 /* UserManager.swift */; };
+		04D574A62A4EFB9000F9C227 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D574A52A4EFB9000F9C227 /* AuthService.swift */; };
+		04D574A82A4EFDBC00F9C227 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D574A72A4EFDBC00F9C227 /* NetworkError.swift */; };
 		04D5B35A2A46E58700DCE93E /* AllArticlesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5B3592A46E58700DCE93E /* AllArticlesModel.swift */; };
 		04D5B35C2A47084E00DCE93E /* LabelCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5B35B2A47084E00DCE93E /* LabelCustomView.swift */; };
 		04D5B35F2A47198600DCE93E /* TourImgsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5B35E2A47198600DCE93E /* TourImgsCollectionViewCell.swift */; };
@@ -230,6 +234,10 @@
 		04D319832A09768600CF0C7F /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		04D319A82A098D0300CF0C7F /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		04D5749F2A4ED8CC00F9C227 /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
+		04D574A12A4EE2A900F9C227 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		04D574A32A4EE2B900F9C227 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		04D574A52A4EFB9000F9C227 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		04D574A72A4EFDBC00F9C227 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		04D5B3592A46E58700DCE93E /* AllArticlesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticlesModel.swift; sourceTree = "<group>"; };
 		04D5B35B2A47084E00DCE93E /* LabelCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCustomView.swift; sourceTree = "<group>"; };
 		04D5B35E2A47198600DCE93E /* TourImgsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourImgsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -371,7 +379,7 @@
 		040CF65D29C4A86A008BC27F /* Etlas */ = {
 			isa = PBXGroup;
 			children = (
-				042450372A4D92B5005CCAE7 /* Networking Layer */,
+				042450372A4D92B5005CCAE7 /* Backend */,
 				0470618E29E7418A00114E55 /* Localization Manager */,
 				040B7D1D29D70A7600B1F87C /* LaunchingScreen */,
 				0427055429D5B77400D4CAD7 /* Onboarding */,
@@ -419,12 +427,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		042450372A4D92B5005CCAE7 /* Networking Layer */ = {
+		042450372A4D92B5005CCAE7 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
 				04D5749F2A4ED8CC00F9C227 /* BackendService.swift */,
+				04D574A12A4EE2A900F9C227 /* APIEndpoints.swift */,
+				04D574A32A4EE2B900F9C227 /* UserManager.swift */,
+				04D574A52A4EFB9000F9C227 /* AuthService.swift */,
+				04D574A72A4EFDBC00F9C227 /* NetworkError.swift */,
 			);
-			path = "Networking Layer";
+			path = Backend;
 			sourceTree = "<group>";
 		};
 		042450402A4E162C005CCAE7 /* Constants */ = {
@@ -1492,6 +1504,7 @@
 				046E08962A3B862E00899579 /* AllToursViewController.swift in Sources */,
 				04B7D7672A45C77B00A8E8F7 /* CurrentScoreViewController.swift in Sources */,
 				04A54DD62A406EAD00ABEF7C /* FavArticlesViewController.swift in Sources */,
+				04D574A82A4EFDBC00F9C227 /* NetworkError.swift in Sources */,
 				04CE22682A05A9D2004FCCE9 /* EditAccountViewController.swift in Sources */,
 				04D8DF072A0AA20B0002CEA4 /* TBMiddleButtonVCViewController.swift in Sources */,
 				04CE225D2A05A90E004FCCE9 /* BrownButton.swift in Sources */,
@@ -1503,6 +1516,7 @@
 				042450442A4E1665005CCAE7 /* SharedData.swift in Sources */,
 				04CE22642A05A974004FCCE9 /* HomeViewController.swift in Sources */,
 				040CF66329C4A86A008BC27F /* ViewController.swift in Sources */,
+				04D574A22A4EE2A900F9C227 /* APIEndpoints.swift in Sources */,
 				04EE3A8D2A48DABE0078B7EB /* User.swift in Sources */,
 				046E08882A3AFCE000899579 /* LanguageSelectionViewController.swift in Sources */,
 				04D8DF0D2A0AD6480002CEA4 /* OTPViewController.swift in Sources */,
@@ -1526,8 +1540,10 @@
 				04DF69002A4AF2A400233FC4 /* ChangePasswordViewController.swift in Sources */,
 				04A54DD92A4073A000ABEF7C /* Article.swift in Sources */,
 				04D5B35A2A46E58700DCE93E /* AllArticlesModel.swift in Sources */,
+				04D574A62A4EFB9000F9C227 /* AuthService.swift in Sources */,
 				046E087B2A39ED4000899579 /* MainMenuViewController.swift in Sources */,
 				040CF65F29C4A86A008BC27F /* AppDelegate.swift in Sources */,
+				04D574A42A4EE2B900F9C227 /* UserManager.swift in Sources */,
 				04A0CF812A445C1700BFEC87 /* FavArticlesModel.swift in Sources */,
 				04DA63772A3F963100E8FBD6 /* MainTabBarViewController.swift in Sources */,
 				04EA1C5A2A068E26005BB160 /* CustomGrayView.swift in Sources */,

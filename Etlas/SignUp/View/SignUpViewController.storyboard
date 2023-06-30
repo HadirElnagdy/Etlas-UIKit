@@ -615,6 +615,8 @@ contain letters and symbols.</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressTextField" destination="sD1-rJ-V9f" id="FUS-v2-cgt"/>
+                        <outlet property="phoneTextField" destination="k1W-yg-ZwQ" id="ahy-hq-glS"/>
                         <outlet property="registerButton" destination="Ltz-tX-cCV" id="SeZ-xb-slA"/>
                         <outlet property="signUpLabel" destination="TtP-qv-zCe" id="nO5-bg-KGk"/>
                     </connections>

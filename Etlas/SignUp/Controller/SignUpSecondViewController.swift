@@ -12,12 +12,16 @@ class SignUpSecondViewController: BaseViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var signUpLabel: UILabel!
     @IBOutlet weak var registerButton: BrownButton!
+    @IBOutlet weak var phoneTextField: CustomTextField!
+    @IBOutlet weak var addressTextField: CustomTextField!
+    
+    var name: String?
+//    vc.name = nameTextfiled.text
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
     }
     
     // MARK: - IBActions
@@ -29,11 +33,26 @@ class SignUpSecondViewController: BaseViewController {
     @IBAction func facebookSignUpPressed(_ sender: UIButton) {
     }
     @IBAction func registerPressed(_ sender: UIButton) {
-        let storyborad = UIStoryboard(name: "EmailVerificationViewController", bundle: nil)
-        let VC =  storyborad.instantiateViewController(withIdentifier: "EmailVerificationViewController")
-        self.present(VC, animated: true)
-
+        BackendService.shared.perform(url: APIEndpoints.register,
+                                      model: RegisterRequestModel(email: "alm3223me111@gmail.com",
+                                                                  password: "qwaszx1@Q",
+                                                                  fullName: "Mostafa ESsam",
+                                                                  confirmPassword: "qwaszx1@Q",
+                                                                  address: addressTextField.text ?? "-1",
+                                                                  phoneNumber: phoneTextField.text ?? "-1"),
+                                      responseType: RegisterResponse.self,
+                                      method: .post,
+                                      completionHandler: { response in
+            print(response)
+            
+            let storyborad = UIStoryboard(name: "EmailVerificationViewController", bundle: nil)
+            let vc =  storyborad.instantiateViewController(withIdentifier: "EmailVerificationViewController") as? EmailVerificationViewController
+            vc?.name = "we got this name from the previous screen"
+            
+            self.present(vc, animated: true)
+        })
     }
+
     @IBAction func signInPressed(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "SignInViewController", bundle: nil)
         let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController")

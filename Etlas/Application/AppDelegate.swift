@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.makeKeyAndVisible()
-
+        
+        BackendService.shared
 //           if userIsLoggedIn {
 //            let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
 //            let onboardingVC =  storyborad.instantiateViewController(withIdentifier: "TBMiddleButtonVCViewController")

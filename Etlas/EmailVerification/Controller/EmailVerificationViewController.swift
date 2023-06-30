@@ -9,7 +9,7 @@ import UIKit
 
 class EmailVerificationViewController: UIViewController {
 
-    
+    var name: String?
     // MARK: - IBOutlets
     
     
