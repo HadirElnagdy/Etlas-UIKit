@@ -187,6 +187,9 @@ continue reseting your password.</string>
                                 <buttonConfiguration key="configuration" style="plain" title="Next">
                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextPressed:" destination="nNL-Rz-SpD" eventType="touchUpInside" id="7Dk-sm-3Lv"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r5N-pA-PRR">
                                 <rect key="frame" x="31.666666666666657" y="264.33333333333331" width="330" height="75"/>
@@ -248,6 +251,9 @@ continue reseting your password.</string>
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="onResendMailPressed:" destination="nNL-Rz-SpD" eventType="touchUpInside" id="nLo-f4-w6d"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A8T-Zw-RIe"/>

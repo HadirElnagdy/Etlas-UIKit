@@ -34,7 +34,7 @@ class SignUpSecondViewController: BaseViewController {
     }
     @IBAction func registerPressed(_ sender: UIButton) {
         BackendService.shared.perform(url: APIEndpoints.register,
-                                      model: RegisterRequestModel(email: "alm3223me111@gmail.com",
+                                      model: RegisterRequestModel(email: "\(UUID().uuidString)@gmail.com",
                                                                   password: "qwaszx1@Q",
                                                                   fullName: "Mostafa ESsam",
                                                                   confirmPassword: "qwaszx1@Q",
@@ -46,8 +46,8 @@ class SignUpSecondViewController: BaseViewController {
             print(response)
             
             let storyborad = UIStoryboard(name: "EmailVerificationViewController", bundle: nil)
-            let vc =  storyborad.instantiateViewController(withIdentifier: "EmailVerificationViewController") as? EmailVerificationViewController
-            vc?.name = "we got this name from the previous screen"
+            let vc =  storyborad.instantiateViewController(withIdentifier: "EOTPViewController") as! EOTPViewController
+            vc.enteredEmail = "almme111@gmail.com"
             
             self.present(vc, animated: true)
         })
