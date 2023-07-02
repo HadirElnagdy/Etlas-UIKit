@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -264,8 +263,8 @@
                     <connections>
                         <outlet property="EnterAccountLabel" destination="6P8-fr-sMo" id="xJE-ax-GVv"/>
                         <outlet property="dontHaveAccountLabel" destination="7rx-3t-WoI" id="PE6-Re-fmw"/>
-                        <outlet property="emaiTextField" destination="hZq-wy-pkc" id="Xwl-UX-wFQ"/>
                         <outlet property="emailLabel" destination="wd1-jU-WG7" id="f23-U2-IWm"/>
+                        <outlet property="emailTextField" destination="hZq-wy-pkc" id="Xwl-UX-wFQ"/>
                         <outlet property="forgotPasswordButton" destination="fyV-vp-YMt" id="wNE-On-JWv"/>
                         <outlet property="logInLabel" destination="XK6-qs-SrG" id="qK6-u1-PBN"/>
                         <outlet property="passwordLabel" destination="SNk-Ep-Keo" id="EBa-zL-f7C"/>

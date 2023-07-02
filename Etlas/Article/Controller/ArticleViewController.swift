@@ -18,6 +18,7 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var articleDescriptionLabel: UILabel!
     
     var isLoved = false
+    var id: String = ""
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
@@ -47,5 +48,9 @@ class ArticleViewController: UIViewController {
         let imageName = isLoved ? "ic_selectedFavButton" : "ic_FavButton"
         let image = UIImage(named: imageName)
         loveButton.setImage(image, for: .normal)
+    }
+
+    private func getArticleDetails() {
+      
     }
 }

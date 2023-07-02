@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftMessages
 
 class SignUpSecondViewController: BaseViewController {
     
@@ -15,8 +16,7 @@ class SignUpSecondViewController: BaseViewController {
     @IBOutlet weak var phoneTextField: CustomTextField!
     @IBOutlet weak var addressTextField: CustomTextField!
     
-    var name: String?
-//    vc.name = nameTextfiled.text
+    var fullName: String? = "", email: String? = "", password: String = ""
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
@@ -33,24 +33,17 @@ class SignUpSecondViewController: BaseViewController {
     @IBAction func facebookSignUpPressed(_ sender: UIButton) {
     }
     @IBAction func registerPressed(_ sender: UIButton) {
-        BackendService.shared.perform(url: APIEndpoints.register,
-                                      model: RegisterRequestModel(email: "\(UUID().uuidString)@gmail.com",
-                                                                  password: "qwaszx1@Q",
-                                                                  fullName: "Mostafa ESsam",
-                                                                  confirmPassword: "qwaszx1@Q",
-                                                                  address: addressTextField.text ?? "-1",
-                                                                  phoneNumber: phoneTextField.text ?? "-1"),
-                                      responseType: RegisterResponse.self,
-                                      method: .post,
-                                      completionHandler: { response in
-            print(response)
-            
-            let storyborad = UIStoryboard(name: "EmailVerificationViewController", bundle: nil)
-            let vc =  storyborad.instantiateViewController(withIdentifier: "EOTPViewController") as! EOTPViewController
-            vc.enteredEmail = "almme111@gmail.com"
-            
-            self.present(vc, animated: true)
-        })
+        APIClient.register(fullName: fullName ?? "" , email: email ?? "", password: password, address: addressTextField.text ?? "", phoneNumber: phoneTextField.text ?? "") { [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(let user):
+                goToVerification()
+            case .failure(let error):
+                print(error.localizedDescription)
+                return
+            }
+        }
+        
     }
 
     @IBAction func signInPressed(_ sender: Any) {
@@ -68,6 +61,12 @@ class SignUpSecondViewController: BaseViewController {
         attributedString.addAttributes(boldFontAttribute, range: NSRange(location: 3, length: 7))
         signUpLabel.attributedText = attributedString
         
+    }
+    private func goToVerification() {
+        let storyborad = UIStoryboard(name: "EOTPViewController", bundle: nil)
+        let vc =  storyborad.instantiateViewController(withIdentifier: "EOTPViewController") as! EOTPViewController
+        vc.enteredEmail = email
+        self.present(vc, animated: true)
     }
     
 }

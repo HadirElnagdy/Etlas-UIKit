@@ -1,7 +1,9 @@
 PODS:
   - Alamofire (5.6.4)
   - Cosmos (23.0.0)
+  - Default (3.0.0)
   - EasyCustomTabBar (1.0.1)
+  - Hash (1.5.0)
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
@@ -13,7 +15,9 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Cosmos
+  - Default
   - EasyCustomTabBar
+  - Hash
   - NVActivityIndicatorView
   - SwiftMessages
   - TinyConstraints
@@ -22,7 +26,9 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Cosmos
+    - Default
     - EasyCustomTabBar
+    - Hash
     - NVActivityIndicatorView
     - SwiftMessages
     - TinyConstraints
@@ -30,11 +36,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  Default: df6f5067d92a350e908125bf269a7317df86b3bb
   EasyCustomTabBar: 37e77fd47cfcfae46cf87ccdf204076a58ea0fbc
+  Hash: 9765c4f6b0bbde0980b2122de0535e968bdfec37
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: c87fd2fe7ce39d66793453c2152b97dbdc4a9d48
+PODFILE CHECKSUM: ac6cd184d015fee1bfef72a8c2fffca3a098651f
 
 COCOAPODS: 1.12.1

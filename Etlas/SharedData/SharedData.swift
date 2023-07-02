@@ -54,11 +54,11 @@ class SharedData {
         }
         return false
     }
-
+    
     func SetIsAppAlreadyLaunchedOnce(_ isAppAlreadyLaunchedOnce: Bool){
-           defaults.set(isAppAlreadyLaunchedOnce, forKey: IsAppAlreadyLaunchedOnceKey)
-       }
-       
+        defaults.set(isAppAlreadyLaunchedOnce, forKey: IsAppAlreadyLaunchedOnceKey)
+    }
+    
     func isAppAlreadyLaunchedOnce() -> Bool {
         if (UserDefaults.standard.object(forKey: IsAppAlreadyLaunchedOnceKey) != nil) {
             return defaults.bool(forKey: IsAppAlreadyLaunchedOnceKey)
@@ -72,16 +72,6 @@ class SharedData {
         defaults.set(data, forKey: UserDataKey)
     }
     
-//    func GetUserData()->LoginModel{
-//
-//        if let savedPerson = defaults.object(forKey: UserData) as? Data {
-//            let decoder = JSONDecoder()
-//            if let loadedPerson = try? decoder.decode(LoginModel.self, from: savedPerson) {
-//                return loadedPerson
-//            }
-//        }
-//        return LoginModel(Id: 0, Msisdn: "", Email: "", UserName: "", Password: "", PIN: "", Gender: "", DateofBirth: "", LangId: 0, Description: "", VerifyCode: "", SignedIn: false , SignedOut: false)
-//    }
     
 }
 

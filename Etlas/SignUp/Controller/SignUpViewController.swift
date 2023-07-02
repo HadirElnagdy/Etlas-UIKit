@@ -14,9 +14,9 @@ class SignUpViewController: BaseViewController {
     @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var showPasswordButton: PasswordButton!
     @IBOutlet weak var passwordTextField: CustomTextField!
-    
     @IBOutlet weak var signUpLabel: UILabel!
     @IBOutlet weak var nextButton: BrownButton!
+    
 
     // MARK: - Lifecycle methods
         override func viewDidLoad() {
@@ -36,10 +36,22 @@ class SignUpViewController: BaseViewController {
         self.present(signInVC, animated: true)
 
     }
+
     @IBAction func nextPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: "goToSecondPage", sender: self)
     }
-   
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSecondPage" {
+            if let destinationVC = segue.destination as? SignUpSecondViewController {
+                destinationVC.fullName = fullNameTextField.text
+                destinationVC.email = emailTextField.text
+                destinationVC.password = passwordTextField.text ?? ""
+                
+            }
+        }
+    }
+
     
     // MARK: - Private methods
         private func setupUI() {

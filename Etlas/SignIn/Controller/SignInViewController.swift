@@ -12,7 +12,7 @@ class SignInViewController: BaseViewController {
     @IBOutlet weak var EnterAccountLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
-    @IBOutlet weak var emaiTextField: CustomTextField!
+    @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
     @IBOutlet weak var showPasswordButton: PasswordButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
@@ -42,9 +42,19 @@ class SignInViewController: BaseViewController {
     
     
     @IBAction func signInPressed(_ sender: UIButton) {
-        let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
-        let homeVC =  storyborad.instantiateViewController(withIdentifier: "MainTabBarViewController")
-        self.present(homeVC, animated: true)
+        APIClient.login(email: emailTextField.text ?? "", password: passwordTextField.text ?? ""){ [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(let user):
+                //UserDefaults.standard.df.store(user, forKey: "user")
+                SharedData.shared.SetIsLoggedIn(true)
+                goToHome()
+            case .failure(let error):
+                // showSwiftMessage(title: "error", message: error.message)
+                return
+            }
+        }
+        
 
     }
     @IBAction func signUpPressed(_ sender: UIButton) {
@@ -65,9 +75,11 @@ class SignInViewController: BaseViewController {
         showPasswordButton.textField = passwordTextField
        
     }
-    
-    
-    
+    private func goToHome() {
+        let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
+        let homeVC =  storyborad.instantiateViewController(withIdentifier: "MainTabBarViewController")
+        self.present(homeVC, animated: true)
+    }
     
     
 }

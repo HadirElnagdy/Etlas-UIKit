@@ -245,6 +245,7 @@ contain letters and symbols.</string>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="nextPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="s4H-cJ-aM6"/>
+                                                            <segue destination="kTn-bO-S16" kind="show" identifier="goToSecondPage" id="Tb0-Y8-wYT"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7W-nW-Uo9">
@@ -335,7 +336,6 @@ contain letters and symbols.</string>
                         <outlet property="passwordTextField" destination="dB6-ds-sj0" id="3gN-uF-3W3"/>
                         <outlet property="showPasswordButton" destination="chH-KV-MxO" id="qUe-NH-QpP"/>
                         <outlet property="signUpLabel" destination="nwy-cc-Gvt" id="EK1-mg-SN1"/>
-                        <segue destination="kTn-bO-S16" kind="presentation" identifier="goToSecondPage" id="AuY-cL-5xW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -614,6 +614,7 @@ contain letters and symbols.</string>
                             <constraint firstAttribute="bottom" secondItem="9b2-fb-Ho7" secondAttribute="bottom" id="jng-vu-zFt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="l8Q-sk-nws"/>
                     <connections>
                         <outlet property="addressTextField" destination="sD1-rJ-V9f" id="FUS-v2-cgt"/>
                         <outlet property="phoneTextField" destination="k1W-yg-ZwQ" id="ahy-hq-glS"/>

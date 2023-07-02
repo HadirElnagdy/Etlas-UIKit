@@ -29,7 +29,7 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func logOutPressed(_ sender: UIButton) {
-        // Perform logout action
+       // APIClient.logout(refreshToken: <#T##String#>, completion: goToOnboarding(), SharedData.shared.SetIsLoggedOut(true))
     }
 
     @IBAction func editProfilePressed(_ sender: UIButton) {

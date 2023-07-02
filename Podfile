@@ -11,7 +11,8 @@ target 'Etlas' do
   pod 'Alamofire'
   pod 'SwiftMessages'
   pod 'NVActivityIndicatorView'
-
+  pod 'Hash'
+  pod 'Default'
 	
 
 end

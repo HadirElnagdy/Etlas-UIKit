@@ -60,5 +60,7 @@ extension AllArticlesViewController: UICollectionViewDelegate, UICollectionViewD
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //action
+//        articleModels[indexPath.row].id
+//        let vc = UIStoryboard.instantiateViewController(sldkfnls)
     }
 }

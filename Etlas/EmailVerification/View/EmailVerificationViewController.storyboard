@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1CG-gx-w6l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nNL-Rz-SpD">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,117 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Email Verification View Controller-->
-        <scene sceneID="2O3-72-OqI">
-            <objects>
-                <viewController storyboardIdentifier="EmailVerificationViewController" modalPresentationStyle="fullScreen" id="1CG-gx-w6l" customClass="EmailVerificationViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="abB-IO-UtK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xv7-Qa-1AT">
-                                <rect key="frame" x="24" y="80" width="152.66666666666666" height="24"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Email Verification">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="20" name="CapitalisTypOasisMedium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPJ-MP-gRR">
-                                <rect key="frame" x="319" y="74.666666666666671" width="50" height="35"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
-                                <connections>
-                                    <action selector="backPressed:" destination="1CG-gx-w6l" eventType="touchUpInside" id="FYK-Y4-exN"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUv-GO-mze">
-                                <rect key="frame" x="24" y="117" width="80" height="1"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="CPs-aR-yNZ"/>
-                                    <constraint firstAttribute="width" constant="80" id="R2t-sa-1sN"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQP-NA-okP">
-                                <rect key="frame" x="24" y="134" width="345" height="35"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Enter your E-mail to send a mail to re-assign a new password for your account.">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="15" name="Montserrat-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L90-ue-Mb6">
-                                <rect key="frame" x="24.000000000000004" y="249" width="48.333333333333343" height="21"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="E-mail">
-                                        <attributes>
-                                            <color key="NSColor" red="0.74901960784313726" green="0.50588235294117645" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="17"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tn5-mg-Z01" customClass="CustomTextField" customModule="Etlas" customModuleProvider="target">
-                                <rect key="frame" x="24" y="286" width="345" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="yC7-pM-ykX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aG-Wd-GyN" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
-                                <rect key="frame" x="24" y="438" width="180" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="OY5-li-CV0"/>
-                                    <constraint firstAttribute="width" constant="180" id="vee-O7-mN5"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next">
-                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="nNL-Rz-SpD" kind="show" id="27c-eb-Wqm"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Bwd-OW-Y9C"/>
-                        <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="EUv-GO-mze" firstAttribute="top" secondItem="Xv7-Qa-1AT" secondAttribute="bottom" constant="13" id="0vC-9T-Fwv"/>
-                            <constraint firstItem="tn5-mg-Z01" firstAttribute="leading" secondItem="Xv7-Qa-1AT" secondAttribute="leading" id="1w0-QW-vul"/>
-                            <constraint firstItem="Bwd-OW-Y9C" firstAttribute="trailing" secondItem="mQP-NA-okP" secondAttribute="trailing" constant="24" id="2ek-dC-Pgg"/>
-                            <constraint firstItem="mQP-NA-okP" firstAttribute="leading" secondItem="Xv7-Qa-1AT" secondAttribute="leading" id="3R1-pd-aF0"/>
-                            <constraint firstItem="Xv7-Qa-1AT" firstAttribute="leading" secondItem="Bwd-OW-Y9C" secondAttribute="leading" constant="24" id="7AM-fe-0RR"/>
-                            <constraint firstItem="6aG-Wd-GyN" firstAttribute="top" secondItem="tn5-mg-Z01" secondAttribute="bottom" constant="96" id="Cyk-Ma-eag"/>
-                            <constraint firstItem="Bwd-OW-Y9C" firstAttribute="trailing" secondItem="HPJ-MP-gRR" secondAttribute="trailing" constant="24" id="FlU-w7-a2g"/>
-                            <constraint firstItem="tn5-mg-Z01" firstAttribute="top" secondItem="L90-ue-Mb6" secondAttribute="bottom" constant="16" id="Gmy-q6-Q8S"/>
-                            <constraint firstItem="L90-ue-Mb6" firstAttribute="top" secondItem="mQP-NA-okP" secondAttribute="bottom" constant="80" id="Lqf-t7-zgO"/>
-                            <constraint firstItem="mQP-NA-okP" firstAttribute="top" secondItem="EUv-GO-mze" secondAttribute="bottom" constant="16" id="PCW-io-MEE"/>
-                            <constraint firstItem="6aG-Wd-GyN" firstAttribute="leading" secondItem="Xv7-Qa-1AT" secondAttribute="leading" id="Zre-I4-FEp"/>
-                            <constraint firstItem="Bwd-OW-Y9C" firstAttribute="trailing" secondItem="tn5-mg-Z01" secondAttribute="trailing" constant="24" id="dsS-5n-dnb"/>
-                            <constraint firstItem="HPJ-MP-gRR" firstAttribute="centerY" secondItem="Xv7-Qa-1AT" secondAttribute="centerY" id="fVp-bm-P42"/>
-                            <constraint firstItem="L90-ue-Mb6" firstAttribute="leading" secondItem="Xv7-Qa-1AT" secondAttribute="leading" id="l6j-pH-cUI"/>
-                            <constraint firstItem="EUv-GO-mze" firstAttribute="leading" secondItem="Xv7-Qa-1AT" secondAttribute="leading" id="rDT-eq-IDu"/>
-                            <constraint firstItem="Xv7-Qa-1AT" firstAttribute="top" secondItem="abB-IO-UtK" secondAttribute="top" constant="80" id="v8w-P3-D2N"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ige-Pj-rFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-541" y="20"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="YNt-Ic-nhd">
             <objects>
@@ -286,7 +175,7 @@ continue reseting your password.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19K-cd-POw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="314" y="20"/>
+            <point key="canvasLocation" x="-283" y="-44"/>
         </scene>
     </scenes>
     <resources>
