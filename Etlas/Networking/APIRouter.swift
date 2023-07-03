@@ -11,7 +11,7 @@ import Alamofire
 enum APIRouter: URLRequestConvertible {
     
     //auth
-    case register(fullName:String, email: String, password: String, address: String, phoneNumber: String)
+    case register(fullName:String, email: String, password: String, confirmPassword: String, address: String, phoneNumber: String)
     case verifyEmail(OTP: String)
     case requestNewOTP(email: String)
     case refreshToken(token: String)
@@ -23,13 +23,15 @@ enum APIRouter: URLRequestConvertible {
     case changePassword(oldPassword: String, newPassword: String, confirmNewPassword: String)
     case googleSignIn(authToken: String, frontEnd: String)
     case facebookSignIn(authToken: String)
+    //case getAllArticles
+    case contactUs(fullName: String, email: String, subject: String, message: String)
     
     
     
     // MARK: - HTTPMethod
     private var method: HTTPMethod {
         switch self {
-        case .register, .verifyEmail, .requestNewOTP, .login, .logout, .refreshToken, .resetPassword, .verifyPasswordOTP, .changePassword, .googleSignIn, .facebookSignIn:
+        case .register, .verifyEmail, .requestNewOTP, .login, .logout, .refreshToken, .resetPassword, .verifyPasswordOTP, .changePassword, .googleSignIn, .facebookSignIn, .contactUs:
             return .post
         case .confirmPasswordReset:
             return .patch
@@ -75,6 +77,8 @@ enum APIRouter: URLRequestConvertible {
             return APIEndpoints.googleSignIn
         case .facebookSignIn:
             return APIEndpoints.facebookSignIn
+        case .contactUs:
+            return APIEndpoints.contactUs
             
         }
     }
@@ -86,6 +90,7 @@ enum APIRouter: URLRequestConvertible {
             fullName: let fullName,
             email: let email,
             password: let password,
+            confirmPassword: let confirmPassword,
             address: let address,
             phoneNumber: let phoneNumber
         ):
@@ -139,6 +144,9 @@ enum APIRouter: URLRequestConvertible {
             
         case .facebookSignIn(authToken: let authToken):
             return [APIParameterKey.authToken: authToken]
+            
+        case .contactUs(fullName: let fullName, email: let email, subject: let subject, message: let message):
+            return[APIParameterKey.fullName: fullName, APIParameterKey.email: email, APIParameterKey.subject: subject, APIParameterKey.message: message]
         default:
             return[:]
         }

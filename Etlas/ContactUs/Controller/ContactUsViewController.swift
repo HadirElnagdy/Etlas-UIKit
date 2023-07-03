@@ -12,6 +12,9 @@ class ContactUsViewController: BaseViewController {
     
      // MARK: - IBOutlets
     @IBOutlet weak var blueView: UIView!
+    @IBOutlet weak var fullNameTextField: BlueTextField!
+    @IBOutlet weak var emailTextField: BlueTextField!
+    @IBOutlet weak var subjectTextField: BlueTextField!
     @IBOutlet weak var messageTextView: MessageTextView!
     
 
@@ -27,6 +30,16 @@ class ContactUsViewController: BaseViewController {
         dismissLastTwoPresentedViewControllers()
     }
     @IBAction func submitPressed(_ sender: BrownButton) {
+        APIClient.contactUs(fullName: fullNameTextField.text ?? "" , email: emailTextField.text ?? "", subject: subjectTextField.text ?? "", message: messageTextView.text ?? "") { [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(_):
+                dismissLastTwoPresentedViewControllers()
+            case .failure(let error):
+                print(error.localizedDescription)
+                return
+            }
+        }
     }
     
     

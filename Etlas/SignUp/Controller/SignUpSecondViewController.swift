@@ -33,7 +33,7 @@ class SignUpSecondViewController: BaseViewController {
     @IBAction func facebookSignUpPressed(_ sender: UIButton) {
     }
     @IBAction func registerPressed(_ sender: UIButton) {
-        APIClient.register(fullName: fullName ?? "" , email: email ?? "", password: password, address: addressTextField.text ?? "", phoneNumber: phoneTextField.text ?? "") { [weak self] (result) in
+        APIClient.register(fullName: fullName ?? "" , email: email ?? "", password: password, confirmPassword: password, address: addressTextField.text ?? "", phoneNumber: phoneTextField.text ?? "") { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let user):
@@ -63,7 +63,7 @@ class SignUpSecondViewController: BaseViewController {
         
     }
     private func goToVerification() {
-        let storyborad = UIStoryboard(name: "EOTPViewController", bundle: nil)
+        let storyborad = UIStoryboard(name: "EmailVerificationViewController", bundle: nil)
         let vc =  storyborad.instantiateViewController(withIdentifier: "EOTPViewController") as! EOTPViewController
         vc.enteredEmail = email
         self.present(vc, animated: true)

@@ -42,13 +42,13 @@ class APIClient {
             }
     }
     
-    static func register(fullName:String, email: String, password: String, address: String, phoneNumber: String, completion: @escaping (Result<User, NetworkError>) -> Void) {
-        performRequest(route: APIRouter.register(fullName: fullName, email: email, password: password, address: address, phoneNumber: phoneNumber), completion: completion)
+    static func register(fullName:String, email: String, password: String, confirmPassword: String, address: String, phoneNumber: String, completion: @escaping (Result<RegisterResponseModel, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.register(fullName: fullName, email: email, password: password, confirmPassword: confirmPassword, address: address, phoneNumber: phoneNumber), completion: completion)
     }
-    static func verifyEmail(OTP: String, completion: @escaping (Result<User, NetworkError>) -> Void){
+    static func verifyEmail(OTP: String, completion: @escaping (Result<successResponse, NetworkError>) -> Void){
         performRequest(route: APIRouter.verifyEmail(OTP: OTP), completion: completion)
     }
-    static func requestNewOTP(email: String, completion: @escaping (Result<User, NetworkError>) -> Void){
+    static func requestNewOTP(email: String, completion: @escaping (Result<successResponse, NetworkError>) -> Void){
         performRequest(route: APIRouter.requestNewOTP(email: email), completion: completion)
     }
     static func login(email: String, password: String, completion: @escaping (Result<User, NetworkError>) -> Void){
@@ -83,7 +83,9 @@ class APIClient {
     static func facebookSignIn(authToken: String, completion: @escaping (Result<User, NetworkError>) -> Void) {
         performRequest(route: APIRouter.facebookSignIn(authToken: authToken), completion: completion)
     }
-//    static func getAllArticles(completion: @escaping (Result<Articles, NetworkError>) -> Void) {
-//
-//    }
+    static func contactUs(fullName: String, email: String, subject: String, message: String, completion: @escaping (Result<successResponse, NetworkError>) -> Void){
+        performRequest(route: APIRouter.contactUs(fullName: fullName, email: email, subject: subject, message: message), completion: completion)
+        
+    }
+    
 }

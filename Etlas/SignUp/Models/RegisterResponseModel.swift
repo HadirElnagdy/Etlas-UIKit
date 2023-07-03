@@ -8,8 +8,8 @@
 import Foundation
 
 struct RegisterResponseModel: Codable {
-    let email, fullName, address, phoneNumber: String
-    let id: Int
+    let email, fullName, address, phoneNumber, imgURL: String?
+    let id: Int?
 
     enum CodingKeys: String, CodingKey {
         case email
@@ -17,5 +17,6 @@ struct RegisterResponseModel: Codable {
         case fullName = "full_name"
         case address
         case phoneNumber = "phone_number"
+        case imgURL = "image_url"
     }
 }

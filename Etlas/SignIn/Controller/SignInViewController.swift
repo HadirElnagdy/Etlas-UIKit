@@ -46,7 +46,7 @@ class SignInViewController: BaseViewController {
             guard let self = self else { return }
             switch result {
             case .success(let user):
-                //UserDefaults.standard.df.store(user, forKey: "user")
+               // UserDefaults.standard.set(user, forKey: "user")
                 SharedData.shared.SetIsLoggedIn(true)
                 goToHome()
             case .failure(let error):

@@ -294,7 +294,10 @@
                     <size key="freeformSize" width="389" height="1051"/>
                     <connections>
                         <outlet property="blueView" destination="gDi-45-WNi" id="X9x-xL-2G3"/>
+                        <outlet property="emailTextField" destination="Rqk-GW-7Rk" id="nhe-7c-DaP"/>
+                        <outlet property="fullNameTextField" destination="4pX-eS-5dy" id="e4d-bg-23L"/>
                         <outlet property="messageTextView" destination="ia7-xE-kWi" id="4Ov-nf-KgA"/>
+                        <outlet property="subjectTextField" destination="yTq-LI-QxK" id="aF8-W5-0ft"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

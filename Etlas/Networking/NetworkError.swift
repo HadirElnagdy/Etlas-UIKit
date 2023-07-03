@@ -12,7 +12,7 @@ enum NetworkError: Error {
         case .networkError(let networkMessage):
             return networkMessage
         default:
-            return "Something went wrong".localized
+            return "Something went wrong"
         }
     }
     
