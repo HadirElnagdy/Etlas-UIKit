@@ -8,5 +8,5 @@
 import Foundation
 
 struct detailResponse : Codable {
-    let detail: String
+    
 }

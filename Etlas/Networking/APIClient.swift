@@ -11,7 +11,7 @@ import NVActivityIndicatorView
 
 class APIClient {
     private static func performRequest<T: Decodable>(route: APIRouter, decoder: JSONDecoder = JSONDecoder(), completion: @escaping (Result<T, NetworkError>) -> Void) {
-       // print(route.urlRequest?.httpBody)
+        print(route.urlRequest?.httpBody)
         AF.request(route).validate(statusCode: 200 ..< 300)
             .responseDecodable { (response: AFDataResponse<T>) in
                 switch response.result {
@@ -57,22 +57,20 @@ class APIClient {
     static func logout(refreshToken: String, completion: @escaping (Result<detailResponse, NetworkError>) -> Void){
         performRequest(route: APIRouter.logout(refreshToken: refreshToken), completion: completion)
     }
-    static func refreshToken(token: String, completion: @escaping (Result<User, NetworkError>) -> Void){
+    static func refreshToken(token: String, completion: @escaping (Result<Tokens, NetworkError>) -> Void){
         performRequest(route: APIRouter.refreshToken(token: token), completion: completion)
     }
-    static func resetPassword(email: String, completion: @escaping (Result<User, NetworkError>) -> Void) {
+    static func resetPassword(email: String, completion: @escaping (Result<successResponse, NetworkError>) -> Void) {
         performRequest(route: APIRouter.resetPassword(email: email), completion: completion)
     }
-    
-    static func confirmPasswordReset(password: String, confirmPassword: String, token: String, userId: String, completion: @escaping (Result<User, NetworkError>) -> Void) {
+    static func verifyPasswordOTP(OTP: String, completion: @escaping (Result<verifyPasswordOTPResponse, NetworkError>) -> Void){
+        performRequest(route: APIRouter.verifyPasswordOTP(OTP: OTP), completion: completion)
+    }
+    static func confirmPasswordReset(password: String, confirmPassword: String, token: String, userId: String, completion: @escaping (Result<ConfirmPasswordResetResponse, NetworkError>) -> Void) {
         performRequest(route: APIRouter.confirmPasswordReset(password: password, confirmPassword: confirmPassword, token: token, userId: userId), completion: completion)
     }
     
-    static func verifyPasswordOTP(OTP: String, completion: @escaping (Result<User, NetworkError>) -> Void) {
-        performRequest(route: APIRouter.verifyPasswordOTP(OTP: OTP), completion: completion)
-    }
-    
-    static func changePassword(oldPassword: String, newPassword: String, confirmNewPassword: String, completion: @escaping (Result<User, NetworkError>) -> Void) {
+    static func changePassword(oldPassword: String, newPassword: String, confirmNewPassword: String, completion: @escaping (Result<successResponse, NetworkError>) -> Void) {
         performRequest(route: APIRouter.changePassword(oldPassword: oldPassword, newPassword: newPassword, confirmNewPassword: confirmNewPassword), completion: completion)
     }
     
@@ -87,5 +85,43 @@ class APIClient {
         performRequest(route: APIRouter.contactUs(fullName: fullName, email: email, subject: subject, message: message), completion: completion)
         
     }
+    static func getUser(completion: @escaping (Result<User, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.getUser, completion: completion)
+    }
+
+    static func editUser(fullName: String, email: String, address: String, phoneNumber: String, completion: @escaping (Result<User
+                                                                                                                       , NetworkError>) -> Void) {
+        performRequest(route: APIRouter.editUser(fullName: fullName, email: email, address: address, phoneNumber: phoneNumber), completion: completion)
+    }
+
+    static func getBestScore(completion: @escaping (Result<BestScoreResponse, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.getBestScore, completion: completion)
+    }
+
+    static func getMonumentScore(completion: @escaping (Result<MonumentsScoreResponse, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.getMonumentScore, completion: completion)
+    }
+
+    static func getLandmarkScore(completion: @escaping (Result<LandmarksScoreResponse, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.getLandmarkScore, completion: completion)
+    }
+
+    static func getStatueScore(completion: @escaping (Result<StatuesScoreResponse, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.getStatueScore, completion: completion)
+    }
+
+    static func putMonumentScore(newScore: Int, completion: @escaping (Result<MonumentsScoreResponse, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.putMonumentScore(newScore: newScore), completion: completion)
+    }
+
+    static func putLandmarkScore(newScore: Int, completion: @escaping (Result<LandmarksScoreResponse, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.putLandmarkScore(newScore: newScore), completion: completion)
+    }
+
+    static func putStatueScore(newScore: Int, completion: @escaping (Result<StatuesScoreResponse, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.putStatueScore(newScore: newScore), completion: completion)
+    }
+
+
     
 }

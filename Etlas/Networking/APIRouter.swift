@@ -18,8 +18,8 @@ enum APIRouter: URLRequestConvertible {
     case login(email: String, password: String)
     case logout(refreshToken: String)
     case resetPassword(email: String)
-    case confirmPasswordReset(password: String, confirmPassword: String, token: String, userId: String)
     case verifyPasswordOTP(OTP: String)
+    case confirmPasswordReset(password: String, confirmPassword: String, token: String, userId: String)
     case changePassword(oldPassword: String, newPassword: String, confirmNewPassword: String)
     case googleSignIn(authToken: String, frontEnd: String)
     case facebookSignIn(authToken: String)
@@ -37,18 +37,32 @@ enum APIRouter: URLRequestConvertible {
     case putMonumentScore(newScore: Int)
     case putLandmarkScore(newScore: Int)
     case putStatueScore(newScore: Int)
-    case editUserImg
-    
+    //favorites
+    case getFavorites
+    case addArticleToFavs(id: Int)
+    case addMonumentToFavs(id: Int)
+    case delFavArticle
+    case delFavMonument
+    //Monuments
+    case getMonument
+    //Questions
+    case getLandmarksQuestions
+    case getMonumentsQuestions
+    case getStatuesQuestions
+    //Tours
+    case getAllTours
     
     // MARK: - HTTPMethod
     private var method: HTTPMethod {
         switch self {
-        case .register, .verifyEmail, .requestNewOTP, .login, .logout, .refreshToken, .resetPassword, .verifyPasswordOTP, .googleSignIn, .facebookSignIn, .contactUs, .editUserImg:
+        case .register, .verifyEmail, .requestNewOTP, .login, .logout, .refreshToken, .resetPassword, .verifyPasswordOTP, .googleSignIn, .facebookSignIn, .contactUs, .addArticleToFavs, .addMonumentToFavs:
             return .post
         case .confirmPasswordReset, .editUser:
             return .patch
         case .changePassword, .putStatueScore, .putLandmarkScore, .putMonumentScore:
             return .put
+        case .delFavArticle, .delFavMonument:
+            return .delete
         default:
             return .get
         }
@@ -107,10 +121,33 @@ enum APIRouter: URLRequestConvertible {
             return APIEndpoints.getLandmarkScore
         case .getStatueScore:
             return APIEndpoints.getStatueScore
-        case .putMonumentScore, .putLandmarkScore, .putStatueScore:
-            return "" // Replace with the appropriate endpoint path
-        case .editUserImg:
-            return APIEndpoints.editUserImg
+        case .putMonumentScore:
+            return APIEndpoints.putMonumentScore
+        case .putLandmarkScore:
+            return APIEndpoints.putLandmarkScore
+        case .putStatueScore:
+            return APIEndpoints.putStatueScore
+        case .getFavorites:
+            return APIEndpoints.getFavorites
+        case .addArticleToFavs(let id):
+            return "\(APIEndpoints.addArticleToFavs)/\(id)"
+        case .addMonumentToFavs(let id):
+            return "\(APIEndpoints.addMonumentToFavs)/\(id)"
+        case .delFavArticle:
+            return APIEndpoints.delFavArticle
+        case .delFavMonument:
+            return APIEndpoints.delFavMonument
+        case .getMonument:
+            return APIEndpoints.getMonument
+        case .getLandmarksQuestions:
+            return APIEndpoints.getLandmarksQuestions
+        case .getMonumentsQuestions:
+            return APIEndpoints.getMonumentsQuestions
+        case .getStatuesQuestions:
+            return APIEndpoints.getStatuesQuestions
+        case .getAllTours:
+            return APIEndpoints.getAllTours
+            
             
         }
     }
@@ -118,7 +155,7 @@ enum APIRouter: URLRequestConvertible {
     // MARK: - Parameters
     private var parameters: [String: String]? {
         switch self {
-        // Auth
+            // Auth
         case .register(
             fullName: let fullName,
             email: let email,
@@ -131,7 +168,7 @@ enum APIRouter: URLRequestConvertible {
                 APIParameterKey.email: email,
                 APIParameterKey.fullName: fullName,
                 APIParameterKey.password: password,
-                APIParameterKey.confirmPassword: password,
+                APIParameterKey.confirmPassword: confirmPassword,
                 APIParameterKey.address: address,
                 APIParameterKey.phoneNumber: phoneNumber
             ]
@@ -180,17 +217,22 @@ enum APIRouter: URLRequestConvertible {
                 APIParameterKey.address: address,
                 APIParameterKey.phoneNumber: phoneNumber
             ]
+            //Take another look
         case .putMonumentScore(newScore: let newScore):
             return [APIParameterKey.newScore: String(newScore)]
         case .putLandmarkScore(newScore: let newScore):
             return [APIParameterKey.newScore: String(newScore)]
         case .putStatueScore(newScore: let newScore):
             return [APIParameterKey.newScore: String(newScore)]
+        case .addArticleToFavs(id: let id):
+            return[APIParameterKey.id: String(id)]
+        case .addMonumentToFavs(id: let id):
+            return [APIParameterKey.id: String(id)]
         default:
             return nil
         }
     }
-
+    
     
     private var encoding: ParameterEncoding {
         switch self {

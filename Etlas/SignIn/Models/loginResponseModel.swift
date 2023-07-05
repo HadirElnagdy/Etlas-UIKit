@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - User
+// MARK: - loginResponseModel
 struct loginResponseModel: Codable {
     let email: String?
     let address, phoneNumber, imageURL: String?

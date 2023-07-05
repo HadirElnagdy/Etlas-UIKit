@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HJ5-h9-2dL">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Error Pop Up View Controller-->
+        <scene sceneID="AZo-5f-KRO">
+            <objects>
+                <viewController storyboardIdentifier="ErrorPopUpViewController" modalPresentationStyle="overFullScreen" id="HJ5-h9-2dL" customClass="ErrorPopUpViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jmc-iM-Sso">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJ9-fa-dO0">
+                                <rect key="frame" x="35" y="285.66666666666669" width="323" height="281.00000000000006"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_ErrorMessage" translatesAutoresizingMaskIntoConstraints="NO" id="VCp-hk-DMM">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="281"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKs-0X-L7A">
+                                        <rect key="frame" x="38" y="140" width="247" height="63"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Your password hasn’t been reset. Please, try again!">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="18" name="Montserrat-Regular"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cKs-0X-L7A" firstAttribute="top" secondItem="cJ9-fa-dO0" secondAttribute="top" constant="140" id="LbJ-fH-Idu"/>
+                                    <constraint firstAttribute="height" constant="281" id="Van-Ou-mkK"/>
+                                    <constraint firstAttribute="trailing" secondItem="VCp-hk-DMM" secondAttribute="trailing" id="XfP-zc-FYc"/>
+                                    <constraint firstAttribute="trailing" secondItem="cKs-0X-L7A" secondAttribute="trailing" constant="38" id="ar8-La-LHG"/>
+                                    <constraint firstItem="cKs-0X-L7A" firstAttribute="centerX" secondItem="cJ9-fa-dO0" secondAttribute="centerX" id="gPO-MM-TT1"/>
+                                    <constraint firstAttribute="bottom" secondItem="VCp-hk-DMM" secondAttribute="bottom" id="h4E-PK-Pqz"/>
+                                    <constraint firstItem="VCp-hk-DMM" firstAttribute="top" secondItem="cJ9-fa-dO0" secondAttribute="top" id="m89-Uj-cKX"/>
+                                    <constraint firstAttribute="width" constant="323" id="oNZ-Fs-15j"/>
+                                    <constraint firstItem="cKs-0X-L7A" firstAttribute="leading" secondItem="cJ9-fa-dO0" secondAttribute="leading" constant="38" id="pgu-5R-N9N"/>
+                                    <constraint firstItem="VCp-hk-DMM" firstAttribute="leading" secondItem="cJ9-fa-dO0" secondAttribute="leading" id="ubt-fw-5hO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gf6-tr-ibJ"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cJ9-fa-dO0" firstAttribute="centerY" secondItem="jmc-iM-Sso" secondAttribute="centerY" id="Q7T-eG-HOf"/>
+                            <constraint firstItem="cJ9-fa-dO0" firstAttribute="centerX" secondItem="jmc-iM-Sso" secondAttribute="centerX" id="oMd-dW-Y1o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="cKs-0X-L7A" id="wNM-1l-dza"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rLO-MP-HwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360" y="2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_ErrorMessage" width="323" height="281"/>
+    </resources>
+</document>

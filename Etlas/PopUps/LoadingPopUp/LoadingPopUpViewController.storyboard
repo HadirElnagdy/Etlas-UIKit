@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading Pop Up View Controller-->
+        <scene sceneID="DTf-ZI-aBe">
+            <objects>
+                <viewController storyboardIdentifier="LoadingPopUpViewController" modalPresentationStyle="overFullScreen" id="xer-95-czZ" customClass="LoadingPopUpViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HQa-At-6cX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-cF-3i1">
+                                <rect key="frame" x="35" y="264.66666666666669" width="323" height="323.00000000000006"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adl-aL-ybJ">
+                                        <rect key="frame" x="110.66666666666666" y="88" width="102" height="24"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Please wait">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="20" name="Montserrat-Bold"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bc9-ny-qS2" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                        <rect key="frame" x="89" y="235" width="145" height="18"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="5V6-pe-jev"/>
+                                            <constraint firstAttribute="width" constant="145" id="yhc-t3-pBU"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Y6-u3-LBb">
+                                        <rect key="frame" x="60.666666666666671" y="128" width="201.66666666666663" height="42"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">while your photo is being
+recognized.</string>
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="18" name="Montserrat-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="323" id="2Vn-rP-vD6"/>
+                                    <constraint firstItem="bc9-ny-qS2" firstAttribute="centerX" secondItem="Adl-aL-ybJ" secondAttribute="centerX" id="3PP-kn-peh"/>
+                                    <constraint firstAttribute="bottom" secondItem="bc9-ny-qS2" secondAttribute="bottom" constant="70" id="AiH-tb-aKG"/>
+                                    <constraint firstItem="Adl-aL-ybJ" firstAttribute="top" secondItem="2Zc-cF-3i1" secondAttribute="top" constant="88" id="TbB-YY-rcl"/>
+                                    <constraint firstItem="1Y6-u3-LBb" firstAttribute="centerX" secondItem="Adl-aL-ybJ" secondAttribute="centerX" id="X7P-Tl-OFj"/>
+                                    <constraint firstItem="Adl-aL-ybJ" firstAttribute="centerX" secondItem="2Zc-cF-3i1" secondAttribute="centerX" id="eBY-1Y-Qof"/>
+                                    <constraint firstItem="1Y6-u3-LBb" firstAttribute="top" secondItem="Adl-aL-ybJ" secondAttribute="bottom" constant="16" id="gYa-Js-zAN"/>
+                                    <constraint firstAttribute="width" constant="323" id="pcV-15-rYe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wcl-LA-xfS"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Zc-cF-3i1" firstAttribute="centerX" secondItem="HQa-At-6cX" secondAttribute="centerX" id="m93-lk-m8v"/>
+                            <constraint firstItem="2Zc-cF-3i1" firstAttribute="centerY" secondItem="HQa-At-6cX" secondAttribute="centerY" id="mBx-Ki-Noi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingIndecatorView" destination="bc9-ny-qS2" id="L58-aB-FSn"/>
+                        <outlet property="messageLabel" destination="1Y6-u3-LBb" id="X3Q-ji-WPA"/>
+                        <outlet property="popUpView" destination="2Zc-cF-3i1" id="ujG-GU-Df0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dqy-dm-zEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951.90839694656484" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+</document>

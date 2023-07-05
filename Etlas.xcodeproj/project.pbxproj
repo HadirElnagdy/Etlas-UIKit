@@ -111,6 +111,16 @@
 		04D7217D2A54742400CAFFB2 /* DetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7217C2A54742400CAFFB2 /* DetailResponse.swift */; };
 		04D721802A54747F00CAFFB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7217F2A54747F00CAFFB2 /* User.swift */; };
 		04D721822A548ACC00CAFFB2 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D721812A548ACC00CAFFB2 /* TokenManager.swift */; };
+		04D7218A2A559D5100CAFFB2 /* DonePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D721892A559D5100CAFFB2 /* DonePopUpViewController.swift */; };
+		04D7218C2A559D6700CAFFB2 /* DonePopUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D7218B2A559D6700CAFFB2 /* DonePopUpViewController.storyboard */; };
+		04D7218F2A55C76C00CAFFB2 /* ErrorPopUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D7218E2A55C76C00CAFFB2 /* ErrorPopUpViewController.storyboard */; };
+		04D721912A55C77C00CAFFB2 /* ErrorPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D721902A55C77C00CAFFB2 /* ErrorPopUpViewController.swift */; };
+		04D721942A55C83800CAFFB2 /* LoadingPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D721932A55C83800CAFFB2 /* LoadingPopUpViewController.swift */; };
+		04D721962A55C84200CAFFB2 /* LoadingPopUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D721952A55C84200CAFFB2 /* LoadingPopUpViewController.storyboard */; };
+		04D721982A55CCB700CAFFB2 /* MessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D721972A55CCB700CAFFB2 /* MessageHandler.swift */; };
+		04D7219D2A5600FD00CAFFB2 /* verifyPasswordOTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7219C2A5600FD00CAFFB2 /* verifyPasswordOTPResponse.swift */; };
+		04D7219F2A56024200CAFFB2 /* confirmPasswordResetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7219E2A56024200CAFFB2 /* confirmPasswordResetResponse.swift */; };
+		04D721A22A56100600CAFFB2 /* ScoreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D721A12A56100600CAFFB2 /* ScoreResponse.swift */; };
 		04D8DF072A0AA20B0002CEA4 /* TBMiddleButtonVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8DF062A0AA20B0002CEA4 /* TBMiddleButtonVCViewController.swift */; };
 		04D8DF092A0AA2E20002CEA4 /* ForgotPasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D8DF082A0AA2E20002CEA4 /* ForgotPasswordViewController.storyboard */; };
 		04D8DF0B2A0AA3020002CEA4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8DF0A2A0AA3020002CEA4 /* ForgotPasswordViewController.swift */; };
@@ -252,6 +262,16 @@
 		04D7217C2A54742400CAFFB2 /* DetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResponse.swift; sourceTree = "<group>"; };
 		04D7217F2A54747F00CAFFB2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		04D721812A548ACC00CAFFB2 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		04D721892A559D5100CAFFB2 /* DonePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonePopUpViewController.swift; sourceTree = "<group>"; };
+		04D7218B2A559D6700CAFFB2 /* DonePopUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DonePopUpViewController.storyboard; sourceTree = "<group>"; };
+		04D7218E2A55C76C00CAFFB2 /* ErrorPopUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ErrorPopUpViewController.storyboard; sourceTree = "<group>"; };
+		04D721902A55C77C00CAFFB2 /* ErrorPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopUpViewController.swift; sourceTree = "<group>"; };
+		04D721932A55C83800CAFFB2 /* LoadingPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPopUpViewController.swift; sourceTree = "<group>"; };
+		04D721952A55C84200CAFFB2 /* LoadingPopUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingPopUpViewController.storyboard; sourceTree = "<group>"; };
+		04D721972A55CCB700CAFFB2 /* MessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHandler.swift; sourceTree = "<group>"; };
+		04D7219C2A5600FD00CAFFB2 /* verifyPasswordOTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifyPasswordOTPResponse.swift; sourceTree = "<group>"; };
+		04D7219E2A56024200CAFFB2 /* confirmPasswordResetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmPasswordResetResponse.swift; sourceTree = "<group>"; };
+		04D721A12A56100600CAFFB2 /* ScoreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreResponse.swift; sourceTree = "<group>"; };
 		04D8DF062A0AA20B0002CEA4 /* TBMiddleButtonVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBMiddleButtonVCViewController.swift; sourceTree = "<group>"; };
 		04D8DF082A0AA2E20002CEA4 /* ForgotPasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordViewController.storyboard; sourceTree = "<group>"; };
 		04D8DF0A2A0AA3020002CEA4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -860,6 +880,7 @@
 		04B7D7612A45C6C700A8E8F7 /* CurrentScore */ = {
 			isa = PBXGroup;
 			children = (
+				04D721A02A560FF500CAFFB2 /* Models */,
 				04B7D7632A45C6F600A8E8F7 /* View */,
 				04B7D7622A45C6EA00A8E8F7 /* Controller */,
 			);
@@ -1123,6 +1144,7 @@
 				04D574AF2A5051B200F9C227 /* NetworkError.swift */,
 				04D574B12A5059C400F9C227 /* Constants.swift */,
 				04D721812A548ACC00CAFFB2 /* TokenManager.swift */,
+				04D721972A55CCB700CAFFB2 /* MessageHandler.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -1162,13 +1184,61 @@
 		04D721832A558A9200CAFFB2 /* PopUps */ = {
 			isa = PBXGroup;
 			children = (
+				04D721922A55C81400CAFFB2 /* LoadingPopUp */,
+				04D7218D2A559F1D00CAFFB2 /* ErrorPopUp */,
+				04D721842A55969000CAFFB2 /* DonePopUp */,
 			);
 			path = PopUps;
+			sourceTree = "<group>";
+		};
+		04D721842A55969000CAFFB2 /* DonePopUp */ = {
+			isa = PBXGroup;
+			children = (
+				04D7218B2A559D6700CAFFB2 /* DonePopUpViewController.storyboard */,
+				04D721892A559D5100CAFFB2 /* DonePopUpViewController.swift */,
+			);
+			path = DonePopUp;
+			sourceTree = "<group>";
+		};
+		04D7218D2A559F1D00CAFFB2 /* ErrorPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				04D7218E2A55C76C00CAFFB2 /* ErrorPopUpViewController.storyboard */,
+				04D721902A55C77C00CAFFB2 /* ErrorPopUpViewController.swift */,
+			);
+			path = ErrorPopUp;
+			sourceTree = "<group>";
+		};
+		04D721922A55C81400CAFFB2 /* LoadingPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				04D721952A55C84200CAFFB2 /* LoadingPopUpViewController.storyboard */,
+				04D721932A55C83800CAFFB2 /* LoadingPopUpViewController.swift */,
+			);
+			path = LoadingPopUp;
+			sourceTree = "<group>";
+		};
+		04D7219B2A5600CE00CAFFB2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04D7219C2A5600FD00CAFFB2 /* verifyPasswordOTPResponse.swift */,
+				04D7219E2A56024200CAFFB2 /* confirmPasswordResetResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04D721A02A560FF500CAFFB2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04D721A12A56100600CAFFB2 /* ScoreResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		04D8DEF92A0A4D780002CEA4 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
+				04D7219B2A5600CE00CAFFB2 /* Models */,
 				04D8DEFC2A0A4DA00002CEA4 /* View */,
 				04D8DEFA2A0A4D8C0002CEA4 /* Controller */,
 			);
@@ -1459,7 +1529,9 @@
 				040E75432A1C019A00AF2B15 /* Montserrat-Light.ttf in Resources */,
 				040E753E2A1C019A00AF2B15 /* Montserrat-Regular.ttf in Resources */,
 				040E753F2A1C019A00AF2B15 /* Montserrat-Black.ttf in Resources */,
+				04D7218F2A55C76C00CAFFB2 /* ErrorPopUpViewController.storyboard in Resources */,
 				04B7D75B2A45C0EB00A8E8F7 /* EmailVerificationViewController.storyboard in Resources */,
+				04D7218C2A559D6700CAFFB2 /* DonePopUpViewController.storyboard in Resources */,
 				040161B329E43D160021F73C /* SignInViewController.storyboard in Resources */,
 				04D8DF092A0AA2E20002CEA4 /* ForgotPasswordViewController.storyboard in Resources */,
 				040E75512A1C01E500AF2B15 /* Poppins-Medium.ttf in Resources */,
@@ -1512,6 +1584,7 @@
 				040E75402A1C019A00AF2B15 /* Montserrat-Medium.ttf in Resources */,
 				041F3BAC29E424A200351680 /* OnboardingViewController.storyboard in Resources */,
 				04A0CF7E2A433F9F00BFEC87 /* FavModelsTableViewCell.xib in Resources */,
+				04D721962A55C84200CAFFB2 /* LoadingPopUpViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1588,9 +1661,11 @@
 				04D8DF0D2A0AD6480002CEA4 /* OTPViewController.swift in Sources */,
 				040161AD29E43C0B0021F73C /* SignUpViewController.swift in Sources */,
 				04DA63682A3F3AE000E8FBD6 /* MessageTextView.swift in Sources */,
+				04D721942A55C83800CAFFB2 /* LoadingPopUpViewController.swift in Sources */,
 				04CE225C2A05A90E004FCCE9 /* BaseViewController.swift in Sources */,
 				04D574B82A51F58F00F9C227 /* AppCommon.swift in Sources */,
 				0496DFA12A20C1FA00B0CE3E /* ContactUsViewController.swift in Sources */,
+				04D721982A55CCB700CAFFB2 /* MessageHandler.swift in Sources */,
 				04D5B35F2A47198600DCE93E /* TourImgsCollectionViewCell.swift in Sources */,
 				041F3BB329E4260D00351680 /* OnboardingViewController.swift in Sources */,
 				0494C3F32A3E065A004B3EC3 /* TermsViewController.swift in Sources */,
@@ -1609,16 +1684,19 @@
 				046E087B2A39ED4000899579 /* MainMenuViewController.swift in Sources */,
 				040CF65F29C4A86A008BC27F /* AppDelegate.swift in Sources */,
 				04A0CF812A445C1700BFEC87 /* FavArticlesModel.swift in Sources */,
+				04D721912A55C77C00CAFFB2 /* ErrorPopUpViewController.swift in Sources */,
 				04DA63772A3F963100E8FBD6 /* MainTabBarViewController.swift in Sources */,
 				04D574B22A5059C400F9C227 /* Constants.swift in Sources */,
 				04EA1C5A2A068E26005BB160 /* CustomGrayView.swift in Sources */,
 				046E088E2A3B38F500899579 /* RecognitionFailedViewController.swift in Sources */,
 				040161B529E43D310021F73C /* SignInViewController.swift in Sources */,
 				04EE3A842A48D83A0078B7EB /* Tour.swift in Sources */,
+				04D7219D2A5600FD00CAFFB2 /* verifyPasswordOTPResponse.swift in Sources */,
 				04A0CF7D2A433F9F00BFEC87 /* FavModelsTableViewCell.swift in Sources */,
 				04C8C7202A084B9A006D2CC7 /* CustomTabBar.swift in Sources */,
 				04EA1C542A066DE5005BB160 /* SettingsViewController.swift in Sources */,
 				04D574AC2A50519900F9C227 /* APIClient.swift in Sources */,
+				04D7218A2A559D5100CAFFB2 /* DonePopUpViewController.swift in Sources */,
 				04D721822A548ACC00CAFFB2 /* TokenManager.swift in Sources */,
 				04EE3A872A48D90C0078B7EB /* Questions.swift in Sources */,
 				04D721802A54747F00CAFFB2 /* User.swift in Sources */,
@@ -1627,10 +1705,12 @@
 				04A2BE5D2A0591A800044C9B /* AboutUsViewController.swift in Sources */,
 				04B7D75D2A45C11C00A8E8F7 /* EOTPViewController.swift in Sources */,
 				04CE225A2A05A90E004FCCE9 /* ClearButton.swift in Sources */,
+				04D7219F2A56024200CAFFB2 /* confirmPasswordResetResponse.swift in Sources */,
 				046E08982A3B869D00899579 /* AllArticlesViewController.swift in Sources */,
 				04D319842A09768600CF0C7F /* CustomView.swift in Sources */,
 				0474CEC52A52D1AC00BDEEF5 /* loginResponseModel.swift in Sources */,
 				04CE22582A05A90E004FCCE9 /* BlueButton.swift in Sources */,
+				04D721A22A56100600CAFFB2 /* ScoreResponse.swift in Sources */,
 				0494C3E32A3DE435004B3EC3 /* ArticleViewController.swift in Sources */,
 				04B7D7522A45BD6300A8E8F7 /* AllToursCollectionViewCell.swift in Sources */,
 				040CF66929C4A86A008BC27F /* Etlas.xcdatamodeld in Sources */,

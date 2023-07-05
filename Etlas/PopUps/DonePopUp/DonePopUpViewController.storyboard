@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Done Pop Up View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="Y6W-OH-hqX" customClass="DonePopUpViewController" customModule="Etlas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mn-56-p0r">
+                                <rect key="frame" x="35" y="285.66666666666669" width="323" height="281.00000000000006"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_DoneMessage" translatesAutoresizingMaskIntoConstraints="NO" id="d8b-e0-Ufz">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="281"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9m-nq-fEk">
+                                        <rect key="frame" x="38" y="140" width="247" height="42"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Your password has been reset.">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="18" name="Montserrat-Regular"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="d8b-e0-Ufz" firstAttribute="leading" secondItem="9mn-56-p0r" secondAttribute="leading" id="0oI-qa-MS0"/>
+                                    <constraint firstAttribute="trailing" secondItem="d8b-e0-Ufz" secondAttribute="trailing" id="3ua-Mn-KUz"/>
+                                    <constraint firstAttribute="trailing" secondItem="k9m-nq-fEk" secondAttribute="trailing" constant="38" id="DhO-O7-HDv"/>
+                                    <constraint firstAttribute="bottom" secondItem="d8b-e0-Ufz" secondAttribute="bottom" id="OUv-J2-CPy"/>
+                                    <constraint firstAttribute="width" constant="323" id="VBH-LE-I8O"/>
+                                    <constraint firstItem="k9m-nq-fEk" firstAttribute="centerX" secondItem="9mn-56-p0r" secondAttribute="centerX" id="eVS-Eb-Sn1"/>
+                                    <constraint firstItem="d8b-e0-Ufz" firstAttribute="top" secondItem="9mn-56-p0r" secondAttribute="top" id="iIS-Af-ukp"/>
+                                    <constraint firstItem="k9m-nq-fEk" firstAttribute="top" secondItem="9mn-56-p0r" secondAttribute="top" constant="140" id="jsm-hG-oTW"/>
+                                    <constraint firstAttribute="height" constant="281" id="mC1-WW-0Rb"/>
+                                    <constraint firstItem="k9m-nq-fEk" firstAttribute="leading" secondItem="9mn-56-p0r" secondAttribute="leading" constant="38" id="zBT-Lk-pps"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9mn-56-p0r" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1Og-6f-UEz"/>
+                            <constraint firstItem="9mn-56-p0r" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ker-am-6F4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="k9m-nq-fEk" id="nKe-Rk-BZf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_DoneMessage" width="323" height="281"/>
+    </resources>
+</document>

@@ -13,6 +13,8 @@ target 'Etlas' do
   pod 'NVActivityIndicatorView'
   pod 'Hash'
   pod 'Default'
+  pod 'AMDots'
+
 	
 
 end
