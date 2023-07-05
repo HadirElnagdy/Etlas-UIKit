@@ -51,10 +51,10 @@ class APIClient {
     static func requestNewOTP(email: String, completion: @escaping (Result<successResponse, NetworkError>) -> Void){
         performRequest(route: APIRouter.requestNewOTP(email: email), completion: completion)
     }
-    static func login(email: String, password: String, completion: @escaping (Result<User, NetworkError>) -> Void){
+    static func login(email: String, password: String, completion: @escaping (Result<loginResponseModel, NetworkError>) -> Void){
         performRequest(route: APIRouter.login(email: email, password: password), completion: completion)
     }
-    static func logout(refreshToken: String, completion: @escaping (Result<User, NetworkError>) -> Void){
+    static func logout(refreshToken: String, completion: @escaping (Result<detailResponse, NetworkError>) -> Void){
         performRequest(route: APIRouter.logout(refreshToken: refreshToken), completion: completion)
     }
     static func refreshToken(token: String, completion: @escaping (Result<User, NetworkError>) -> Void){

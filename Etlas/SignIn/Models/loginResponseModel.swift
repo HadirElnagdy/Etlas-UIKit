@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  loginResponseModel.swift
 //  Etlas
 //
 //  Created by Hadir on 25/06/2023.
@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - User
-struct User: Codable {
+struct loginResponseModel: Codable {
     let email: String?
     let address, phoneNumber, imageURL: String?
     let tokens: Tokens?

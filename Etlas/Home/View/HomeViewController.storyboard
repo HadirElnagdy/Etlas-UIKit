@@ -30,11 +30,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ky2-0k-vJq" userLabel="TopView">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="390"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blx-qE-2SX">
-                                                        <rect key="frame" x="56.666666666666657" y="200" width="280" height="48"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blx-qE-2SX">
+                                                        <rect key="frame" x="56.666666666666657" y="200" width="280" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="280" id="T7V-oV-RAI"/>
-                                                            <constraint firstAttribute="height" constant="48" id="jne-Of-3Zv"/>
+                                                            <constraint firstAttribute="height" constant="50" id="jne-Of-3Zv"/>
                                                         </constraints>
                                                         <attributedString key="attributedText">
                                                             <fragment content="we are here to help you make your tour much easier">
@@ -48,7 +48,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1uA-Wm-WV9" customClass="CustomTextField" customModule="Etlas" customModuleProvider="target">
-                                                        <rect key="frame" x="11.666666666666657" y="280" width="370" height="56"/>
+                                                        <rect key="frame" x="11.666666666666657" y="282" width="370" height="56"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="370" id="M4G-7t-pll"/>
                                                             <constraint firstAttribute="height" constant="56" id="scY-3y-upg"/>
@@ -69,7 +69,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHg-ie-XkP">
-                                                        <rect key="frame" x="24" y="360" width="164.33333333333334" height="21"/>
+                                                        <rect key="frame" x="24" y="362" width="164.33333333333334" height="21"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Check popular tours">
                                                                 <attributes>
@@ -81,7 +81,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQy-sg-sPi">
-                                                        <rect key="frame" x="291.33333333333331" y="358.66666666666669" width="77.666666666666686" height="24"/>
+                                                        <rect key="frame" x="291.33333333333331" y="360.66666666666669" width="77.666666666666686" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="czs-oB-o21"/>
                                                         </constraints>
@@ -129,7 +129,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_newHome" translatesAutoresizingMaskIntoConstraints="NO" id="pT7-dC-zdU">
-                                                        <rect key="frame" x="196.33333333333334" y="362" width="40" height="17"/>
+                                                        <rect key="frame" x="196.33333333333334" y="364" width="40" height="17"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -412,12 +412,11 @@
         <!--Navigation Controller-->
         <scene sceneID="GoN-pX-d5g">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y4C-ZY-V1q" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Y4C-ZY-V1q" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="ic_knowledgeCheckButton" selectedImage="ic_SelectedKnowledgeCheck" id="6Gd-GT-Wu3"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4gY-gG-jip">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -432,14 +431,13 @@
         <!--Navigation Controller-->
         <scene sceneID="uqf-z1-ww9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dsq-3W-iqB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="dsq-3W-iqB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="ic_settingsButton" selectedImage="ic_SelectedSettings" id="85Y-gV-Js7">
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UIS-OF-XYK">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
