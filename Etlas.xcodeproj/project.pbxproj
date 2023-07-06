@@ -71,6 +71,8 @@
 		04A54DD62A406EAD00ABEF7C /* FavArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A54DD52A406EAD00ABEF7C /* FavArticlesViewController.swift */; };
 		04A54DD92A4073A000ABEF7C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A54DD82A4073A000ABEF7C /* Article.swift */; };
 		04A54DDD2A407AB400ABEF7C /* InfoAboutUsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A54DDC2A407AB400ABEF7C /* InfoAboutUsViewController.storyboard */; };
+		04AD5C8F2A57448C001FBF59 /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AD5C8D2A57448B001FBF59 /* texture.png */; };
+		04AD5C902A57448C001FBF59 /* nefertiti_HQ2.obj in Resources */ = {isa = PBXBuildFile; fileRef = 04AD5C8E2A57448C001FBF59 /* nefertiti_HQ2.obj */; };
 		04B7D74D2A45B8AB00A8E8F7 /* AllArticlesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7D74B2A45B8AB00A8E8F7 /* AllArticlesCollectionViewCell.swift */; };
 		04B7D74E2A45B8AB00A8E8F7 /* AllArticlesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B7D74C2A45B8AB00A8E8F7 /* AllArticlesCollectionViewCell.xib */; };
 		04B7D7522A45BD6300A8E8F7 /* AllToursCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7D7502A45BD6300A8E8F7 /* AllToursCollectionViewCell.swift */; };
@@ -222,6 +224,8 @@
 		04A54DD52A406EAD00ABEF7C /* FavArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavArticlesViewController.swift; sourceTree = "<group>"; };
 		04A54DD82A4073A000ABEF7C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		04A54DDC2A407AB400ABEF7C /* InfoAboutUsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoAboutUsViewController.storyboard; sourceTree = "<group>"; };
+		04AD5C8D2A57448B001FBF59 /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture.png; sourceTree = "<group>"; };
+		04AD5C8E2A57448C001FBF59 /* nefertiti_HQ2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nefertiti_HQ2.obj; sourceTree = "<group>"; };
 		04B7D74B2A45B8AB00A8E8F7 /* AllArticlesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticlesCollectionViewCell.swift; sourceTree = "<group>"; };
 		04B7D74C2A45B8AB00A8E8F7 /* AllArticlesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllArticlesCollectionViewCell.xib; sourceTree = "<group>"; };
 		04B7D7502A45BD6300A8E8F7 /* AllToursCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllToursCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -409,6 +413,7 @@
 		040CF65D29C4A86A008BC27F /* Etlas */ = {
 			isa = PBXGroup;
 			children = (
+				04AD5C8C2A574474001FBF59 /* 3dobjects */,
 				04D574A92A50517900F9C227 /* Networking */,
 				0470618E29E7418A00114E55 /* Localization Manager */,
 				040B7D1D29D70A7600B1F87C /* LaunchingScreen */,
@@ -823,6 +828,15 @@
 				04A54DD82A4073A000ABEF7C /* Article.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		04AD5C8C2A574474001FBF59 /* 3dobjects */ = {
+			isa = PBXGroup;
+			children = (
+				04AD5C8E2A57448C001FBF59 /* nefertiti_HQ2.obj */,
+				04AD5C8D2A57448B001FBF59 /* texture.png */,
+			);
+			path = 3dobjects;
 			sourceTree = "<group>";
 		};
 		04B7D74A2A45B87100A8E8F7 /* Cells */ = {
@@ -1533,6 +1547,7 @@
 				040E75452A1C019A00AF2B15 /* Montserrat-Bold.ttf in Resources */,
 				040E75542A1C01E500AF2B15 /* Poppins-Regular.ttf in Resources */,
 				04CE226B2A05A9E4004FCCE9 /* EditAccountViewController.storyboard in Resources */,
+				04AD5C8F2A57448C001FBF59 /* texture.png in Resources */,
 				0470619129E741D300114E55 /* Localizable.strings in Resources */,
 				04C90EB72A53395F00A163E5 /* CameraViewController.storyboard in Resources */,
 				04DF69022A4AF2BD00233FC4 /* ChangePasswordViewController.storyboard in Resources */,
@@ -1546,6 +1561,7 @@
 				04C5260A2A3DAF0600BFB41F /* ToursTableViewCell.xib in Resources */,
 				040E75462A1C019A00AF2B15 /* Montserrat-ExtraBold.ttf in Resources */,
 				04CE22612A05A94C004FCCE9 /* HomeViewController.storyboard in Resources */,
+				04AD5C902A57448C001FBF59 /* nefertiti_HQ2.obj in Resources */,
 				040CF66B29C4A86C008BC27F /* Assets.xcassets in Resources */,
 				040E75562A1C01E500AF2B15 /* Poppins-SemiBold.ttf in Resources */,
 				040CF66629C4A86A008BC27F /* Main.storyboard in Resources */,
