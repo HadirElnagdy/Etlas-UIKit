@@ -108,7 +108,7 @@
 		04D5B35A2A46E58700DCE93E /* AllArticlesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5B3592A46E58700DCE93E /* AllArticlesModel.swift */; };
 		04D5B35C2A47084E00DCE93E /* LabelCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5B35B2A47084E00DCE93E /* LabelCustomView.swift */; };
 		04D5B35F2A47198600DCE93E /* TourImgsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5B35E2A47198600DCE93E /* TourImgsCollectionViewCell.swift */; };
-		04D7217D2A54742400CAFFB2 /* DetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7217C2A54742400CAFFB2 /* DetailResponse.swift */; };
+		04D7217D2A54742400CAFFB2 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7217C2A54742400CAFFB2 /* EmptyResponse.swift */; };
 		04D721802A54747F00CAFFB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7217F2A54747F00CAFFB2 /* User.swift */; };
 		04D721822A548ACC00CAFFB2 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D721812A548ACC00CAFFB2 /* TokenManager.swift */; };
 		04D7218A2A559D5100CAFFB2 /* DonePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D721892A559D5100CAFFB2 /* DonePopUpViewController.swift */; };
@@ -259,7 +259,7 @@
 		04D5B3592A46E58700DCE93E /* AllArticlesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticlesModel.swift; sourceTree = "<group>"; };
 		04D5B35B2A47084E00DCE93E /* LabelCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCustomView.swift; sourceTree = "<group>"; };
 		04D5B35E2A47198600DCE93E /* TourImgsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourImgsCollectionViewCell.swift; sourceTree = "<group>"; };
-		04D7217C2A54742400CAFFB2 /* DetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResponse.swift; sourceTree = "<group>"; };
+		04D7217C2A54742400CAFFB2 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		04D7217F2A54747F00CAFFB2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		04D721812A548ACC00CAFFB2 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		04D721892A559D5100CAFFB2 /* DonePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonePopUpViewController.swift; sourceTree = "<group>"; };
@@ -1168,7 +1168,7 @@
 		04D7217B2A54740B00CAFFB2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				04D7217C2A54742400CAFFB2 /* DetailResponse.swift */,
+				04D7217C2A54742400CAFFB2 /* EmptyResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1335,7 +1335,6 @@
 		04DF68FB2A4AF25F00233FC4 /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
-				04DF68FE2A4AF28100233FC4 /* Model */,
 				04DF68FD2A4AF27A00233FC4 /* View */,
 				04DF68FC2A4AF27200233FC4 /* Controller */,
 			);
@@ -1356,13 +1355,6 @@
 				04DF69012A4AF2BD00233FC4 /* ChangePasswordViewController.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		04DF68FE2A4AF28100233FC4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		04E139722A4632B300B24A55 /* Models */ = {
@@ -1639,7 +1631,7 @@
 			files = (
 				04E6F1282A42EA48000E82E9 /* FavouritesViewController.swift in Sources */,
 				046E08962A3B862E00899579 /* AllToursViewController.swift in Sources */,
-				04D7217D2A54742400CAFFB2 /* DetailResponse.swift in Sources */,
+				04D7217D2A54742400CAFFB2 /* EmptyResponse.swift in Sources */,
 				04B7D7672A45C77B00A8E8F7 /* CurrentScoreViewController.swift in Sources */,
 				04A54DD62A406EAD00ABEF7C /* FavArticlesViewController.swift in Sources */,
 				04CE22682A05A9D2004FCCE9 /* EditAccountViewController.swift in Sources */,

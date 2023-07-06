@@ -35,17 +35,16 @@ class EOTPViewController: UIViewController {
     
     
     @IBAction func nextPressed(_ sender: BrownButton) {
-        //singleton pattern
-        
         let otpCode = [textField1.text, textField2.text, textField3.text, textField4.text]
             .compactMap { $0 }
             .reduce("", +)
         APIClient.verifyEmail(OTP: otpCode){ [weak self] (result) in
             guard let self = self else { return }
             switch result {
-            case .success(let user):
+            case .success(_):
                 goToLogin()
             case .failure(let error):
+                print(error.localizedDescription)
                 return
             }
         }
@@ -55,10 +54,11 @@ class EOTPViewController: UIViewController {
         APIClient.requestNewOTP(email: enteredEmail ?? ""){ [weak self] (result) in
             guard let self = self else { return }
             switch result {
-            case .success(let user):
-                goToLogin()
+            case .success(_):
+                print("OTPSent")
+                //show a message otp sent succesfuly
             case .failure(let error):
-               //show a message
+                print(error.localizedDescription)
                 return
             }
         }

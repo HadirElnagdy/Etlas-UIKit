@@ -14,6 +14,7 @@ class NewPasswordViewController: BaseViewController {
     @IBOutlet weak var showPasswordBtn: PasswordButton!
     @IBOutlet weak var newPasswordTextField: CustomTextField!
     @IBOutlet weak var confirmPasswordTextField: CustomTextField!
+    var token, userId: String?
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
@@ -25,8 +26,15 @@ class NewPasswordViewController: BaseViewController {
     @IBAction func finishPressed(_ sender: UIButton) {
         //change password
         //Alert
-        if let signInViewController = navigationController?.viewControllers.first(where: { $0 is SignInViewController }) {
-            navigationController?.popToViewController(signInViewController, animated: true)
+        APIClient.confirmPasswordReset(password: newPasswordTextField.text ?? "", confirmPassword: confirmPasswordTextField.text ?? "", token: token ?? "", userId: userId ?? ""){[weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(_):
+                goToLogin()
+            case .failure(let error):
+                print(error.localizedDescription)
+                return
+            }
         }
         
     }
@@ -42,6 +50,11 @@ class NewPasswordViewController: BaseViewController {
         showNewPasswordBtn.textField = newPasswordTextField
         showPasswordBtn.textField = confirmPasswordTextField
         
+    }
+    private func goToLogin(){
+        let storyborad = UIStoryboard(name: "SignInViewController", bundle: nil)
+        let viewController =  storyborad.instantiateViewController(withIdentifier: "SignInViewController")
+        self.present(viewController, animated: true)
     }
     
     

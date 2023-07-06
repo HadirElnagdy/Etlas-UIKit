@@ -11,6 +11,7 @@ class ForgotPasswordViewController: BaseViewController {
     
     
     // MARK: - IBOutlets
+    @IBOutlet weak var emailTextField: CustomTextField!
     
     
     // MARK: - Lifecycle methods
@@ -24,6 +25,19 @@ class ForgotPasswordViewController: BaseViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func nextPressed(_ sender: BrownButton) {
+        APIClient.resetPassword(email: emailTextField.text ?? " "){ [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(_):
+                self.performSegue(withIdentifier: "goToOtp", sender: self)
+            case .failure(let error):
+                print(error.localizedDescription)
+                return
+            }
+        }
+        
+    }
     
     
     

@@ -45,12 +45,13 @@ class SignInViewController: BaseViewController {
         APIClient.login(email: emailTextField.text ?? "", password: passwordTextField.text ?? ""){ [weak self] (result) in
             guard let self = self else { return }
             switch result {
-            case .success(let user):
+            case .success(let loginResponse):
                // UserDefaults.standard.set(user, forKey: "user")
                 SharedData.shared.SetIsLoggedIn(true)
+                TokenManager.shared.setTokens(accessToken: loginResponse.tokens?.access, refreshToken: loginResponse.tokens?.refresh)
                 goToHome()
             case .failure(let error):
-                // showSwiftMessage(title: "error", message: error.message)
+                print(error.localizedDescription)
                 return
             }
         }

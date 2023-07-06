@@ -26,8 +26,17 @@ class ChangePasswordViewController: BaseViewController {
     
     // MARK: - IBActions
     @IBAction func savePressed(_ sender: UIButton) {
-        //change password
-        //Alert
+        APIClient.changePassword(oldPassword: oldPasswordTextField.text ?? " ", newPassword: newPasswordTextField.text ?? "", confirmNewPassword: confirmPasswordTextField.text ?? ""){[weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(_):
+                navigationController?.popViewController(animated: true)
+            case .failure(let error):
+                print(error.localizedDescription)
+                return
+            }
+            
+        }
         
     }
     @IBAction func backPressed(_ sender: UIButton) {

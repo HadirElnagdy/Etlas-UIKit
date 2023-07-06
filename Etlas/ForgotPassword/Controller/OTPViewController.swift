@@ -14,7 +14,7 @@ class OTPViewController: BaseViewController {
     @IBOutlet weak var textField2: CustomTextField!
     @IBOutlet weak var textField3: CustomTextField!
     @IBOutlet weak var textField4: CustomTextField!
-    
+    var token: String?, userId: String?
     
     
     // MARK: - Lifecycle methods
@@ -30,6 +30,24 @@ class OTPViewController: BaseViewController {
     // MARK: - IBActions
     @IBAction func backPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func nextPressed(_ sender: BrownButton) {
+        let otpCode = [textField1.text, textField2.text, textField3.text, textField4.text]
+            .compactMap { $0 }
+            .reduce("", +)
+        APIClient.verifyPasswordOTP(OTP: otpCode){ [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(let model):
+                token = model.token
+                userId = model.userId
+                self.performSegue(withIdentifier: "goToNewPassword", sender: self)
+            case .failure(let error):
+                print(error.localizedDescription)
+                return
+            }
+        }
     }
     
     
@@ -62,6 +80,15 @@ class OTPViewController: BaseViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToNewPassword" {
+            if let destinationVC = segue.destination as? NewPasswordViewController {
+                destinationVC.token = token
+                destinationVC.userId = userId
+            }
+        }
+    }
+
     
     
 }

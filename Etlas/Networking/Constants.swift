@@ -11,7 +11,7 @@ class APIEndpoints {
     
     static let baseURL = "https://api.etlas.tech/"
     static let baseImgURL = "https://etlas-storage.s3.us-east-005.backblazeb2.com/media/articles_images/"
-   // var accessToken = TokenManager.shared.getAccessToken()
+    var accessToken = TokenManager.shared.getAccessToken()
     
     //auth
     static var register: String {
@@ -167,9 +167,9 @@ struct APIParameterKey {
 
 enum HTTPHeaderField: String {
     case contentType = "Content-Type"
-    case acceptType = "Accept"
+    case acceptType = "accept"
     case acceptEncoding = "Accept-Encoding"
-    //case Authorization = "Bearer \(accessToken)"
+    case authorization = "Authorization"
 }
 
 enum ContentType: String {

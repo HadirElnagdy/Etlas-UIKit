@@ -36,7 +36,7 @@ class SignUpSecondViewController: BaseViewController {
         APIClient.register(fullName: fullName ?? "" , email: email ?? "", password: password, confirmPassword: password, address: addressTextField.text ?? "", phoneNumber: phoneTextField.text ?? "") { [weak self] (result) in
             guard let self = self else { return }
             switch result {
-            case .success(let user):
+            case .success(_):
                 goToVerification()
             case .failure(let error):
                 print(error.localizedDescription)

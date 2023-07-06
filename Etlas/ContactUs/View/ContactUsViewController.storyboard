@@ -162,6 +162,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="321" id="63y-2S-rWK"/>
                                                             <constraint firstItem="RAg-rH-AKV" firstAttribute="top" secondItem="mFS-jQ-QT6" secondAttribute="top" constant="24" id="Mgu-bV-ru6"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ia7-xE-kWi" secondAttribute="trailing" constant="24" id="ZuD-3P-fdb"/>
                                                             <constraint firstItem="ia7-xE-kWi" firstAttribute="top" secondItem="RAg-rH-AKV" secondAttribute="bottom" constant="16" id="bym-a4-Lnd"/>
                                                             <constraint firstItem="RAg-rH-AKV" firstAttribute="leading" secondItem="mFS-jQ-QT6" secondAttribute="leading" constant="24" id="e3x-fv-GTI"/>
                                                             <constraint firstItem="ia7-xE-kWi" firstAttribute="leading" secondItem="RAg-rH-AKV" secondAttribute="leading" id="hNJ-eC-1qa"/>

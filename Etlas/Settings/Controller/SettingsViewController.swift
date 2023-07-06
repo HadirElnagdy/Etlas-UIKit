@@ -29,7 +29,28 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func logOutPressed(_ sender: UIButton) {
-        
+        APIClient.logout(refreshToken: TokenManager.shared.getRefreshToken() ?? ""){ result in
+            switch result {
+            case .success:
+                SharedData.shared.SetIsLoggedIn(false)
+                TokenManager.shared.clearTokens()
+                if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+                   let window = appDelegate.window {
+                    window.rootViewController?.dismiss(animated: true, completion: {
+                        let storyboard = UIStoryboard(name: "OnboardingViewController", bundle: nil)
+                        if let rootViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController {
+                            window.rootViewController = rootViewController
+                            window.makeKeyAndVisible()
+                        }
+                    })
+                }
+            case .failure(let error):
+                print(TokenManager.shared.getRefreshToken() ?? "there's no refresh token")
+                print(error.localizedDescription)
+                return
+            }
+            
+        }
     }
     
     @IBAction func editProfilePressed(_ sender: UIButton) {

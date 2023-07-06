@@ -7,6 +7,4 @@
 
 import Foundation
 
-struct detailResponse : Codable {
-    
-}
+struct EmptyResponse: Decodable {}

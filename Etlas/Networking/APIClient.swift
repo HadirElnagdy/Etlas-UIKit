@@ -11,7 +11,7 @@ import NVActivityIndicatorView
 
 class APIClient {
     private static func performRequest<T: Decodable>(route: APIRouter, decoder: JSONDecoder = JSONDecoder(), completion: @escaping (Result<T, NetworkError>) -> Void) {
-        print(route.urlRequest?.httpBody)
+        print(route.urlRequest?.allHTTPHeaderFields)
         AF.request(route).validate(statusCode: 200 ..< 300)
             .responseDecodable { (response: AFDataResponse<T>) in
                 switch response.result {
@@ -40,6 +40,7 @@ class APIClient {
                     break
                 }
             }
+        
     }
     
     static func register(fullName:String, email: String, password: String, confirmPassword: String, address: String, phoneNumber: String, completion: @escaping (Result<RegisterResponseModel, NetworkError>) -> Void) {
@@ -54,7 +55,7 @@ class APIClient {
     static func login(email: String, password: String, completion: @escaping (Result<loginResponseModel, NetworkError>) -> Void){
         performRequest(route: APIRouter.login(email: email, password: password), completion: completion)
     }
-    static func logout(refreshToken: String, completion: @escaping (Result<detailResponse, NetworkError>) -> Void){
+    static func logout(refreshToken: String, completion: @escaping (Result<Empty, NetworkError>) -> Void){
         performRequest(route: APIRouter.logout(refreshToken: refreshToken), completion: completion)
     }
     static func refreshToken(token: String, completion: @escaping (Result<Tokens, NetworkError>) -> Void){
@@ -121,7 +122,46 @@ class APIClient {
     static func putStatueScore(newScore: Int, completion: @escaping (Result<StatuesScoreResponse, NetworkError>) -> Void) {
         performRequest(route: APIRouter.putStatueScore(newScore: newScore), completion: completion)
     }
-
+//
+//    static func getFavorites(completion: @escaping (Result<FavoritesResponse, NetworkError>) -> Void) {
+//        performRequest(route: APIRouter.getFavorites, completion: completion)
+//    }
+//
+//    static func addArticleToFavs(id: Int, completion: @escaping (Result<AddToFavoritesResponse, NetworkError>) -> Void) {
+//        performRequest(route: APIRouter.addArticleToFavs(id: id), completion: completion)
+//    }
+//
+//    static func addMonumentToFavs(id: Int, completion: @escaping (Result<AddToFavoritesResponse, NetworkError>) -> Void) {
+//        performRequest(route: APIRouter.addMonumentToFavs(id: id), completion: completion)
+//    }
+//
+//    static func delFavArticle(completion: @escaping (Result<DeleteFavoriteResponse, NetworkError>) -> Void) {
+//        performRequest(route: APIRouter.delFavArticle, completion: completion)
+//    }
+//
+//    static func delFavMonument(completion: @escaping (Result<DeleteFavoriteResponse, NetworkError>) -> Void) {
+//        performRequest(route: APIRouter.delFavMonument, completion: completion)
+//    }
+//
+//    static func getMonument(completion: @escaping (Result<MonumentResponse, NetworkError>) -> Void) {
+//        performRequest(route: APIRouter.getMonument, completion: completion)
+//    }
+//
+//    static func getLandmarksQuestions(completion: @escaping (Result<QuestionsResponse, NetworkError>) -> Void) {
+//        performRequest(route: APIRouter.getLandmarksQuestions, completion: completion)
+//    }
+//
+//    static func getMonumentsQuestions(completion: @escaping (Result<QuestionsResponse, NetworkError>) -> Void) {
+//        performRequest(route: APIRouter.getMonumentsQuestions, completion: completion)
+//    }
+//
+//    static func getStatuesQuestions(completion: @escaping (Result<QuestionsResponse, NetworkError>) -> Void) {
+//        performRequest(route: APIRouter.getStatuesQuestions, completion: completion)
+//    }
+//
+//    static func getAllTours(completion: @escaping (Result<ToursResponse, NetworkError>) -> Void) {
+//        performRequest(route: APIRouter.getAllTours, completion: completion)
+//    }
 
     
 }

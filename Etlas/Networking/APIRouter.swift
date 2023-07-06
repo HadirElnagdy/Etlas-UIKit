@@ -70,7 +70,7 @@ enum APIRouter: URLRequestConvertible {
     
     private var isAuthenticated: Bool {
         switch self {
-        case .register, .verifyEmail, .requestNewOTP, .login, .logout, .refreshToken, .resetPassword, .verifyPasswordOTP, .changePassword, .googleSignIn, .facebookSignIn, .confirmPasswordReset:
+        case .register, .verifyEmail, .requestNewOTP, .login, .resetPassword, .confirmPasswordReset, .verifyPasswordOTP:
             return true
         default:
             return false
@@ -249,6 +249,12 @@ enum APIRouter: URLRequestConvertible {
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
+        if !isAuthenticated {
+                if let accessToken = TokenManager.shared.getAccessToken() {
+                    urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: HTTPHeaderField.authorization.rawValue)
+                }
+            }
+        
         return try encoding.encode(urlRequest, with: parameters)
     }
 }
