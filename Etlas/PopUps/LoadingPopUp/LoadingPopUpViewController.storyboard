@@ -89,7 +89,7 @@ recognized.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqy-dm-zEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951.90839694656484" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="353" y="-56"/>
         </scene>
     </scenes>
 </document>

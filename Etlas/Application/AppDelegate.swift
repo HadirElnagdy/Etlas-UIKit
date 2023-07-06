@@ -13,9 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UserDefaults.standard.set(true, forKey: "isFirstLaunch")
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        
         if SharedData.shared.isLoggedIn() {
             let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
             let onboardingVC =  storyborad.instantiateViewController(withIdentifier: "MainTabBarViewController")
@@ -25,8 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             let onboardingViewController = storyborad.instantiateViewController(withIdentifier: "OnboardingViewController")
             window?.rootViewController = onboardingViewController
         }
-        //        LocalizationManager.shared.delegate = self
-        //        LocalizationManager.shared.setAppInitLanguage()
+
         return true
     }
     

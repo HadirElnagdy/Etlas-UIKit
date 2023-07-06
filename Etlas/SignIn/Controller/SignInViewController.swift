@@ -31,7 +31,6 @@ class SignInViewController: BaseViewController {
     @IBAction func forgotPasswordPressed(_ sender: UIButton) {
         let storyboard: UIStoryboard = UIStoryboard(name: "ForgotPasswordViewController", bundle: nil)
         let forgotPWVC = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController")
-    
         self.present(forgotPWVC, animated: true)
         
     }
@@ -46,12 +45,14 @@ class SignInViewController: BaseViewController {
             guard let self = self else { return }
             switch result {
             case .success(let loginResponse):
-               // UserDefaults.standard.set(user, forKey: "user")
+                //UserDefaults.standard.set(loginResponse, forKey: "loginResponse")
                 SharedData.shared.SetIsLoggedIn(true)
                 TokenManager.shared.setTokens(accessToken: loginResponse.tokens?.access, refreshToken: loginResponse.tokens?.refresh)
                 goToHome()
             case .failure(let error):
+                showErrorMessage(message: error.message)
                 print(error.localizedDescription)
+                
                 return
             }
         }
@@ -82,5 +83,10 @@ class SignInViewController: BaseViewController {
         self.present(homeVC, animated: true)
     }
     
-    
+    private func showErrorMessage(message: String){
+        let storyboard = UIStoryboard(name: "ErrorPopUpViewController", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ErrorPopUpViewController") as? ErrorPopUpViewController else {return}
+        viewController.errorMessage = message
+    }
+   
 }

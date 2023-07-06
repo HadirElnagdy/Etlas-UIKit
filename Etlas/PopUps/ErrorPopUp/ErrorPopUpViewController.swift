@@ -12,11 +12,12 @@ class ErrorPopUpViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var messageLabel: UILabel!
-    
+    var errorMessage: String?
    // MARK: - Lifecycle methods
    override func viewDidLoad() {
        super.viewDidLoad()
        setupUI()
+       messageLabel.text = errorMessage
    }
    
    // MARK: - IBActions

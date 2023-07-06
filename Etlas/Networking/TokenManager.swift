@@ -54,15 +54,14 @@ class TokenManager {
             guard let self = self else { return }
             switch result {
             case .success(let tokens):
-                self.accessToken = tokens.access
-                self.refreshToken = tokens.refresh
-                startRefreshTimer()
+                setTokens(accessToken: tokens.access,
+                          refreshToken: tokens.refresh)
             case .failure(let error):
-                print(error.localizedDescription)
-                return
+                return print(error.localizedDescription)
             }
         }
-        
+        //diroo109@gmail.com
+        //Anypassword@123
     }
     func clearTokens() {
         self.accessToken = nil

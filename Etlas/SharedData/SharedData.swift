@@ -71,8 +71,6 @@ class SharedData {
         let defaults = UserDefaults.standard
         defaults.set(data, forKey: UserDataKey)
     }
-    
-    
 }
 
 

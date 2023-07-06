@@ -90,8 +90,7 @@ class APIClient {
         performRequest(route: APIRouter.getUser, completion: completion)
     }
 
-    static func editUser(fullName: String, email: String, address: String, phoneNumber: String, completion: @escaping (Result<User
-                                                                                                                       , NetworkError>) -> Void) {
+    static func editUser(fullName: String, email: String, address: String, phoneNumber: String, completion: @escaping (Result<User, NetworkError>) -> Void) {
         performRequest(route: APIRouter.editUser(fullName: fullName, email: email, address: address, phoneNumber: phoneNumber), completion: completion)
     }
 
@@ -121,6 +120,9 @@ class APIClient {
 
     static func putStatueScore(newScore: Int, completion: @escaping (Result<StatuesScoreResponse, NetworkError>) -> Void) {
         performRequest(route: APIRouter.putStatueScore(newScore: newScore), completion: completion)
+    }
+    static func getAllArticles(completion: @escaping (Result<StatuesScoreResponse, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.getAllArticles, completion: completion)
     }
 //
 //    static func getFavorites(completion: @escaping (Result<FavoritesResponse, NetworkError>) -> Void) {
