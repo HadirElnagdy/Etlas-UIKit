@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,14 +21,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPO-xX-LKi" customClass="CustomView" customModule="Etlas" customModuleProvider="target">
                         <rect key="frame" x="14" y="0.0" width="356" height="115"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I1V-Fy-clh">
-                                <rect key="frame" x="0.0" y="0.0" width="140" height="115"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="I1V-Fy-clh">
+                                <rect key="frame" x="0.0" y="1.6666666666666643" width="140" height="112"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="9wt-h1-gdg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwe-Pd-8VU">
-                                <rect key="frame" x="148" y="16" width="73" height="21"/>
+                                <rect key="frame" x="148" y="16" width="200" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Giza tour">
                                         <attributes>
@@ -39,7 +41,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ0-1F-fgv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ0-1F-fgv">
                                 <rect key="frame" x="148" y="41" width="200" height="28"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -76,6 +78,7 @@
                             <constraint firstItem="uwe-Pd-8VU" firstAttribute="top" secondItem="DPO-xX-LKi" secondAttribute="top" constant="16" id="Wwa-GN-xJW"/>
                             <constraint firstItem="uwe-Pd-8VU" firstAttribute="leading" secondItem="5Vc-D7-gou" secondAttribute="leading" id="aPs-WX-2zB"/>
                             <constraint firstAttribute="trailing" secondItem="NJ0-1F-fgv" secondAttribute="trailing" constant="8" id="cgP-DV-EDl"/>
+                            <constraint firstAttribute="trailing" secondItem="uwe-Pd-8VU" secondAttribute="trailing" constant="8" id="cr4-Cf-4Tt"/>
                             <constraint firstItem="I1V-Fy-clh" firstAttribute="leading" secondItem="DPO-xX-LKi" secondAttribute="leading" id="m6b-y7-BNz"/>
                             <constraint firstItem="NJ0-1F-fgv" firstAttribute="leading" secondItem="5Vc-D7-gou" secondAttribute="leading" id="qHB-CN-B4y"/>
                             <constraint firstItem="NJ0-1F-fgv" firstAttribute="top" secondItem="uwe-Pd-8VU" secondAttribute="bottom" constant="4" id="wSd-lk-aSc"/>
@@ -102,4 +105,10 @@
             <point key="canvasLocation" x="219.84732824427479" y="21.47887323943662"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

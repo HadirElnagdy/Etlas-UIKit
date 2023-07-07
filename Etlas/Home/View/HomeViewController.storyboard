@@ -102,10 +102,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfo-MQ-c4U">
-                                                        <rect key="frame" x="24" y="51.666666666666657" width="30" height="30"/>
+                                                        <rect key="frame" x="24" y="54.666666666666657" width="24" height="24"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="30" id="Nyt-CS-RRf"/>
-                                                            <constraint firstAttribute="height" constant="30" id="vJy-gq-lN2"/>
+                                                            <constraint firstAttribute="width" constant="24" id="Nyt-CS-RRf"/>
+                                                            <constraint firstAttribute="height" constant="24" id="vJy-gq-lN2"/>
                                                         </constraints>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>

@@ -14,7 +14,26 @@ struct Monument: Codable {
     let next, previous: String?
 }
 
-// MARK: - Result
+
+// MARK: - MonumentResult
 struct MonumentResult: Codable {
-    let name, id, created, updated: String?
+    let id: Int?
+    let name, description, created, updated: String?
+    let threeDModel: ThreeDModel?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, description, created, updated
+        case threeDModel = "three_d_model"
+    }
+}
+
+// MARK: - ThreeDModel
+struct ThreeDModel: Codable {
+    let modelObj: String?
+    let modelTexture: String?
+
+    enum CodingKeys: String, CodingKey {
+        case modelObj = "model_obj"
+        case modelTexture = "model_texture"
+    }
 }

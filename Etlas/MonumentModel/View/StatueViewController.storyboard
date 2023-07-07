@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31p-Xe-szM">
-                                <rect key="frame" x="80.666666666666671" y="336" width="231.66666666666663" height="38.333333333333314"/>
+                                <rect key="frame" x="80.666666666666686" y="336" width="232" height="38.333333333333314"/>
                                 <attributedString key="attributedText">
                                     <fragment content="ANUBIS STATUE">
                                         <attributes>
@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egb-EK-D0K">
-                                <rect key="frame" x="136.33333333333331" y="390.33333333333331" width="154.33333333333331" height="21.666666666666686"/>
+                                <rect key="frame" x="136.33333333333334" y="390.33333333333331" width="120.66666666666666" height="21.666666666666686"/>
                                 <attributedString key="attributedText">
                                     <fragment content="200 BC | Egypt">
                                         <attributes>
@@ -77,10 +77,10 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="352"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uDt-z8-5lv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="960"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNh-HA-iE3">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="960"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqo-1M-FIO">
                                                                                 <rect key="frame" x="24" y="0.0" width="345" height="838"/>
@@ -123,7 +123,7 @@ unchanged. It was popularised in the 1960s with the release of Letraset sheets c
                                                                         <constraints>
                                                                             <constraint firstAttribute="trailing" secondItem="aqo-1M-FIO" secondAttribute="trailing" constant="24" id="I5N-cI-z6G"/>
                                                                             <constraint firstItem="aqo-1M-FIO" firstAttribute="top" secondItem="SNh-HA-iE3" secondAttribute="top" id="Rae-bA-Qre"/>
-                                                                            <constraint firstAttribute="height" constant="960" id="meT-Ws-lp9"/>
+                                                                            <constraint firstAttribute="height" constant="1300" id="meT-Ws-lp9"/>
                                                                             <constraint firstItem="aqo-1M-FIO" firstAttribute="leading" secondItem="SNh-HA-iE3" secondAttribute="leading" constant="24" id="mgi-kt-Ecf"/>
                                                                         </constraints>
                                                                     </view>
@@ -214,11 +214,9 @@ unchanged. It was popularised in the 1960s with the release of Letraset sheets c
                             <constraint firstItem="WVN-Nn-rsL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="37" id="RNT-Wk-rYm"/>
                             <constraint firstItem="jzW-7z-83b" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TL2-2q-JTU"/>
                             <constraint firstItem="31p-Xe-szM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="277" id="Txv-km-bnx"/>
-                            <constraint firstItem="egb-EK-D0K" firstAttribute="centerX" secondItem="31p-Xe-szM" secondAttribute="centerX" constant="17" id="Xmi-ec-cY7"/>
+                            <constraint firstItem="egb-EK-D0K" firstAttribute="centerX" secondItem="31p-Xe-szM" secondAttribute="centerX" id="Xmi-ec-cY7"/>
                             <constraint firstItem="31p-Xe-szM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="d3c-Gb-o0l"/>
                             <constraint firstItem="egb-EK-D0K" firstAttribute="top" secondItem="31p-Xe-szM" secondAttribute="bottom" constant="16" id="gfK-Xx-5cp"/>
-                            <constraint firstItem="31p-Xe-szM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="80.666666666666686" id="m2z-aU-cr6"/>
-                            <constraint firstItem="egb-EK-D0K" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="136.33333333333337" id="pmz-rG-PlE"/>
                             <constraint firstAttribute="trailing" secondItem="WVN-Nn-rsL" secondAttribute="trailing" constant="16" id="vzb-6F-hQN"/>
                             <constraint firstItem="Ieo-cG-lBk" firstAttribute="top" secondItem="egb-EK-D0K" secondAttribute="bottom" constant="24" id="w3u-md-xBb"/>
                             <constraint firstAttribute="bottom" secondItem="jzW-7z-83b" secondAttribute="bottom" id="wHe-WO-5Tf"/>

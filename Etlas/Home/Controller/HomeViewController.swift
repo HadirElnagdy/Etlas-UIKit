@@ -15,13 +15,14 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var searchTextField: CustomTextField!
     
     // MARK: - Data
-    var tourModels: [AllToursUIModel] = [AllToursUIModel(), AllToursUIModel(), AllToursUIModel(), AllToursUIModel()]
+    var tourModels: [Tour] = []
     var articleModels: [AllArticlesModel] = [AllArticlesModel(), AllArticlesModel(), AllArticlesModel(), AllArticlesModel()]
    
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        fetchTours() 
         setupCollectionViews()
         setupSearchTextField()
     }
@@ -45,7 +46,21 @@ class HomeViewController: BaseViewController {
     private func setupUI() {
         navigationController?.navigationBar.isHidden = true
     }
-   
+    func fetchTours() {
+        APIClient.getAllTours(){[weak self] (result) in
+            switch result {
+            case .success(let toursResponse):
+                print(toursResponse)
+                self?.tourModels = toursResponse.results!
+                self?.toursCollectionView.reloadData()
+                break
+            case . failure(let error):
+                return print(error.localizedDescription)
+            }
+        }
+        
+    }
+
     private func setupCollectionViews() {
         toursCollectionView.delegate = self
         toursCollectionView.dataSource = self
@@ -77,9 +92,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == toursCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllToursCollectionViewCell", for: indexPath) as? AllToursCollectionViewCell
-            cell?.configure(model: tourModels[indexPath.item])
-            return cell ?? UICollectionViewCell()
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllToursCollectionViewCell", for: indexPath) as! AllToursCollectionViewCell
+                let tour = tourModels[indexPath.item]
+                cell.configure(model: tour)
+                return cell ?? UICollectionViewCell()
         } else if collectionView == articlesCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllArticlesCollectionViewCell", for: indexPath) as? AllArticlesCollectionViewCell
             cell?.configure(model: articleModels[indexPath.item])

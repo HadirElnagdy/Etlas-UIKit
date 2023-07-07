@@ -124,6 +124,12 @@ class APIClient {
     static func getAllArticles(completion: @escaping (Result<StatuesScoreResponse, NetworkError>) -> Void) {
         performRequest(route: APIRouter.getAllArticles, completion: completion)
     }
+    static func getAllTours(completion: @escaping (Result<AllToursResponse, NetworkError>) -> Void) {
+            performRequest(route: APIRouter.getAllTours, completion: completion)
+        }
+    static func getMonument(completion: @escaping (Result<MonumentResult, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.getMonument, completion: completion)
+    }
 //
 //    static func getFavorites(completion: @escaping (Result<FavoritesResponse, NetworkError>) -> Void) {
 //        performRequest(route: APIRouter.getFavorites, completion: completion)
@@ -161,9 +167,7 @@ class APIClient {
 //        performRequest(route: APIRouter.getStatuesQuestions, completion: completion)
 //    }
 //
-//    static func getAllTours(completion: @escaping (Result<ToursResponse, NetworkError>) -> Void) {
-//        performRequest(route: APIRouter.getAllTours, completion: completion)
-//    }
+//
 
     
 }

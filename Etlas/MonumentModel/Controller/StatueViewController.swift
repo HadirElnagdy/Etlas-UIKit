@@ -25,11 +25,9 @@ class StatueViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupSceneKitView(.Nefertiti)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        setupSceneKitView(.Khafre)
-    }
 
     private func setupSceneKitView(_ statues: Statues) {
         let scene: SCNScene!
@@ -53,6 +51,17 @@ class StatueViewController: UIViewController {
         whiteView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         whiteView.layer.masksToBounds = true
         setupLabel()
+        APIClient.getMonument{[weak self] result in
+            switch result {
+            case .success(let model):
+                self?.monumentNameLabel.text = model.name
+                self?.descriptionLabel.text = model.description
+                break
+            case .failure(let error):
+                return print(error.localizedDescription)
+            }
+            
+        }
     }
     private func setupButtonImage() {
         let imageName = isLoved ? "ic_selectedFavButton" : "ic_FavButton"

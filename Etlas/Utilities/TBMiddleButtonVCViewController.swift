@@ -118,16 +118,9 @@ extension TBMiddleButtonVCViewController: UINavigationControllerDelegate, UIImag
              return
          }
         let imageData = image.jpegData(compressionQuality: 0.8)
-        APIClient.uploadImageWithRequest(imageData: imageData!) { result in
-               switch result {
-               case .success(let data):
-                   print("It's Working yaay!")
-                   break
-               case .failure(let error):
-                   print("It's not working!!!!!")
-                   break
-               }
-           }
+        let storyboard = UIStoryboard(name: "StatueViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "StatueViewController")
+        self.present(vc, animated: true)
         
     }
 }

@@ -37,6 +37,16 @@ class HighestScoreViewController: UIViewController {
    private func setupUI() {
        bestScoreView.layer.cornerRadius = 30
        self.navigationController?.navigationBar.isHidden = true
+       APIClient.getBestScore(){[weak self] result in
+           switch result {
+           case .success(let model):
+               self?.bestScoreLabel.text = String(model.totalBestScore ?? 0)
+               break
+           case .failure(let error):
+               return print(error.localizedDescription)
+           }
+           
+       }
 
    }
 
