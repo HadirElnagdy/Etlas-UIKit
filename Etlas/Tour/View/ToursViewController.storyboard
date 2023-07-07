@@ -182,7 +182,7 @@ unchanged. It was popularised in the 1960s with the release of Letraset sheets c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368.70229007633588" y="-57.04225352112676"/>
+            <point key="canvasLocation" x="602" y="-38"/>
         </scene>
     </scenes>
     <resources>

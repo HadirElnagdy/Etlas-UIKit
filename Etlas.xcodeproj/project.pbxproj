@@ -43,7 +43,7 @@
 		045A9B942A58188E0064022A /* APIClient+Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A9B932A58188E0064022A /* APIClient+Upload.swift */; };
 		045A9B962A5838080064022A /* DetectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A9B952A5838080064022A /* DetectionResponse.swift */; };
 		045A9B982A5874670064022A /* AllToursResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A9B972A5874670064022A /* AllToursResponse.swift */; };
-		045A9B9A2A58A3D50064022A /* AllToursUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A9B992A58A3D50064022A /* AllToursUIModel.swift */; };
+		045A9B9C2A58B40C0064022A /* AllArticlesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A9B9B2A58B40C0064022A /* AllArticlesResponse.swift */; };
 		046E08782A38A15500899579 /* MainMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046E08772A38A15500899579 /* MainMenuViewController.storyboard */; };
 		046E087B2A39ED4000899579 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E087A2A39ED4000899579 /* MainMenuViewController.swift */; };
 		046E08842A3AFBB400899579 /* LanguageSelectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046E08832A3AFBB400899579 /* LanguageSelectionViewController.storyboard */; };
@@ -73,7 +73,6 @@
 		04A2BE5D2A0591A800044C9B /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2BE5C2A0591A800044C9B /* AboutUsViewController.swift */; };
 		04A54DD42A406E8B00ABEF7C /* FavArticlesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A54DD32A406E8B00ABEF7C /* FavArticlesViewController.storyboard */; };
 		04A54DD62A406EAD00ABEF7C /* FavArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A54DD52A406EAD00ABEF7C /* FavArticlesViewController.swift */; };
-		04A54DD92A4073A000ABEF7C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A54DD82A4073A000ABEF7C /* Article.swift */; };
 		04A54DDD2A407AB400ABEF7C /* InfoAboutUsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A54DDC2A407AB400ABEF7C /* InfoAboutUsViewController.storyboard */; };
 		04AD5C8F2A57448C001FBF59 /* Nefertiti.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AD5C8D2A57448B001FBF59 /* Nefertiti.png */; };
 		04AD5C902A57448C001FBF59 /* Nefertiti.obj in Resources */ = {isa = PBXBuildFile; fileRef = 04AD5C8E2A57448C001FBF59 /* Nefertiti.obj */; };
@@ -198,7 +197,7 @@
 		045A9B932A58188E0064022A /* APIClient+Upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Upload.swift"; sourceTree = "<group>"; };
 		045A9B952A5838080064022A /* DetectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionResponse.swift; sourceTree = "<group>"; };
 		045A9B972A5874670064022A /* AllToursResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllToursResponse.swift; sourceTree = "<group>"; };
-		045A9B992A58A3D50064022A /* AllToursUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllToursUIModel.swift; sourceTree = "<group>"; };
+		045A9B9B2A58B40C0064022A /* AllArticlesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticlesResponse.swift; sourceTree = "<group>"; };
 		046E08772A38A15500899579 /* MainMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenuViewController.storyboard; sourceTree = "<group>"; };
 		046E087A2A39ED4000899579 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		046E08832A3AFBB400899579 /* LanguageSelectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LanguageSelectionViewController.storyboard; sourceTree = "<group>"; };
@@ -230,7 +229,6 @@
 		04A2BE5C2A0591A800044C9B /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		04A54DD32A406E8B00ABEF7C /* FavArticlesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavArticlesViewController.storyboard; sourceTree = "<group>"; };
 		04A54DD52A406EAD00ABEF7C /* FavArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavArticlesViewController.swift; sourceTree = "<group>"; };
-		04A54DD82A4073A000ABEF7C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		04A54DDC2A407AB400ABEF7C /* InfoAboutUsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoAboutUsViewController.storyboard; sourceTree = "<group>"; };
 		04AD5C8D2A57448B001FBF59 /* Nefertiti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nefertiti.png; sourceTree = "<group>"; };
 		04AD5C8E2A57448C001FBF59 /* Nefertiti.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Nefertiti.obj; sourceTree = "<group>"; };
@@ -833,7 +831,6 @@
 		04A54DD72A40738E00ABEF7C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04A54DD82A4073A000ABEF7C /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1030,7 +1027,6 @@
 			isa = PBXGroup;
 			children = (
 				045A9B972A5874670064022A /* AllToursResponse.swift */,
-				045A9B992A58A3D50064022A /* AllToursUIModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1178,6 +1174,7 @@
 			isa = PBXGroup;
 			children = (
 				04D5B3592A46E58700DCE93E /* AllArticlesModel.swift */,
+				045A9B9B2A58B40C0064022A /* AllArticlesResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1678,6 +1675,7 @@
 				042450442A4E1665005CCAE7 /* SharedData.swift in Sources */,
 				04CE22642A05A974004FCCE9 /* HomeViewController.swift in Sources */,
 				040CF66329C4A86A008BC27F /* ViewController.swift in Sources */,
+				045A9B9C2A58B40C0064022A /* AllArticlesResponse.swift in Sources */,
 				0474CEC72A52D29A00BDEEF5 /* successResponse.swift in Sources */,
 				046E08882A3AFCE000899579 /* LanguageSelectionViewController.swift in Sources */,
 				04D8DF0D2A0AD6480002CEA4 /* OTPViewController.swift in Sources */,
@@ -1699,7 +1697,6 @@
 				04D5B35C2A47084E00DCE93E /* LabelCustomView.swift in Sources */,
 				04DF69002A4AF2A400233FC4 /* ChangePasswordViewController.swift in Sources */,
 				04D574AE2A5051A500F9C227 /* APIRouter.swift in Sources */,
-				04A54DD92A4073A000ABEF7C /* Article.swift in Sources */,
 				04D5B35A2A46E58700DCE93E /* AllArticlesModel.swift in Sources */,
 				046E087B2A39ED4000899579 /* MainMenuViewController.swift in Sources */,
 				040CF65F29C4A86A008BC27F /* AppDelegate.swift in Sources */,
@@ -1744,7 +1741,6 @@
 				04A0CF792A433D1300BFEC87 /* FavArticlesTableViewCell.swift in Sources */,
 				04D8DF0B2A0AA3020002CEA4 /* ForgotPasswordViewController.swift in Sources */,
 				04D319A92A098D0300CF0C7F /* RatingView.swift in Sources */,
-				045A9B9A2A58A3D50064022A /* AllToursUIModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

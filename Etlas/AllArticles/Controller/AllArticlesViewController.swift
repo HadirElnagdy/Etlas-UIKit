@@ -13,13 +13,15 @@ class AllArticlesViewController: BaseViewController {
     @IBOutlet weak var articlesCollectionView: UICollectionView!
     @IBOutlet weak var searchTextField: CustomTextField!
     
-    
-    var articleModels: [AllArticlesModel] = [AllArticlesModel(), AllArticlesModel(), AllArticlesModel(), AllArticlesModel(), AllArticlesModel(), AllArticlesModel(), AllArticlesModel()]
+    // MARK: - Data
+    var articleModels: [ArticleResult] = []
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        fetchArticles()
+        setupCollectionViews()
     }
     
     // MARK: - IBActions
@@ -32,13 +34,28 @@ class AllArticlesViewController: BaseViewController {
     @IBAction func backPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-    @IBAction func filterPressed(_ sender: UIButton) {
-    }
     
+    @IBAction func filterPressed(_ sender: UIButton) {
+        // Implement your filter logic here
+    }
     
     // MARK: - Private methods
     private func setupUI() {
         setupCollectionViews()
+    }
+    
+    private func fetchArticles() {
+        APIClient.getAllArticles { [weak self] result in
+            switch result {
+            case .success(let articlesResponse):
+                if let articleModels = articlesResponse.results {
+                    self?.articleModels = articleModels
+                    self?.articlesCollectionView.reloadData()
+                }
+            case .failure(let error):
+                print("Error fetching articles: \(error.localizedDescription)")
+            }
+        }
     }
     
     private func setupCollectionViews() {
@@ -58,9 +75,11 @@ extension AllArticlesViewController: UICollectionViewDelegate, UICollectionViewD
         cell?.configure(model: articleModels[indexPath.item])
         return cell ?? UICollectionViewCell()
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //action
-//        articleModels[indexPath.row].id
-//        let vc = UIStoryboard.instantiateViewController(sldkfnls)
+        // Handle the selection of an article
+        let selectedArticle = articleModels[indexPath.item]
+        // Perform the desired action, such as navigating to a detailed view for the selected article
+        // You can access the article's ID using selectedArticle.id
     }
 }

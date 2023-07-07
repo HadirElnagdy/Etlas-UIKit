@@ -12,12 +12,14 @@ class AllToursViewController: BaseViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var toursTableView: UITableView!
     
-    var tourModels: [AllToursUIModel] = [AllToursUIModel(), AllToursUIModel(), AllToursUIModel()]
+    var tourModels: [Tour] = []
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        fetchTours()
+        setupTableView()
     }
     
     // MARK: - IBActions
@@ -37,13 +39,27 @@ class AllToursViewController: BaseViewController {
     
     // MARK: - Private methods
     private func setupUI() {
-        setupTableView()
+        // Set up UI elements
     }
     
     private func setupTableView() {
         toursTableView.delegate = self
         toursTableView.dataSource = self
-        toursTableView.register(UINib(nibName: String(describing: ToursTableViewCell.self), bundle: nil), forCellReuseIdentifier: "ToursTableViewCell")
+        toursTableView.register(UINib(nibName: "ToursTableViewCell", bundle: nil), forCellReuseIdentifier: "ToursTableViewCell")
+    }
+    
+    private func fetchTours() {
+        APIClient.getAllTours { [weak self] result in
+            switch result {
+            case .success(let toursResponse):
+                if let tourModels = toursResponse.results {
+                    self?.tourModels = tourModels
+                    self?.toursTableView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 
@@ -53,12 +69,19 @@ extension AllToursViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToursTableViewCell") as? ToursTableViewCell
-        cell?.configure(model: tourModels[indexPath.row])
-        return cell ?? UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ToursTableViewCell", for: indexPath) as! ToursTableViewCell
+        let tour = tourModels[indexPath.row]
+        cell.configure(model: tour)
+        return cell
     }
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // push the tour with the same id
+        let selectedTour = tourModels[indexPath.row]
+        let storyboard = UIStoryboard(name: "ToursViewController", bundle: nil)
+        let toursVC = storyboard.instantiateViewController(identifier: "ToursViewController") as! ToursViewController
+        toursVC.tour = selectedTour
+        navigationController?.pushViewController(toursVC, animated: true)
     }
+
 }

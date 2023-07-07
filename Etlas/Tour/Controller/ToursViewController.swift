@@ -17,7 +17,7 @@ class ToursViewController: UIViewController {
     @IBOutlet weak var tourDescriptionLabel: UILabel!
     
     
-    
+    var tour: Tour?
     var testImgs = [UIImage(named: "img_ToursGiza"), UIImage(named: "img_ToursGiza"), UIImage(named: "img_ToursGiza"), UIImage(named: "img_ToursGiza"), UIImage(named: "img_ToursGiza")]
     var timer: Timer?
     var currentCellIndex = 0
@@ -39,9 +39,18 @@ class ToursViewController: UIViewController {
         let contentSize = pageControl.size(forNumberOfPages: pageControl.numberOfPages)
         let pageControlWidth = contentSize.width
         pageControl.frame.size = CGSize(width: pageControlWidth, height: pageControl.frame.height)
+        guard let tour = tour else {
+            return
+        }
+        
+        // Configure UI elements with tour data
+        tourTitleLabel.text = tour.title
+        rateView.cosmosView.rating = tour.rating ?? 0
+        tourDescriptionLabel.text = tour.description
         
         setupCollectionView()
         startTimer()
+        
     }
     
     private func setupCollectionView() {

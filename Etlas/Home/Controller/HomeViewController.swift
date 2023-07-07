@@ -16,17 +16,18 @@ class HomeViewController: BaseViewController {
     
     // MARK: - Data
     var tourModels: [Tour] = []
-    var articleModels: [AllArticlesModel] = [AllArticlesModel(), AllArticlesModel(), AllArticlesModel(), AllArticlesModel()]
-   
+    var articleModels: [ArticleResult] = []
+    
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        fetchTours() 
+        fetchTours()
+        fetchArticles()
         setupCollectionViews()
         setupSearchTextField()
     }
-   
+    
     // MARK: - IBActions
     @IBAction func learnMorePressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "MainMenuViewController", bundle: nil)
@@ -46,21 +47,35 @@ class HomeViewController: BaseViewController {
     private func setupUI() {
         navigationController?.navigationBar.isHidden = true
     }
-    func fetchTours() {
-        APIClient.getAllTours(){[weak self] (result) in
+    
+    private func fetchTours() {
+        APIClient.getAllTours { [weak self] result in
             switch result {
             case .success(let toursResponse):
-                print(toursResponse)
-                self?.tourModels = toursResponse.results!
-                self?.toursCollectionView.reloadData()
-                break
-            case . failure(let error):
-                return print(error.localizedDescription)
+                if let tourModels = toursResponse.results {
+                    self?.tourModels = tourModels
+                    self?.toursCollectionView.reloadData()
+                }
+            case .failure(let error):
+                print("Error fetching tours: \(error.localizedDescription)")
             }
         }
-        
     }
-
+    
+    private func fetchArticles() {
+        APIClient.getAllArticles { [weak self] result in
+            switch result {
+            case .success(let articlesResponse):
+                if let articleModels = articlesResponse.results {
+                    self?.articleModels = articleModels
+                    self?.articlesCollectionView.reloadData()
+                }
+            case .failure(let error):
+                print("Error fetching articles: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     private func setupCollectionViews() {
         toursCollectionView.delegate = self
         toursCollectionView.dataSource = self
@@ -81,7 +96,6 @@ class HomeViewController: BaseViewController {
         searchTextField.delegate = self
         searchTextField.returnKeyType = .search
     }
-    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -93,18 +107,17 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == toursCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllToursCollectionViewCell", for: indexPath) as! AllToursCollectionViewCell
-                let tour = tourModels[indexPath.item]
-                cell.configure(model: tour)
-                return cell ?? UICollectionViewCell()
+            let tour = tourModels[indexPath.item]
+            cell.configure(model: tour)
+            return cell
         } else if collectionView == articlesCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllArticlesCollectionViewCell", for: indexPath) as? AllArticlesCollectionViewCell
-            cell?.configure(model: articleModels[indexPath.item])
-            return cell ?? UICollectionViewCell()
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AllArticlesCollectionViewCell", for: indexPath) as! AllArticlesCollectionViewCell
+            let article = articleModels[indexPath.item]
+            cell.configure(model: article)
+            return cell
         } else {
             return UICollectionViewCell()
         }
     }
 }
 
-
-   

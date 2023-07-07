@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="175" height="246"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eln-C3-fVF">
-                                <rect key="frame" x="8" y="118.99999999999999" width="50" height="19.333333333333329"/>
+                                <rect key="frame" x="8" y="118.99999999999999" width="159" height="19.333333333333329"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Anubis">
                                         <attributes>
@@ -87,7 +87,7 @@ Anubis and his powers.</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_Anubis" translatesAutoresizingMaskIntoConstraints="NO" id="5cE-te-AeE">
-                                <rect key="frame" x="0.0" y="8" width="175" height="107"/>
+                                <rect key="frame" x="6" y="8" width="163" height="107"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="107" id="Kqz-6P-98b"/>
                                 </constraints>
@@ -125,11 +125,12 @@ Anubis and his powers.</string>
                             <constraint firstAttribute="bottom" secondItem="HMF-gg-s1T" secondAttribute="bottom" constant="4" id="YP6-id-Jeh"/>
                             <constraint firstItem="eln-C3-fVF" firstAttribute="top" secondItem="5cE-te-AeE" secondAttribute="bottom" constant="4" id="Yuf-Fb-9Sy"/>
                             <constraint firstItem="2hA-BA-ItP" firstAttribute="leading" secondItem="eln-C3-fVF" secondAttribute="leading" id="aZG-8Z-0ev"/>
+                            <constraint firstAttribute="trailing" secondItem="eln-C3-fVF" secondAttribute="trailing" constant="8" id="beX-6K-j2d"/>
                             <constraint firstItem="HMF-gg-s1T" firstAttribute="centerX" secondItem="O8D-1N-RVB" secondAttribute="centerX" id="bt4-aA-mwy"/>
                             <constraint firstItem="5cE-te-AeE" firstAttribute="top" secondItem="O8D-1N-RVB" secondAttribute="top" constant="8" id="etJ-S7-DAB"/>
                             <constraint firstItem="2hA-BA-ItP" firstAttribute="top" secondItem="W7v-gK-hTj" secondAttribute="bottom" constant="8" id="fOA-gA-shm"/>
-                            <constraint firstItem="5cE-te-AeE" firstAttribute="leading" secondItem="O8D-1N-RVB" secondAttribute="leading" id="hJC-O0-BUm"/>
-                            <constraint firstAttribute="trailing" secondItem="5cE-te-AeE" secondAttribute="trailing" id="meD-7U-t2B"/>
+                            <constraint firstItem="5cE-te-AeE" firstAttribute="leading" secondItem="O8D-1N-RVB" secondAttribute="leading" constant="6" id="hJC-O0-BUm"/>
+                            <constraint firstAttribute="trailing" secondItem="5cE-te-AeE" secondAttribute="trailing" constant="6" id="meD-7U-t2B"/>
                             <constraint firstItem="W7v-gK-hTj" firstAttribute="leading" secondItem="eln-C3-fVF" secondAttribute="leading" id="urO-Hd-uUK"/>
                         </constraints>
                     </view>

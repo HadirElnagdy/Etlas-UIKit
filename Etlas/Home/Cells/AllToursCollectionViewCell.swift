@@ -25,7 +25,7 @@ class AllToursCollectionViewCell: UICollectionViewCell {
         self.tourDetails.text = model?.description
         self.tourRating.cosmosView.rating = Double(model?.rating ?? 0.0)
         
-        self.tourImg.image = UIImage(named: "defaultImg")
+        self.tourImg.image = UIImage(named: "photo")
         if let firstImage = model?.images?.first, let imageURLString = firstImage.imageURL, let imageURL = URL(string: imageURLString) {
             URLSession.shared.dataTask(with: imageURL) { [weak self] (data, _, error) in
                 if let error = error {

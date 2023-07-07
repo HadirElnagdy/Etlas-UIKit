@@ -21,11 +21,28 @@ class ToursTableViewCell: UITableViewCell {
 
     }
     
-    func configure(model: AllToursUIModel?) {
-        self.tourImg.image = model?.tourImg?.image
-        self.tourName.text = model?.tourName
-        self.tourDetails.text = model?.tourDetails
-        self.tourRating.cosmosView.rating = model?.tourRating ?? 0.0
+    func configure(model: Tour?) {
+        self.tourName.text = model?.title
+        self.tourDetails.text = model?.description
+        self.tourRating.cosmosView.rating = model?.rating ?? 0.0
+        self.tourImg.image = UIImage(named: "photo")
+        self.tourImg.tintColor = .gray
+
+        if let firstImage = model?.images?.first, let imageURLString = firstImage.imageURL, let imageURL = URL(string: imageURLString) {
+            URLSession.shared.dataTask(with: imageURL) { [weak self] (data, _, error) in
+                if let error = error {
+                    print("Error downloading tour image: \(error.localizedDescription)")
+                    return
+                }
+                
+                if let imageData = data, let image = UIImage(data: imageData) {
+                    DispatchQueue.main.async {
+                        self?.tourImg.image = image
+                    }
+                }
+            }.resume()
+        }
+        
     }
     
 
