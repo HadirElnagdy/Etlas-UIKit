@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         UserDefaults.standard.set(true, forKey: "isFirstLaunch")
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
+        
         if SharedData.shared.isLoggedIn() {
             let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
             let onboardingVC =  storyborad.instantiateViewController(withIdentifier: "MainTabBarViewController")

@@ -11,7 +11,7 @@ import NVActivityIndicatorView
 
 class APIClient {
     private static func performRequest<T: Decodable>(route: APIRouter, decoder: JSONDecoder = JSONDecoder(), completion: @escaping (Result<T, NetworkError>) -> Void) {
-        print(route.urlRequest?.allHTTPHeaderFields)
+        
         AF.request(route).validate(statusCode: 200 ..< 300)
             .responseDecodable { (response: AFDataResponse<T>) in
                 switch response.result {
