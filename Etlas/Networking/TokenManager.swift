@@ -46,7 +46,7 @@ class TokenManager {
         }
     }
     
-    private func refreshAccessToken() {
+    func refreshAccessToken() {
         guard let refreshToken = refreshToken else {
             return
         }
@@ -60,15 +60,14 @@ class TokenManager {
                 return print(error.localizedDescription)
             }
         }
-        //diroo109@gmail.com
-        //Anypassword@123
+        
     }
     func clearTokens() {
         self.accessToken = nil
         self.refreshToken = nil
         UserDefaults.standard.removeObject(forKey: "accessToken")
         UserDefaults.standard.removeObject(forKey: "refreshToken")
-        refreshTimer?.invalidate() // Stop the refresh timer
+        refreshTimer?.invalidate()
     }
 
    

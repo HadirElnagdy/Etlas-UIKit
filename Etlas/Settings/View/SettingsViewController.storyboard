@@ -371,6 +371,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nameLabel" destination="wAC-4V-BBv" id="dSQ-54-4u8"/>
                         <outlet property="personalImageView" destination="iyW-f9-nKu" id="IP3-q6-9qv"/>
                     </connections>
                 </viewController>

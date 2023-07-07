@@ -9,7 +9,8 @@ import Foundation
 
 // MARK: - User
 struct User: Codable {
-    let fullName, email, id, address: String?
+    let id: Int?
+    let fullName, email, address: String?
     let phoneNumber, imageURL: String?
 
     enum CodingKeys: String, CodingKey {

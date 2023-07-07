@@ -16,16 +16,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         UserDefaults.standard.set(true, forKey: "isFirstLaunch")
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        
         if SharedData.shared.isLoggedIn() {
+            TokenManager.shared.refreshAccessToken()
             let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
-            let onboardingVC =  storyborad.instantiateViewController(withIdentifier: "MainTabBarViewController")
-            window?.rootViewController = onboardingVC
+            let vc =  storyborad.instantiateViewController(withIdentifier: "MainTabBarViewController")
+            window?.rootViewController = vc
+            APIClient.getUser(){ [weak self](result) in
+                switch result{
+                case .success(let model):
+                    UserDefaults.standard.set(model.fullName, forKey: "fullName")
+                    UserDefaults.standard.set(model.email, forKey: "email")
+                    UserDefaults.standard.set(model.address, forKey: "address")
+                    UserDefaults.standard.set(model.phoneNumber, forKey: "phoneNumber")
+                    UserDefaults.standard.set(model.id, forKey: "id")
+                    UserDefaults.standard.set(model.imageURL, forKey: "imageURL")
+                    break
+                case .failure(let error):
+                    return print(error.message)
+                }
+            }
         } else {
             let storyborad = UIStoryboard(name: "OnboardingViewController", bundle: nil)
             let onboardingViewController = storyborad.instantiateViewController(withIdentifier: "OnboardingViewController")
             window?.rootViewController = onboardingViewController
         }
+       
 
         return true
     }

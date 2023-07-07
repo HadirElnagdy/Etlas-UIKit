@@ -114,9 +114,20 @@ extension TBMiddleButtonVCViewController: UINavigationControllerDelegate, UIImag
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
+         guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+             return
+         }
+        let imageData = image.jpegData(compressionQuality: 0.8)
+        APIClient.uploadImageWithRequest(imageData: imageData!) { result in
+               switch result {
+               case .success(let data):
+                   print("It's Working yaay!")
+                   break
+               case .failure(let error):
+                   print("It's not working!!!!!")
+                   break
+               }
+           }
         
-        // guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
-        //     return
-        // }
     }
 }

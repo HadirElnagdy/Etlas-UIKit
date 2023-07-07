@@ -40,6 +40,8 @@
 		042450442A4E1665005CCAE7 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042450432A4E1665005CCAE7 /* SharedData.swift */; };
 		04550A7929F7E7EC00442218 /* SignUpSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04550A7829F7E7EC00442218 /* SignUpSecondViewController.swift */; };
 		0457BDB129F6CF3700E2D8F0 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457BDB029F6CF3700E2D8F0 /* LocalizationManager.swift */; };
+		045A9B942A58188E0064022A /* APIClient+Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A9B932A58188E0064022A /* APIClient+Upload.swift */; };
+		045A9B962A5838080064022A /* DetectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A9B952A5838080064022A /* DetectionResponse.swift */; };
 		046E08782A38A15500899579 /* MainMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046E08772A38A15500899579 /* MainMenuViewController.storyboard */; };
 		046E087B2A39ED4000899579 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E087A2A39ED4000899579 /* MainMenuViewController.swift */; };
 		046E08842A3AFBB400899579 /* LanguageSelectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046E08832A3AFBB400899579 /* LanguageSelectionViewController.storyboard */; };
@@ -192,6 +194,8 @@
 		042450432A4E1665005CCAE7 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		04550A7829F7E7EC00442218 /* SignUpSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondViewController.swift; sourceTree = "<group>"; };
 		0457BDB029F6CF3700E2D8F0 /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
+		045A9B932A58188E0064022A /* APIClient+Upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Upload.swift"; sourceTree = "<group>"; };
+		045A9B952A5838080064022A /* DetectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionResponse.swift; sourceTree = "<group>"; };
 		046E08772A38A15500899579 /* MainMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenuViewController.storyboard; sourceTree = "<group>"; };
 		046E087A2A39ED4000899579 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		046E08832A3AFBB400899579 /* LanguageSelectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LanguageSelectionViewController.storyboard; sourceTree = "<group>"; };
@@ -1162,6 +1166,7 @@
 				04D574AF2A5051B200F9C227 /* NetworkError.swift */,
 				04D574B12A5059C400F9C227 /* Constants.swift */,
 				04D721812A548ACC00CAFFB2 /* TokenManager.swift */,
+				045A9B932A58188E0064022A /* APIClient+Upload.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -1445,6 +1450,7 @@
 			isa = PBXGroup;
 			children = (
 				04EE3A892A48D9920078B7EB /* Monument.swift */,
+				045A9B952A5838080064022A /* DetectionResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1717,6 +1723,7 @@
 				04A2BE5D2A0591A800044C9B /* AboutUsViewController.swift in Sources */,
 				04B7D75D2A45C11C00A8E8F7 /* EOTPViewController.swift in Sources */,
 				04CE225A2A05A90E004FCCE9 /* ClearButton.swift in Sources */,
+				045A9B962A5838080064022A /* DetectionResponse.swift in Sources */,
 				04D7219F2A56024200CAFFB2 /* confirmPasswordResetResponse.swift in Sources */,
 				046E08982A3B869D00899579 /* AllArticlesViewController.swift in Sources */,
 				04D319842A09768600CF0C7F /* CustomView.swift in Sources */,
@@ -1728,6 +1735,7 @@
 				040CF66929C4A86A008BC27F /* Etlas.xcdatamodeld in Sources */,
 				04CE22572A05A90E004FCCE9 /* BlueTextField.swift in Sources */,
 				04DA636E2A3F431400E8FBD6 /* StatueViewController.swift in Sources */,
+				045A9B942A58188E0064022A /* APIClient+Upload.swift in Sources */,
 				0494C3ED2A3DF2B7004B3EC3 /* ToursViewController.swift in Sources */,
 				04EE3A8A2A48D9920078B7EB /* Monument.swift in Sources */,
 				04A0CF792A433D1300BFEC87 /* FavArticlesTableViewCell.swift in Sources */,

@@ -46,6 +46,22 @@ class EditAccountViewController: BaseViewController {
     }
     
     @IBAction func savePressed(_ sender: UIButton) {
+        APIClient.editUser(fullName: fullNameTextField.text ?? "" , email: emailTextField.text ?? "", address: addressTextField.text ?? "", phoneNumber: phoneTextField.text ?? ""){[weak self] result in
+            switch result{
+            case .success(let model):
+                UserDefaults.standard.set(model.fullName, forKey: "fullName")
+                UserDefaults.standard.set(model.email, forKey: "email")
+                UserDefaults.standard.set(model.address, forKey: "address")
+                UserDefaults.standard.set(model.phoneNumber, forKey: "phoneNumber")
+                UserDefaults.standard.set(model.id, forKey: "id")
+                UserDefaults.standard.set(model.imageURL, forKey: "imageURL")
+                self?.navigationController?.popViewController(animated: true)
+                break
+            case .failure(let error):
+                return print(error.localizedDescription)
+            }
+            
+        }
     }
     @IBAction func changePasswordPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "ChangePasswordViewController", bundle: nil)
@@ -57,7 +73,11 @@ class EditAccountViewController: BaseViewController {
     // MARK: - Private methods
     private func setupUI() {
         self.navigationController?.navigationBar.isHidden = true
-
+        fullNameTextField.text = UserDefaults.standard.string(forKey: "fullName") ?? ""
+        addressTextField.text = UserDefaults.standard.string(forKey: "address") ?? ""
+        phoneTextField.text = UserDefaults.standard.string(forKey: "phoneNumber") ?? ""
+        emailTextField.text = UserDefaults.standard.string(forKey: "email") ?? ""
+        
     }
     private func toggleEditMode(for textField: BlueTextField, button: UIButton) {
         textField.isEnabled = !textField.isEnabled

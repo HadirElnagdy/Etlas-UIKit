@@ -11,15 +11,20 @@ class SettingsViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var personalImageView: CircleImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     // MARK: - Properties
     private var selectedImage: UIImage?
     
     // MARK: - Lifecycle methods
-    
+    override func loadView() {
+        super.loadView()
+        setupUI()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        
     }
     
     // MARK: - IBActions
@@ -45,7 +50,7 @@ class SettingsViewController: UIViewController {
                     })
                 }
             case .failure(let error):
-                print(TokenManager.shared.getRefreshToken() ?? "there's no refresh token")
+                print(TokenManager.shared.getRefreshToken() ?? "There's no refresh token")
                 print(error.localizedDescription)
                 return
             }
@@ -77,6 +82,13 @@ class SettingsViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
         personalImageView.addGestureRecognizer(tapGesture)
         personalImageView.isUserInteractionEnabled = true
+        
+        if let fullName = UserDefaults.standard.string(forKey: "fullName") {
+            nameLabel.text = fullName
+        } else {
+            print("fullName value not found or is not a String")
+        }
+
     }
     
     @objc private func imageViewTapped() {

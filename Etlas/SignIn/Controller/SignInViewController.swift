@@ -48,6 +48,20 @@ class SignInViewController: BaseViewController {
                 //UserDefaults.standard.set(loginResponse, forKey: "loginResponse")
                 SharedData.shared.SetIsLoggedIn(true)
                 TokenManager.shared.setTokens(accessToken: loginResponse.tokens?.access, refreshToken: loginResponse.tokens?.refresh)
+                APIClient.getUser(){ [weak self](result) in
+                    switch result{
+                    case .success(let model):
+                        UserDefaults.standard.set(model.fullName, forKey: "fullName")
+                        UserDefaults.standard.set(model.email, forKey: "email")
+                        UserDefaults.standard.set(model.address, forKey: "address")
+                        UserDefaults.standard.set(model.phoneNumber, forKey: "phoneNumber")
+                        UserDefaults.standard.set(model.id, forKey: "id")
+                        UserDefaults.standard.set(model.imageURL, forKey: "imageURL")
+                        break
+                    case .failure(let error):
+                        return print(error.message)
+                    }
+                }
                 goToHome()
             case .failure(let error):
                 showErrorMessage(message: error.message)
