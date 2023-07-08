@@ -22,10 +22,10 @@
                                 <rect key="frame" x="0.0" y="372" width="393" height="480"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cSW-N0-XXT">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0s-ha-aC0">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSS-JY-NFu" customClass="RatingView" customModule="Etlas" customModuleProvider="target">
                                                         <rect key="frame" x="219" y="24" width="150" height="24"/>
@@ -35,8 +35,8 @@
                                                             <constraint firstAttribute="width" constant="150" id="kyA-sM-NGN"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYE-sD-zqC">
-                                                        <rect key="frame" x="24" y="24" width="107" height="25.666666666666671"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYE-sD-zqC">
+                                                        <rect key="frame" x="24" y="24" width="187" height="25.666666666666671"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Tour Name">
                                                                 <attributes>
@@ -51,7 +51,7 @@
                                                         <rect key="frame" x="24" y="81.666666666666686" width="345" height="755"/>
                                                         <attributedString key="attributedText">
                                                             <fragment>
-                                                                <string key="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                                                <mutableString key="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
 has been the industry's standard dummy text ever since the 1500s, when an unknown
 printer took a galley of type and scrambled it to make a type specimen book. It has survived
 not only five centuries, but also the leap into electronic typesetting, remaining essentially
@@ -60,7 +60,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 has been the industry's standard dummy text ever since the 1500s, when an unknown
 printer took a galley of type and scrambled it to make a type specimen book. It has survived
 not only five centuries, but also the leap into electronic typesetting, remaining essentially
-unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" size="18" name="Montserrat-Regular"/>
@@ -73,7 +73,8 @@ unchanged. It was popularised in the 1960s with the release of Letraset sheets c
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="1200" id="CUK-bK-npd"/>
+                                                    <constraint firstItem="mSS-JY-NFu" firstAttribute="leading" secondItem="mYE-sD-zqC" secondAttribute="trailing" constant="8" id="27C-iv-aaH"/>
+                                                    <constraint firstAttribute="height" constant="1500" id="CUK-bK-npd"/>
                                                     <constraint firstItem="mYE-sD-zqC" firstAttribute="leading" secondItem="q0s-ha-aC0" secondAttribute="leading" constant="24" id="JyG-Cr-oCW"/>
                                                     <constraint firstItem="EbX-3l-8ls" firstAttribute="top" secondItem="mYE-sD-zqC" secondAttribute="bottom" constant="32" id="Qgt-2K-Ofk"/>
                                                     <constraint firstAttribute="trailing" secondItem="mSS-JY-NFu" secondAttribute="trailing" constant="24" id="RF0-PC-KZO"/>
@@ -149,18 +150,11 @@ unchanged. It was popularised in the 1960s with the release of Letraset sheets c
                                     <action selector="backPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="INu-E3-oSn"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="jmp-Pl-dm2">
-                                <rect key="frame" x="112" y="346" width="177" height="26"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <color key="pageIndicatorTintColor" red="0.46666666666666667" green="0.43529411764705883" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="0.74901960779999999" green="0.50588235290000005" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VXQ-8t-CpG" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6kP-Ku-mXg"/>
-                            <constraint firstItem="eJl-Mu-u18" firstAttribute="top" secondItem="jmp-Pl-dm2" secondAttribute="bottom" id="9Eg-Ur-7nn"/>
                             <constraint firstItem="eJl-Mu-u18" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="F2c-Yv-kY3"/>
                             <constraint firstItem="EFb-dv-uZS" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="56" id="MWd-6w-zn5"/>
                             <constraint firstAttribute="bottom" secondItem="eJl-Mu-u18" secondAttribute="bottom" id="Odw-ns-Xmb"/>
@@ -168,13 +162,11 @@ unchanged. It was popularised in the 1960s with the release of Letraset sheets c
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EFb-dv-uZS" secondAttribute="trailing" constant="24" id="ZLC-de-SL5"/>
                             <constraint firstItem="VXQ-8t-CpG" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="dkM-hP-EVe"/>
                             <constraint firstItem="eJl-Mu-u18" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fm3-A9-4zk"/>
-                            <constraint firstItem="jmp-Pl-dm2" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="lrM-KB-YC1"/>
                             <constraint firstItem="eJl-Mu-u18" firstAttribute="top" secondItem="VXQ-8t-CpG" secondAttribute="bottom" id="rEl-mC-42R"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imgsCollectionView" destination="VXQ-8t-CpG" id="CzC-by-RWq"/>
-                        <outlet property="pageControl" destination="jmp-Pl-dm2" id="DZZ-Hx-yao"/>
                         <outlet property="rateView" destination="mSS-JY-NFu" id="C9F-1M-gho"/>
                         <outlet property="tourDescriptionLabel" destination="EbX-3l-8ls" id="aqe-8m-iq9"/>
                         <outlet property="tourTitleLabel" destination="mYE-sD-zqC" id="ekt-Mh-E0T"/>
@@ -182,7 +174,7 @@ unchanged. It was popularised in the 1960s with the release of Letraset sheets c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="602" y="-38"/>
+            <point key="canvasLocation" x="600.76335877862596" y="-38.028169014084511"/>
         </scene>
     </scenes>
     <resources>

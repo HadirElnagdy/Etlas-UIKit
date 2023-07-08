@@ -138,12 +138,12 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         picker.dismiss(animated: true, completion: nil)
-        
         if let image = info[.originalImage] as? UIImage {
             delegate?.didSelectImage(image)
         } else {
             delegate?.didSelectImage(nil)
         }
+        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

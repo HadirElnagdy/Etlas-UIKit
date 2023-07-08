@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AllArticlesViewController: BaseViewController {
+class AllArticlesViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var articlesCollectionView: UICollectionView!
@@ -77,9 +77,10 @@ extension AllArticlesViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Handle the selection of an article
-        let selectedArticle = articleModels[indexPath.item]
-        // Perform the desired action, such as navigating to a detailed view for the selected article
-        // You can access the article's ID using selectedArticle.id
+        let article = articleModels[indexPath.item]
+        let storyboard = UIStoryboard(name: "ArticleViewController", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "ArticleViewController") as ArticleViewController
+        viewController.article = article
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

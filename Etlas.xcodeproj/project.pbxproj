@@ -150,7 +150,6 @@
 		04EA1C562A066DFF005BB160 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EA1C552A066DFF005BB160 /* SettingsViewController.storyboard */; };
 		04EA1C582A0682FC005BB160 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1C572A0682FC005BB160 /* CircleImageView.swift */; };
 		04EA1C5A2A068E26005BB160 /* CustomGrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1C592A068E26005BB160 /* CustomGrayView.swift */; };
-		04EE3A842A48D83A0078B7EB /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE3A832A48D83A0078B7EB /* Tour.swift */; };
 		04EE3A872A48D90C0078B7EB /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE3A862A48D90C0078B7EB /* Questions.swift */; };
 		04EE3A8A2A48D9920078B7EB /* Monument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE3A892A48D9920078B7EB /* Monument.swift */; };
 		7085B21A2A575A72004D6BF5 /* Khafre.obj in Resources */ = {isa = PBXBuildFile; fileRef = 7085B2182A575A72004D6BF5 /* Khafre.obj */; };
@@ -306,7 +305,6 @@
 		04EA1C552A066DFF005BB160 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		04EA1C572A0682FC005BB160 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		04EA1C592A068E26005BB160 /* CustomGrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGrayView.swift; sourceTree = "<group>"; };
-		04EE3A832A48D83A0078B7EB /* Tour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
 		04EE3A862A48D90C0078B7EB /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		04EE3A892A48D9920078B7EB /* Monument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monument.swift; sourceTree = "<group>"; };
 		41069432686BAC03F0413425 /* libPods-Etlas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Etlas.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -456,6 +454,7 @@
 				04DA63732A3F952900E8FBD6 /* SupportingFiles */,
 				040B7D1729D7076D00B1F87C /* Resources */,
 				04CE224F2A05A8D8004FCCE9 /* Utilities */,
+				04989D1E2A598D7E0066E848 /* Testing */,
 				040CF66F29C4A86C008BC27F /* Info.plist */,
 				0470619529E7420F00114E55 /* Application */,
 			);
@@ -719,14 +718,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		0494C3EB2A3DF2A0004B3EC3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				04EE3A832A48D83A0078B7EB /* Tour.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		0496DF9B2A20C19500B0CE3E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,6 +739,13 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		04989D1E2A598D7E0066E848 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Testing;
 			sourceTree = "<group>";
 		};
 		04A0CF762A4334F000BFEC87 /* Cells */ = {
@@ -1016,7 +1014,6 @@
 			isa = PBXGroup;
 			children = (
 				04D5B35D2A47195C00DCE93E /* Cells */,
-				0494C3EB2A3DF2A0004B3EC3 /* Model */,
 				0494C3E92A3DF2A0004B3EC3 /* View */,
 				0494C3EA2A3DF2A0004B3EC3 /* Controller */,
 			);
@@ -1707,7 +1704,6 @@
 				04EA1C5A2A068E26005BB160 /* CustomGrayView.swift in Sources */,
 				046E088E2A3B38F500899579 /* RecognitionFailedViewController.swift in Sources */,
 				040161B529E43D310021F73C /* SignInViewController.swift in Sources */,
-				04EE3A842A48D83A0078B7EB /* Tour.swift in Sources */,
 				04D7219D2A5600FD00CAFFB2 /* verifyPasswordOTPResponse.swift in Sources */,
 				04A0CF7D2A433F9F00BFEC87 /* FavModelsTableViewCell.swift in Sources */,
 				04C8C7202A084B9A006D2CC7 /* CustomTabBar.swift in Sources */,

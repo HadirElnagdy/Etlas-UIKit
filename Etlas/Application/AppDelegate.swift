@@ -40,7 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             let onboardingViewController = storyborad.instantiateViewController(withIdentifier: "OnboardingViewController")
             window?.rootViewController = onboardingViewController
 //        }
-       
 
         return true
     }

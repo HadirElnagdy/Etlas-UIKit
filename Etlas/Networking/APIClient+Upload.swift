@@ -17,8 +17,25 @@ extension APIClient {
             downloadTasks.forEach { $0.cancel() }
         }
     }
-
-    static func uploadImageWithRequest(imageData: Data, completion: @escaping (Result<DetectionResponse, Error>) -> Void) {
-        
+    
+    
+    static func uploadImage<T: Decodable>(imageData: Data, endpoint: String, completion: @escaping (T?, NetworkError?) -> Void) {
+        AF.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(imageData, withName: "image", fileName: "file.jpg", mimeType: "image/jpg")
+            
+        }, to: endpoint).responseDecodable { (response: AFDataResponse<T>) in
+            switch response.result {
+            case .success(let result):
+                completion(result, nil)
+            case .failure(let error):
+                debugPrint(error)
+                completion(nil, .other)
+            }
+        }.uploadProgress { progress in
+            print("Uploading \(Int(progress.fractionCompleted * 100))%")
+        }
     }
+    
+    
+    
 }

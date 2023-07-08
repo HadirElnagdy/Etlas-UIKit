@@ -19,6 +19,7 @@ class ArticleViewController: UIViewController {
     
     var isLoved = false
     var id: String = ""
+    var article: ArticleResult?
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
@@ -42,6 +43,27 @@ class ArticleViewController: UIViewController {
         blueView.layer.cornerRadius = 30.0
         blueView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         blueView.layer.masksToBounds = true
+        articleTitleLabel.text = article?.articleTitle
+        articleDescriptionLabel.text = article?.description
+        if let dateString = article?.date, let date = dateFormatter.date(from: dateString) {
+            articleDateLabel.text = formattedDateString(from: date)
+        } else {
+            articleDateLabel.text = nil
+        }
+        if let imageURLString = article?.imageURL, let imageURL = URL(string: imageURLString) {
+            URLSession.shared.dataTask(with: imageURL) { [weak self] (data, _, error) in
+                if let error = error {
+                    print("Error downloading image: \(error.localizedDescription)")
+                    return
+                }
+                
+                if let imageData = data, let image = UIImage(data: imageData) {
+                    DispatchQueue.main.async {
+                        self?.articleImg.image = image
+                    }
+                }
+            }.resume()
+        }
     }
     
     private func setupButtonImage() {
@@ -49,8 +71,17 @@ class ArticleViewController: UIViewController {
         let image = UIImage(named: imageName)
         loveButton.setImage(image, for: .normal)
     }
-
-    private func getArticleDetails() {
-      
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+    
+    private func formattedDateString(from date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMM yyyy"
+        return formatter.string(from: date)
     }
+    
+
 }

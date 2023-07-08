@@ -11,18 +11,18 @@ import NVActivityIndicatorView
 
 class APIClient {
     private static func performRequest<T: Decodable>(route: APIRouter, decoder: JSONDecoder = JSONDecoder(), completion: @escaping (Result<T, NetworkError>) -> Void) {
-        print(route.urlRequest?.headers)
+//        print(route.urlRequest?.headers)
         AF.request(route).validate(statusCode: 200 ..< 300)
             .responseDecodable { (response: AFDataResponse<T>) in
                 switch response.result {
                 case .success(let model):
-                    print("\(model)")
+                   // print("\(model)")
                     completion(.success(model))
                     break
                 case .failure(let error):
-                    debugPrint(error)
-                    print(error)
-                    print(error.localizedDescription)
+//                    debugPrint(error)
+//                    print(error)
+//                    print(error.localizedDescription)
                     do {
                         guard let data = response.data else {
                             completion(.failure(.other))

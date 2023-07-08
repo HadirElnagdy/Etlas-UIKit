@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AllToursViewController: BaseViewController {
+class AllToursViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var toursTableView: UITableView!

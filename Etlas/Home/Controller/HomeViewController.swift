@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class HomeViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IBOutlets
     @IBOutlet weak var toursCollectionView: UICollectionView!
@@ -77,13 +77,15 @@ class HomeViewController: BaseViewController {
     }
     
     private func setupCollectionViews() {
+        toursCollectionView.register(UINib(nibName: "AllToursCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AllToursCollectionViewCell")
         toursCollectionView.delegate = self
         toursCollectionView.dataSource = self
-        toursCollectionView.register(UINib(nibName: "AllToursCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AllToursCollectionViewCell")
         
+        articlesCollectionView.register(UINib(nibName: "AllArticlesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AllArticlesCollectionViewCell")
         articlesCollectionView.delegate = self
         articlesCollectionView.dataSource = self
-        articlesCollectionView.register(UINib(nibName: "AllArticlesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AllArticlesCollectionViewCell")
+        
+        
     }
     
     private func pushStoryboardViewController(identifier: String) {
@@ -98,7 +100,7 @@ class HomeViewController: BaseViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionView == toursCollectionView ? tourModels.count : articleModels.count
@@ -119,5 +121,21 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return UICollectionViewCell()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == toursCollectionView {
+            let tour = tourModels[indexPath.item]
+            let storyboard = UIStoryboard(name: "ToursViewController", bundle: nil)
+            let viewController = storyboard.instantiateViewController(identifier: "ToursViewController") as ToursViewController
+            viewController.tour = tour
+            navigationController?.pushViewController(viewController, animated: true)
+            print("you pressed on tour \(indexPath)")
+        } else if collectionView == articlesCollectionView {
+            let article = articleModels[indexPath.item]
+            let storyboard = UIStoryboard(name: "ArticleViewController", bundle: nil)
+            let viewController = storyboard.instantiateViewController(identifier: "ArticleViewController") as ArticleViewController
+            viewController.article = article
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 }
-
