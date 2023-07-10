@@ -19,7 +19,8 @@ struct QuestionResponse: Codable {
     enum CodingKeys: String, CodingKey {
         case id, statement
         case imageURL = "image_url"
-        case label, correctChoice
+        case label
+        case correctChoice = "correct_choice"
         case shuffledChoices = "shuffled_choices"
     }
 }

@@ -136,8 +136,8 @@ enum APIRouter: URLRequestConvertible {
             return APIEndpoints.addMonumentToFavs
         case .delFavArticle(let id):
             return "\(APIEndpoints.delFavArticle)/\(id)"
-        case .delFavMonument:
-            return APIEndpoints.delFavMonument
+        case .delFavMonument(let id):
+            return "\(APIEndpoints.delFavMonument)/\(id)"
         case .getMonument:
             return APIEndpoints.getMonument
         case .getLandmarksQuestions:
@@ -148,7 +148,7 @@ enum APIRouter: URLRequestConvertible {
             return APIEndpoints.getStatuesQuestions
         case .getAllTours:
             return APIEndpoints.getAllTours
-        case .isFavorite(let id):
+        case .isFavorite:
             return APIEndpoints.isFavorite
             
         }
@@ -229,7 +229,7 @@ enum APIRouter: URLRequestConvertible {
         case .addArticleToFavs(let id):
             return[APIParameterKey.id: String(id)]
         case .addMonumentToFavs(id: let id):
-            return [APIParameterKey.id: id]
+            return [APIParameterKey.id: String(id)]
         default:
             return nil
         }

@@ -18,6 +18,7 @@ class SharedData {
     let languageKey = "language"
     let IsAppAlreadyLaunchedOnceKey = "IsAppAlreadyLaunchedOnce"
     let UserDataKey = "UserData"
+    var flag = 1
     
     private init() { }
     

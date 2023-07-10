@@ -23,6 +23,7 @@ class QuestionsViewController: UIViewController {
     var currentQuestionIndex: Int = 0
     var score: Int = 0
     var hintsLeft = 2
+    var selectedChoice = ""
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
@@ -42,29 +43,29 @@ class QuestionsViewController: UIViewController {
             hintsLeft -= 1
             self.hintButton.imageView?.image = UIImage(named: "ic_hint\(hintsLeft)")
             guard let currentQuestion = questions?[currentQuestionIndex] else {
-                   return
-               }
-               
-               var wrongChoicesCount = 0
+                return
+            }
+            
+            var wrongChoicesCount = 0
             let customColor = UIColor(red: 37/255, green: 86/255, blue: 108/255, alpha: 0.5)
-               for (_, choiceButton) in choiceButtons.enumerated() {
-                   guard let shuffledChoices = currentQuestion.shuffledChoices else {
-                       return
-                   }
-                   if choiceButton.titleLabel?.text != currentQuestion.correctChoice && wrongChoicesCount < 2 {
-                       choiceButton.backgroundColor = customColor
-                       choiceButton.isEnabled = false
-                       wrongChoicesCount += 1
-                   }
-               }
+            for (_, choiceButton) in choiceButtons.enumerated() {
+                guard let shuffledChoices = currentQuestion.shuffledChoices else {
+                    return
+                }
+                if choiceButton.titleLabel?.text != currentQuestion.correctChoice && wrongChoicesCount < 2 {
+                    choiceButton.backgroundColor = customColor
+                    choiceButton.layer.borderColor = customColor.cgColor
+                    choiceButton.isEnabled = false
+                    wrongChoicesCount += 1
+                }
+            }
         }
         
     }
     
     @IBAction func choiceButtonsTapped(_ sender: BrownButton) {
-        if let selectedChoiceIndex = choiceButtons.firstIndex(of: sender) {
-            handleChoiceSelected(choiceIndex: selectedChoiceIndex)
-        }
+        selectedChoice = (sender.titleLabel?.text)!
+        handleChoiceSelected(choiceIndex: sender.tag)
     }
     
     
@@ -94,33 +95,30 @@ class QuestionsViewController: UIViewController {
         }
         
         questionLabel.text = currentQuestion.statement
-        scoreLabel.text = "\(score)/\(questions?.count)"
+        scoreLabel.text = "\(score)/\(questions!.count)"
         if let shuffledChoices = currentQuestion.shuffledChoices {
             for (index, choiceButton) in choiceButtons.enumerated() {
-                if index < shuffledChoices.count {
-                    choiceButton.setTitle(shuffledChoices[index].choiceText, for: .normal)
-                    choiceButton.isHidden = false
-                } else {
-                    choiceButton.isHidden = true
-                }
+                choiceButton.setTitle(shuffledChoices[index].choiceText, for: .normal)
             }
         }
+        
     }
     
     private func handleChoiceSelected(choiceIndex: Int) {
         guard let currentQuestion = questions?[currentQuestionIndex] else {
             return
         }
-        
-        let selectedChoice = currentQuestion.shuffledChoices?[choiceIndex]
-        if selectedChoice?.choiceText == currentQuestion.correctChoice && currentQuestionIndex < (questions?.count ?? 1) - 1 {
+        print(currentQuestion.correctChoice ?? "Problem is here")
+        if selectedChoice == currentQuestion.correctChoice && choiceIndex < questions!.count {
             score += 1
             currentQuestionIndex += 1
             showCurrentQuestion()
             choiceButtons[choiceIndex].backgroundColor = .green
-        } else {
-            if selectedChoice?.choiceText == currentQuestion.correctChoice {
+            choiceButtons[choiceIndex].layer.borderColor = CGColor(red: 0, green: 1, blue: 0, alpha: 1)
+        }else {
+            if selectedChoice != currentQuestion.correctChoice {
                 choiceButtons[choiceIndex].backgroundColor = .red
+                choiceButtons[choiceIndex].layer.borderColor = CGColor(red: 1, green: 0, blue: 0, alpha: 1)
             }
             if currentQuestion.label == "landmark"{
                 APIClient.putLandmarkScore(newScore: score){[weak self](result) in
@@ -162,16 +160,21 @@ class QuestionsViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             for button in self.choiceButtons {
                 button.backgroundColor = customColor
+                button.layer.borderColor = customColor.cgColor
                 button.isUserInteractionEnabled = true
             }
         }
     }
     
-    
+
+
+
     private func navigateToCurrentScoreViewController() {
         let storyboard = UIStoryboard(name: "CurrentScoreViewController", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "CurrentScoreViewController")
+        let viewController = storyboard.instantiateViewController(identifier: "CurrentScoreViewController") as! CurrentScoreViewController
+        viewController.score = String(score)
         navigationController?.pushViewController(viewController, animated: true)
     }
-    
+
+
 }

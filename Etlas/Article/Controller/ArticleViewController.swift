@@ -24,17 +24,19 @@ class ArticleViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-//        APIClient.isFavorite(id: (article?.id)!){ result in
-//            switch result {
-//            case .success(let model):
-//                if model.isFavorite == nil {"isFav returned nil!"}
-//                self.isLoved = model.isFavorite ?? false
-//               // print(model.isFavorite)
-//                break
-//            case .failure(let error):
-//                debugPrint(error)
-//            }
-//        }
+        APIClient.isFavorite(id: (article?.id)!){ result in
+            switch result {
+            case .success(let model):
+                if model.isFavorite == nil {"isFav returned nil!"}
+                print("isFavorite returned \(model.isFavorite)")
+                self.isLoved = model.isFavorite ?? false
+                break
+            case .failure(let error):
+                print("isFav here")
+                print("________________________")
+                debugPrint(error)
+            }
+        }
         setupUI()
     }
     
@@ -51,6 +53,8 @@ class ArticleViewController: UIViewController {
                 self?.isLoved.toggle()
                 break
             case .failure(let error):
+                print("Add fav here")
+                print("________________________")
                 debugPrint(error)
             }
             
@@ -63,7 +67,9 @@ class ArticleViewController: UIViewController {
                    self?.isLoved.toggle()
                    break
                case .failure(let error):
-                   print(error)
+                   print("Delete fav here")
+                   print("________________________")
+                   debugPrint(error)
                }
                
            }

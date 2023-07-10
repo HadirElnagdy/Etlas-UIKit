@@ -119,15 +119,26 @@ extension TBMiddleButtonVCViewController: UINavigationControllerDelegate, UIImag
          guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
              return
          }
-        let imageData = image.jpegData(compressionQuality: 0.8)
-        let completion: (DetectionResponse?, NetworkError?) -> Void = { result, error in
-            if let result = result {
-                print("Result: \(result)")
-            } else if let error = error {
-                print("Error: \(error)")
-            }
+        if SharedData.shared.flag == 1 {
+            SharedData.shared.flag += 1
+            let storyboard = UIStoryboard(name: "StatueViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(identifier: "StatueViewController")
+            navigationController?.pushViewController(vc, animated: true)
+            
+        }else{
+            let storyboard = UIStoryboard(name: "RecognitionFailedViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(identifier: "RecognitionFailedViewController")
+            navigationController?.pushViewController(vc, animated: true)
         }
-        APIClient.uploadImage(imageData: imageData! , endpoint: "https://api.etlas.tech/monuments/detect/", completion: completion)
+//        let imageData = image.jpegData(compressionQuality: 0.8)
+//        let completion: (DetectionResponse?, NetworkError?) -> Void = { result, error in
+//            if let result = result {
+//                print("Result: \(result)")
+//            } else if let error = error {
+//                print("Error: \(error)")
+//            }
+//        }
+//        APIClient.uploadImage(imageData: imageData! , endpoint: "https://api.etlas.tech/monuments/detect/", completion: completion)
         
     }
 }

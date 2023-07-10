@@ -13,22 +13,40 @@ class CurrentScoreViewController: UIViewController {
     @IBOutlet weak var bestScoreView: UIView!
     @IBOutlet weak var currentScoreLabel: UILabel!
    
+    var score = "0"
+    
    // MARK: - Lifecycle methods
    override func viewDidLoad() {
        super.viewDidLoad()
        setupUI()
+       currentScoreLabel.text = "\(score)"
    }
    
    // MARK: - IBActions
+    
     @IBAction func closePressed(_ sender: UIButton) {
-        //go back to KnowledgeGameViewController
-    }
-    @IBAction func playNowPressed(_ sender: UIButton) {
-        //go back to KnowledgeGameViewController
+        if let viewControllers = navigationController?.viewControllers {
+            guard viewControllers.count >= 3 else {
+                return
+            }
+            let targetViewController = viewControllers[viewControllers.count - 3]
+            navigationController?.popToViewController(targetViewController, animated: true)
+        }
+        
     }
     
-
-
+    @IBAction func playNowPressed(_ sender: UIButton) {
+        if let viewControllers = navigationController?.viewControllers {
+            guard viewControllers.count >= 3 else {
+                return
+            }
+            let targetViewController = viewControllers[viewControllers.count - 3]
+            navigationController?.popToViewController(targetViewController, animated: true)
+        }
+        
+    }
+        
+    
    
    // MARK: - Private methods
    private func setupUI() {

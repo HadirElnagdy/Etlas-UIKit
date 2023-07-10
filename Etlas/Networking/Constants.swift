@@ -118,7 +118,7 @@ class APIEndpoints {
     
     //monuments
     static var getMonument: String {
-        return "monuments/"
+        return "monuments/1/"
     }
     static var detectMonument: String {
         return "monuments/detect/"

@@ -19,7 +19,7 @@ struct ArticleResult: Codable {
     let articleTitle, date, description, imageURL: String?
     let id: Int?
     let sections: [ArticleSection]?
-    let monuments: [Monument]?
+    let monuments: [MonumentResult]?
     
     enum CodingKeys: String, CodingKey {
         case id

@@ -65,32 +65,33 @@
                                                 <rect key="frame" x="0.0" y="104" width="393" height="200"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_Q1" translatesAutoresizingMaskIntoConstraints="NO" id="TIw-MA-cqB">
-                                                        <rect key="frame" x="6.6666666666666572" y="10" width="380" height="180"/>
+                                                        <rect key="frame" x="8" y="10" width="377" height="180"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="380" id="JHd-uY-ttw"/>
                                                             <constraint firstAttribute="height" constant="180" id="Rq1-uv-U5z"/>
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="TIw-MA-cqB" secondAttribute="trailing" constant="8" id="1VP-Do-cvk"/>
                                                     <constraint firstItem="TIw-MA-cqB" firstAttribute="centerX" secondItem="DrJ-T0-Y1c" secondAttribute="centerX" id="KCn-xB-z51"/>
                                                     <constraint firstAttribute="height" constant="200" id="X2a-ry-AHw"/>
                                                     <constraint firstItem="TIw-MA-cqB" firstAttribute="centerY" secondItem="DrJ-T0-Y1c" secondAttribute="centerY" id="aPD-hy-Mxb"/>
+                                                    <constraint firstItem="TIw-MA-cqB" firstAttribute="leading" secondItem="DrJ-T0-Y1c" secondAttribute="leading" constant="8" id="jP4-QK-9Bz"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ui-Xf-KWl" userLabel="questionsView">
                                                 <rect key="frame" x="0.0" y="304" width="393" height="400"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhr-VK-NMf">
-                                                        <rect key="frame" x="99.666666666666671" y="32" width="193.66666666666663" height="25.666666666666671"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhr-VK-NMf">
+                                                        <rect key="frame" x="24" y="32" width="345" height="68"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="What is this statue?">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                                     <font key="NSFont" size="22" name="Montserrat-Bold"/>
                                                                     <real key="NSKern" value="0.0"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                                         <tabStops/>
                                                                     </paragraphStyle>
                                                                     <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -101,7 +102,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8Oi-zT-JrW">
-                                                        <rect key="frame" x="54" y="105.66666666666669" width="285" height="276"/>
+                                                        <rect key="frame" x="54" y="116" width="285" height="276"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyg-hi-xWm" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="285" height="57"/>
@@ -125,7 +126,7 @@
                                                                     <action selector="choiceButtonsTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="b0u-yj-12I"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7p-cp-Dl3" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7p-cp-Dl3" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="73" width="285" height="57"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="57" id="VQU-uQ-gqb"/>
@@ -147,8 +148,8 @@
                                                                     <action selector="choiceButtonsTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TVG-5N-ger"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouZ-wC-DAr" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="145.99999999999994" width="285" height="57"/>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouZ-wC-DAr" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="146" width="285" height="57"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="285" id="RFn-VT-b9W"/>
                                                                     <constraint firstAttribute="height" constant="57" id="blz-e4-RJm"/>
@@ -169,8 +170,8 @@
                                                                     <action selector="choiceButtonsTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="E2B-8e-qt6"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpx-dh-s3f" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="218.99999999999994" width="285" height="57"/>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpx-dh-s3f" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="219" width="285" height="57"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="285" id="jzy-NW-7yr"/>
                                                                     <constraint firstAttribute="height" constant="57" id="m6A-fl-gNA"/>
@@ -197,8 +198,11 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="8Oi-zT-JrW" firstAttribute="centerX" secondItem="1Ui-Xf-KWl" secondAttribute="centerX" id="1z5-0f-MYy"/>
+                                                    <constraint firstItem="Qhr-VK-NMf" firstAttribute="leading" secondItem="1Ui-Xf-KWl" secondAttribute="leading" constant="24" id="HNO-1l-mih"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8Oi-zT-JrW" secondAttribute="bottom" constant="8" id="ICV-YP-cXI"/>
                                                     <constraint firstAttribute="height" constant="400" id="cJI-zk-ZyS"/>
-                                                    <constraint firstItem="8Oi-zT-JrW" firstAttribute="top" secondItem="Qhr-VK-NMf" secondAttribute="bottom" constant="48" id="eE5-HK-SQz"/>
+                                                    <constraint firstItem="8Oi-zT-JrW" firstAttribute="top" secondItem="Qhr-VK-NMf" secondAttribute="bottom" constant="16" id="eE5-HK-SQz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Qhr-VK-NMf" secondAttribute="trailing" constant="24" id="sIL-1y-LbV"/>
                                                     <constraint firstItem="Qhr-VK-NMf" firstAttribute="top" secondItem="1Ui-Xf-KWl" secondAttribute="top" constant="32" id="vOp-sb-XtK"/>
                                                     <constraint firstItem="Qhr-VK-NMf" firstAttribute="centerX" secondItem="1Ui-Xf-KWl" secondAttribute="centerX" id="vX1-2v-Xqo"/>
                                                 </constraints>

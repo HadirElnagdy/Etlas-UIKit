@@ -181,8 +181,8 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="Favourites">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="18" name="Montserrat-Medium"/>
+                                                                    <color key="NSColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="18" name="Montserrat-SemiBold"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
@@ -382,7 +382,7 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
-        <image name="exclamationmark.circle" catalog="system" width="128" height="123"/>
+        <image name="exclamationmark.circle" catalog="system" width="32" height="32"/>
         <image name="globe" catalog="system" width="128" height="123"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="ic_bestScore" width="24" height="24"/>
