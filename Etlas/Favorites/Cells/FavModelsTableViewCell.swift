@@ -40,14 +40,14 @@ class FavModelsTableViewCell: UITableViewCell {
     
     
     // MARK: - Private methods
-    func configure(model: FavModelModel?) {
-        self.modelImg.image = model?.modelImg
-        self.modelName.text = model?.modelName
-        self.period.text = model?.period
-        self.scanningDate.text = model?.scanningDate
-        
-    }
-   
+//    func configure(model: FavModelModel?) {
+//        self.modelImg.image = model?.modelImg
+//        self.modelName.text = model?.modelName
+//        self.period.text = model?.period
+//        self.scanningDate.text = model?.scanningDate
+//
+//    }
+//
     
     
 }

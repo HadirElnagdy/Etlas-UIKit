@@ -39,7 +39,6 @@ class KnowledgeGameViewController: UIViewController {
     
     // MARK: - Private methods
     private func setupUI() {
-        self.navigationController?.navigationBar.isHidden = true
         let statuesTapGesture = UITapGestureRecognizer(target: self, action: #selector(statuesViewTapped))
         statuesView.addGestureRecognizer(statuesTapGesture)
         
@@ -49,6 +48,34 @@ class KnowledgeGameViewController: UIViewController {
         let landmarksTapGesture = UITapGestureRecognizer(target: self, action: #selector(landmarksViewTapped))
         landmarksView.addGestureRecognizer(landmarksTapGesture)
         
+        APIClient.getStatueScore{[weak self] (result) in
+            switch result {
+            case .success(let model):
+                self?.statuesScoreLabel.text = model.bestScoreStatues
+                break
+            case .failure(let error):
+                return print(error.localizedDescription)
+            }
+        }
+        APIClient.getMonumentScore{[weak self] (result) in
+            switch result {
+            case .success(let model):
+                self?.monumentsScoreLabel.text = model.bestScoreMonuments
+                break
+            case .failure(let error):
+                return print(error.localizedDescription)
+            }
+        }
+        APIClient.getLandmarkScore{[weak self] (result) in
+            switch result {
+            case .success(let model):
+                self?.landmarksScoreLabel.text = model.bestScoreLandmarks
+                break
+            case .failure(let error):
+                return print(error.localizedDescription)
+            }
+        }
+        
     }
     private func pushStoryboardViewController(identifier: String) {
         let storyboard = UIStoryboard(name: identifier, bundle: nil)
@@ -57,15 +84,58 @@ class KnowledgeGameViewController: UIViewController {
     }
     
     @objc func statuesViewTapped() {
-        pushStoryboardViewController(identifier: "QuestionsViewController")
+        APIClient.getStatuesQuestions { [weak self] result in
+            switch result {
+            case .success(let response):
+                let questions = response
+                let storyboard = UIStoryboard(name: "QuestionsViewController", bundle: nil)
+                if let viewController = storyboard.instantiateViewController(identifier: "QuestionsViewController") as? QuestionsViewController {
+                    viewController.questions = questions
+                    self?.navigationController?.pushViewController(viewController, animated: true)
+                }
+                break
+            case .failure(let error):
+                print("\n\nKnowledge Game Problem")
+                print("-------------------")
+                debugPrint(error)
+                print("\n \(error)")
+                return
+            }
+        }
     }
+
     
     @objc func monumentsViewTapped() {
-        pushStoryboardViewController(identifier: "QuestionsViewController")
+        APIClient.getMonumentsQuestions { [weak self] result in
+            switch result {
+            case .success(let response):
+                let questions = response
+                let storyboard = UIStoryboard(name: "QuestionsViewController", bundle: nil)
+                if let viewController = storyboard.instantiateViewController(identifier: "QuestionsViewController") as? QuestionsViewController {
+                    viewController.questions = questions
+                    self?.navigationController?.pushViewController(viewController, animated: true)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+       
     }
     
     @objc func landmarksViewTapped() {
-        pushStoryboardViewController(identifier: "RecognitionFailedViewController")
+        APIClient.getLandmarksQuestions { [weak self] result in
+            switch result {
+            case .success(let response):
+                let questions = response
+                let storyboard = UIStoryboard(name: "QuestionsViewController", bundle: nil)
+                if let viewController = storyboard.instantiateViewController(identifier: "QuestionsViewController") as? QuestionsViewController {
+                    viewController.questions = questions
+                    self?.navigationController?.pushViewController(viewController, animated: true)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     

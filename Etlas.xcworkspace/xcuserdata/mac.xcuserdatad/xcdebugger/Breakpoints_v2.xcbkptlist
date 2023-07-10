@@ -66,6 +66,38 @@
             endingLineNumber = "37"
             landmarkName = "SetIsLoggedOut(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "35383AD9-FBE9-45B0-9191-88811152F934 - 2a2681411172ddb1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Etlas.SharedData.SetIsLoggedOut(Swift.Bool) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/SharedData/SharedData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  uuid = "35383AD9-FBE9-45B0-9191-88811152F934 - 2a2681411172ddb1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Etlas.SharedData.SetIsLoggedOut(Swift.Bool) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/SharedData/SharedData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -82,6 +114,432 @@
             endingLineNumber = "25"
             landmarkName = "SetIsLoggedIn(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF9A65A7-E1C8-433D-B7A0-CF0B0B1147C1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Etlas/Settings/Controller/SettingsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "didSelectImage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BF9A65A7-E1C8-433D-B7A0-CF0B0B1147C1 - 8455f54743e024ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "584">
+               </Location>
+               <Location
+                  uuid = "BF9A65A7-E1C8-433D-B7A0-CF0B0B1147C1 - 8455f54743e024ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "636">
+               </Location>
+               <Location
+                  uuid = "BF9A65A7-E1C8-433D-B7A0-CF0B0B1147C1 - 23523ba0ec9067bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Etlas.imgResponse&gt;, Swift.Optional&lt;Etlas.NetworkError&gt;) -&gt; () in Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "BF9A65A7-E1C8-433D-B7A0-CF0B0B1147C1 - 8455f54743e024ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "604">
+               </Location>
+               <Location
+                  uuid = "BF9A65A7-E1C8-433D-B7A0-CF0B0B1147C1 - 8455f54743e024ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "656">
+               </Location>
+               <Location
+                  uuid = "BF9A65A7-E1C8-433D-B7A0-CF0B0B1147C1 - 23523ba0ec9067bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Etlas.imgResponse&gt;, Swift.Optional&lt;Etlas.NetworkError&gt;) -&gt; () in Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABEB23D7-7677-4468-9D63-431F230F028D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Etlas/Settings/Controller/SettingsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "didSelectImage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ABEB23D7-7677-4468-9D63-431F230F028D - 8455f54743e0236b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  uuid = "ABEB23D7-7677-4468-9D63-431F230F028D - 8455f54743e0236b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "267">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6A25A4B-32B8-4E43-8C71-48401C9B819E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Etlas/Settings/Controller/SettingsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "didSelectImage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A6A25A4B-32B8-4E43-8C71-48401C9B819E - 23523ba0ec90667a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Etlas.imgResponse&gt;, Swift.Optional&lt;Etlas.NetworkError&gt;) -&gt; () in Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "764">
+               </Location>
+               <Location
+                  uuid = "A6A25A4B-32B8-4E43-8C71-48401C9B819E - 23523ba0ec90667a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Etlas.imgResponse&gt;, Swift.Optional&lt;Etlas.NetworkError&gt;) -&gt; () in Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "796">
+               </Location>
+               <Location
+                  uuid = "A6A25A4B-32B8-4E43-8C71-48401C9B819E - 23523ba0ec90667a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Etlas.imgResponse&gt;, Swift.Optional&lt;Etlas.NetworkError&gt;) -&gt; () in Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "965">
+               </Location>
+               <Location
+                  uuid = "A6A25A4B-32B8-4E43-8C71-48401C9B819E - 23523ba0ec90667a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Etlas.imgResponse&gt;, Swift.Optional&lt;Etlas.NetworkError&gt;) -&gt; () in Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "1006">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "890A752A-AD28-41DF-B294-5CE34D98264C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Etlas/Settings/Controller/SettingsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "didSelectImage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "890A752A-AD28-41DF-B294-5CE34D98264C - 23523ba0ec90679d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Etlas.imgResponse&gt;, Swift.Optional&lt;Etlas.NetworkError&gt;) -&gt; () in Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "890A752A-AD28-41DF-B294-5CE34D98264C - 23523ba0ec90679d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Etlas.imgResponse&gt;, Swift.Optional&lt;Etlas.NetworkError&gt;) -&gt; () in Etlas.SettingsViewController.didSelectImage(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "295">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7CECB66-3EED-4D1D-8465-C49830BDF7A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Etlas/Networking/APIClient+Upload.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "uploadImage(imageData:endpoint:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58F317AA-8321-4DE8-98AF-28D136EF9706"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Etlas/Networking/APIClient+Upload.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "uploadImage(imageData:endpoint:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58F317AA-8321-4DE8-98AF-28D136EF9706 - b169de7741d1c489"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Etlas.APIClient.uploadImage&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(imageData: Foundation.Data, endpoint: Swift.String, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Etlas.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Networking/APIClient+Upload.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "58F317AA-8321-4DE8-98AF-28D136EF9706 - 14d230f66fb74546"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.MultipartFormData) -&gt; () in static Etlas.APIClient.uploadImage&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(imageData: Foundation.Data, endpoint: Swift.String, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;, Swift.Optional&lt;Etlas.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Networking/APIClient+Upload.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8BA1D4B5-9F5D-454F-8BD0-5C78EF5A4B91"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Etlas/Settings/Controller/SettingsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "imageViewTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24A382DB-264A-4EF0-B8AA-68B29894236C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Etlas/Settings/Controller/SettingsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "ImagePickerManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "17EABA99-3CF4-4BE2-9787-C9BDE7C35ADE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Etlas/Settings/Controller/SettingsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "17EABA99-3CF4-4BE2-9787-C9BDE7C35ADE - ad4bdf075f4a6849"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Etlas.ImagePickerManager.imagePickerController(_: __C.UIImagePickerController, didFinishPickingMediaWithInfo: Swift.Dictionary&lt;__C.UIImagePickerControllerInfoKey, Any&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "17EABA99-3CF4-4BE2-9787-C9BDE7C35ADE - ad4bdf075f4a686a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Etlas.ImagePickerManager.imagePickerController(_: __C.UIImagePickerController, didFinishPickingMediaWithInfo: Swift.Dictionary&lt;__C.UIImagePickerControllerInfoKey, Any&gt;) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/Settings/Controller/SettingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

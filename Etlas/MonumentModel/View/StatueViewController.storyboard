@@ -199,11 +199,19 @@ unchanged. It was popularised in the 1960s with the release of Letraset sheets c
                                 <rect key="frame" x="16" y="96" width="361" height="239"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </sceneKitView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="syH-bY-Pdv">
+                                <rect key="frame" x="80" y="56" width="233" height="248"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="BOF-kj-RC2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WVN-Nn-rsL" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="1ON-cB-rah"/>
+                            <constraint firstItem="31p-Xe-szM" firstAttribute="top" secondItem="syH-bY-Pdv" secondAttribute="bottom" constant="32" id="3RF-KW-V76"/>
+                            <constraint firstItem="syH-bY-Pdv" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="56" id="BR7-2z-ETI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dXh-lS-VAt" secondAttribute="trailing" constant="24" id="DeG-Bv-Ch0"/>
                             <constraint firstItem="WVN-Nn-rsL" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="FWo-nD-ni1"/>
                             <constraint firstItem="dXh-lS-VAt" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="56" id="GyJ-BL-OLF"/>
@@ -217,6 +225,7 @@ unchanged. It was popularised in the 1960s with the release of Letraset sheets c
                             <constraint firstItem="egb-EK-D0K" firstAttribute="centerX" secondItem="31p-Xe-szM" secondAttribute="centerX" id="Xmi-ec-cY7"/>
                             <constraint firstItem="31p-Xe-szM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="d3c-Gb-o0l"/>
                             <constraint firstItem="egb-EK-D0K" firstAttribute="top" secondItem="31p-Xe-szM" secondAttribute="bottom" constant="16" id="gfK-Xx-5cp"/>
+                            <constraint firstItem="syH-bY-Pdv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="jqv-g1-Sef"/>
                             <constraint firstAttribute="trailing" secondItem="WVN-Nn-rsL" secondAttribute="trailing" constant="16" id="vzb-6F-hQN"/>
                             <constraint firstItem="Ieo-cG-lBk" firstAttribute="top" secondItem="egb-EK-D0K" secondAttribute="bottom" constant="24" id="w3u-md-xBb"/>
                             <constraint firstAttribute="bottom" secondItem="jzW-7z-83b" secondAttribute="bottom" id="wHe-WO-5Tf"/>
@@ -226,6 +235,7 @@ unchanged. It was popularised in the 1960s with the release of Letraset sheets c
                         <outlet property="descriptionLabel" destination="aqo-1M-FIO" id="O4d-OP-joP"/>
                         <outlet property="loveButton" destination="2GR-90-nX1" id="zMf-xY-jZ9"/>
                         <outlet property="monumentNameLabel" destination="31p-Xe-szM" id="iXg-Mc-MdS"/>
+                        <outlet property="periodLabel" destination="egb-EK-D0K" id="sK6-uv-Bp4"/>
                         <outlet property="readButton" destination="6su-RF-fyz" id="Iel-An-0dd"/>
                         <outlet property="sceneView" destination="WVN-Nn-rsL" id="eoB-fP-bH3"/>
                         <outlet property="whiteView" destination="FQ7-dL-UPJ" id="OoK-IM-BrH"/>

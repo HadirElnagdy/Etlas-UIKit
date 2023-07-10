@@ -41,8 +41,9 @@ enum APIRouter: URLRequestConvertible {
     case getFavorites
     case addArticleToFavs(id: Int)
     case addMonumentToFavs(id: Int)
-    case delFavArticle
-    case delFavMonument
+    case delFavArticle(id: Int)
+    case delFavMonument(id: Int)
+    case isFavorite(id: Int)
     //Monuments
     case getMonument
     //Questions
@@ -55,7 +56,7 @@ enum APIRouter: URLRequestConvertible {
     // MARK: - HTTPMethod
     private var method: HTTPMethod {
         switch self {
-        case .register, .verifyEmail, .requestNewOTP, .login, .logout, .refreshToken, .resetPassword, .verifyPasswordOTP, .googleSignIn, .facebookSignIn, .contactUs, .addArticleToFavs, .addMonumentToFavs:
+        case .register, .verifyEmail, .requestNewOTP, .login, .logout, .refreshToken, .resetPassword, .verifyPasswordOTP, .googleSignIn, .facebookSignIn, .contactUs, .addArticleToFavs, .addMonumentToFavs, .isFavorite:
             return .post
         case .confirmPasswordReset, .editUser:
             return .patch
@@ -129,12 +130,12 @@ enum APIRouter: URLRequestConvertible {
             return APIEndpoints.putStatueScore
         case .getFavorites:
             return APIEndpoints.getFavorites
-        case .addArticleToFavs(let id):
-            return "\(APIEndpoints.addArticleToFavs)/\(id)"
-        case .addMonumentToFavs(let id):
-            return "\(APIEndpoints.addMonumentToFavs)/\(id)"
-        case .delFavArticle:
-            return APIEndpoints.delFavArticle
+        case .addArticleToFavs:
+            return APIEndpoints.addArticleToFavs
+        case .addMonumentToFavs:
+            return APIEndpoints.addMonumentToFavs
+        case .delFavArticle(let id):
+            return "\(APIEndpoints.delFavArticle)/\(id)"
         case .delFavMonument:
             return APIEndpoints.delFavMonument
         case .getMonument:
@@ -147,13 +148,14 @@ enum APIRouter: URLRequestConvertible {
             return APIEndpoints.getStatuesQuestions
         case .getAllTours:
             return APIEndpoints.getAllTours
-            
+        case .isFavorite(let id):
+            return APIEndpoints.isFavorite
             
         }
     }
     
     // MARK: - Parameters
-    private var parameters: [String: String]? {
+    private var parameters: [String: Any]? {
         switch self {
             // Auth
         case .register(
@@ -224,10 +226,10 @@ enum APIRouter: URLRequestConvertible {
             return [APIParameterKey.newScore: String(newScore)]
         case .putStatueScore(newScore: let newScore):
             return [APIParameterKey.newScore: String(newScore)]
-        case .addArticleToFavs(id: let id):
+        case .addArticleToFavs(let id):
             return[APIParameterKey.id: String(id)]
         case .addMonumentToFavs(id: let id):
-            return [APIParameterKey.id: String(id)]
+            return [APIParameterKey.id: id]
         default:
             return nil
         }
@@ -235,12 +237,14 @@ enum APIRouter: URLRequestConvertible {
     
     
     private var encoding: ParameterEncoding {
-        switch self {
-            //        case .allCategories, .homeExperts, .testimonials, .allExperts, .categoryDetails, .allBlogs, .aboutUs, .homeCategories, .blogDetails:
-            //            return URLEncoding(destination: .queryString)
-        default:
-            return JSONEncoding.init(options: .sortedKeys)
-        }
+//        switch self {
+//        case .addArticleToFavs:
+//            return URLEncoding.httpBody
+//        default:
+//
+//        }
+        return JSONEncoding.default
+        
     }
     
     // MARK: - URLRequestConvertible

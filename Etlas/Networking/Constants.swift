@@ -112,10 +112,13 @@ class APIEndpoints {
     static var delFavMonument: String {
         return "favorites/monument/delete/"
     }
+    static var isFavorite: String {
+        return "/favorites/is-favorite/"
+    }
     
     //monuments
     static var getMonument: String {
-        return "monuments/1/"
+        return "monuments/"
     }
     static var detectMonument: String {
         return "monuments/detect/"

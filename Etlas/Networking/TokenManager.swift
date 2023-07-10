@@ -7,6 +7,7 @@
 
 
 import Foundation
+//import KeychainSwift
 
 class TokenManager {
     static let shared = TokenManager()
@@ -48,7 +49,7 @@ class TokenManager {
     
     func refreshAccessToken() {
         guard let refreshToken = refreshToken else {
-            return
+            return print("there's no refresh token")
         }
         APIClient.refreshToken(token: refreshToken){ [weak self] (result) in
             guard let self = self else { return }
@@ -56,6 +57,7 @@ class TokenManager {
             case .success(let tokens):
                 setTokens(accessToken: tokens.access,
                           refreshToken: tokens.refresh)
+                print("refreshing")
             case .failure(let error):
                 return print(error.localizedDescription)
             }
@@ -70,6 +72,5 @@ class TokenManager {
         refreshTimer?.invalidate()
     }
 
-   
    
 }

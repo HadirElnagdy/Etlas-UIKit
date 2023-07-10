@@ -11,7 +11,7 @@ class FavModelsViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var favModelsTableView: UITableView!
-    var favModelModel: [FavModelModel] = [FavModelModel(), FavModelModel(), FavModelModel(), FavModelModel(), FavModelModel()]
+    //var favModelModel: [FavModelModel] = [FavModelModel(), FavModelModel(), FavModelModel(), FavModelModel(), FavModelModel()]
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
@@ -41,12 +41,12 @@ class FavModelsViewController: UIViewController {
 }
 extension FavModelsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favModelModel.count
+        return 0//favModelModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favModelsTableView.dequeueReusableCell(withIdentifier: "FavModelsTableViewCell") as? FavModelsTableViewCell
-        cell?.configure(model: favModelModel[indexPath.row])
+       // cell?.configure(model: favModelModel[indexPath.row])
         return cell ?? UITableViewCell()
     }
     

@@ -209,8 +209,8 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="Best Score">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="18" name="Montserrat-Medium"/>
+                                                                    <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="18" name="Montserrat-SemiBold"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
@@ -305,8 +305,8 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="Language">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="18" name="Montserrat-Medium"/>
+                                                                    <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="18" name="Montserrat-SemiBold"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>

@@ -18,14 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJl-Mu-u18">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJl-Mu-u18">
                                 <rect key="frame" x="0.0" y="372" width="393" height="480"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cSW-N0-XXT">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0s-ha-aC0">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSS-JY-NFu" customClass="RatingView" customModule="Etlas" customModuleProvider="target">
                                                         <rect key="frame" x="219" y="24" width="150" height="24"/>
@@ -51,7 +51,7 @@
                                                         <rect key="frame" x="24" y="81.666666666666686" width="345" height="755"/>
                                                         <attributedString key="attributedText">
                                                             <fragment>
-                                                                <mutableString key="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                                                <string key="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
 has been the industry's standard dummy text ever since the 1500s, when an unknown
 printer took a galley of type and scrambled it to make a type specimen book. It has survived
 not only five centuries, but also the leap into electronic typesetting, remaining essentially
@@ -60,7 +60,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 has been the industry's standard dummy text ever since the 1500s, when an unknown
 printer took a galley of type and scrambled it to make a type specimen book. It has survived
 not only five centuries, but also the leap into electronic typesetting, remaining essentially
-unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
+unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.0" green="0.20392156862745098" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" size="18" name="Montserrat-Regular"/>
@@ -74,7 +74,7 @@ unchanged. It was popularised in the 1960s with the release of Letraset sheets c
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="mSS-JY-NFu" firstAttribute="leading" secondItem="mYE-sD-zqC" secondAttribute="trailing" constant="8" id="27C-iv-aaH"/>
-                                                    <constraint firstAttribute="height" constant="1500" id="CUK-bK-npd"/>
+                                                    <constraint firstAttribute="height" constant="1000" id="CUK-bK-npd"/>
                                                     <constraint firstItem="mYE-sD-zqC" firstAttribute="leading" secondItem="q0s-ha-aC0" secondAttribute="leading" constant="24" id="JyG-Cr-oCW"/>
                                                     <constraint firstItem="EbX-3l-8ls" firstAttribute="top" secondItem="mYE-sD-zqC" secondAttribute="bottom" constant="32" id="Qgt-2K-Ofk"/>
                                                     <constraint firstAttribute="trailing" secondItem="mSS-JY-NFu" secondAttribute="trailing" constant="24" id="RF0-PC-KZO"/>

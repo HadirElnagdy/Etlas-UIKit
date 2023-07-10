@@ -56,6 +56,11 @@
 		0470619129E741D300114E55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0470619329E741D300114E55 /* Localizable.strings */; };
 		0474CEC52A52D1AC00BDEEF5 /* loginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474CEC42A52D1AB00BDEEF5 /* loginResponseModel.swift */; };
 		0474CEC72A52D29A00BDEEF5 /* successResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474CEC62A52D29A00BDEEF5 /* successResponse.swift */; };
+		047E3F682A5A087A0061EDC2 /* QuestionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E3F672A5A087A0061EDC2 /* QuestionsResponse.swift */; };
+		047E3F6B2A5AC31F0061EDC2 /* Rameses.png in Resources */ = {isa = PBXBuildFile; fileRef = 047E3F692A5AC31E0061EDC2 /* Rameses.png */; };
+		047E3F6C2A5AC31F0061EDC2 /* Rameses.obj in Resources */ = {isa = PBXBuildFile; fileRef = 047E3F6A2A5AC31F0061EDC2 /* Rameses.obj */; };
+		047E3F6F2A5ACB690061EDC2 /* FavoritesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E3F6E2A5ACB690061EDC2 /* FavoritesResponse.swift */; };
+		047E3F712A5AF09D0061EDC2 /* IsFavResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E3F702A5AF09D0061EDC2 /* IsFavResponse.swift */; };
 		04902F262A2E01F500B74482 /* RecognitionFailedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04902F252A2E01F500B74482 /* RecognitionFailedViewController.storyboard */; };
 		0494C3E12A3DE417004B3EC3 /* ArticleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0494C3E02A3DE417004B3EC3 /* ArticleViewController.storyboard */; };
 		0494C3E32A3DE435004B3EC3 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494C3E22A3DE435004B3EC3 /* ArticleViewController.swift */; };
@@ -109,7 +114,6 @@
 		04D574B22A5059C400F9C227 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D574B12A5059C400F9C227 /* Constants.swift */; };
 		04D574B62A50854600F9C227 /* RegisterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D574B52A50854600F9C227 /* RegisterResponseModel.swift */; };
 		04D574B82A51F58F00F9C227 /* AppCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D574B72A51F58F00F9C227 /* AppCommon.swift */; };
-		04D5B35A2A46E58700DCE93E /* AllArticlesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5B3592A46E58700DCE93E /* AllArticlesModel.swift */; };
 		04D5B35C2A47084E00DCE93E /* LabelCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5B35B2A47084E00DCE93E /* LabelCustomView.swift */; };
 		04D5B35F2A47198600DCE93E /* TourImgsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5B35E2A47198600DCE93E /* TourImgsCollectionViewCell.swift */; };
 		04D7217D2A54742400CAFFB2 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7217C2A54742400CAFFB2 /* EmptyResponse.swift */; };
@@ -139,7 +143,6 @@
 		04DF69002A4AF2A400233FC4 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF68FF2A4AF2A400233FC4 /* ChangePasswordViewController.swift */; };
 		04DF69022A4AF2BD00233FC4 /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DF69012A4AF2BD00233FC4 /* ChangePasswordViewController.storyboard */; };
 		04DF69042A4AF6B900233FC4 /* PasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF69032A4AF6B900233FC4 /* PasswordButton.swift */; };
-		04E139742A4632DC00B24A55 /* FavModelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E139732A4632DC00B24A55 /* FavModelModel.swift */; };
 		04E6F1262A42EA38000E82E9 /* FavouritesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E6F1252A42EA38000E82E9 /* FavouritesViewController.storyboard */; };
 		04E6F1282A42EA48000E82E9 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6F1272A42EA48000E82E9 /* FavouritesViewController.swift */; };
 		04E6F12A2A42EEFD000E82E9 /* FavModelsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E6F1292A42EEFD000E82E9 /* FavModelsViewController.storyboard */; };
@@ -150,7 +153,6 @@
 		04EA1C562A066DFF005BB160 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EA1C552A066DFF005BB160 /* SettingsViewController.storyboard */; };
 		04EA1C582A0682FC005BB160 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1C572A0682FC005BB160 /* CircleImageView.swift */; };
 		04EA1C5A2A068E26005BB160 /* CustomGrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1C592A068E26005BB160 /* CustomGrayView.swift */; };
-		04EE3A872A48D90C0078B7EB /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE3A862A48D90C0078B7EB /* Questions.swift */; };
 		04EE3A8A2A48D9920078B7EB /* Monument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE3A892A48D9920078B7EB /* Monument.swift */; };
 		7085B21A2A575A72004D6BF5 /* Khafre.obj in Resources */ = {isa = PBXBuildFile; fileRef = 7085B2182A575A72004D6BF5 /* Khafre.obj */; };
 		7085B21C2A575D10004D6BF5 /* Khafre.png in Resources */ = {isa = PBXBuildFile; fileRef = 7085B21B2A575D10004D6BF5 /* Khafre.png */; };
@@ -210,6 +212,11 @@
 		0470619429E741D500114E55 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0474CEC42A52D1AB00BDEEF5 /* loginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginResponseModel.swift; sourceTree = "<group>"; };
 		0474CEC62A52D29A00BDEEF5 /* successResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = successResponse.swift; sourceTree = "<group>"; };
+		047E3F672A5A087A0061EDC2 /* QuestionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsResponse.swift; sourceTree = "<group>"; };
+		047E3F692A5AC31E0061EDC2 /* Rameses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rameses.png; sourceTree = "<group>"; };
+		047E3F6A2A5AC31F0061EDC2 /* Rameses.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rameses.obj; sourceTree = "<group>"; };
+		047E3F6E2A5ACB690061EDC2 /* FavoritesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesResponse.swift; sourceTree = "<group>"; };
+		047E3F702A5AF09D0061EDC2 /* IsFavResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFavResponse.swift; sourceTree = "<group>"; };
 		04902F252A2E01F500B74482 /* RecognitionFailedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecognitionFailedViewController.storyboard; sourceTree = "<group>"; };
 		0494C3E02A3DE417004B3EC3 /* ArticleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleViewController.storyboard; sourceTree = "<group>"; };
 		0494C3E22A3DE435004B3EC3 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
@@ -264,7 +271,6 @@
 		04D574B12A5059C400F9C227 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04D574B52A50854600F9C227 /* RegisterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseModel.swift; sourceTree = "<group>"; };
 		04D574B72A51F58F00F9C227 /* AppCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommon.swift; sourceTree = "<group>"; };
-		04D5B3592A46E58700DCE93E /* AllArticlesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticlesModel.swift; sourceTree = "<group>"; };
 		04D5B35B2A47084E00DCE93E /* LabelCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCustomView.swift; sourceTree = "<group>"; };
 		04D5B35E2A47198600DCE93E /* TourImgsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourImgsCollectionViewCell.swift; sourceTree = "<group>"; };
 		04D7217C2A54742400CAFFB2 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
@@ -294,7 +300,6 @@
 		04DF68FF2A4AF2A400233FC4 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		04DF69012A4AF2BD00233FC4 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
 		04DF69032A4AF6B900233FC4 /* PasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordButton.swift; sourceTree = "<group>"; };
-		04E139732A4632DC00B24A55 /* FavModelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavModelModel.swift; sourceTree = "<group>"; };
 		04E6F1252A42EA38000E82E9 /* FavouritesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouritesViewController.storyboard; sourceTree = "<group>"; };
 		04E6F1272A42EA48000E82E9 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		04E6F1292A42EEFD000E82E9 /* FavModelsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavModelsViewController.storyboard; sourceTree = "<group>"; };
@@ -305,7 +310,6 @@
 		04EA1C552A066DFF005BB160 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		04EA1C572A0682FC005BB160 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		04EA1C592A068E26005BB160 /* CustomGrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGrayView.swift; sourceTree = "<group>"; };
-		04EE3A862A48D90C0078B7EB /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		04EE3A892A48D9920078B7EB /* Monument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monument.swift; sourceTree = "<group>"; };
 		41069432686BAC03F0413425 /* libPods-Etlas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Etlas.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7085B2182A575A72004D6BF5 /* Khafre.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Khafre.obj; sourceTree = "<group>"; };
@@ -577,6 +581,7 @@
 		046E088C2A3AFF0000899579 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				047E3F6D2A5ACB560061EDC2 /* Models */,
 				04A0CF762A4334F000BFEC87 /* Cells */,
 				04C526022A3DAB1400BFB41F /* View */,
 				04C526012A3DAB1300BFB41F /* Controller */,
@@ -636,6 +641,15 @@
 				040CF65E29C4A86A008BC27F /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		047E3F6D2A5ACB560061EDC2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				047E3F6E2A5ACB690061EDC2 /* FavoritesResponse.swift */,
+				047E3F702A5AF09D0061EDC2 /* IsFavResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		04902F222A2E01A500B74482 /* RecognitionFailed */ = {
@@ -826,16 +840,11 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		04A54DD72A40738E00ABEF7C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		04AD5C8C2A574474001FBF59 /* 3D Models */ = {
 			isa = PBXGroup;
 			children = (
+				047E3F6A2A5AC31F0061EDC2 /* Rameses.obj */,
+				047E3F692A5AC31E0061EDC2 /* Rameses.png */,
 				7085B21B2A575D10004D6BF5 /* Khafre.png */,
 				7085B2182A575A72004D6BF5 /* Khafre.obj */,
 				04AD5C8E2A57448C001FBF59 /* Nefertiti.obj */,
@@ -1003,7 +1012,6 @@
 		04C526052A3DABA200BFB41F /* Article */ = {
 			isa = PBXGroup;
 			children = (
-				04A54DD72A40738E00ABEF7C /* Model */,
 				0494C3DF2A3DE3F5004B3EC3 /* View */,
 				0494C3DE2A3DE3ED004B3EC3 /* Controller */,
 			);
@@ -1170,7 +1178,6 @@
 		04D5B3582A46E57200DCE93E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				04D5B3592A46E58700DCE93E /* AllArticlesModel.swift */,
 				045A9B9B2A58B40C0064022A /* AllArticlesResponse.swift */,
 			);
 			path = Models;
@@ -1379,7 +1386,6 @@
 		04E139722A4632B300B24A55 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				04E139732A4632DC00B24A55 /* FavModelModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1438,7 +1444,7 @@
 		04EE3A852A48D8FB0078B7EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				04EE3A862A48D90C0078B7EB /* Questions.swift */,
+				047E3F672A5A087A0061EDC2 /* QuestionsResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1546,12 +1552,14 @@
 				04D7218C2A559D6700CAFFB2 /* DonePopUpViewController.storyboard in Resources */,
 				040161B329E43D160021F73C /* SignInViewController.storyboard in Resources */,
 				04D8DF092A0AA2E20002CEA4 /* ForgotPasswordViewController.storyboard in Resources */,
+				047E3F6C2A5AC31F0061EDC2 /* Rameses.obj in Resources */,
 				040E75512A1C01E500AF2B15 /* Poppins-Medium.ttf in Resources */,
 				040E75412A1C019A00AF2B15 /* Montserrat-Thin.ttf in Resources */,
 				046E08942A3B861600899579 /* AllToursViewController.storyboard in Resources */,
 				04DA636C2A3F42F800E8FBD6 /* StatueViewController.storyboard in Resources */,
 				040E75452A1C019A00AF2B15 /* Montserrat-Bold.ttf in Resources */,
 				040E75542A1C01E500AF2B15 /* Poppins-Regular.ttf in Resources */,
+				047E3F6B2A5AC31F0061EDC2 /* Rameses.png in Resources */,
 				7085B21C2A575D10004D6BF5 /* Khafre.png in Resources */,
 				04CE226B2A05A9E4004FCCE9 /* EditAccountViewController.storyboard in Resources */,
 				04AD5C8F2A57448C001FBF59 /* Nefertiti.png in Resources */,
@@ -1667,6 +1675,7 @@
 				04DA63722A3F449C00E8FBD6 /* QuestionsViewController.swift in Sources */,
 				04DF69042A4AF6B900233FC4 /* PasswordButton.swift in Sources */,
 				04CE225B2A05A90E004FCCE9 /* CustomTextField.swift in Sources */,
+				047E3F712A5AF09D0061EDC2 /* IsFavResponse.swift in Sources */,
 				0457BDB129F6CF3700E2D8F0 /* LocalizationManager.swift in Sources */,
 				04E6F12C2A42EF18000E82E9 /* FavModelsViewController.swift in Sources */,
 				042450442A4E1665005CCAE7 /* SharedData.swift in Sources */,
@@ -1685,7 +1694,6 @@
 				04D5B35F2A47198600DCE93E /* TourImgsCollectionViewCell.swift in Sources */,
 				041F3BB329E4260D00351680 /* OnboardingViewController.swift in Sources */,
 				0494C3F32A3E065A004B3EC3 /* TermsViewController.swift in Sources */,
-				04E139742A4632DC00B24A55 /* FavModelModel.swift in Sources */,
 				04D8DF0F2A0AD65D0002CEA4 /* NewPasswordViewController.swift in Sources */,
 				04CE226F2A05AA30004FCCE9 /* HighestScoreViewController.swift in Sources */,
 				04550A7929F7E7EC00442218 /* SignUpSecondViewController.swift in Sources */,
@@ -1694,7 +1702,6 @@
 				04D5B35C2A47084E00DCE93E /* LabelCustomView.swift in Sources */,
 				04DF69002A4AF2A400233FC4 /* ChangePasswordViewController.swift in Sources */,
 				04D574AE2A5051A500F9C227 /* APIRouter.swift in Sources */,
-				04D5B35A2A46E58700DCE93E /* AllArticlesModel.swift in Sources */,
 				046E087B2A39ED4000899579 /* MainMenuViewController.swift in Sources */,
 				040CF65F29C4A86A008BC27F /* AppDelegate.swift in Sources */,
 				04A0CF812A445C1700BFEC87 /* FavArticlesModel.swift in Sources */,
@@ -1711,7 +1718,6 @@
 				04D574AC2A50519900F9C227 /* APIClient.swift in Sources */,
 				04D7218A2A559D5100CAFFB2 /* DonePopUpViewController.swift in Sources */,
 				04D721822A548ACC00CAFFB2 /* TokenManager.swift in Sources */,
-				04EE3A872A48D90C0078B7EB /* Questions.swift in Sources */,
 				04D721802A54747F00CAFFB2 /* User.swift in Sources */,
 				045A9B982A5874670064022A /* AllToursResponse.swift in Sources */,
 				04B7D74D2A45B8AB00A8E8F7 /* AllArticlesCollectionViewCell.swift in Sources */,
@@ -1719,6 +1725,7 @@
 				04A2BE5D2A0591A800044C9B /* AboutUsViewController.swift in Sources */,
 				04B7D75D2A45C11C00A8E8F7 /* EOTPViewController.swift in Sources */,
 				04CE225A2A05A90E004FCCE9 /* ClearButton.swift in Sources */,
+				047E3F6F2A5ACB690061EDC2 /* FavoritesResponse.swift in Sources */,
 				045A9B962A5838080064022A /* DetectionResponse.swift in Sources */,
 				04D7219F2A56024200CAFFB2 /* confirmPasswordResetResponse.swift in Sources */,
 				046E08982A3B869D00899579 /* AllArticlesViewController.swift in Sources */,
@@ -1736,6 +1743,7 @@
 				04EE3A8A2A48D9920078B7EB /* Monument.swift in Sources */,
 				04A0CF792A433D1300BFEC87 /* FavArticlesTableViewCell.swift in Sources */,
 				04D8DF0B2A0AA3020002CEA4 /* ForgotPasswordViewController.swift in Sources */,
+				047E3F682A5A087A0061EDC2 /* QuestionsResponse.swift in Sources */,
 				04D319A92A098D0300CF0C7F /* RatingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

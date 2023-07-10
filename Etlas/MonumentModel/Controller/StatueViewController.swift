@@ -17,13 +17,22 @@ class StatueViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var monumentNameLabel: UILabel!
     @IBOutlet weak var sceneView: SCNView!
-    
+    @IBOutlet weak var periodLabel: UILabel!
     var isLoved = false
     var speechSynthesizer: AVSpeechSynthesizer?
     
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+//        APIClient.isFavorite(id: (article?.id)!){ result in
+//            switch result {
+//            case .success(let model):
+//                self.isLoved = model.isFavorite ?? false
+//                break
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
         setupUI()
         setupSceneKitView(.Nefertiti)
     }
@@ -41,10 +50,15 @@ class StatueViewController: UIViewController {
             scene = SCNScene(named: "Nefertiti.obj")
             sceneView.scene = scene
             sceneView.scene?.rootNode.childNodes[0].geometry?.materials.first?.diffuse.contents =  UIImage(named: "Nefertiti")
+        case .Remses:
+            scene = SCNScene(named: "Remses.obj")
+            sceneView.scene = scene
+            sceneView.scene?.rootNode.childNodes[0].geometry?.materials.first?.diffuse.contents =  UIImage(named: "Remses")
         }
         sceneView.autoenablesDefaultLighting = true
-
     }
+    
+    
     // MARK: - Private methods
     private func setupUI() {
         whiteView.layer.cornerRadius = 30.0
@@ -56,6 +70,7 @@ class StatueViewController: UIViewController {
             case .success(let model):
                 self?.monumentNameLabel.text = model.name
                 self?.descriptionLabel.text = model.description
+                self?.periodLabel.text = "\((model.date)!) | \((model.location)!)"
                 break
             case .failure(let error):
                 return print(error.localizedDescription)
@@ -81,21 +96,42 @@ class StatueViewController: UIViewController {
     }
     @IBAction func lovePressed(_ sender: UIButton) {
         isLoved.toggle()
+//        if !isLoved {
+//         APIClient.addArticleToFavs(id: (article?.id)!){[weak self] (result) in
+//             switch result {
+//             case .success(_):
+//                 self?.isLoved.toggle()
+//                 break
+//             case .failure(let error):
+//                 print(error)
+//             }
+//
+//         }
+//
+//        }else {
+//            APIClient.delFavArticle(id: (article?.id)!){[weak self] (result) in
+//                switch result {
+//                case .success(_):
+//                    self?.isLoved.toggle()
+//                    break
+//                case .failure(let error):
+//                    print(error)
+//                }
+//
+//            }
+//        }
         setupButtonImage()
     }
     @IBAction func readButtonPressed(_ sender: UIButton) {
         if let speechSynthesizer = speechSynthesizer, speechSynthesizer.isSpeaking {
-            // Stop the speech
             speechSynthesizer.stopSpeaking(at: .immediate)
             speechSynthesizer.delegate = nil
             self.speechSynthesizer = nil
             
-            // Reset the button image
             sender.setImage(UIImage(named: "ic_PlayButton"), for: .normal)
         } else {
-            // Start the speech
             guard let labelText = descriptionLabel.text, !labelText.isEmpty else {
-                return // No text to read
+                return
             }
             
             let speechUtterance = AVSpeechUtterance(string: labelText)
@@ -106,18 +142,15 @@ class StatueViewController: UIViewController {
             newSpeechSynthesizer.delegate = self
             newSpeechSynthesizer.speak(speechUtterance)
             self.speechSynthesizer = newSpeechSynthesizer
-            
-            // Update the button image to the stop button
+           
             sender.setImage(UIImage(named: "ic_StopButton"), for: .normal)
         }
     }
 }
 extension StatueViewController: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        // Reset the button image when speech finishes
         readButton.setImage(UIImage(named: "ic_PlayButton"), for: .normal)
         
-        // Clear the speech synthesizer instance
         self.speechSynthesizer = nil
     }
 }
@@ -129,4 +162,5 @@ extension StatueViewController: AVSpeechSynthesizerDelegate {
 enum Statues {
     case Nefertiti
     case Khafre
+    case Remses
 }

@@ -102,6 +102,8 @@ class TBMiddleButtonVCViewController: UITabBarController, UITabBarControllerDele
         picker.delegate = self
         picker.allowsEditing = true
         present(picker, animated: true)
+//        let cameraViewController = CameraViewController()
+//        present(cameraViewController, animated: true, completion: nil)
     }
 }
 
@@ -118,9 +120,14 @@ extension TBMiddleButtonVCViewController: UINavigationControllerDelegate, UIImag
              return
          }
         let imageData = image.jpegData(compressionQuality: 0.8)
-        let storyboard = UIStoryboard(name: "StatueViewController", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "StatueViewController")
-        self.present(vc, animated: true)
+        let completion: (DetectionResponse?, NetworkError?) -> Void = { result, error in
+            if let result = result {
+                print("Result: \(result)")
+            } else if let error = error {
+                print("Error: \(error)")
+            }
+        }
+        APIClient.uploadImage(imageData: imageData! , endpoint: "https://api.etlas.tech/monuments/detect/", completion: completion)
         
     }
 }

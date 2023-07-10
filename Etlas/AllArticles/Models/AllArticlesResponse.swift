@@ -19,7 +19,7 @@ struct ArticleResult: Codable {
     let articleTitle, date, description, imageURL: String?
     let id: Int?
     let sections: [ArticleSection]?
-    let monuments: [ArticleMonument]?
+    let monuments: [Monument]?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -30,10 +30,7 @@ struct ArticleResult: Codable {
     }
 }
 
-// MARK: - Monument
-struct ArticleMonument: Codable {
-    let name, id, created, updated: String?
-}
+
 
 // MARK: - ArticleSection
 struct ArticleSection: Codable {

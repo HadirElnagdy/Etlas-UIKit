@@ -13,8 +13,8 @@ target 'Etlas' do
   pod 'NVActivityIndicatorView'
   pod 'Hash'
   pod 'Default'
-  pod 'AMDots'
-
+ # pod 'AMDots'
+ # pod 'KeychainSwift', '~> 20.0' 
 	
 
 end

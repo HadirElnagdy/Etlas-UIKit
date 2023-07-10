@@ -8,5 +8,8 @@
 import Foundation
 
 struct DetectionResponse: Codable{
-    let statues: String?
+    
+    let status: String?
+    
 }
+

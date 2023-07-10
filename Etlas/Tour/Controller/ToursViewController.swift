@@ -50,7 +50,7 @@ class ToursViewController: UIViewController {
         let attributedDescription = NSMutableAttributedString()
         
         let titleFont = UIFont(name: "Montserrat-Bold", size: 18.0) ?? UIFont.boldSystemFont(ofSize: 18.0)
-        let descriptionFont = UIFont(name: "Montserrat-Regular", size: 16.0) ?? UIFont.systemFont(ofSize: 16.0)
+        let descriptionFont = UIFont(name: "Montserrat-Regular", size: 14.0) ?? UIFont.systemFont(ofSize: 14.0)
         
         if let sections = tour.sections {
             for section in sections {
@@ -63,7 +63,7 @@ class ToursViewController: UIViewController {
                 let descriptionAttributes: [NSAttributedString.Key: Any] = [
                     .font: descriptionFont,
                 ]
-                let descriptionString = NSAttributedString(string: "\n\(section.description ?? "")\n\n\n", attributes: descriptionAttributes)
+                let descriptionString = NSAttributedString(string: "\n\n\(section.description ?? "")\n\n\n", attributes: descriptionAttributes)
                 attributedDescription.append(descriptionString)
             }
         }

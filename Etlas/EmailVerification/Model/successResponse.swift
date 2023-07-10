@@ -10,3 +10,11 @@ import Foundation
 struct successResponse: Codable {
        let success: String
    }
+
+struct imgResponse: Codable {
+    let imgURL: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case imgURL = "image_url"
+    }
+}

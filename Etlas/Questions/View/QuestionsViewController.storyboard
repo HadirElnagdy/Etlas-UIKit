@@ -121,6 +121,9 @@
                                                                         </fragment>
                                                                     </attributedString>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="choiceButtonsTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="b0u-yj-12I"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7p-cp-Dl3" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="73" width="285" height="57"/>
@@ -140,6 +143,9 @@
                                                                         </fragment>
                                                                     </attributedString>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="choiceButtonsTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TVG-5N-ger"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouZ-wC-DAr" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="145.99999999999994" width="285" height="57"/>
@@ -159,6 +165,9 @@
                                                                         </fragment>
                                                                     </attributedString>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="choiceButtonsTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="E2B-8e-qt6"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpx-dh-s3f" customClass="BrownButton" customModule="Etlas" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="218.99999999999994" width="285" height="57"/>
@@ -178,6 +187,9 @@
                                                                         </fragment>
                                                                     </attributedString>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="choiceButtonsTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lxv-z3-A4e"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -282,7 +294,13 @@
                     <connections>
                         <outlet property="hintButton" destination="Snc-Nd-9Du" id="xP9-fs-r1J"/>
                         <outlet property="labelBorderView" destination="iWC-G3-Q6V" id="1Km-Nh-S8R"/>
+                        <outlet property="questionImage" destination="TIw-MA-cqB" id="Rpc-jN-9ox"/>
+                        <outlet property="questionLabel" destination="Qhr-VK-NMf" id="Z9v-PP-Dc2"/>
                         <outlet property="scoreLabel" destination="HrA-0r-2Qn" id="VlF-RY-U0k"/>
+                        <outletCollection property="choiceButtons" destination="yyg-hi-xWm" collectionClass="NSMutableArray" id="ozr-vD-NJv"/>
+                        <outletCollection property="choiceButtons" destination="r7p-cp-Dl3" collectionClass="NSMutableArray" id="Piu-k0-icv"/>
+                        <outletCollection property="choiceButtons" destination="ouZ-wC-DAr" collectionClass="NSMutableArray" id="4IM-oP-aqb"/>
+                        <outletCollection property="choiceButtons" destination="cpx-dh-s3f" collectionClass="NSMutableArray" id="lLD-zx-p2P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

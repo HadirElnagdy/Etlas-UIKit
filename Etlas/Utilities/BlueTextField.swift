@@ -42,6 +42,7 @@ class BlueTextField: UITextField {
         clipsToBounds = true
         attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        font = UIFont(name: "Montserrat-SemiBold", size: 20)
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
