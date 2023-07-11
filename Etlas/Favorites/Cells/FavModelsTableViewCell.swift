@@ -40,14 +40,31 @@ class FavModelsTableViewCell: UITableViewCell {
     
     
     // MARK: - Private methods
-//    func configure(model: FavModelModel?) {
-//        self.modelImg.image = model?.modelImg
-//        self.modelName.text = model?.modelName
-//        self.period.text = model?.period
-//        self.scanningDate.text = model?.scanningDate
-//
-//    }
-//
+    func configure(model: FavoritesResult?) {
+        guard let monument = model?.monument else {
+            return
+        }
+        modelName.text = monument.name
+        period.text = "\(monument.date) | \(monument.location)"
+        scanningDate.text = monument.updated
+        if let imageURLString = monument.imageURL, let imageURL = URL(string: imageURLString) {
+            URLSession.shared.dataTask(with: imageURL) { [weak self] (data, _, error) in
+                if let error = error {
+                    print("Error downloading image: \(error.localizedDescription)")
+                    return
+                }
+
+                if let imageData = data, let image = UIImage(data: imageData) {
+                    DispatchQueue.main.async {
+                        self?.modelImg.image = image
+                    }
+                }
+            }.resume()
+        }
+
+    }
+
     
     
 }
+

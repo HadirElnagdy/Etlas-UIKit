@@ -18,6 +18,7 @@ class SignUpSecondViewController: BaseViewController {
     
     var fullName: String? = "", email: String? = "", password: String = ""
     
+
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,13 @@ class SignUpSecondViewController: BaseViewController {
             case .success(_):
                 goToVerification()
             case .failure(let error):
+                let alertController = UIAlertController(title: "Opps!", message: error.localizedDescription, preferredStyle: .alert)
+                present(alertController, animated: true, completion: nil)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    alertController.dismiss(animated: true, completion: nil)
+                }
                 print(error.localizedDescription)
+                
                 return
             }
         }

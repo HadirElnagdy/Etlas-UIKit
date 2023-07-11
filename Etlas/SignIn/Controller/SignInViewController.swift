@@ -64,7 +64,11 @@ class SignInViewController: BaseViewController {
                 }
                 goToHome()
             case .failure(let error):
-                showErrorMessage(message: error.message)
+                let alertController = UIAlertController(title: "Opps!", message: error.localizedDescription, preferredStyle: .alert)
+                present(alertController, animated: true, completion: nil)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    alertController.dismiss(animated: true, completion: nil)
+                }
                 print(error.localizedDescription)
                 
                 return

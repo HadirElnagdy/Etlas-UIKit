@@ -166,6 +166,8 @@ struct APIParameterKey {
     static let authToken = "auth_token"
     static let frontEnd = "front_end"
     static let newScore = "new_score"
+    static let articleId = "article_id"
+    static let monumentId = "monument_id"
 }
 
 enum HTTPHeaderField: String {

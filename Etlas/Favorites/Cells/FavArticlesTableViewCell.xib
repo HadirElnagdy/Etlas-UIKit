@@ -21,7 +21,10 @@
                         <rect key="frame" x="16" y="0.0" width="422" height="117"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKc-CE-hIf">
-                                <rect key="frame" x="122.00000000000001" y="8" width="61.666666666666671" height="24"/>
+                                <rect key="frame" x="125" y="8" width="250" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="dox-za-NSg"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Anubis">
                                         <attributes>
@@ -34,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTV-1r-CCi">
-                                <rect key="frame" x="122" y="36" width="130" height="30"/>
+                                <rect key="frame" x="125" y="37" width="130" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Hw9-dH-VyV"/>
                                     <constraint firstAttribute="width" constant="130" id="kSM-DK-qrh"/>
@@ -51,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4l-7o-66i">
-                                <rect key="frame" x="122.00000000000001" y="72" width="60.666666666666671" height="13"/>
+                                <rect key="frame" x="125.00000000000001" y="73" width="60.666666666666671" height="13"/>
                                 <attributedString key="attributedText">
                                     <fragment content="15 Jan 2023">
                                         <attributes>
@@ -94,18 +97,18 @@
                         <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="J9g-7I-j4Q" firstAttribute="trailing" secondItem="OXf-23-vcM" secondAttribute="trailing" id="0TG-XY-ORP"/>
-                            <constraint firstItem="Pgx-ea-fEc" firstAttribute="top" secondItem="Oap-GN-Xuk" secondAttribute="top" constant="-3" id="2hT-Qb-79R"/>
+                            <constraint firstItem="Pgx-ea-fEc" firstAttribute="top" secondItem="Oap-GN-Xuk" secondAttribute="top" id="2hT-Qb-79R"/>
                             <constraint firstItem="OXf-23-vcM" firstAttribute="top" secondItem="Oap-GN-Xuk" secondAttribute="top" constant="8" id="35k-U3-OF1"/>
                             <constraint firstItem="g4l-7o-66i" firstAttribute="leading" secondItem="nTV-1r-CCi" secondAttribute="leading" id="7hr-dX-Ijy"/>
                             <constraint firstItem="EKc-CE-hIf" firstAttribute="top" secondItem="Oap-GN-Xuk" secondAttribute="top" constant="8" id="BqG-Sg-dTk"/>
-                            <constraint firstAttribute="bottom" secondItem="Pgx-ea-fEc" secondAttribute="bottom" constant="-5" id="J7N-d3-5Ua"/>
-                            <constraint firstItem="Pgx-ea-fEc" firstAttribute="leading" secondItem="Oap-GN-Xuk" secondAttribute="leading" constant="-3" id="LrP-ZK-3dM"/>
+                            <constraint firstAttribute="bottom" secondItem="Pgx-ea-fEc" secondAttribute="bottom" id="J7N-d3-5Ua"/>
+                            <constraint firstItem="Pgx-ea-fEc" firstAttribute="leading" secondItem="Oap-GN-Xuk" secondAttribute="leading" id="LrP-ZK-3dM"/>
                             <constraint firstAttribute="trailing" secondItem="OXf-23-vcM" secondAttribute="trailing" constant="8" id="OPB-lL-Dmi"/>
-                            <constraint firstItem="nTV-1r-CCi" firstAttribute="leading" secondItem="EKc-CE-hIf" secondAttribute="leading" id="P0z-e8-0k5"/>
+                            <constraint firstItem="nTV-1r-CCi" firstAttribute="top" secondItem="EKc-CE-hIf" secondAttribute="bottom" constant="6" id="ZKj-q6-o7M"/>
                             <constraint firstItem="EKc-CE-hIf" firstAttribute="leading" secondItem="Pgx-ea-fEc" secondAttribute="trailing" constant="16" id="dxh-28-LTy"/>
                             <constraint firstAttribute="bottom" secondItem="J9g-7I-j4Q" secondAttribute="bottom" constant="16" id="kAL-5y-B8l"/>
-                            <constraint firstItem="nTV-1r-CCi" firstAttribute="top" secondItem="EKc-CE-hIf" secondAttribute="bottom" constant="4" id="omg-81-6Mb"/>
                             <constraint firstItem="g4l-7o-66i" firstAttribute="top" secondItem="nTV-1r-CCi" secondAttribute="bottom" constant="6" id="qDU-Xf-wL3"/>
+                            <constraint firstItem="nTV-1r-CCi" firstAttribute="leading" secondItem="Pgx-ea-fEc" secondAttribute="trailing" constant="16" id="t8C-I6-Et9"/>
                         </constraints>
                     </view>
                 </subviews>

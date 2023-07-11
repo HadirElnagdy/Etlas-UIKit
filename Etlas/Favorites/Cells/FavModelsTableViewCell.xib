@@ -21,10 +21,10 @@
                         <rect key="frame" x="24" y="0.0" width="381" height="117"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_3dAnubis" translatesAutoresizingMaskIntoConstraints="NO" id="dXn-yj-gbp">
-                                <rect key="frame" x="8" y="0.0" width="72" height="117"/>
+                                <rect key="frame" x="8" y="0.0" width="80" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="M5J-gZ-yRr"/>
-                                    <constraint firstAttribute="width" constant="72" id="e5u-TP-eST"/>
+                                    <constraint firstAttribute="width" constant="80" id="e5u-TP-eST"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1q-q4-S1G">
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55F-jj-R5d">
-                                <rect key="frame" x="96" y="45" width="122" height="21"/>
+                                <rect key="frame" x="104" y="45" width="122" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="200 BC | Egypt">
                                         <attributes>
@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AD2-VQ-tID">
-                                <rect key="frame" x="96" y="78" width="184" height="21"/>
+                                <rect key="frame" x="104" y="78" width="184" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Scanned 12 OCT 2021">
                                         <attributes>
@@ -66,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW2-7F-mk1">
-                                <rect key="frame" x="96" y="16" width="117" height="24"/>
+                                <rect key="frame" x="104" y="16" width="117" height="24"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Statue Name">
                                         <attributes>

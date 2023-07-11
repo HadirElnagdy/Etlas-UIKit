@@ -30,7 +30,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ky2-0k-vJq" userLabel="TopView">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="390"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blx-qE-2SX">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blx-qE-2SX">
                                                         <rect key="frame" x="56.666666666666657" y="200" width="280" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="280" id="T7V-oV-RAI"/>
@@ -39,7 +39,7 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="we are here to help you make your tour much easier">
                                                                 <attributes>
-                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" size="18" name="Montserrat-SemiBold"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -470,7 +470,7 @@
     </scenes>
     <resources>
         <image name="bg_Home" width="430" height="932"/>
-        <image name="exclamationmark.circle" catalog="system" width="128" height="123"/>
+        <image name="exclamationmark.circle" catalog="system" width="32" height="32"/>
         <image name="ic_ARButton" width="35" height="33"/>
         <image name="ic_HomeButton" width="33" height="32"/>
         <image name="ic_SelectedHome" width="33" height="42"/>

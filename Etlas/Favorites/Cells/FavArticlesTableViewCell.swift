@@ -32,37 +32,53 @@ class FavArticlesTableViewCell: UITableViewCell {
     // MARK: - IBActions
     
     @IBAction func openPressed(_ sender: UIButton) {
-        // go to article with the same id
+        
     }
     @IBAction func deletePressed(_ sender: UIButton) {
-        // remove it from favs
+        
     }
     
     
     // MARK: - Private methods
-//    func configure(model: FavoritesResult?) {
-//        guard let article = model?.article?.first else {
-//            return
-//        }
-//
-//        articleTitle.text = article.articleTitle
-//        articleDescription.text = article.description
-//        articleDate.text = article.date
-//        if let imageURLString = article.imageURL, let imageURL = URL(string: imageURLString) {
-//            URLSession.shared.dataTask(with: imageURL) { [weak self] (data, _, error) in
-//                if let error = error {
-//                    print("Error downloading image: \(error.localizedDescription)")
-//                    return
-//                }
-//
-//                if let imageData = data, let image = UIImage(data: imageData) {
-//                    DispatchQueue.main.async {
-//                        self?.articleImg.image = image
-//                    }
-//                }
-//            }.resume()
-//        }
-//    }
+    func configure(model: FavoritesResult?) {
+        guard let article = model?.article else {
+            return
+        }
+        articleTitle.text = article.articleTitle
+        articleDescription.text = article.description
+        if let dateString = article.date, let date = dateFormatter.date(from: dateString) {
+            articleDate.text = formattedDateString(from: date)
+        } else {
+            articleDate.text = nil
+        }
+        if let imageURLString = article.imageURL, let imageURL = URL(string: imageURLString) {
+            URLSession.shared.dataTask(with: imageURL) { [weak self] (data, _, error) in
+                if let error = error {
+                    print("Error downloading image: \(error.localizedDescription)")
+                    return
+                }
+
+                if let imageData = data, let image = UIImage(data: imageData) {
+                    DispatchQueue.main.async {
+                        self?.articleImg.image = image
+                    }
+                }
+            }.resume()
+        }
+    }
+    
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+    
+    private func formattedDateString(from date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMM yyyy"
+        return formatter.string(from: date)
+    }
+    
 
     
     

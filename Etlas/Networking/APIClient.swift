@@ -154,8 +154,11 @@ class APIClient {
         performRequest(route: APIRouter.delFavMonument(id: id), completion: completion)
     }
     
-    static func isFavorite(id: Int, completion: @escaping (Result<IsFavoriteResponse, NetworkError>) -> Void) {
-        performRequest(route: APIRouter.isFavorite(id: id), completion: completion)
+    static func isFavoriteArticle(id: Int, completion: @escaping (Result<IsFavoriteResponse, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.isFavoriteArticle(id: id), completion: completion)
+    }
+    static func isFavoriteMonument(id: Int, completion: @escaping (Result<IsFavoriteResponse, NetworkError>) -> Void) {
+        performRequest(route: APIRouter.isFavoriteMonument(id: id), completion: completion)
     }
 
     static func getLandmarksQuestions(completion: @escaping (Result<[QuestionResponse], NetworkError>) -> Void) {

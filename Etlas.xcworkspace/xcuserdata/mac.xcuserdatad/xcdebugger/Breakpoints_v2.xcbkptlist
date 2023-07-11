@@ -112,6 +112,21 @@
                   endingLineNumber = "38"
                   offsetFromSymbolStart = "44">
                </Location>
+               <Location
+                  uuid = "35383AD9-FBE9-45B0-9191-88811152F934 - 2a2681411172dd90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Etlas.SharedData.SetIsLoggedOut(Swift.Bool) -&gt; ()"
+                  moduleName = "Etlas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/GradPrj/Etlas/Etlas/SharedData/SharedData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "35">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

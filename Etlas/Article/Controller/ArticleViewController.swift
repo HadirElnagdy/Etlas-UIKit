@@ -24,10 +24,11 @@ class ArticleViewController: UIViewController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        APIClient.isFavorite(id: (article?.id)!){ result in
+        APIClient.isFavoriteArticle(id: (article?.id)!){ result in
             switch result {
             case .success(let model):
                 if model.isFavorite == nil {"isFav returned nil!"}
+                print("ID: \(self.article!.id)")
                 print("isFavorite returned \(model.isFavorite)")
                 self.isLoved = model.isFavorite ?? false
                 break
@@ -37,6 +38,7 @@ class ArticleViewController: UIViewController {
                 debugPrint(error)
             }
         }
+        setupButtonImage()
         setupUI()
     }
     
@@ -59,6 +61,7 @@ class ArticleViewController: UIViewController {
             }
             
         }
+           isLoved = true
            
        }else {
            APIClient.delFavArticle(id: (article?.id)!){[weak self] (result) in
@@ -73,6 +76,7 @@ class ArticleViewController: UIViewController {
                }
                
            }
+           isLoved = false
        }
         setupButtonImage()
         

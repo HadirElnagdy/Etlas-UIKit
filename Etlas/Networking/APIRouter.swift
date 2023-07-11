@@ -43,7 +43,8 @@ enum APIRouter: URLRequestConvertible {
     case addMonumentToFavs(id: Int)
     case delFavArticle(id: Int)
     case delFavMonument(id: Int)
-    case isFavorite(id: Int)
+    case isFavoriteArticle(id: Int)
+    case isFavoriteMonument(id: Int)
     //Monuments
     case getMonument
     //Questions
@@ -56,7 +57,7 @@ enum APIRouter: URLRequestConvertible {
     // MARK: - HTTPMethod
     private var method: HTTPMethod {
         switch self {
-        case .register, .verifyEmail, .requestNewOTP, .login, .logout, .refreshToken, .resetPassword, .verifyPasswordOTP, .googleSignIn, .facebookSignIn, .contactUs, .addArticleToFavs, .addMonumentToFavs, .isFavorite:
+        case .register, .verifyEmail, .requestNewOTP, .login, .logout, .refreshToken, .resetPassword, .verifyPasswordOTP, .googleSignIn, .facebookSignIn, .contactUs, .addArticleToFavs, .addMonumentToFavs, .isFavoriteArticle, .isFavoriteMonument:
             return .post
         case .confirmPasswordReset, .editUser:
             return .patch
@@ -148,7 +149,9 @@ enum APIRouter: URLRequestConvertible {
             return APIEndpoints.getStatuesQuestions
         case .getAllTours:
             return APIEndpoints.getAllTours
-        case .isFavorite:
+        case .isFavoriteArticle:
+            return APIEndpoints.isFavorite
+        case .isFavoriteMonument:
             return APIEndpoints.isFavorite
             
         }
@@ -230,6 +233,10 @@ enum APIRouter: URLRequestConvertible {
             return[APIParameterKey.id: String(id)]
         case .addMonumentToFavs(id: let id):
             return [APIParameterKey.id: String(id)]
+        case .isFavoriteArticle(id: let id):
+            return [APIParameterKey.articleId: id]
+        case .isFavoriteMonument(id: let id):
+            return [APIParameterKey.monumentId: id]
         default:
             return nil
         }

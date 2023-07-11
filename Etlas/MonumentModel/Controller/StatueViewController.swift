@@ -20,7 +20,7 @@ class StatueViewController: UIViewController {
     @IBOutlet weak var periodLabel: UILabel!
     var isLoved = false
     var speechSynthesizer: AVSpeechSynthesizer?
-    
+    var monumentId = 0
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +71,7 @@ class StatueViewController: UIViewController {
                 self?.monumentNameLabel.text = model.name
                 self?.descriptionLabel.text = model.description
                 self?.periodLabel.text = "\((model.date)!) | \((model.location)!)"
+                self?.monumentId = model.id!
                 break
             case .failure(let error):
                 return print(error.localizedDescription)
@@ -95,20 +96,19 @@ class StatueViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     @IBAction func lovePressed(_ sender: UIButton) {
-        isLoved.toggle()
-//        if !isLoved {
-//         APIClient.addArticleToFavs(id: (article?.id)!){[weak self] (result) in
-//             switch result {
-//             case .success(_):
-//                 self?.isLoved.toggle()
-//                 break
-//             case .failure(let error):
-//                 print(error)
-//             }
-//
-//         }
-//
-//        }else {
+        if !isLoved {
+         APIClient.addMonumentToFavs(id: monumentId){[weak self] (result) in
+             switch result {
+             case .success(_):
+                 self?.isLoved.toggle()
+                 break
+             case .failure(let error):
+                 print(error)
+             }
+
+         }
+
+        } //else {
 //            APIClient.delFavArticle(id: (article?.id)!){[weak self] (result) in
 //                switch result {
 //                case .success(_):
