@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqt-2B-iWk" customClass="CustomView" customModule="Etlas" customModuleProvider="target">
                         <rect key="frame" x="24" y="0.0" width="381" height="117"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_3dAnubis" translatesAutoresizingMaskIntoConstraints="NO" id="dXn-yj-gbp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_3dAnubis" translatesAutoresizingMaskIntoConstraints="NO" id="dXn-yj-gbp">
                                 <rect key="frame" x="8" y="0.0" width="80" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="M5J-gZ-yRr"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55F-jj-R5d">
-                                <rect key="frame" x="104" y="45" width="122" height="21"/>
+                                <rect key="frame" x="104" y="45" width="261" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="200 BC | Egypt">
                                         <attributes>
@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AD2-VQ-tID">
-                                <rect key="frame" x="104" y="78" width="184" height="21"/>
+                                <rect key="frame" x="104" y="78" width="261" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Scanned 12 OCT 2021">
                                         <attributes>
@@ -66,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW2-7F-mk1">
-                                <rect key="frame" x="104" y="16" width="117" height="24"/>
+                                <rect key="frame" x="104" y="16" width="221" height="24"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Statue Name">
                                         <attributes>
@@ -82,8 +82,11 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="dXn-yj-gbp" secondAttribute="bottom" id="2ZM-uz-4fx"/>
                             <constraint firstItem="dXn-yj-gbp" firstAttribute="leading" secondItem="Bqt-2B-iWk" secondAttribute="leading" constant="8" id="3GY-Sg-BlS"/>
+                            <constraint firstAttribute="trailing" secondItem="55F-jj-R5d" secondAttribute="trailing" constant="16" id="7Ey-aX-pgV"/>
                             <constraint firstItem="AD2-VQ-tID" firstAttribute="leading" secondItem="JW2-7F-mk1" secondAttribute="leading" id="PXk-m8-shm"/>
+                            <constraint firstAttribute="trailing" secondItem="AD2-VQ-tID" secondAttribute="trailing" constant="16" id="PiW-GV-tQY"/>
                             <constraint firstItem="JW2-7F-mk1" firstAttribute="top" secondItem="Bqt-2B-iWk" secondAttribute="top" constant="16" id="Pwo-70-PXU"/>
+                            <constraint firstItem="K1q-q4-S1G" firstAttribute="leading" secondItem="JW2-7F-mk1" secondAttribute="trailing" constant="8" id="UCM-YM-OXZ"/>
                             <constraint firstItem="dXn-yj-gbp" firstAttribute="top" secondItem="Bqt-2B-iWk" secondAttribute="top" id="fyG-zB-w1d"/>
                             <constraint firstItem="55F-jj-R5d" firstAttribute="top" secondItem="JW2-7F-mk1" secondAttribute="bottom" constant="5" id="ht6-RO-j7I"/>
                             <constraint firstItem="AD2-VQ-tID" firstAttribute="top" secondItem="55F-jj-R5d" secondAttribute="bottom" constant="12" id="pe3-fv-Lmw"/>

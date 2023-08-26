@@ -53,7 +53,7 @@ class FavArticlesViewController: UIViewController {
 }
 extension FavArticlesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favArticleModel.count
+        return favArticleModel.filter {$0.article != nil}.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -382,7 +382,7 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
-        <image name="exclamationmark.circle" catalog="system" width="32" height="32"/>
+        <image name="exclamationmark.circle" catalog="system" width="128" height="123"/>
         <image name="globe" catalog="system" width="128" height="123"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="ic_bestScore" width="24" height="24"/>

@@ -64,7 +64,7 @@ class SignInViewController: BaseViewController {
                 }
                 goToHome()
             case .failure(let error):
-                let alertController = UIAlertController(title: "Opps!", message: error.localizedDescription, preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Wrong Credentials!", message: "Invalid Email or Password! ", preferredStyle: .alert)
                 present(alertController, animated: true, completion: nil)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     alertController.dismiss(animated: true, completion: nil)

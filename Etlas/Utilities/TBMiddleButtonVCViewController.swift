@@ -116,20 +116,14 @@ extension TBMiddleButtonVCViewController: UINavigationControllerDelegate, UIImag
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "RecognitionFailedViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "RecognitionFailedViewController")
+        self.present(vc, animated: true)
+        
          guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
              return
          }
-        if SharedData.shared.flag == 1 {
-            SharedData.shared.flag += 1
-            let storyboard = UIStoryboard(name: "StatueViewController", bundle: nil)
-            let vc = storyboard.instantiateViewController(identifier: "StatueViewController")
-            navigationController?.pushViewController(vc, animated: true)
-            
-        }else{
-            let storyboard = UIStoryboard(name: "RecognitionFailedViewController", bundle: nil)
-            let vc = storyboard.instantiateViewController(identifier: "RecognitionFailedViewController")
-            navigationController?.pushViewController(vc, animated: true)
-        }
+        
 //        let imageData = image.jpegData(compressionQuality: 0.8)
 //        let completion: (DetectionResponse?, NetworkError?) -> Void = { result, error in
 //            if let result = result {

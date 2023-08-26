@@ -72,10 +72,19 @@ class QuestionsViewController: UIViewController {
     // MARK: - Private methods
     private func setupUI() {
         self.labelBorderView.setupBorder()
-        self.hintButton.imageView?.image = UIImage(named: "ic_hint2")
+        self.hintButton.imageView?.image = UIImage(named: "ic_hint\(hintsLeft)")
     }
     
     private func showCurrentQuestion() {
+        let customColor = UIColor(red: 0.75, green: 0.51, blue: 0.28, alpha: 1.0)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            for button in self.choiceButtons {
+                button.backgroundColor = customColor
+                button.layer.borderColor = customColor.cgColor
+                button.isUserInteractionEnabled = true
+                button.isEnabled = true
+            }
+        }
         guard let currentQuestion = questions?[currentQuestionIndex] else {
             return
         }
@@ -109,7 +118,7 @@ class QuestionsViewController: UIViewController {
             return
         }
         print(currentQuestion.correctChoice ?? "Problem is here")
-        if selectedChoice == currentQuestion.correctChoice && choiceIndex < questions!.count {
+        if selectedChoice == currentQuestion.correctChoice && choiceIndex < questions!.count-1 {
             score += 1
             currentQuestionIndex += 1
             showCurrentQuestion()
@@ -156,14 +165,8 @@ class QuestionsViewController: UIViewController {
         for button in choiceButtons {
             button.isUserInteractionEnabled = false
         }
-        let customColor = UIColor(red: 0.75, green: 0.51, blue: 0.28, alpha: 1.0)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            for button in self.choiceButtons {
-                button.backgroundColor = customColor
-                button.layer.borderColor = customColor.cgColor
-                button.isUserInteractionEnabled = true
-            }
-        }
+       
+        
     }
     
 

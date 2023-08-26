@@ -15,8 +15,8 @@ class FavouritesViewController: UIViewController {
     @IBOutlet weak var articlesTableView: UITableView!
     
     
-    var favArticleModel: [FavoritesResult] = []
-    var favModelModel: [FavoritesResult] = []
+    var favsModel: [FavoritesResult] = []
+    
     // MARK: - Lifecycle methods
     
     override func viewDidLoad() {
@@ -24,8 +24,7 @@ class FavouritesViewController: UIViewController {
         APIClient.getFavorites { [weak self] result in
             switch result {
             case .success(let response):
-                self?.favArticleModel = response.results ?? []
-                self?.favModelModel = response.results ?? []
+                self?.favsModel = response.results ?? []
                 self?.modelsTableView.reloadData()
                 self?.articlesTableView.reloadData()
             case .failure(let error):
@@ -75,9 +74,9 @@ class FavouritesViewController: UIViewController {
 extension FavouritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == modelsTableView {
-            return favModelModel.count
+            return favsModel.filter { $0.monument != nil}.count
         } else if tableView == articlesTableView {
-            return favArticleModel.count
+            return favsModel.filter { $0.article != nil }.count
         } else {
             return 0
         }
@@ -86,12 +85,12 @@ extension FavouritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == modelsTableView {
             let cell = modelsTableView.dequeueReusableCell(withIdentifier: "FavModelsTableViewCell") as! FavModelsTableViewCell
-            let model = favArticleModel[indexPath.row]
+            let model = favsModel[indexPath.row]
             cell.configure(model: model)
             return cell
         } else if tableView == articlesTableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FavArticlesTableViewCell", for: indexPath) as! FavArticlesTableViewCell
-                  let model = favArticleModel[indexPath.row]
+                  let model = favsModel[indexPath.row]
                   cell.configure(model: model)
                   return cell
         } else {

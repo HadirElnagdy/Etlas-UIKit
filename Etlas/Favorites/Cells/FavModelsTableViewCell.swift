@@ -45,8 +45,12 @@ class FavModelsTableViewCell: UITableViewCell {
             return
         }
         modelName.text = monument.name
-        period.text = "\(monument.date) | \(monument.location)"
-        scanningDate.text = monument.updated
+        period.text = "\((monument.date)!) | \((monument.location)!)"
+        if let dateString = monument.updated, let date = dateFormatter.date(from: dateString) {
+            scanningDate.text = formattedDateString(from: date)
+        } else {
+            scanningDate.text = nil
+        }
         if let imageURLString = monument.imageURL, let imageURL = URL(string: imageURLString) {
             URLSession.shared.dataTask(with: imageURL) { [weak self] (data, _, error) in
                 if let error = error {
@@ -62,6 +66,17 @@ class FavModelsTableViewCell: UITableViewCell {
             }.resume()
         }
 
+    }
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'"
+        return formatter
+    }()
+    
+    private func formattedDateString(from date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMM yyyy"
+        return formatter.string(from: date)
     }
 
     

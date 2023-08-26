@@ -22,22 +22,21 @@ class ArticleViewController: UIViewController {
     var article: ArticleResult?
     
     // MARK: - Lifecycle methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func loadView() {
+        super.loadView()
         APIClient.isFavoriteArticle(id: (article?.id)!){ result in
             switch result {
             case .success(let model):
-                if model.isFavorite == nil {"isFav returned nil!"}
-                print("ID: \(self.article!.id)")
-                print("isFavorite returned \(model.isFavorite)")
                 self.isLoved = model.isFavorite ?? false
                 break
             case .failure(let error):
-                print("isFav here")
-                print("________________________")
                 debugPrint(error)
             }
         }
+
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
         setupButtonImage()
         setupUI()
     }
@@ -48,7 +47,7 @@ class ArticleViewController: UIViewController {
     }
     
     @IBAction func lovePressed(_ sender: UIButton) {
-       if !isLoved {
+       if isLoved == false {
         APIClient.addArticleToFavs(id: (article?.id)!){[weak self] (result) in
             switch result {
             case .success(_):
@@ -59,10 +58,8 @@ class ArticleViewController: UIViewController {
                 print("________________________")
                 debugPrint(error)
             }
-            
         }
            isLoved = true
-           
        }else {
            APIClient.delFavArticle(id: (article?.id)!){[weak self] (result) in
                switch result {
@@ -76,7 +73,7 @@ class ArticleViewController: UIViewController {
                }
                
            }
-           isLoved = false
+          isLoved = false
        }
         setupButtonImage()
         

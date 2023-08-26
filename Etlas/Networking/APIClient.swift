@@ -20,9 +20,9 @@ class APIClient {
                     completion(.success(model))
                     break
                 case .failure(let error):
-//                    if let responseBody = String(data: response.data ?? Data(), encoding: .utf8) {
-//                                        print("Response body: \(responseBody)")
-//                                    }
+                    if let responseBody = String(data: response.data ?? Data(), encoding: .utf8) {
+                                        print("Response body: \(responseBody)")
+                                    }
                     debugPrint(error)
 //                    print(error)
 //                    print(error.localizedDescription)

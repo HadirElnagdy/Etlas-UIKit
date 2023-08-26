@@ -10,7 +10,7 @@ import AVFoundation
 import SceneKit
 
 class StatueViewController: UIViewController {
-     // MARK: - IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var whiteView: UIView!
     @IBOutlet weak var loveButton: UIButton!
     @IBOutlet weak var readButton: UIButton!
@@ -18,26 +18,63 @@ class StatueViewController: UIViewController {
     @IBOutlet weak var monumentNameLabel: UILabel!
     @IBOutlet weak var sceneView: SCNView!
     @IBOutlet weak var periodLabel: UILabel!
+    
     var isLoved = false
     var speechSynthesizer: AVSpeechSynthesizer?
-    var monumentId = 0
+    var monumentId = 1
+    var monument: MonumentResult?
+    
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-//        APIClient.isFavorite(id: (article?.id)!){ result in
-//            switch result {
-//            case .success(let model):
-//                self.isLoved = model.isFavorite ?? false
-//                break
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+//                APIClient.isFavoriteMonument(id: (monument?.id)){ result in
+//                    switch result {
+//                    case .success(let model):
+//                        self.isLoved = model.isFavorite ?? false
+//                        break
+//                    case .failure(let error):
+//                        print(error)
+//                    }
+//                }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
+            let homeVC =  storyborad.instantiateViewController(withIdentifier: "MainTabBarViewController")
+            self.present(homeVC, animated: true)
+        }
+       
+        
         setupUI()
-        setupSceneKitView(.Nefertiti)
+        APIClient.getMonument { [weak self] result in
+            switch result {
+            case .success(let monument):
+                self?.monument = monument
+                self?.monumentNameLabel.text = monument.name
+                self?.descriptionLabel.text = monument.description
+                self?.periodLabel.text = "\(monument.date ?? "") | \(monument.location ?? "")"
+                self?.monumentId = monument.id ?? 1
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+                }
+        print(monumentId)
+
+        switch monumentId {
+        case 1:
+            setupSceneKitView(.Nefertiti)
+            break
+        case 2:
+            setupSceneKitView(.Khafre)
+            break
+        case 3:
+            setupSceneKitView(.Remses)
+            break
+        default:
+            return
+        }
+        
     }
     
-
+    
     private func setupSceneKitView(_ statues: Statues) {
         let scene: SCNScene!
         
@@ -57,6 +94,22 @@ class StatueViewController: UIViewController {
         }
         sceneView.autoenablesDefaultLighting = true
     }
+//    private func setUpImageView(){
+//        if let imageURLString = monument?.imageURL, let imageURL = URL(string: imageURLString) {
+//            URLSession.shared.dataTask(with: imageURL) { [weak self] (data, _, error) in
+//                if let error = error {
+//                    print("Error downloading image: \(error.localizedDescription)")
+//                    return
+//                }
+//
+//                if let imageData = data, let image = UIImage(data: imageData) {
+//                    DispatchQueue.main.async {
+//                        self?.monumentImg.image = image
+//                    }
+//                }
+//            }.resume()
+//        }
+//    }
     
     
     // MARK: - Private methods
@@ -65,19 +118,7 @@ class StatueViewController: UIViewController {
         whiteView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         whiteView.layer.masksToBounds = true
         setupLabel()
-        APIClient.getMonument{[weak self] result in
-            switch result {
-            case .success(let model):
-                self?.monumentNameLabel.text = model.name
-                self?.descriptionLabel.text = model.description
-                self?.periodLabel.text = "\((model.date)!) | \((model.location)!)"
-                self?.monumentId = model.id!
-                break
-            case .failure(let error):
-                return print(error.localizedDescription)
-            }
-            
-        }
+        
     }
     private func setupButtonImage() {
         let imageName = isLoved ? "ic_selectedFavButton" : "ic_FavButton"
@@ -91,35 +132,37 @@ class StatueViewController: UIViewController {
     }
     
     // MARK: - IBActions
-  
+    
     @IBAction func closePressed(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        
+        
     }
     @IBAction func lovePressed(_ sender: UIButton) {
         if !isLoved {
-         APIClient.addMonumentToFavs(id: monumentId){[weak self] (result) in
-             switch result {
-             case .success(_):
-                 self?.isLoved.toggle()
-                 break
-             case .failure(let error):
-                 print(error)
-             }
-
-         }
-
-        } //else {
-//            APIClient.delFavArticle(id: (article?.id)!){[weak self] (result) in
-//                switch result {
-//                case .success(_):
-//                    self?.isLoved.toggle()
-//                    break
-//                case .failure(let error):
-//                    print(error)
-//                }
-//
-//            }
-//        }
+            APIClient.addMonumentToFavs(id: monumentId){[weak self] (result) in
+                switch result {
+                case .success(_):
+                    self?.isLoved.toggle()
+                    break
+                case .failure(let error):
+                    print(error)
+                }
+                
+            }
+            
+        } else {
+                    APIClient.delFavMonument(id: (monumentId)){[weak self] (result) in
+                        switch result {
+                        case .success(_):
+                            self?.isLoved.toggle()
+                            break
+                        case .failure(let error):
+                            print(error)
+                        }
+        
+                    }
+                }
+        isLoved.toggle()
         setupButtonImage()
     }
     @IBAction func readButtonPressed(_ sender: UIButton) {
@@ -142,7 +185,7 @@ class StatueViewController: UIViewController {
             newSpeechSynthesizer.delegate = self
             newSpeechSynthesizer.speak(speechUtterance)
             self.speechSynthesizer = newSpeechSynthesizer
-           
+            
             sender.setImage(UIImage(named: "ic_StopButton"), for: .normal)
         }
     }
@@ -155,8 +198,8 @@ extension StatueViewController: AVSpeechSynthesizerDelegate {
     }
 }
 
-    
-    
+
+
 
 
 enum Statues {

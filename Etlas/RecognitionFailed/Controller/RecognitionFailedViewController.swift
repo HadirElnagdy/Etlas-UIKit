@@ -27,7 +27,9 @@ class RecognitionFailedViewController: UIViewController {
         
     }
     @IBAction func tryAgainPressed(_ sender: BrownButton) {
-        
+        let storyborad = UIStoryboard(name: "HomeViewController", bundle: nil)
+        let homeVC =  storyborad.instantiateViewController(withIdentifier: "MainTabBarViewController")
+        self.present(homeVC, animated: true)
     }
     
     
